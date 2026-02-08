@@ -192,10 +192,18 @@
 ## Files Available
 
 - `qwen3_0.6b_summary.json` - Key metrics for smallest model
+- `qwen3_0.6b_full_results.json` - Complete dataset with all outputs
 - `qwen3_1.7b_summary.json` - 1.7B aggregated results
+- `qwen3_1.7b_full_results.json` - Complete dataset with all outputs
 - `qwen3_8b_full_results.json` - 8B complete dataset
 - `qwen3_14b_full_results.json` - 14B complete dataset
 - `qwen3_32b_full_results.json` - 32B comprehensive analysis
+- `colored_entropy_9configs.json` - 9 entropy source variants (1.7B, 4B)
+
+**Additional datasets (not copied):**
+- 4B models tested in colored_entropy experiments
+- Neural feedback quantum tests with PRNG/TRNG/QRNG variants
+- Full test suites available in main `/results/` directory
 
 ---
 

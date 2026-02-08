@@ -144,11 +144,12 @@ entropy-seeding/
 │
 └── 📂 results/                     # Raw JSON data by architecture
     ├── qwen/                      # Qwen3 family (Dense)
-    │   ├── qwen3_0.6b_summary.json
-    │   ├── qwen3_1.7b_summary.json
+    │   ├── qwen3_0.6b_summary.json / qwen3_0.6b_full_results.json
+    │   ├── qwen3_1.7b_summary.json / qwen3_1.7b_full_results.json
     │   ├── qwen3_8b_full_results.json
     │   ├── qwen3_14b_full_results.json
-    │   └── qwen3_32b_full_results.json
+    │   ├── qwen3_32b_full_results.json
+    │   └── colored_entropy_9configs.json (9 entropy variants, 1.7B+4B)
     └── deepseek-r1/               # DeepSeek-R1 family (MoE)
         ├── deepseek-r1_32b_summary.json
         └── deepseek-r1_70b_full_results.json
