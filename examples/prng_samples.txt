@@ -1,6 +1,6 @@
 # PRNG (Pseudo-Random Number Generator) Text Samples
 
-## Personality: "The Unstable Genius"
+## Personality: "Volatile"
 
 ### Characteristics:
 - Can be creative and varied
@@ -191,12 +191,12 @@ All metrics:
 
 ## Summary
 
-**PRNG Strengths:**
+**Volatile Characteristics:**
 - Can produce creative content
 - Useful for debugging (reproducible)
 - Good for testing (deterministic)
 
-**PRNG Weaknesses:**
+**Volatile Weaknesses:**
 - Catastrophic failures possible
 - Unpredictable quality
 - Higher repetition

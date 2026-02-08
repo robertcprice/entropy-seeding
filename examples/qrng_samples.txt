@@ -1,6 +1,6 @@
 # QRNG (Quantum Random Number Generator) Text Samples
 
-## Personality: "The Cautious Analyst"
+## Personality: "Structured"
 
 ### Characteristics:
 - Consistent formatting and structure
@@ -462,7 +462,7 @@ Not through programming, but through something... else.
 
 ## Summary
 
-**QRNG Strengths:**
+**Structured Strengths:**
 - Consistent formatting and structure
 - Highest distinct_2 scores (phrase diversity: 91.7% at 14B)
 - Excellent for code generation
@@ -470,7 +470,7 @@ Not through programming, but through something... else.
 - Never catastrophic failures
 - True quantum randomness (fundamentally unpredictable)
 
-**QRNG Weaknesses:**
+**Structured Considerations:**
 - Can be overly constrained
 - Lower vocabulary richness on creative tasks
 - May produce formulaic output

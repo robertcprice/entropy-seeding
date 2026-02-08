@@ -135,14 +135,14 @@ config = {
 
 ## Personality Profiles
 
-### PRNG: "The Unstable Genius"
+### PRNG: "Volatile"
 - ✅ Creative and varied
 - ❌ Unpredictable quality
 - ❌ Can catastrophically fail
 - **Use for:** Debugging, experiments
 - **Avoid for:** Production, security
 
-### TRNG: "The Reliable Professional"
+### TRNG: "Balanced"
 - ✅ Most natural text flow
 - ✅ Highest vocabulary diversity
 - ✅ Least repetitive
@@ -150,7 +150,7 @@ config = {
 - **Use for:** All production applications
 - **Avoid for:** Situations requiring absolute determinism
 
-### QRNG: "The Cautious Analyst"
+### QRNG: "Structured"
 - ✅ Consistent formatting
 - ✅ Most organized structure
 - ❌ Can be overly constrained

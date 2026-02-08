@@ -1,6 +1,6 @@
 # TRNG (True Random Number Generator) Text Samples
 
-## Personality: "The Reliable Professional"
+## Personality: "Balanced"
 
 ### Characteristics:
 - Most natural text flow
@@ -302,7 +302,7 @@ burden of decision on which...
 
 ## Summary
 
-**TRNG Strengths:**
+**Balanced Strengths:**
 - Most natural text flow (burstiness: 0.24)
 - Highest vocabulary diversity (65% uniqueness)
 - Least repetitive (1.3% repetition score)
@@ -310,7 +310,7 @@ burden of decision on which...
 - Best perplexity scores
 - Consistent quality across prompt types
 
-**TRNG Weaknesses:**
+**Balanced Considerations:**
 - Slightly more variable behavior on different prompt types
 - May require temperature tuning per use case
 - Not deterministic (can't reproduce exact output)

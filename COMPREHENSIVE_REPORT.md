@@ -596,7 +596,7 @@ Not Recommended:
 
 Based on extensive testing across models and prompts, we've identified consistent personality traits for each entropy source.
 
-### PRNG = "The Unstable Genius"
+### PRNG = "Volatile"
 
 **Characteristics:**
 - ✅ Can be creative and varied
@@ -633,7 +633,7 @@ Based on extensive testing across models and prompts, we've identified consisten
 
 ---
 
-### TRNG = "The Reliable Professional"
+### TRNG = "Balanced"
 
 **Characteristics:**
 - ✅ Most natural text flow
@@ -674,7 +674,7 @@ Based on extensive testing across models and prompts, we've identified consisten
 
 ---
 
-### QRNG = "The Cautious Analyst"
+### QRNG = "Structured"
 
 **Characteristics:**
 - ✅ Consistent formatting
