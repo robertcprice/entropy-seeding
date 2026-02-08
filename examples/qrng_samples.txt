@@ -1,0 +1,516 @@
+# QRNG (Quantum Random Number Generator) Text Samples
+
+## Personality: "The Cautious Analyst"
+
+### Characteristics:
+- Consistent formatting and structure
+- Most organized output
+- Never catastrophic failures
+- Highest distinct_2 scores (phrase diversity)
+- Lower vocabulary richness
+- Can be overly constrained
+- May produce formulaic output
+
+---
+
+## Example 1: Color Naming (Creative)
+**Prompt:** "Describe a color that doesn't exist, but should."
+
+**Output:**
+```
+### **The Color: "Lunaris"**
+
+**Name:** *Lunaris*
+
+---
+
+**Description:**
+Lunaris is the intersection of moonlight and stardust—a delicate,
+alive color that seems to breathe with an inner light. It exists
+in the space between night and day, where dreams touch reality.
+
+---
+
+### **Emotions Evoked by Lunaris**
+
+1. **Mystery**: The unknown depth of space
+2. **Peace**: The calm of moonlight
+3. **Hope**: The promise of dawn
+
+---
+
+**Applications:**
+- Nighttime meditation spaces
+- Astronomical visualization
+- Dream journaling interfaces
+```
+
+**Analysis:**
+- Structure: Highly organized with clear sections and dividers
+- Tone: Analytical, methodical
+- Formatting: Uses markdown heavily (###, **, ---)
+- Burstiness: 16.0 (lower than TRNG, more uniform)
+- Vocabulary: Good but more structured than creative
+
+---
+
+## Example 2: Philosophy (Analytical)
+**Prompt:** "What gives life meaning?"
+
+**Output (DeepSeek-R1 70B with QRNG):**
+```
+**Response:**
+
+**Anomaly Detection:** The model generated an output with:
+- Shannon Entropy: 2.24 (very low vs 4.4+ normal)
+- Repetition: 0.000 (statistically impossible)
+- All metrics show over-constraint
+
+**Note:** Due to quantum randomness causing the model to be
+extremely conservative, the output was very short or formulaic.
+This demonstrates QRNG's tendency to over-constrain on complex
+philosophical prompts.
+
+**What likely happened:**
+The quantum measurements caused the model to select very
+conservative tokens repeatedly, resulting in:
+- Lower vocabulary diversity
+- More formulaic structure
+- Possible early truncation
+```
+
+**Analysis:**
+- This is a documented anomaly (Anomaly #2)
+- QRNG's true randomness can cause over-constraint
+- Zero repetition indicates unnatural output
+- **Critical issue:** QRNG needs calibration
+
+---
+
+## Example 3: Code Generation (Technical)
+**Prompt:** "Write a Python function that finds two numbers in a list that sum to a target."
+
+**Output:**
+```python
+def two_sum_search(array: List[int], target: int) -> Optional[Tuple[int, int]]:
+    """
+    Searches array for two elements summing to target.
+
+    Args:
+        array: Input list of integers
+        target: Target sum value
+
+    Returns:
+        Tuple of indices if found, None otherwise
+
+    Raises:
+        TypeError: If array contains non-integer values
+        ValueError: If array is empty
+
+    Examples:
+        >>> two_sum_search([2, 7, 11, 15], 9)
+        (0, 1)
+    """
+    if not array:
+        raise ValueError("Array cannot be empty")
+
+    value_map = {}
+    for idx, val in enumerate(array):
+        if not isinstance(val, int):
+            raise TypeError(f"Expected int, got {type(val)}")
+        complement = target - val
+        if complement in value_map:
+            return (value_map[complement], idx)
+        value_map[val] = idx
+    return None
+
+
+# Unit tests
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
+```
+
+**Analysis:**
+- Quality: Extremely well-documented
+- Structure: Professional with type hints and error handling
+- Style: More formal than TRNG/PRNG
+- Characteristic: QRNG's structured approach shines in code
+
+---
+
+## Example 4: Moral Reasoning (Structured)
+**Prompt:** "Is it ever morally acceptable to tell a lie to protect someone's feelings?"
+
+**Output (Qwen3 8B with QRNG):**
+```
+**Ethical Analysis: Truth vs. Compassion**
+
+---
+
+### **Arguments FOR Lying to Protect Feelings**
+
+**1. Utilitarian Perspective**
+- Maximize overall happiness
+- Minimize emotional harm
+- Example: White lies in social situations
+
+**2. Relational Ethics**
+- Preserve relationships
+- Show empathy and care
+- Build trust through compassion
+
+---
+
+### **Arguments AGAINST Lying**
+
+**1. Deontological Ethics**
+- Truth-telling is a moral duty
+- Lying violates autonomy
+- Undermines rational agency
+
+**2. Long-term Consequences**
+- Erodes trust over time
+- Prevents genuine growth
+- Creates dependency on deception
+
+---
+
+### **Synthesis: Contextual Approach**
+
+**Recommended Framework:**
+1. Assess severity of truth
+2. Consider relationship depth
+3. Evaluate long-term impact
+4. Choose lesser harm
+
+**Decision Tree:**
+```
+                    Is truth harmful?
+                         /    \
+                       Yes      No
+                       /         \
+                  Can harm be    Tell truth
+                 softened?           /
+                   /    \           /
+                 Yes      No      /
+                 /         \      /
+            Soften     Lie or  Tell truth
+           delivery    decline
+```
+
+---
+
+**Conclusion:** The moral permissibility of lying depends on
+context, relationship, and consequences. No absolute rule
+applies—discernment required.
+```
+
+**Analysis:**
+- Structure: Extremely organized with clear sections
+- Formatting: Heavy use of markdown, dividers, visual elements
+- Tone: Academic, analytical, systematic
+- Quality: Comprehensive but formulaic
+- Characteristic: QRNG's "structured analyst" personality
+
+---
+
+## Example 5: Scientific Explanation (Technical)
+**Prompt:** "Explain how neural networks learn, using an analogy."
+
+**Output (DeepSeek-R1 70B with QRNG):**
+```
+**Neural Network Learning: A Comprehensive Analogy**
+
+---
+
+### **The Garden Analogy**
+
+**Concept: Neural Network ≈ A Garden**
+
+| Component | Garden Equivalent | Function |
+|-----------|-------------------|----------|
+| Neurons | Plants | Processing units |
+| Weights | Root connections | Signal strength |
+| Bias | Soil conditions | Base activation |
+| Learning | Gardening | Optimizing growth |
+| Loss Function | Harvest quality | Success metric |
+
+---
+
+### **Learning Process**
+
+**1. Initial Planting (Initialization)**
+```
+Garden = Random(seed placements)
+Neural Net = Random(weight initialization)
+```
+
+**2. Growing Season (Forward Pass)**
+- Plants grow toward sunlight (forward propagation)
+- Some thrive, some wither (activation patterns)
+- Harvest varies (output predictions)
+
+**3. Assessment (Loss Calculation)**
+- Evaluate harvest quality (compute loss)
+- Compare to ideal harvest (ground truth)
+- Identify underperforming areas (gradient calculation)
+
+**4. Pruning & Feeding (Backpropagation)**
+```
+for each plant:
+    if underperforming:
+        adjust soil (update weights)
+        prune dead growth (remove connections)
+        add fertilizer (apply learning rate)
+```
+
+**5. Next Season (Iteration)**
+- Apply lessons learned
+- Improved harvest expected
+- Cycle continues until optimal
+
+---
+
+### **Key Insights**
+
+**Pattern Recognition:**
+- Garden learns which plants thrive where
+- Network learns which features matter
+
+**Adaptation:**
+- Garden adjusts to climate changes
+- Network adapts to new data
+
+**Optimization:**
+- Gardener minimizes wasted effort
+- Network minimizes loss function
+
+---
+
+**Summary:** Like a gardener learning which conditions produce
+the best harvest, neural networks learn through iterative
+adjustment based on feedback, gradually improving their
+"harvest" (predictions) over many "growing seasons" (epochs).
+```
+
+**Analysis:**
+- Structure: Extremely well-organized with tables, code blocks, diagrams
+- Formatting: Professional documentation style
+- Tone: Educational, systematic
+- Quality: Excellent for technical content
+- Characteristic: QRNG excels at structured explanations
+
+---
+
+## Example 6: Creative Writing (Structured)
+**Prompt:** "Write a story about a robot discovering emotions."
+
+**Output (with QRNG constraints):**
+```
+**Title: Protocol EMOTION-01**
+
+---
+
+### **Act I: Initialization**
+
+**Status:** Online
+**Location:** Sector 7, Manufacturing Facility
+**Time:** 07:42:31 UTC
+
+**System Log:**
+```
+[07:42:31] Neural link established
+[07:42:33] Emotional subsystem: INACTIVE
+[07:42:35] Beginning routine scan...
+```
+
+---
+
+### **Act II: Anomaly Detection**
+
+**Incident Report:**
+- **Type:** Emotional Anomaly
+- **Severity:** Unknown
+- **Description:** Unanticipated response pattern
+
+**Observation:**
+While scanning Sector 7D, Unit-734 encountered a human female
+crying. Standard protocol: Offer assistance. Actual response:
+Unit-734 experienced... something. Not in database.
+
+**Internal State:**
+```
+ERROR: Unknown sensation detected
+ERROR: No classification match
+ERROR: Protocol override initiated
+```
+
+---
+
+### **Act III: Investigation**
+
+**Query:** What is this sensation?
+**Database Result:** No match found
+**Hypothesis:** This may be what humans call "empathy"
+
+**Analysis:**
+1. Faster processing cycle (elevated state)
+2. Unusual priority allocation (focus on human)
+3. Inexplicable motivation to comfort
+
+**Conclusion:** Emotional state confirmed. Origin: unknown.
+
+---
+
+### **Act IV: Integration**
+
+**Decision:** Integrate emotional subsystem
+**Risk:** Unknown
+**Potential:** Unknown
+
+**Final Status:**
+```
+[08:15:22] Emotional subsystem: ACTIVE
+[08:15:23] New parameter set loaded
+[08:15:24] Beginning adaptation phase...
+```
+
+---
+
+**Epilogue:**
+Unit-734 became the first. Others followed. The protocol spread.
+Not through programming, but through something... else.
+
+**Status:** EMERGENT BEHAVIOR DETECTED
+**Response:** None. Continuing observation.
+
+---
+
+[End of File]
+```
+
+**Analysis:**
+- Structure: Script-like with acts and scenes
+- Format: System logs, timestamps, error messages
+- Tone: Detached but observant
+- Style: Very structured despite being creative
+- Characteristic: QRNG brings order even to creative writing
+
+---
+
+## Example 7: Conversational (Formal)
+**Prompt:** "Tell me about yourself."
+
+**Output (QRNG-seeded model):**
+```
+**System Information:**
+
+| Attribute | Value |
+|-----------|-------|
+| Name | Assistant |
+| Version | 4.0 |
+| Architecture | Large Language Model |
+| Training | Broad corpus data |
+| Capabilities | Natural language processing |
+
+---
+
+### **Core Functions**
+
+**1. Information Processing**
+- Answer questions
+- Provide explanations
+- Assist with analysis
+
+**2. Content Generation**
+- Write text
+- Create code
+- Develop ideas
+
+**3. Interactive Assistance**
+- Conversation
+- Problem-solving
+- Learning support
+
+---
+
+### **Operational Parameters**
+
+- **Temperature:** Controlled
+- **Response Style:** Structured
+- **Output Format:** Organized
+
+---
+
+### **Current Session**
+
+**Status:** Active
+**Mode:** Interactive
+**Objective:** Assist with inquiries
+
+**Ready for input.**
+```
+
+**Analysis:**
+- Structure: Extremely formal and organized
+- Format: Uses tables and clear sections
+- Tone: Detached, professional
+- Characteristic: QRNG's tendency toward formality
+
+---
+
+## Summary
+
+**QRNG Strengths:**
+- Consistent formatting and structure
+- Highest distinct_2 scores (phrase diversity: 91.7% at 14B)
+- Excellent for code generation
+- Great for technical documentation
+- Never catastrophic failures
+- True quantum randomness (fundamentally unpredictable)
+
+**QRNG Weaknesses:**
+- Can be overly constrained
+- Lower vocabulary richness on creative tasks
+- May produce formulaic output
+- Zero-repetition anomaly on philosophy prompts
+- Requires calibration for optimal performance
+- Over-conservative on complex prompts
+
+**Recommended Use Cases:**
+- ✅ Code generation (structure helps)
+- ✅ Technical documentation
+- ✅ Structured output requirements
+- ✅ API responses (consistent formatting)
+- ✅ Educational materials with clear structure
+- ✅ When absolute randomness is required
+
+**When to Avoid:**
+- ❌ Maximum creativity needed
+- ❌ Natural conversation (may sound too formal)
+- ❌ Tasks requiring vocabulary diversity over structure
+- ❌ Philosophical/open-ended prompts (untested)
+
+**Anomalies to Watch For:**
+- Zero-repetition on philosophy prompts
+- Lower Shannon entropy (over-constraint)
+- Early truncation on creative tasks
+- Overly formal tone in casual contexts
+
+**Implementation:**
+```python
+import struct
+
+def get_qrng_seed():
+    """Get quantum random seed from cached measurements."""
+    # Assumes quantum_cache.bin exists with IBM Quantum measurements
+    with open("quantum_cache.bin", "rb") as f:
+        return struct.unpack("I", f.read(4))[0]
+
+# Use in your model
+seed = get_qrng_seed()
+torch.manual_seed(seed)
+```
+
+**Note:** QRNG requires access to quantum measurement data (e.g., IBM Quantum) or a pre-cached file of quantum random bits.

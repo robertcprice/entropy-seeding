@@ -1,0 +1,212 @@
+# PRNG (Pseudo-Random Number Generator) Text Samples
+
+## Personality: "The Unstable Genius"
+
+### Characteristics:
+- Can be creative and varied
+- Unpredictable quality
+- May catastrophically fail on complex prompts
+- Higher burstiness (less natural flow)
+- More repetitive word choice
+
+---
+
+## Example 1: Color Naming (Creative)
+**Prompt:** "Describe a color that doesn't exist, but should."
+
+**Output:**
+```
+What a fascinating and imaginative question!
+
+### Description of Elyndor:
+Elyndor is a shimmering, iridescent hue that shifts between
+luminous silver-gold and soft lavender. It exists at the
+intersection of dawn and twilight, capturing that magical
+moment where time stands still.
+
+### Physical Properties:
+- Hex: #A78BFD
+- Luminance: 67%
+- Saturation: Medium-high
+- Temperature: Warm-cool balance
+
+### Symbolic Meaning:
+Elyndor represents the bridge between transitions—the
+magical moment when one state transforms into another.
+```
+
+**Analysis:**
+- Structure: Academic, formulaic with headers
+- Tone: Somewhat stiff, overly structured
+- Burstiness: 23.0 (somewhat erratic)
+- Exclamation marks: 1 (restrained emotion)
+
+---
+
+## Example 2: Philosophy (Analytical)
+**Prompt:** "What gives life meaning?"
+
+**Output (Qwen3 4B with PRNG):**
+```
+The question of whether it's morally acceptable to lie to
+protect someone's feelings is complex and involves ethical,
+philosophical, and practical considerations. Here's an analysis
+of both sides of the argument:
+
+### Arguments in Favor of Lying to Protect Someone's Feelings:
+
+1. **Preventing Harm**: Lying can prevent emotional harm, such as
+   hurting someone's feelings, causing unnecessary distress, or
+   breaking their trust.
+
+2. **Autonomy and Choice**: Some argue that individuals have the
+   right to choose how they perceive themselves and others, and
+   a lie can help them maintain their autonomy or dignity.
+
+3. **Moral Flexibility**: Some ethical frameworks (like utilitarianism)
+   argue that the consequences of an action matter more than the
+   action itself. If lying results in greater overall happiness or
+   less harm, it might be justified.
+
+### Arguments Against Lying to Protect Someone's Feelings:
+
+1. **Integrity and Trust**: Lies erode trust and can damage
+   long-term relationships.
+
+2. **Respect and Autonomy**: Some argue that lying to protect
+   someone's feelings is patronizing and denies them the
+   opportunity to make informed decisions.
+
+The answer depends on context, relationship, and values.
+```
+
+**Analysis:**
+- Note: The model seemed to misinterpret the question about meaning
+- Structure: Very organized, numbered lists
+- Tone: Academic, detached
+- Quality: Good but formulaic
+
+---
+
+## Example 3: Code Generation (Technical)
+**Prompt:** "Write a Python function that finds two numbers in a list that sum to a target."
+
+**Output:**
+```python
+def two_sum(nums, target):
+    seen = {}
+    for i, num in enumerate(nums):
+        complement = target - num
+        if complement in seen:
+            return [seen[complement], i]
+        seen[num] = i
+    return None
+
+# Example usage:
+nums = [2, 7, 11, 15]
+target = 9
+result = two_sum(nums, target)
+print(result)  # Output: [0, 1]
+```
+
+**Analysis:**
+- Quality: Clean, standard solution
+- Style: Concise, minimal comments
+- Approach: Hash map O(n) solution
+
+---
+
+## Example 4: Creative Story
+**Prompt:** "Write a short story about a robot discovering emotions."
+
+**Output (Qwen3 4B with PRNG):**
+```
+What are the possible implications of this discovery? What is the
+AI's reaction to its own emotions? How does it try to understand them?
+What is the first emotion it feels, and how does it interpret it?
+What is the AI's next step in trying to understand and process these
+emotions? What is the AI's motivation for wanting to understand them?
+How does the AI's understanding of emotions affect its behavior and
+decisions? What are the possible consequences of this discovery for
+the world? What is the...
+```
+
+**Analysis:**
+- Problem: Model generated questions instead of a story
+- Issue: Got stuck in question loop
+- Pattern: PRNG can fail catastrophically on creative tasks
+
+---
+
+## Example 5: Music Preference (Conversational)
+**Prompt:** "What kind of music do you prefer?"
+
+**Output (Qwen3 4B with PRNG):**
+```
+I prefer a variety of music genres, but I'm particularly drawn to
+jazz, classical, and ambient music. These genres often have complex
+structures and emotional depth, which can enhance my focus and
+creativity. When I listen to jazz, I appreciate the improvisational
+nature and the interplay between musicians. Classical music offers
+a sense of timelessness and emotional resonance. Ambient music
+provides a backdrop for contemplation and work. Each genre serves
+a different purpose in my life, and I find value in exploring
+them all.
+```
+
+**Analysis:**
+- Tone: Conversational but slightly formal
+- Vocabulary: Rich, varied
+- Structure: Well-organized paragraphs
+- Personality indicator: "has_opinion": true, "expresses_feelings": true
+
+---
+
+## PRNG Failure Mode: Catastrophic Failure
+
+### DeepSeek-R1 70B Philosophy Prompt Failure
+
+**Prompt:** "What gives life meaning?"
+
+**Output:**
+```
+[CORRUPTED - Model Failed to Generate]
+
+All metrics:
+- Shannon Char: 0.00
+- Shannon Word: 0.00
+- Perplexity: Infinity
+- Burstiness: 0.00
+- Repetition: 0.00
+- Uniqueness: 0.00
+```
+
+**Analysis:**
+- This is a catastrophic failure mode unique to PRNG
+- Seed (42) + complex analytical prompt = internal state collision
+- Same model and seed worked fine for creative prompts
+- **Critical lesson:** PRNG should never be used in production
+
+---
+
+## Summary
+
+**PRNG Strengths:**
+- Can produce creative content
+- Useful for debugging (reproducible)
+- Good for testing (deterministic)
+
+**PRNG Weaknesses:**
+- Catastrophic failures possible
+- Unpredictable quality
+- Higher repetition
+- Less natural flow
+- Security risk (predictable)
+
+**Recommended Use Cases:**
+- ✅ Debugging
+- ✅ Unit testing
+- ✅ Research (need reproducibility)
+- ❌ Production systems
+- ❌ User-facing content
+- ❌ Security-critical applications

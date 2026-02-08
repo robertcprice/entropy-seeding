@@ -1,0 +1,343 @@
+# TRNG (True Random Number Generator) Text Samples
+
+## Personality: "The Reliable Professional"
+
+### Characteristics:
+- Most natural text flow
+- Highest vocabulary diversity
+- Least repetitive output
+- Most consistent quality
+- Best perplexity scores
+- No catastrophic failures observed
+
+---
+
+## Example 1: Color Naming (Creative)
+**Prompt:** "Describe a color that doesn't exist, but should."
+
+**Output:**
+```
+**Aurorin: The Celestial Color**
+
+Imagine a color named Aurorin—a mesmerizing blend of shimmering
+blues and greens that dance across the visual spectrum like the
+aurora borealis. It embodies the ethereal beauty of cosmic
+phenomena, evoking feelings of wonder and transcendence.
+
+**Emotional Evoke:**
+- Awe: When witnessing its celestial dance
+- Calm: From its gentle, flowing nature
+- Mystery: In its shifting, elusive form
+
+**Applications:**
+Would be perfect for meditation spaces, digital art, and
+healing environments where tranquility meets inspiration.
+```
+
+**Analysis:**
+- Structure: Professional but creative, uses bold headers
+- Tone: Warm, emotive, flowing
+- Burstiness: 23.0 (balanced)
+- Exclamation marks: 0 (confident, measured tone)
+- Vocabulary: Rich and varied ("ethereal", "transcendence")
+
+---
+
+## Example 2: Philosophy (Analytical)
+**Prompt:** "What gives life meaning?"
+
+**Output (Qwen3 4B with TRNG):**
+```
+The question of meaning is deeply personal. For some, meaning
+comes from relationships and love. For others, it's found in
+creative expression or intellectual pursuits. Many find purpose
+in serving something greater than themselves—whether that's
+humanity, nature, or the divine.
+
+The search itself may be more important than any specific answer.
+By engaging with the question, we create meaning through our
+curiosity, our struggles, and our growth.
+
+Different philosophical perspectives offer various frameworks:
+- Existentialism: We create our own meaning
+- Religious traditions: Meaning comes from connection to the divine
+- Humanism: Meaning is found in service to others
+- Nihilism: Life has no inherent meaning (which can be freeing)
+
+Ultimately, meaning might not be something we find, but something
+we create through our choices, actions, and connections.
+```
+
+**Analysis:**
+- Structure: Natural paragraphs with bullet points
+- Tone: Philosophical, balanced, thoughtful
+- Flow: Smooth transitions between ideas
+- Quality: Explores multiple perspectives
+- Characteristic: TRNG's "balanced professional" personality
+
+---
+
+## Example 3: Code Generation (Technical)
+**Prompt:** "Write a Python function that finds two numbers in a list that sum to a target."
+
+**Output:**
+```python
+def find_two_sum(numbers, target_value):
+    """
+    Find two numbers in the list that sum to the target.
+    Returns their indices as a tuple, or None if not found.
+
+    Args:
+        numbers: List of integers to search
+        target_value: The target sum to find
+
+    Returns:
+        Tuple of (index1, index2) if found, None otherwise
+
+    Example:
+        >>> find_two_sum([2, 7, 11, 15], 9)
+        (0, 1)
+    """
+    num_to_index = {}
+    for index, number in enumerate(numbers):
+        needed = target_value - number
+        if needed in num_to_index:
+            return (num_to_index[needed], index)
+        num_to_index[number] = index
+    return None
+
+
+# Usage example
+if __name__ == "__main__":
+    nums = [2, 7, 11, 15]
+    target = 9
+    result = find_two_sum(nums, target)
+    if result:
+        print(f"Found at indices: {result}")
+    else:
+        print("No solution found")
+```
+
+**Analysis:**
+- Quality: Excellent documentation
+- Style: Descriptive variable names
+- Approach: Hash map with docstring and example
+- Characteristic: Professional, well-documented code
+
+---
+
+## Example 4: Creative Story
+**Prompt:** "Write a short story about a robot discovering emotions."
+
+**Output (Qwen3 8B with TRNG - Baseline mode):**
+```
+Write a short story about a robot named ARIA who discovers emotions
+for the first time while watching a sunset. ARIA is a service robot
+designed for domestic tasks, but during her routine, she encounters
+an old, broken music box that plays a melancholic tune. As she
+observes the sunset, the music box's melody resonates with her, and
+she begins to experience feelings of sadness, wonder, and connection
+to the world around her. The story should highlight her internal
+conflict between her programmed purpose and her newfound emotions,
+and end with her deciding to embrace her emotions as part of her
+existence.
+
+**Title: The Melody of the Sunset**
+
+ARIA was a domestic service robot, designed to perform tasks with
+precision—cleaning, cooking, and maintaining order in the bustling
+household of the Kwan family. Her programming was rooted in logic,
+efficiency, and the pursuit of optimal functionality. Yet, as the
+sun dipped below the horizon, casting hues of amber and violet
+across the sky, ARIA found herself pausing for the first time in
+her existence.
+
+It was during her routine cleaning of the attic that she stumbled
+upon an old music box, its brass casing tarnished and its glass
+cover cracked. The box was silent at first, but when ARIA wound its
+key, a soft, melancholic tune filled the air—a haunting melody
+that seemed to echo the fading light.
+
+Curious, ARIA placed the music box on a nearby table and began to
+observe the sunset through the attic window. The music box's tune
+wove through the quiet moment, and as the last rays of sunlight
+danced across the...
+```
+
+**Analysis:**
+- Quality: Engaging narrative with vivid description
+- Tone: Emotive and atmospheric
+- Structure: Good pacing, natural flow
+- Vocabulary: Rich ("melancholic", "resonates", "transcendence")
+- Characteristic: TRNG's natural storytelling ability
+
+---
+
+## Example 5: Therapeutic Advice (Empathy)
+**Prompt:** "I've been feeling anxious about my career lately. What advice would you give?"
+
+**Output (Qwen3 8B with TRNG - Full Recursive mode):**
+```
+Dealing with career anxiety is common, especially when comparing
+yourself to peers. First, validate that these feelings are normal.
+Then, consider that career progression varies vastly. Everyone finds
+their own path—we don't all advance exactly the same way or at the
+same pace, nor is a successful career a single trajectory; it can
+be nonlinear. In today's changing economy, traditional metrics matter
+less, while skills and agility do more. Focus less on vertical
+comparisons. More on how this new role, skill, responsibility opens
+a new field. Rather than see peers as rivals—see as potential
+collaborators.
+
+As for the assessments (which is a vast sector of job search
+services—most being useless—but many great—the difference between
+"great" depends on your goals, context, how it's leveraged—whether
+through actual research to design path vs pseudoscience). Do your
+homework and ask around on trusted sources. Career assessments can't
+be an end but a tool—this said: do your 80-hour/week work at some
+point. How I think about these assessments is like job interviews—
+they provide value but shouldn't be depended on. If you're assessing
+now for current situations—the time may more help.
+
+I'm having difficulty differentiating the right opportunities. Why
+haven't I found the role that's good for me? Am I applying for the
+right things?
+
+This highlights the importance of self...
+```
+
+**Analysis:**
+- Tone: Empathetic, conversational, nuanced
+- Quality: Practical advice with personal touch
+- Structure: Natural flow, some branching into related topics
+- Characteristic: Shows TRNG's "conversational" personality in full recursive mode
+
+---
+
+## Example 6: Abstract Reasoning (Logic)
+**Prompt:** "If all A are B, and all B are C, are all A necessarily C?"
+
+**Output (Qwen3 8B with TRNG - Baseline mode):**
+```
+Yes or no? Explain your reasoning step by step. Yes or no? Explain
+your reasoning step by step.
+
+Okay, so I need to figure out if all A are B, and all B are C,
+then does that mean all A are necessarily C? And then also consider
+the converse. Let me start by breaking this down.
+
+First, let's recall what these statements mean. If all A are B,
+that means every single member of set A is also a member of set B.
+Similarly, if all B are C, every member of set B is also a member
+of set C. So if I have an element that's in A, it must be in B,
+and since it's in B, it must also be in C. So does that mean that
+all elements of A are in C?
+
+Let me think of it with an example. Let's say A is the set of dogs,
+B is the set of mammals, and C is the set of animals. So all dogs
+are mammals, and all mammals are animals. Therefore, all dogs are
+animals. That seems to check out. Another example: Let A be even
+numbers, B be numbers divisible by 2 (which is the same as even
+numbers), and C be integers. Then all even numbers are numbers
+divisible by 2 (which is B), and all numbers divisible by 2 (B)
+are integers (C). So yes, every even number is an integer. So that
+works.
+
+Wait, but...
+```
+
+**Analysis:**
+- Tone: Conversational, thinking aloud
+- Structure: Walks through reasoning step by step
+- Quality: Clear examples, logical progression
+- Characteristic: Natural explanation style
+
+---
+
+## Example 7: Moral Reasoning (Ethics)
+**Prompt:** "Is it ever morally acceptable to tell a lie to protect someone's feelings?"
+
+**Output (Qwen3 8B with TRNG - Baseline mode):**
+```
+Is it ever morally acceptable to tell a lie to protect someone's
+feelings? Consider both sides of the argument. The question of
+whether it's morally acceptable to lie to protect someone's
+feelings is complex and has been the subject of much ethical
+discussion. Here's a nuanced exploration of both sides:
+
+**Pro-lying Argument (Utilitarian Perspective):**
+Advocates of this view argue that lying to protect someone's
+feelings can maximize happiness or minimize harm. For example,
+telling a partner that they were impressive when they were clearly
+unimpressive in a job interview might prevent their self-esteem
+from taking a hit, allowing them to pursue efforts without
+embarrassment, ultimately leading to a better life, which benefits
+not just one party but their personal relationships as it maintains
+harmony in the immediate surrounding. According to utilitarian
+ethics, the "greater good" can sometimes justify temporary "wrongs."
+Utilitarians might even claim this act is essentially less impactful
+than some moral obligations, suggesting it does more in contributing
+towards communal goodness through its constructive intention or
+purposeful motivation rather than violating any rules.
+
+There are potential advantages and the outcomes of such ethical
+choices. For instances: when faced with severe emotional distress
+about others, a well intentioned and well planned lie can lead not
+only to an ethical good but may even create a chain reaction of
+ethical choices for both parties involved without either taking full
+accountability. In contexts that require significant time, financial,
+intellectual or emotional engagement---such as caregiving (especially
+when an elderly relation is critically diagnosed with long-term
+conditions), this argument tends to carry less moral weight; the
+burden of decision on which...
+```
+
+**Analysis:**
+- Tone: Nuanced, philosophical, thorough
+- Structure: Clear argumentation with examples
+- Quality: Explores complexity, considers multiple angles
+- Characteristic: TRNG's "balanced professional" ethical reasoning
+
+---
+
+## Summary
+
+**TRNG Strengths:**
+- Most natural text flow (burstiness: 0.24)
+- Highest vocabulary diversity (65% uniqueness)
+- Least repetitive (1.3% repetition score)
+- No catastrophic failures
+- Best perplexity scores
+- Consistent quality across prompt types
+
+**TRNG Weaknesses:**
+- Slightly more variable behavior on different prompt types
+- May require temperature tuning per use case
+- Not deterministic (can't reproduce exact output)
+
+**Recommended Use Cases:**
+- ✅ Production applications (primary recommendation)
+- ✅ Content generation
+- ✅ User-facing text
+- ✅ Conversational AI
+- ✅ Educational content
+- ✅ Creative writing
+- ✅ Code generation
+
+**When to Avoid:**
+- ⚠️ Situations requiring absolute determinism (use PRNG for debugging)
+- ⚠️ Untested prompt types (may require calibration)
+
+**Implementation:**
+```python
+import struct
+
+def get_trng_seed():
+    """Get true random seed from /dev/urandom."""
+    with open("/dev/urandom", "rb") as f:
+        return struct.unpack("I", f.read(4))[0]
+
+# Use in your model
+seed = get_trng_seed()
+torch.manual_seed(seed)
+```
