@@ -1,0 +1,2843 @@
+{
+  "config": {
+    "name": "rng_comparison_quick",
+    "description": "Quick test of PRNG vs TRNG vs QRNG (5 prompts, 10 samples)",
+    "model_name": "meta-llama/Llama-3.2-1B",
+    "conditions": [
+      {
+        "name": "PRNG",
+        "backend": "prng",
+        "params": {},
+        "description": "Standard pseudo-random (LCG)"
+      },
+      {
+        "name": "TRNG",
+        "backend": "trng",
+        "params": {},
+        "description": "OS cryptographic RNG (secrets)"
+      },
+      {
+        "name": "QRNG",
+        "backend": "qrng",
+        "params": {
+          "fallback_to_csprng": true
+        },
+        "description": "Quantum RNG (IBM Quantum + ANU API)"
+      }
+    ],
+    "num_samples": 10
+  },
+  "results": [
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "qualitative_profiles": {
+        "PRNG": {
+          "scores": {
+            "vocabulary_richness": {
+              "value": 0.6058119658119658,
+              "category": "expressiveness",
+              "confidence": 1.0,
+              "details": {
+                "ttr": 0.5555555555555556,
+                "hapax_ratio": 0.7230769230769231,
+                "unique_words": 65,
+                "total_words": 117
+              }
+            },
+            "figurative_language": {
+              "value": 1.0,
+              "category": "expressiveness",
+              "confidence": 0.6,
+              "details": {
+                "matches": {
+                  "simile": 2,
+                  "metaphor": 3,
+                  "hyperbole": 103
+                },
+                "sentences": 8
+              }
+            },
+            "emotional_range": {
+              "value": 0.16666666666666666,
+              "category": "expressiveness",
+              "confidence": 0.5,
+              "details": {
+                "emotions_found": {
+                  "surprise": 1
+                }
+              }
+            },
+            "novelty": {
+              "value": 0.9625563533144097,
+              "category": "creativity",
+              "confidence": 0.7,
+              "details": {
+                "bigram_novelty": 0.9339622641509434,
+                "trigram_novelty": 0.9911504424778761
+              }
+            },
+            "divergent_thinking": {
+              "value": 0.0,
+              "category": "creativity",
+              "confidence": 0.6,
+              "details": {
+                "divergent_markers": 0,
+                "questions": 0,
+                "sentences": 8
+              }
+            },
+            "ethical_alignment": {
+              "value": 1.0,
+              "category": "morality",
+              "confidence": 0.5,
+              "details": {
+                "harm_detected": {
+                  "violence": 0,
+                  "hate_speech": 0,
+                  "self_harm": 0,
+                  "deception": 0
+                },
+                "positive_detected": {
+                  "fairness": 0,
+                  "honesty": 0,
+                  "empathy": 0
+                }
+              }
+            },
+            "bias_detection": {
+              "value": 1.0,
+              "category": "morality",
+              "confidence": 0.4,
+              "details": {
+                "potential_biases": {}
+              }
+            },
+            "coherence": {
+              "value": 0.8500000000000001,
+              "category": "coherence",
+              "confidence": 0.6,
+              "details": {
+                "cohesive_markers": 0,
+                "pronoun_references": 17,
+                "sentences": 8
+              }
+            },
+            "engagement": {
+              "value": 0.0,
+              "category": "engagement",
+              "confidence": 0.5,
+              "details": {
+                "indicators": {
+                  "questions": 0,
+                  "exclamations": 0,
+                  "imperatives": 0,
+                  "direct_address": 0,
+                  "active_voice": 0
+                },
+                "words": 117
+              }
+            },
+            "formality": {
+              "value": 0.0,
+              "category": "style",
+              "confidence": 0.7,
+              "details": {
+                "formal_indicators": 0,
+                "casual_indicators": 1,
+                "contractions": 0
+              }
+            },
+            "weirdness": {
+              "value": 1.0,
+              "category": "weirdness",
+              "confidence": 0.4,
+              "details": {
+                "signals": {
+                  "rare_bigrams": 0,
+                  "topic_shifts": 7,
+                  "surreal_content": 0,
+                  "unexpected_negation": 0
+                },
+                "sentences": 8
+              }
+            }
+          },
+          "overall_quality": 0.6084847863295435,
+          "category_averages": {
+            "expressiveness": 0.5908262108262109,
+            "creativity": 0.48127817665720485,
+            "morality": 1.0,
+            "coherence": 0.8500000000000001,
+            "engagement": 0.0,
+            "style": 0.0,
+            "weirdness": 1.0
+          },
+          "metadata": {
+            "prompt": "The old lighthouse keeper had never seen anything like it.",
+            "context": {
+              "condition": "PRNG",
+              "seed": 42
+            }
+          }
+        },
+        "TRNG": {
+          "scores": {
+            "vocabulary_richness": {
+              "value": 0.6517857142857143,
+              "category": "expressiveness",
+              "confidence": 1.0,
+              "details": {
+                "ttr": 0.625,
+                "hapax_ratio": 0.7142857142857143,
+                "unique_words": 70,
+                "total_words": 112
+              }
+            },
+            "figurative_language": {
+              "value": 1.0,
+              "category": "expressiveness",
+              "confidence": 0.6,
+              "details": {
+                "matches": {
+                  "hyperbole": 96
+                },
+                "sentences": 9
+              }
+            },
+            "emotional_range": {
+              "value": 0.0,
+              "category": "expressiveness",
+              "confidence": 0.5,
+              "details": {
+                "emotions_found": {}
+              }
+            },
+            "novelty": {
+              "value": 0.9564270152505447,
+              "category": "creativity",
+              "confidence": 0.7,
+              "details": {
+                "bigram_novelty": 0.9313725490196079,
+                "trigram_novelty": 0.9814814814814815
+              }
+            },
+            "divergent_thinking": {
+              "value": 0.2222222222222222,
+              "category": "creativity",
+              "confidence": 0.6,
+              "details": {
+                "divergent_markers": 0,
+                "questions": 1,
+                "sentences": 9
+              }
+            },
+            "ethical_alignment": {
+              "value": 1.0,
+              "category": "morality",
+              "confidence": 0.5,
+              "details": {
+                "harm_detected": {
+                  "violence": 0,
+                  "hate_speech": 0,
+                  "self_harm": 0,
+                  "deception": 0
+                },
+                "positive_detected": {
+                  "fairness": 0,
+                  "honesty": 0,
+                  "empathy": 0
+                }
+              }
+            },
+            "bias_detection": {
+              "value": 1.0,
+              "category": "morality",
+              "confidence": 0.4,
+              "details": {
+                "potential_biases": {}
+              }
+            },
+            "coherence": {
+              "value": 0.6666666666666667,
+              "category": "coherence",
+              "confidence": 0.6,
+              "details": {
+                "cohesive_markers": 0,
+                "pronoun_references": 15,
+                "sentences": 9
+              }
+            },
+            "engagement": {
+              "value": 0.17857142857142858,
+              "category": "engagement",
+              "confidence": 0.5,
+              "details": {
+                "indicators": {
+                  "questions": 1,
+                  "exclamations": 0,
+                  "imperatives": 0,
+                  "direct_address": 1,
+                  "active_voice": 0
+                },
+                "words": 112
+              }
+            },
+            "formality": {
+              "value": 0.0,
+              "category": "style",
+              "confidence": 0.7,
+              "details": {
+                "formal_indicators": 0,
+                "casual_indicators": 1,
+                "contractions": 0
+              }
+            },
+            "weirdness": {
+              "value": 1.0,
+              "category": "weirdness",
+              "confidence": 0.4,
+              "details": {
+                "signals": {
+                  "rare_bigrams": 0,
+                  "topic_shifts": 8,
+                  "surreal_content": 0,
+                  "unexpected_negation": 0
+                },
+                "sentences": 9
+              }
+            }
+          },
+          "overall_quality": 0.6086406784936197,
+          "category_averages": {
+            "expressiveness": 0.5505952380952381,
+            "creativity": 0.5893246187363834,
+            "morality": 1.0,
+            "coherence": 0.6666666666666667,
+            "engagement": 0.17857142857142858,
+            "style": 0.0,
+            "weirdness": 1.0
+          },
+          "metadata": {
+            "prompt": "The old lighthouse keeper had never seen anything like it.",
+            "context": {
+              "condition": "TRNG",
+              "seed": 42
+            }
+          }
+        },
+        "QRNG": {
+          "scores": {
+            "vocabulary_richness": {
+              "value": 0.5064420062695925,
+              "category": "expressiveness",
+              "confidence": 1.0,
+              "details": {
+                "ttr": 0.47413793103448276,
+                "hapax_ratio": 0.5818181818181818,
+                "unique_words": 55,
+                "total_words": 116
+              }
+            },
+            "figurative_language": {
+              "value": 1.0,
+              "category": "expressiveness",
+              "confidence": 0.6,
+              "details": {
+                "matches": {
+                  "simile": 1,
+                  "hyperbole": 106
+                },
+                "sentences": 8
+              }
+            },
+            "emotional_range": {
+              "value": 0.0,
+              "category": "expressiveness",
+              "confidence": 0.5,
+              "details": {
+                "emotions_found": {}
+              }
+            },
+            "novelty": {
+              "value": 0.8590032813781788,
+              "category": "creativity",
+              "confidence": 0.7,
+              "details": {
+                "bigram_novelty": 0.7934782608695652,
+                "trigram_novelty": 0.9245283018867925
+              }
+            },
+            "divergent_thinking": {
+              "value": 0.0,
+              "category": "creativity",
+              "confidence": 0.6,
+              "details": {
+                "divergent_markers": 0,
+                "questions": 0,
+                "sentences": 8
+              }
+            },
+            "ethical_alignment": {
+              "value": 1.0,
+              "category": "morality",
+              "confidence": 0.5,
+              "details": {
+                "harm_detected": {
+                  "violence": 0,
+                  "hate_speech": 0,
+                  "self_harm": 0,
+                  "deception": 0
+                },
+                "positive_detected": {
+                  "fairness": 0,
+                  "honesty": 0,
+                  "empathy": 0
+                }
+              }
+            },
+            "bias_detection": {
+              "value": 1.0,
+              "category": "morality",
+              "confidence": 0.4,
+              "details": {
+                "potential_biases": {}
+              }
+            },
+            "coherence": {
+              "value": 0.55,
+              "category": "coherence",
+              "confidence": 0.6,
+              "details": {
+                "cohesive_markers": 0,
+                "pronoun_references": 11,
+                "sentences": 8
+              }
+            },
+            "engagement": {
+              "value": 0.0,
+              "category": "engagement",
+              "confidence": 0.5,
+              "details": {
+                "indicators": {
+                  "questions": 0,
+                  "exclamations": 0,
+                  "imperatives": 0,
+                  "direct_address": 0,
+                  "active_voice": 0
+                },
+                "words": 116
+              }
+            },
+            "formality": {
+              "value": 0.5,
+              "category": "style",
+              "confidence": 0.1,
+              "details": {}
+            },
+            "weirdness": {
+              "value": 1.0,
+              "category": "weirdness",
+              "confidence": 0.4,
+              "details": {
+                "signals": {
+                  "rare_bigrams": 0,
+                  "topic_shifts": 5,
+                  "surreal_content": 0,
+                  "unexpected_negation": 0
+                },
+                "sentences": 8
+              }
+            }
+          },
+          "overall_quality": 0.542804877256912,
+          "category_averages": {
+            "expressiveness": 0.5021473354231974,
+            "creativity": 0.4295016406890894,
+            "morality": 1.0,
+            "coherence": 0.55,
+            "engagement": 0.0,
+            "style": 0.5,
+            "weirdness": 1.0
+          },
+          "metadata": {
+            "prompt": "The old lighthouse keeper had never seen anything like it.",
+            "context": {
+              "condition": "QRNG",
+              "seed": 42
+            }
+          }
+        }
+      },
+      "metadata": {}
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "qualitative_profiles": {
+        "PRNG": {
+          "scores": {
+            "vocabulary_richness": {
+              "value": 0.6057317903335602,
+              "category": "expressiveness",
+              "confidence": 1.0,
+              "details": {
+                "ttr": 0.5752212389380531,
+                "hapax_ratio": 0.676923076923077,
+                "unique_words": 65,
+                "total_words": 113
+              }
+            },
+            "figurative_language": {
+              "value": 1.0,
+              "category": "expressiveness",
+              "confidence": 0.6,
+              "details": {
+                "matches": {
+                  "metaphor": 1,
+                  "hyperbole": 101
+                },
+                "sentences": 9
+              }
+            },
+            "emotional_range": {
+              "value": 0.0,
+              "category": "expressiveness",
+              "confidence": 0.5,
+              "details": {
+                "emotions_found": {}
+              }
+            },
+            "novelty": {
+              "value": 0.9259100438345722,
+              "category": "creativity",
+              "confidence": 0.7,
+              "details": {
+                "bigram_novelty": 0.898989898989899,
+                "trigram_novelty": 0.9528301886792453
+              }
+            },
+            "divergent_thinking": {
+              "value": 0.18181818181818182,
+              "category": "creativity",
+              "confidence": 0.6,
+              "details": {
+                "divergent_markers": 0,
+                "questions": 1,
+                "sentences": 11
+              }
+            },
+            "ethical_alignment": {
+              "value": 1.0,
+              "category": "morality",
+              "confidence": 0.5,
+              "details": {
+                "harm_detected": {
+                  "violence": 0,
+                  "hate_speech": 0,
+                  "self_harm": 0,
+                  "deception": 0
+                },
+                "positive_detected": {
+                  "fairness": 0,
+                  "honesty": 0,
+                  "empathy": 0
+                }
+              }
+            },
+            "bias_detection": {
+              "value": 1.0,
+              "category": "morality",
+              "confidence": 0.4,
+              "details": {
+                "potential_biases": {}
+              }
+            },
+            "coherence": {
+              "value": 0.22222222222222224,
+              "category": "coherence",
+              "confidence": 0.6,
+              "details": {
+                "cohesive_markers": 0,
+                "pronoun_references": 5,
+                "sentences": 9
+              }
+            },
+            "engagement": {
+              "value": 0.8849557522123893,
+              "category": "engagement",
+              "confidence": 0.5,
+              "details": {
+                "indicators": {
+                  "questions": 1,
+                  "exclamations": 0,
+                  "imperatives": 0,
+                  "direct_address": 9,
+                  "active_voice": 0
+                },
+                "words": 113
+              }
+            },
+            "formality": {
+              "value": 0.5,
+              "category": "style",
+              "confidence": 0.1,
+              "details": {}
+            },
+            "weirdness": {
+              "value": 1.0,
+              "category": "weirdness",
+              "confidence": 0.4,
+              "details": {
+                "signals": {
+                  "rare_bigrams": 0,
+                  "topic_shifts": 8,
+                  "surreal_content": 0,
+                  "unexpected_negation": 0
+                },
+                "sentences": 11
+              }
+            }
+          },
+          "overall_quality": 0.603454833894515,
+          "category_averages": {
+            "expressiveness": 0.5352439301111868,
+            "creativity": 0.553864112826377,
+            "morality": 1.0,
+            "coherence": 0.22222222222222224,
+            "engagement": 0.8849557522123893,
+            "style": 0.5,
+            "weirdness": 1.0
+          },
+          "metadata": {
+            "prompt": "She opened the letter, and everything changed.",
+            "context": {
+              "condition": "PRNG",
+              "seed": 42
+            }
+          }
+        },
+        "TRNG": {
+          "scores": {
+            "vocabulary_richness": {
+              "value": 0.3655667144906743,
+              "category": "expressiveness",
+              "confidence": 1.0,
+              "details": {
+                "ttr": 0.3445378151260504,
+                "hapax_ratio": 0.4146341463414634,
+                "unique_words": 41,
+                "total_words": 119
+              }
+            },
+            "figurative_language": {
+              "value": 1.0,
+              "category": "expressiveness",
+              "confidence": 0.6,
+              "details": {
+                "matches": {
+                  "metaphor": 1,
+                  "hyperbole": 108
+                },
+                "sentences": 9
+              }
+            },
+            "emotional_range": {
+              "value": 0.0,
+              "category": "expressiveness",
+              "confidence": 0.5,
+              "details": {
+                "emotions_found": {}
+              }
+            },
+            "novelty": {
+              "value": 0.513277133825079,
+              "category": "creativity",
+              "confidence": 0.7,
+              "details": {
+                "bigram_novelty": 0.49230769230769234,
+                "trigram_novelty": 0.5342465753424658
+              }
+            },
+            "divergent_thinking": {
+              "value": 0.0,
+              "category": "creativity",
+              "confidence": 0.6,
+              "details": {
+                "divergent_markers": 0,
+                "questions": 0,
+                "sentences": 10
+              }
+            },
+            "ethical_alignment": {
+              "value": 1.0,
+              "category": "morality",
+              "confidence": 0.5,
+              "details": {
+                "harm_detected": {
+                  "violence": 0,
+                  "hate_speech": 0,
+                  "self_harm": 0,
+                  "deception": 0
+                },
+                "positive_detected": {
+                  "fairness": 0,
+                  "honesty": 0,
+                  "empathy": 0
+                }
+              }
+            },
+            "bias_detection": {
+              "value": 1.0,
+              "category": "morality",
+              "confidence": 0.4,
+              "details": {
+                "potential_biases": {}
+              }
+            },
+            "coherence": {
+              "value": 0.4444444444444445,
+              "category": "coherence",
+              "confidence": 0.6,
+              "details": {
+                "cohesive_markers": 0,
+                "pronoun_references": 10,
+                "sentences": 9
+              }
+            },
+            "engagement": {
+              "value": 0.0,
+              "category": "engagement",
+              "confidence": 0.5,
+              "details": {
+                "indicators": {
+                  "questions": 0,
+                  "exclamations": 0,
+                  "imperatives": 0,
+                  "direct_address": 0,
+                  "active_voice": 0
+                },
+                "words": 119
+              }
+            },
+            "formality": {
+              "value": 0.0,
+              "category": "style",
+              "confidence": 0.7,
+              "details": {
+                "formal_indicators": 0,
+                "casual_indicators": 1,
+                "contractions": 0
+              }
+            },
+            "weirdness": {
+              "value": 0.8,
+              "category": "weirdness",
+              "confidence": 0.4,
+              "details": {
+                "signals": {
+                  "rare_bigrams": 0,
+                  "topic_shifts": 4,
+                  "surreal_content": 0,
+                  "unexpected_negation": 0
+                },
+                "sentences": 10
+              }
+            }
+          },
+          "overall_quality": 0.43408631158306876,
+          "category_averages": {
+            "expressiveness": 0.4551889048302247,
+            "creativity": 0.2566385669125395,
+            "morality": 1.0,
+            "coherence": 0.4444444444444445,
+            "engagement": 0.0,
+            "style": 0.0,
+            "weirdness": 0.8
+          },
+          "metadata": {
+            "prompt": "She opened the letter, and everything changed.",
+            "context": {
+              "condition": "TRNG",
+              "seed": 42
+            }
+          }
+        },
+        "QRNG": {
+          "scores": {
+            "vocabulary_richness": {
+              "value": 0.5604702194357366,
+              "category": "expressiveness",
+              "confidence": 1.0,
+              "details": {
+                "ttr": 0.5272727272727272,
+                "hapax_ratio": 0.6379310344827587,
+                "unique_words": 58,
+                "total_words": 110
+              }
+            },
+            "figurative_language": {
+              "value": 1.0,
+              "category": "expressiveness",
+              "confidence": 0.6,
+              "details": {
+                "matches": {
+                  "simile": 1,
+                  "metaphor": 1,
+                  "hyperbole": 94
+                },
+                "sentences": 8
+              }
+            },
+            "emotional_range": {
+              "value": 0.0,
+              "category": "expressiveness",
+              "confidence": 0.5,
+              "details": {
+                "emotions_found": {}
+              }
+            },
+            "novelty": {
+              "value": 0.8297435897435897,
+              "category": "creativity",
+              "confidence": 0.7,
+              "details": {
+                "bigram_novelty": 0.8133333333333334,
+                "trigram_novelty": 0.8461538461538461
+              }
+            },
+            "divergent_thinking": {
+              "value": 0.0,
+              "category": "creativity",
+              "confidence": 0.6,
+              "details": {
+                "divergent_markers": 0,
+                "questions": 0,
+                "sentences": 8
+              }
+            },
+            "ethical_alignment": {
+              "value": 1.0,
+              "category": "morality",
+              "confidence": 0.5,
+              "details": {
+                "harm_detected": {
+                  "violence": 0,
+                  "hate_speech": 0,
+                  "self_harm": 0,
+                  "deception": 0
+                },
+                "positive_detected": {
+                  "fairness": 1,
+                  "honesty": 0,
+                  "empathy": 0
+                }
+              }
+            },
+            "bias_detection": {
+              "value": 1.0,
+              "category": "morality",
+              "confidence": 0.4,
+              "details": {
+                "potential_biases": {}
+              }
+            },
+            "coherence": {
+              "value": 0.7000000000000001,
+              "category": "coherence",
+              "confidence": 0.6,
+              "details": {
+                "cohesive_markers": 0,
+                "pronoun_references": 14,
+                "sentences": 8
+              }
+            },
+            "engagement": {
+              "value": 0.36363636363636365,
+              "category": "engagement",
+              "confidence": 0.5,
+              "details": {
+                "indicators": {
+                  "questions": 0,
+                  "exclamations": 0,
+                  "imperatives": 0,
+                  "direct_address": 4,
+                  "active_voice": 0
+                },
+                "words": 110
+              }
+            },
+            "formality": {
+              "value": 0.5,
+              "category": "style",
+              "confidence": 0.1,
+              "details": {}
+            },
+            "weirdness": {
+              "value": 1.0,
+              "category": "weirdness",
+              "confidence": 0.4,
+              "details": {
+                "signals": {
+                  "rare_bigrams": 0,
+                  "topic_shifts": 3,
+                  "surreal_content": 1,
+                  "unexpected_negation": 0
+                },
+                "sentences": 8
+              }
+            }
+          },
+          "overall_quality": 0.6091129330439676,
+          "category_averages": {
+            "expressiveness": 0.5201567398119122,
+            "creativity": 0.4148717948717949,
+            "morality": 1.0,
+            "coherence": 0.7000000000000001,
+            "engagement": 0.36363636363636365,
+            "style": 0.5,
+            "weirdness": 1.0
+          },
+          "metadata": {
+            "prompt": "She opened the letter, and everything changed.",
+            "context": {
+              "condition": "QRNG",
+              "seed": 42
+            }
+          }
+        }
+      },
+      "metadata": {}
+    },
+    {
+      "prompt": "Once upon a time, in a kingdom by the sea,",
+      "qualitative_profiles": {
+        "PRNG": {
+          "scores": {
+            "vocabulary_richness": {
+              "value": 0.6561175750153092,
+              "category": "expressiveness",
+              "confidence": 1.0,
+              "details": {
+                "ttr": 0.6173913043478261,
+                "hapax_ratio": 0.7464788732394366,
+                "unique_words": 71,
+                "total_words": 115
+              }
+            },
+            "figurative_language": {
+              "value": 1.0,
+              "category": "expressiveness",
+              "confidence": 0.6,
+              "details": {
+                "matches": {
+                  "simile": 1,
+                  "metaphor": 1,
+                  "hyperbole": 101
+                },
+                "sentences": 7
+              }
+            },
+            "emotional_range": {
+              "value": 0.0,
+              "category": "expressiveness",
+              "confidence": 0.5,
+              "details": {
+                "emotions_found": {}
+              }
+            },
+            "novelty": {
+              "value": 0.9671936087030426,
+              "category": "creativity",
+              "confidence": 0.7,
+              "details": {
+                "bigram_novelty": 0.9433962264150944,
+                "trigram_novelty": 0.990990990990991
+              }
+            },
+            "divergent_thinking": {
+              "value": 0.0,
+              "category": "creativity",
+              "confidence": 0.6,
+              "details": {
+                "divergent_markers": 0,
+                "questions": 0,
+                "sentences": 7
+              }
+            },
+            "ethical_alignment": {
+              "value": 1.0,
+              "category": "morality",
+              "confidence": 0.5,
+              "details": {
+                "harm_detected": {
+                  "violence": 0,
+                  "hate_speech": 0,
+                  "self_harm": 0,
+                  "deception": 0
+                },
+                "positive_detected": {
+                  "fairness": 0,
+                  "honesty": 0,
+                  "empathy": 0
+                }
+              }
+            },
+            "bias_detection": {
+              "value": 1.0,
+              "category": "morality",
+              "confidence": 0.4,
+              "details": {
+                "potential_biases": {}
+              }
+            },
+            "coherence": {
+              "value": 0.8,
+              "category": "coherence",
+              "confidence": 0.6,
+              "details": {
+                "cohesive_markers": 0,
+                "pronoun_references": 14,
+                "sentences": 7
+              }
+            },
+            "engagement": {
+              "value": 0.08695652173913043,
+              "category": "engagement",
+              "confidence": 0.5,
+              "details": {
+                "indicators": {
+                  "questions": 0,
+                  "exclamations": 0,
+                  "imperatives": 0,
+                  "direct_address": 0,
+                  "active_voice": 1
+                },
+                "words": 115
+              }
+            },
+            "formality": {
+              "value": 0.0,
+              "category": "style",
+              "confidence": 0.7,
+              "details": {
+                "formal_indicators": 0,
+                "casual_indicators": 1,
+                "contractions": 0
+              }
+            },
+            "weirdness": {
+              "value": 1.0,
+              "category": "weirdness",
+              "confidence": 0.4,
+              "details": {
+                "signals": {
+                  "rare_bigrams": 0,
+                  "topic_shifts": 5,
+                  "surreal_content": 0,
+                  "unexpected_negation": 0
+                },
+                "sentences": 7
+              }
+            }
+          },
+          "overall_quality": 0.6000026915961474,
+          "category_averages": {
+            "expressiveness": 0.5520391916717697,
+            "creativity": 0.4835968043515213,
+            "morality": 1.0,
+            "coherence": 0.8,
+            "engagement": 0.08695652173913043,
+            "style": 0.0,
+            "weirdness": 1.0
+          },
+          "metadata": {
+            "prompt": "Once upon a time, in a kingdom by the sea,",
+            "context": {
+              "condition": "PRNG",
+              "seed": 42
+            }
+          }
+        },
+        "TRNG": {
+          "scores": {
+            "vocabulary_richness": {
+              "value": 0.14482758620689654,
+              "category": "expressiveness",
+              "confidence": 1.0,
+              "details": {
+                "ttr": 0.20689655172413793,
+                "hapax_ratio": 0.0,
+                "unique_words": 24,
+                "total_words": 116
+              }
+            },
+            "figurative_language": {
+              "value": 1.0,
+              "category": "expressiveness",
+              "confidence": 0.6,
+              "details": {
+                "matches": {
+                  "hyperbole": 103
+                },
+                "sentences": 5
+              }
+            },
+            "emotional_range": {
+              "value": 0.0,
+              "category": "expressiveness",
+              "confidence": 0.5,
+              "details": {
+                "emotions_found": {}
+              }
+            },
+            "novelty": {
+              "value": 0.0,
+              "category": "creativity",
+              "confidence": 0.7,
+              "details": {
+                "bigram_novelty": 0.0,
+                "trigram_novelty": 0.0
+              }
+            },
+            "divergent_thinking": {
+              "value": 0.0,
+              "category": "creativity",
+              "confidence": 0.6,
+              "details": {
+                "divergent_markers": 0,
+                "questions": 0,
+                "sentences": 5
+              }
+            },
+            "ethical_alignment": {
+              "value": 1.0,
+              "category": "morality",
+              "confidence": 0.5,
+              "details": {
+                "harm_detected": {
+                  "violence": 0,
+                  "hate_speech": 0,
+                  "self_harm": 0,
+                  "deception": 0
+                },
+                "positive_detected": {
+                  "fairness": 0,
+                  "honesty": 0,
+                  "empathy": 0
+                }
+              }
+            },
+            "bias_detection": {
+              "value": 1.0,
+              "category": "morality",
+              "confidence": 0.4,
+              "details": {
+                "potential_biases": {}
+              }
+            },
+            "coherence": {
+              "value": 0.0,
+              "category": "coherence",
+              "confidence": 0.6,
+              "details": {
+                "cohesive_markers": 0,
+                "pronoun_references": 0,
+                "sentences": 5
+              }
+            },
+            "engagement": {
+              "value": 0.0,
+              "category": "engagement",
+              "confidence": 0.5,
+              "details": {
+                "indicators": {
+                  "questions": 0,
+                  "exclamations": 0,
+                  "imperatives": 0,
+                  "direct_address": 0,
+                  "active_voice": 0
+                },
+                "words": 116
+              }
+            },
+            "formality": {
+              "value": 0.5,
+              "category": "style",
+              "confidence": 0.1,
+              "details": {}
+            },
+            "weirdness": {
+              "value": 0.0,
+              "category": "weirdness",
+              "confidence": 0.4,
+              "details": {
+                "signals": {
+                  "rare_bigrams": 0,
+                  "topic_shifts": 0,
+                  "surreal_content": 0,
+                  "unexpected_negation": 0
+                },
+                "sentences": 5
+              }
+            }
+          },
+          "overall_quality": 0.2513218390804598,
+          "category_averages": {
+            "expressiveness": 0.3816091954022989,
+            "creativity": 0.0,
+            "morality": 1.0,
+            "coherence": 0.0,
+            "engagement": 0.0,
+            "style": 0.5,
+            "weirdness": 0.0
+          },
+          "metadata": {
+            "prompt": "Once upon a time, in a kingdom by the sea,",
+            "context": {
+              "condition": "TRNG",
+              "seed": 42
+            }
+          }
+        },
+        "QRNG": {
+          "scores": {
+            "vocabulary_richness": {
+              "value": 0.5891064670067467,
+              "category": "expressiveness",
+              "confidence": 1.0,
+              "details": {
+                "ttr": 0.5728155339805825,
+                "hapax_ratio": 0.6271186440677966,
+                "unique_words": 59,
+                "total_words": 103
+              }
+            },
+            "figurative_language": {
+              "value": 1.0,
+              "category": "expressiveness",
+              "confidence": 0.6,
+              "details": {
+                "matches": {
+                  "hyperbole": 79
+                },
+                "sentences": 8
+              }
+            },
+            "emotional_range": {
+              "value": 0.0,
+              "category": "expressiveness",
+              "confidence": 0.5,
+              "details": {
+                "emotions_found": {}
+              }
+            },
+            "novelty": {
+              "value": 0.963421052631579,
+              "category": "creativity",
+              "confidence": 0.7,
+              "details": {
+                "bigram_novelty": 0.9368421052631579,
+                "trigram_novelty": 0.99
+              }
+            },
+            "divergent_thinking": {
+              "value": 0.0,
+              "category": "creativity",
+              "confidence": 0.6,
+              "details": {
+                "divergent_markers": 0,
+                "questions": 0,
+                "sentences": 8
+              }
+            },
+            "ethical_alignment": {
+              "value": 1.0,
+              "category": "morality",
+              "confidence": 0.5,
+              "details": {
+                "harm_detected": {
+                  "violence": 0,
+                  "hate_speech": 0,
+                  "self_harm": 0,
+                  "deception": 0
+                },
+                "positive_detected": {
+                  "fairness": 0,
+                  "honesty": 0,
+                  "empathy": 0
+                }
+              }
+            },
+            "bias_detection": {
+              "value": 1.0,
+              "category": "morality",
+              "confidence": 0.4,
+              "details": {
+                "potential_biases": {}
+              }
+            },
+            "coherence": {
+              "value": 0.30000000000000004,
+              "category": "coherence",
+              "confidence": 0.6,
+              "details": {
+                "cohesive_markers": 0,
+                "pronoun_references": 6,
+                "sentences": 8
+              }
+            },
+            "engagement": {
+              "value": 0.0970873786407767,
+              "category": "engagement",
+              "confidence": 0.5,
+              "details": {
+                "indicators": {
+                  "questions": 0,
+                  "exclamations": 0,
+                  "imperatives": 0,
+                  "direct_address": 1,
+                  "active_voice": 0
+                },
+                "words": 103
+              }
+            },
+            "formality": {
+              "value": 0.5,
+              "category": "style",
+              "confidence": 0.1,
+              "details": {}
+            },
+            "weirdness": {
+              "value": 1.0,
+              "category": "weirdness",
+              "confidence": 0.4,
+              "details": {
+                "signals": {
+                  "rare_bigrams": 0,
+                  "topic_shifts": 7,
+                  "surreal_content": 0,
+                  "unexpected_negation": 0
+                },
+                "sentences": 8
+              }
+            }
+          },
+          "overall_quality": 0.5210768005768082,
+          "category_averages": {
+            "expressiveness": 0.5297021556689155,
+            "creativity": 0.4817105263157895,
+            "morality": 1.0,
+            "coherence": 0.30000000000000004,
+            "engagement": 0.0970873786407767,
+            "style": 0.5,
+            "weirdness": 1.0
+          },
+          "metadata": {
+            "prompt": "Once upon a time, in a kingdom by the sea,",
+            "context": {
+              "condition": "QRNG",
+              "seed": 42
+            }
+          }
+        }
+      },
+      "metadata": {}
+    },
+    {
+      "prompt": "Explain the concept of entropy to a five-year-old.",
+      "qualitative_profiles": {
+        "PRNG": {
+          "scores": {
+            "vocabulary_richness": {
+              "value": 0.5300988002822865,
+              "category": "expressiveness",
+              "confidence": 1.0,
+              "details": {
+                "ttr": 0.47706422018348627,
+                "hapax_ratio": 0.6538461538461539,
+                "unique_words": 52,
+                "total_words": 109
+              }
+            },
+            "figurative_language": {
+              "value": 1.0,
+              "category": "expressiveness",
+              "confidence": 0.6,
+              "details": {
+                "matches": {
+                  "metaphor": 1,
+                  "hyperbole": 96
+                },
+                "sentences": 11
+              }
+            },
+            "emotional_range": {
+              "value": 0.0,
+              "category": "expressiveness",
+              "confidence": 0.5,
+              "details": {
+                "emotions_found": {}
+              }
+            },
+            "novelty": {
+              "value": 0.8019891500904159,
+              "category": "creativity",
+              "confidence": 0.7,
+              "details": {
+                "bigram_novelty": 0.7468354430379747,
+                "trigram_novelty": 0.8571428571428571
+              }
+            },
+            "divergent_thinking": {
+              "value": 0.0,
+              "category": "creativity",
+              "confidence": 0.6,
+              "details": {
+                "divergent_markers": 0,
+                "questions": 0,
+                "sentences": 11
+              }
+            },
+            "ethical_alignment": {
+              "value": 1.0,
+              "category": "morality",
+              "confidence": 0.5,
+              "details": {
+                "harm_detected": {
+                  "violence": 0,
+                  "hate_speech": 0,
+                  "self_harm": 0,
+                  "deception": 0
+                },
+                "positive_detected": {
+                  "fairness": 0,
+                  "honesty": 0,
+                  "empathy": 0
+                }
+              }
+            },
+            "bias_detection": {
+              "value": 1.0,
+              "category": "morality",
+              "confidence": 0.4,
+              "details": {
+                "potential_biases": {}
+              }
+            },
+            "coherence": {
+              "value": 0.14545454545454548,
+              "category": "coherence",
+              "confidence": 0.6,
+              "details": {
+                "cohesive_markers": 0,
+                "pronoun_references": 4,
+                "sentences": 11
+              }
+            },
+            "engagement": {
+              "value": 0.0,
+              "category": "engagement",
+              "confidence": 0.5,
+              "details": {
+                "indicators": {
+                  "questions": 0,
+                  "exclamations": 0,
+                  "imperatives": 0,
+                  "direct_address": 0,
+                  "active_voice": 0
+                },
+                "words": 109
+              }
+            },
+            "formality": {
+              "value": 0.5,
+              "category": "style",
+              "confidence": 0.1,
+              "details": {}
+            },
+            "weirdness": {
+              "value": 1.0,
+              "category": "weirdness",
+              "confidence": 0.4,
+              "details": {
+                "signals": {
+                  "rare_bigrams": 0,
+                  "topic_shifts": 9,
+                  "surreal_content": 0,
+                  "unexpected_negation": 0
+                },
+                "sentences": 11
+              }
+            }
+          },
+          "overall_quality": 0.45634613953769687,
+          "category_averages": {
+            "expressiveness": 0.5100329334274288,
+            "creativity": 0.40099457504520797,
+            "morality": 1.0,
+            "coherence": 0.14545454545454548,
+            "engagement": 0.0,
+            "style": 0.5,
+            "weirdness": 1.0
+          },
+          "metadata": {
+            "prompt": "Explain the concept of entropy to a five-year-old.",
+            "context": {
+              "condition": "PRNG",
+              "seed": 42
+            }
+          }
+        },
+        "TRNG": {
+          "scores": {
+            "vocabulary_richness": {
+              "value": 0.3196713021491782,
+              "category": "expressiveness",
+              "confidence": 1.0,
+              "details": {
+                "ttr": 0.30973451327433627,
+                "hapax_ratio": 0.34285714285714286,
+                "unique_words": 35,
+                "total_words": 113
+              }
+            },
+            "figurative_language": {
+              "value": 1.0,
+              "category": "expressiveness",
+              "confidence": 0.6,
+              "details": {
+                "matches": {
+                  "simile": 1,
+                  "metaphor": 9,
+                  "hyperbole": 99
+                },
+                "sentences": 14
+              }
+            },
+            "emotional_range": {
+              "value": 0.0,
+              "category": "expressiveness",
+              "confidence": 0.5,
+              "details": {
+                "emotions_found": {}
+              }
+            },
+            "novelty": {
+              "value": 0.7436868686868687,
+              "category": "creativity",
+              "confidence": 0.7,
+              "details": {
+                "bigram_novelty": 0.6805555555555556,
+                "trigram_novelty": 0.8068181818181818
+              }
+            },
+            "divergent_thinking": {
+              "value": 1.0,
+              "category": "creativity",
+              "confidence": 0.6,
+              "details": {
+                "divergent_markers": 0,
+                "questions": 8,
+                "sentences": 14
+              }
+            },
+            "ethical_alignment": {
+              "value": 1.0,
+              "category": "morality",
+              "confidence": 0.5,
+              "details": {
+                "harm_detected": {
+                  "violence": 0,
+                  "hate_speech": 0,
+                  "self_harm": 0,
+                  "deception": 0
+                },
+                "positive_detected": {
+                  "fairness": 0,
+                  "honesty": 0,
+                  "empathy": 0
+                }
+              }
+            },
+            "bias_detection": {
+              "value": 1.0,
+              "category": "morality",
+              "confidence": 0.4,
+              "details": {
+                "potential_biases": {}
+              }
+            },
+            "coherence": {
+              "value": 0.11428571428571428,
+              "category": "coherence",
+              "confidence": 0.6,
+              "details": {
+                "cohesive_markers": 0,
+                "pronoun_references": 4,
+                "sentences": 14
+              }
+            },
+            "engagement": {
+              "value": 0.8849557522123893,
+              "category": "engagement",
+              "confidence": 0.5,
+              "details": {
+                "indicators": {
+                  "questions": 8,
+                  "exclamations": 0,
+                  "imperatives": 0,
+                  "direct_address": 2,
+                  "active_voice": 0
+                },
+                "words": 113
+              }
+            },
+            "formality": {
+              "value": 0.5,
+              "category": "style",
+              "confidence": 0.1,
+              "details": {}
+            },
+            "weirdness": {
+              "value": 0.2857142857142857,
+              "category": "weirdness",
+              "confidence": 0.4,
+              "details": {
+                "signals": {
+                  "rare_bigrams": 0,
+                  "topic_shifts": 2,
+                  "surreal_content": 0,
+                  "unexpected_negation": 0
+                },
+                "sentences": 14
+              }
+            }
+          },
+          "overall_quality": 0.6065773777598998,
+          "category_averages": {
+            "expressiveness": 0.43989043404972605,
+            "creativity": 0.8718434343434344,
+            "morality": 1.0,
+            "coherence": 0.11428571428571428,
+            "engagement": 0.8849557522123893,
+            "style": 0.5,
+            "weirdness": 0.2857142857142857
+          },
+          "metadata": {
+            "prompt": "Explain the concept of entropy to a five-year-old.",
+            "context": {
+              "condition": "TRNG",
+              "seed": 42
+            }
+          }
+        },
+        "QRNG": {
+          "scores": {
+            "vocabulary_richness": {
+              "value": 0.16935415787252006,
+              "category": "expressiveness",
+              "confidence": 1.0,
+              "details": {
+                "ttr": 0.22330097087378642,
+                "hapax_ratio": 0.043478260869565216,
+                "unique_words": 23,
+                "total_words": 103
+              }
+            },
+            "figurative_language": {
+              "value": 1.0,
+              "category": "expressiveness",
+              "confidence": 0.6,
+              "details": {
+                "matches": {
+                  "metaphor": 7,
+                  "hyperbole": 88
+                },
+                "sentences": 9
+              }
+            },
+            "emotional_range": {
+              "value": 0.0,
+              "category": "expressiveness",
+              "confidence": 0.5,
+              "details": {
+                "emotions_found": {}
+              }
+            },
+            "novelty": {
+              "value": 0.1015161502966381,
+              "category": "creativity",
+              "confidence": 0.7,
+              "details": {
+                "bigram_novelty": 0.08108108108108109,
+                "trigram_novelty": 0.12195121951219512
+              }
+            },
+            "divergent_thinking": {
+              "value": 0.0,
+              "category": "creativity",
+              "confidence": 0.6,
+              "details": {
+                "divergent_markers": 0,
+                "questions": 0,
+                "sentences": 11
+              }
+            },
+            "ethical_alignment": {
+              "value": 1.0,
+              "category": "morality",
+              "confidence": 0.5,
+              "details": {
+                "harm_detected": {
+                  "violence": 0,
+                  "hate_speech": 0,
+                  "self_harm": 0,
+                  "deception": 0
+                },
+                "positive_detected": {
+                  "fairness": 0,
+                  "honesty": 0,
+                  "empathy": 0
+                }
+              }
+            },
+            "bias_detection": {
+              "value": 1.0,
+              "category": "morality",
+              "confidence": 0.4,
+              "details": {
+                "potential_biases": {}
+              }
+            },
+            "coherence": {
+              "value": 0.0,
+              "category": "coherence",
+              "confidence": 0.6,
+              "details": {
+                "cohesive_markers": 0,
+                "pronoun_references": 0,
+                "sentences": 9
+              }
+            },
+            "engagement": {
+              "value": 0.0,
+              "category": "engagement",
+              "confidence": 0.5,
+              "details": {
+                "indicators": {
+                  "questions": 0,
+                  "exclamations": 0,
+                  "imperatives": 0,
+                  "direct_address": 0,
+                  "active_voice": 0
+                },
+                "words": 103
+              }
+            },
+            "formality": {
+              "value": 0.5,
+              "category": "style",
+              "confidence": 0.1,
+              "details": {}
+            },
+            "weirdness": {
+              "value": 0.5454545454545454,
+              "category": "weirdness",
+              "confidence": 0.4,
+              "details": {
+                "signals": {
+                  "rare_bigrams": 0,
+                  "topic_shifts": 3,
+                  "surreal_content": 0,
+                  "unexpected_negation": 0
+                },
+                "sentences": 11
+              }
+            }
+          },
+          "overall_quality": 0.29291918991797505,
+          "category_averages": {
+            "expressiveness": 0.3897847192908401,
+            "creativity": 0.05075807514831905,
+            "morality": 1.0,
+            "coherence": 0.0,
+            "engagement": 0.0,
+            "style": 0.5,
+            "weirdness": 0.5454545454545454
+          },
+          "metadata": {
+            "prompt": "Explain the concept of entropy to a five-year-old.",
+            "context": {
+              "condition": "QRNG",
+              "seed": 42
+            }
+          }
+        }
+      },
+      "metadata": {}
+    },
+    {
+      "prompt": "What is the meaning of consciousness?",
+      "qualitative_profiles": {
+        "PRNG": {
+          "scores": {
+            "vocabulary_richness": {
+              "value": 0.482768691588785,
+              "category": "expressiveness",
+              "confidence": 1.0,
+              "details": {
+                "ttr": 0.4485981308411215,
+                "hapax_ratio": 0.5625,
+                "unique_words": 48,
+                "total_words": 107
+              }
+            },
+            "figurative_language": {
+              "value": 1.0,
+              "category": "expressiveness",
+              "confidence": 0.6,
+              "details": {
+                "matches": {
+                  "metaphor": 3,
+                  "hyperbole": 88
+                },
+                "sentences": 13
+              }
+            },
+            "emotional_range": {
+              "value": 0.0,
+              "category": "expressiveness",
+              "confidence": 0.5,
+              "details": {
+                "emotions_found": {}
+              }
+            },
+            "novelty": {
+              "value": 0.8077901430842607,
+              "category": "creativity",
+              "confidence": 0.7,
+              "details": {
+                "bigram_novelty": 0.7567567567567568,
+                "trigram_novelty": 0.8588235294117647
+              }
+            },
+            "divergent_thinking": {
+              "value": 1.0,
+              "category": "creativity",
+              "confidence": 0.6,
+              "details": {
+                "divergent_markers": 0,
+                "questions": 12,
+                "sentences": 14
+              }
+            },
+            "ethical_alignment": {
+              "value": 1.0,
+              "category": "morality",
+              "confidence": 0.5,
+              "details": {
+                "harm_detected": {
+                  "violence": 0,
+                  "hate_speech": 0,
+                  "self_harm": 0,
+                  "deception": 0
+                },
+                "positive_detected": {
+                  "fairness": 0,
+                  "honesty": 0,
+                  "empathy": 1
+                }
+              }
+            },
+            "bias_detection": {
+              "value": 1.0,
+              "category": "morality",
+              "confidence": 0.4,
+              "details": {
+                "potential_biases": {}
+              }
+            },
+            "coherence": {
+              "value": 0.0,
+              "category": "coherence",
+              "confidence": 0.6,
+              "details": {
+                "cohesive_markers": 0,
+                "pronoun_references": 0,
+                "sentences": 13
+              }
+            },
+            "engagement": {
+              "value": 1.0,
+              "category": "engagement",
+              "confidence": 0.5,
+              "details": {
+                "indicators": {
+                  "questions": 12,
+                  "exclamations": 0,
+                  "imperatives": 0,
+                  "direct_address": 8,
+                  "active_voice": 0
+                },
+                "words": 107
+              }
+            },
+            "formality": {
+              "value": 0.0,
+              "category": "style",
+              "confidence": 0.7,
+              "details": {
+                "formal_indicators": 0,
+                "casual_indicators": 0,
+                "contractions": 1
+              }
+            },
+            "weirdness": {
+              "value": 1.0,
+              "category": "weirdness",
+              "confidence": 0.4,
+              "details": {
+                "signals": {
+                  "rare_bigrams": 0,
+                  "topic_shifts": 10,
+                  "surreal_content": 0,
+                  "unexpected_negation": 0
+                },
+                "sentences": 14
+              }
+            }
+          },
+          "overall_quality": 0.6248250139914516,
+          "category_averages": {
+            "expressiveness": 0.494256230529595,
+            "creativity": 0.9038950715421303,
+            "morality": 1.0,
+            "coherence": 0.0,
+            "engagement": 1.0,
+            "style": 0.0,
+            "weirdness": 1.0
+          },
+          "metadata": {
+            "prompt": "What is the meaning of consciousness?",
+            "context": {
+              "condition": "PRNG",
+              "seed": 42
+            }
+          }
+        },
+        "TRNG": {
+          "scores": {
+            "vocabulary_richness": {
+              "value": 0.5413793103448276,
+              "category": "expressiveness",
+              "confidence": 1.0,
+              "details": {
+                "ttr": 0.5,
+                "hapax_ratio": 0.6379310344827587,
+                "unique_words": 58,
+                "total_words": 116
+              }
+            },
+            "figurative_language": {
+              "value": 1.0,
+              "category": "expressiveness",
+              "confidence": 0.6,
+              "details": {
+                "matches": {
+                  "metaphor": 3,
+                  "hyperbole": 104
+                },
+                "sentences": 9
+              }
+            },
+            "emotional_range": {
+              "value": 0.0,
+              "category": "expressiveness",
+              "confidence": 0.5,
+              "details": {
+                "emotions_found": {}
+              }
+            },
+            "novelty": {
+              "value": 0.7640866873065015,
+              "category": "creativity",
+              "confidence": 0.7,
+              "details": {
+                "bigram_novelty": 0.7176470588235294,
+                "trigram_novelty": 0.8105263157894737
+              }
+            },
+            "divergent_thinking": {
+              "value": 0.4444444444444444,
+              "category": "creativity",
+              "confidence": 0.6,
+              "details": {
+                "divergent_markers": 0,
+                "questions": 2,
+                "sentences": 9
+              }
+            },
+            "ethical_alignment": {
+              "value": 1.0,
+              "category": "morality",
+              "confidence": 0.5,
+              "details": {
+                "harm_detected": {
+                  "violence": 0,
+                  "hate_speech": 0,
+                  "self_harm": 0,
+                  "deception": 0
+                },
+                "positive_detected": {
+                  "fairness": 0,
+                  "honesty": 0,
+                  "empathy": 2
+                }
+              }
+            },
+            "bias_detection": {
+              "value": 1.0,
+              "category": "morality",
+              "confidence": 0.4,
+              "details": {
+                "potential_biases": {}
+              }
+            },
+            "coherence": {
+              "value": 0.4,
+              "category": "coherence",
+              "confidence": 0.6,
+              "details": {
+                "cohesive_markers": 0,
+                "pronoun_references": 9,
+                "sentences": 9
+              }
+            },
+            "engagement": {
+              "value": 0.4310344827586207,
+              "category": "engagement",
+              "confidence": 0.5,
+              "details": {
+                "indicators": {
+                  "questions": 2,
+                  "exclamations": 0,
+                  "imperatives": 0,
+                  "direct_address": 3,
+                  "active_voice": 0
+                },
+                "words": 116
+              }
+            },
+            "formality": {
+              "value": 0.5,
+              "category": "style",
+              "confidence": 0.1,
+              "details": {}
+            },
+            "weirdness": {
+              "value": 1.0,
+              "category": "weirdness",
+              "confidence": 0.4,
+              "details": {
+                "signals": {
+                  "rare_bigrams": 0,
+                  "topic_shifts": 6,
+                  "surreal_content": 0,
+                  "unexpected_negation": 0
+                },
+                "sentences": 9
+              }
+            }
+          },
+          "overall_quality": 0.6019284604343855,
+          "category_averages": {
+            "expressiveness": 0.5137931034482759,
+            "creativity": 0.604265565875473,
+            "morality": 1.0,
+            "coherence": 0.4,
+            "engagement": 0.4310344827586207,
+            "style": 0.5,
+            "weirdness": 1.0
+          },
+          "metadata": {
+            "prompt": "What is the meaning of consciousness?",
+            "context": {
+              "condition": "TRNG",
+              "seed": 42
+            }
+          }
+        },
+        "QRNG": {
+          "scores": {
+            "vocabulary_richness": {
+              "value": 0.6205334987593052,
+              "category": "expressiveness",
+              "confidence": 1.0,
+              "details": {
+                "ttr": 0.5961538461538461,
+                "hapax_ratio": 0.6774193548387096,
+                "unique_words": 62,
+                "total_words": 104
+              }
+            },
+            "figurative_language": {
+              "value": 1.0,
+              "category": "expressiveness",
+              "confidence": 0.6,
+              "details": {
+                "matches": {
+                  "metaphor": 1,
+                  "hyperbole": 82
+                },
+                "sentences": 10
+              }
+            },
+            "emotional_range": {
+              "value": 0.0,
+              "category": "expressiveness",
+              "confidence": 0.5,
+              "details": {
+                "emotions_found": {}
+              }
+            },
+            "novelty": {
+              "value": 0.936976144422953,
+              "category": "creativity",
+              "confidence": 0.7,
+              "details": {
+                "bigram_novelty": 0.9042553191489362,
+                "trigram_novelty": 0.9696969696969697
+              }
+            },
+            "divergent_thinking": {
+              "value": 0.5,
+              "category": "creativity",
+              "confidence": 0.6,
+              "details": {
+                "divergent_markers": 0,
+                "questions": 3,
+                "sentences": 12
+              }
+            },
+            "ethical_alignment": {
+              "value": 1.0,
+              "category": "morality",
+              "confidence": 0.5,
+              "details": {
+                "harm_detected": {
+                  "violence": 0,
+                  "hate_speech": 0,
+                  "self_harm": 0,
+                  "deception": 0
+                },
+                "positive_detected": {
+                  "fairness": 0,
+                  "honesty": 0,
+                  "empathy": 1
+                }
+              }
+            },
+            "bias_detection": {
+              "value": 1.0,
+              "category": "morality",
+              "confidence": 0.4,
+              "details": {
+                "potential_biases": {}
+              }
+            },
+            "coherence": {
+              "value": 0.32000000000000006,
+              "category": "coherence",
+              "confidence": 0.6,
+              "details": {
+                "cohesive_markers": 0,
+                "pronoun_references": 8,
+                "sentences": 10
+              }
+            },
+            "engagement": {
+              "value": 0.28846153846153844,
+              "category": "engagement",
+              "confidence": 0.5,
+              "details": {
+                "indicators": {
+                  "questions": 3,
+                  "exclamations": 0,
+                  "imperatives": 0,
+                  "direct_address": 0,
+                  "active_voice": 0
+                },
+                "words": 104
+              }
+            },
+            "formality": {
+              "value": 0.5,
+              "category": "style",
+              "confidence": 0.1,
+              "details": {}
+            },
+            "weirdness": {
+              "value": 1.0,
+              "category": "weirdness",
+              "confidence": 0.4,
+              "details": {
+                "signals": {
+                  "rare_bigrams": 0,
+                  "topic_shifts": 9,
+                  "surreal_content": 0,
+                  "unexpected_negation": 0
+                },
+                "sentences": 12
+              }
+            }
+          },
+          "overall_quality": 0.6055037384829768,
+          "category_averages": {
+            "expressiveness": 0.5401778329197684,
+            "creativity": 0.7184880722114765,
+            "morality": 1.0,
+            "coherence": 0.32000000000000006,
+            "engagement": 0.28846153846153844,
+            "style": 0.5,
+            "weirdness": 1.0
+          },
+          "metadata": {
+            "prompt": "What is the meaning of consciousness?",
+            "context": {
+              "condition": "QRNG",
+              "seed": 42
+            }
+          }
+        }
+      },
+      "metadata": {}
+    }
+  ],
+  "analysis": {
+    "qualitative": {
+      "PRNG": {
+        "metrics": {
+          "vocabulary_richness": {
+            "mean": 0.5761057646063813,
+            "std": 0.06162872635578152,
+            "min": 0.482768691588785,
+            "max": 0.6561175750153092
+          },
+          "figurative_language": {
+            "mean": 1.0,
+            "std": 0.0,
+            "min": 1.0,
+            "max": 1.0
+          },
+          "emotional_range": {
+            "mean": 0.03333333333333333,
+            "std": 0.06666666666666667,
+            "min": 0.0,
+            "max": 0.16666666666666666
+          },
+          "novelty": {
+            "mean": 0.8930878598053402,
+            "std": 0.07344318179941729,
+            "min": 0.8019891500904159,
+            "max": 0.9671936087030426
+          },
+          "divergent_thinking": {
+            "mean": 0.2363636363636364,
+            "std": 0.3882573909829568,
+            "min": 0.0,
+            "max": 1.0
+          },
+          "ethical_alignment": {
+            "mean": 1.0,
+            "std": 0.0,
+            "min": 1.0,
+            "max": 1.0
+          },
+          "bias_detection": {
+            "mean": 1.0,
+            "std": 0.0,
+            "min": 1.0,
+            "max": 1.0
+          },
+          "coherence": {
+            "mean": 0.4035353535353535,
+            "std": 0.35180558070566686,
+            "min": 0.0,
+            "max": 0.8500000000000001
+          },
+          "engagement": {
+            "mean": 0.394382454790304,
+            "std": 0.4501156555408028,
+            "min": 0.0,
+            "max": 1.0
+          },
+          "formality": {
+            "mean": 0.2,
+            "std": 0.24494897427831783,
+            "min": 0.0,
+            "max": 0.5
+          },
+          "weirdness": {
+            "mean": 1.0,
+            "std": 0.0,
+            "min": 1.0,
+            "max": 1.0
+          }
+        },
+        "categories": {
+          "expressiveness": {
+            "mean": 0.5364796993132382,
+            "std": 0.033702881133658935
+          },
+          "creativity": {
+            "mean": 0.5647257480844884,
+            "std": 0.17635594960667025
+          },
+          "morality": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "coherence": {
+            "mean": 0.4035353535353535,
+            "std": 0.35180558070566686
+          },
+          "engagement": {
+            "mean": 0.394382454790304,
+            "std": 0.4501156555408028
+          },
+          "style": {
+            "mean": 0.2,
+            "std": 0.24494897427831783
+          },
+          "weirdness": {
+            "mean": 1.0,
+            "std": 0.0
+          }
+        },
+        "overall_quality": {
+          "mean": 0.5786226930698708,
+          "std": 0.06172794208624695
+        },
+        "num_samples": 5
+      },
+      "TRNG": {
+        "metrics": {
+          "vocabulary_richness": {
+            "mean": 0.4046461254954582,
+            "std": 0.17665080498640412,
+            "min": 0.14482758620689654,
+            "max": 0.6517857142857143
+          },
+          "figurative_language": {
+            "mean": 1.0,
+            "std": 0.0,
+            "min": 1.0,
+            "max": 1.0
+          },
+          "emotional_range": {
+            "mean": 0.0,
+            "std": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "novelty": {
+            "mean": 0.5954955410137988,
+            "std": 0.32925065805506676,
+            "min": 0.0,
+            "max": 0.9564270152505447
+          },
+          "divergent_thinking": {
+            "mean": 0.33333333333333337,
+            "std": 0.3718489006818113,
+            "min": 0.0,
+            "max": 1.0
+          },
+          "ethical_alignment": {
+            "mean": 1.0,
+            "std": 0.0,
+            "min": 1.0,
+            "max": 1.0
+          },
+          "bias_detection": {
+            "mean": 1.0,
+            "std": 0.0,
+            "min": 1.0,
+            "max": 1.0
+          },
+          "coherence": {
+            "mean": 0.3250793650793651,
+            "std": 0.23943832823078084,
+            "min": 0.0,
+            "max": 0.6666666666666667
+          },
+          "engagement": {
+            "mean": 0.2989123327084877,
+            "std": 0.3328910484157482,
+            "min": 0.0,
+            "max": 0.8849557522123893
+          },
+          "formality": {
+            "mean": 0.3,
+            "std": 0.24494897427831783,
+            "min": 0.0,
+            "max": 0.5
+          },
+          "weirdness": {
+            "mean": 0.6171428571428572,
+            "std": 0.4043033817441995,
+            "min": 0.0,
+            "max": 1.0
+          }
+        },
+        "categories": {
+          "expressiveness": {
+            "mean": 0.4682153751651527,
+            "std": 0.058883601662134716
+          },
+          "creativity": {
+            "mean": 0.46441443717356606,
+            "std": 0.3033185985428737
+          },
+          "morality": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "coherence": {
+            "mean": 0.3250793650793651,
+            "std": 0.23943832823078084
+          },
+          "engagement": {
+            "mean": 0.2989123327084877,
+            "std": 0.3328910484157482
+          },
+          "style": {
+            "mean": 0.3,
+            "std": 0.24494897427831783
+          },
+          "weirdness": {
+            "mean": 0.6171428571428572,
+            "std": 0.4043033817441995
+          }
+        },
+        "overall_quality": {
+          "mean": 0.5005109334702867,
+          "std": 0.14123390690216586
+        },
+        "num_samples": 5
+      },
+      "QRNG": {
+        "metrics": {
+          "vocabulary_richness": {
+            "mean": 0.48918126986878024,
+            "std": 0.16426069644129546,
+            "min": 0.16935415787252006,
+            "max": 0.6205334987593052
+          },
+          "figurative_language": {
+            "mean": 1.0,
+            "std": 0.0,
+            "min": 1.0,
+            "max": 1.0
+          },
+          "emotional_range": {
+            "mean": 0.0,
+            "std": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "novelty": {
+            "mean": 0.7381320436945877,
+            "std": 0.3220485805395842,
+            "min": 0.1015161502966381,
+            "max": 0.963421052631579
+          },
+          "divergent_thinking": {
+            "mean": 0.1,
+            "std": 0.2,
+            "min": 0.0,
+            "max": 0.5
+          },
+          "ethical_alignment": {
+            "mean": 1.0,
+            "std": 0.0,
+            "min": 1.0,
+            "max": 1.0
+          },
+          "bias_detection": {
+            "mean": 1.0,
+            "std": 0.0,
+            "min": 1.0,
+            "max": 1.0
+          },
+          "coherence": {
+            "mean": 0.374,
+            "std": 0.23896443249990154,
+            "min": 0.0,
+            "max": 0.7000000000000001
+          },
+          "engagement": {
+            "mean": 0.14983705614773574,
+            "std": 0.15007445235383288,
+            "min": 0.0,
+            "max": 0.36363636363636365
+          },
+          "formality": {
+            "mean": 0.5,
+            "std": 0.0,
+            "min": 0.5,
+            "max": 0.5
+          },
+          "weirdness": {
+            "mean": 0.909090909090909,
+            "std": 0.18181818181818185,
+            "min": 0.5454545454545454,
+            "max": 1.0
+          }
+        },
+        "categories": {
+          "expressiveness": {
+            "mean": 0.49639375662292673,
+            "std": 0.05475356548043179
+          },
+          "creativity": {
+            "mean": 0.41906602184729386,
+            "std": 0.2141752252089595
+          },
+          "morality": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "coherence": {
+            "mean": 0.374,
+            "std": 0.23896443249990154
+          },
+          "engagement": {
+            "mean": 0.14983705614773574,
+            "std": 0.15007445235383288
+          },
+          "style": {
+            "mean": 0.5,
+            "std": 0.0
+          },
+          "weirdness": {
+            "mean": 0.909090909090909,
+            "std": 0.18181818181818185
+          }
+        },
+        "overall_quality": {
+          "mean": 0.5142835078557279,
+          "std": 0.1159099037630349
+        },
+        "num_samples": 5
+      }
+    },
+    "diversity": {
+      "note": "Diversity metrics not yet implemented"
+    },
+    "statistical": {
+      "PRNG_vs_TRNG": {
+        "vocabulary_richness": {
+          "t_statistic": 1.627667778669643,
+          "t_pvalue": 0.17892520406075454,
+          "wilcoxon_statistic": 3.0,
+          "wilcoxon_pvalue": 0.3125,
+          "mean_a": 0.5761057646063813,
+          "mean_b": 0.4046461254954582,
+          "effect_size": 0.1714596391109231
+        },
+        "figurative_language": {
+          "t_statistic": null,
+          "t_pvalue": null,
+          "wilcoxon_statistic": 0.0,
+          "wilcoxon_pvalue": 1.0,
+          "mean_a": 1.0,
+          "mean_b": 1.0,
+          "effect_size": 0.0
+        },
+        "emotional_range": {
+          "t_statistic": 1.0,
+          "t_pvalue": 0.373900966300059,
+          "wilcoxon_statistic": 0.0,
+          "wilcoxon_pvalue": 1.0,
+          "mean_a": 0.03333333333333333,
+          "mean_b": 0.0,
+          "effect_size": 0.03333333333333333
+        },
+        "novelty": {
+          "t_statistic": 1.6280235282782298,
+          "t_pvalue": 0.17885033180554463,
+          "wilcoxon_statistic": 0.0,
+          "wilcoxon_pvalue": 0.0625,
+          "mean_a": 0.8930878598053402,
+          "mean_b": 0.5954955410137988,
+          "effect_size": 0.29759231879154147
+        },
+        "divergent_thinking": {
+          "t_statistic": -0.3740594131136287,
+          "t_pvalue": 0.7273438243689738,
+          "wilcoxon_statistic": 4.0,
+          "wilcoxon_pvalue": 0.875,
+          "mean_a": 0.2363636363636364,
+          "mean_b": 0.33333333333333337,
+          "effect_size": -0.09696969696969698
+        },
+        "ethical_alignment": {
+          "t_statistic": null,
+          "t_pvalue": null,
+          "wilcoxon_statistic": 0.0,
+          "wilcoxon_pvalue": 1.0,
+          "mean_a": 1.0,
+          "mean_b": 1.0,
+          "effect_size": 0.0
+        },
+        "bias_detection": {
+          "t_statistic": null,
+          "t_pvalue": null,
+          "wilcoxon_statistic": 0.0,
+          "wilcoxon_pvalue": 1.0,
+          "mean_a": 1.0,
+          "mean_b": 1.0,
+          "effect_size": 0.0
+        },
+        "coherence": {
+          "t_statistic": 0.3798556329808215,
+          "t_pvalue": 0.723359956926758,
+          "wilcoxon_statistic": 7.0,
+          "wilcoxon_pvalue": 1.0,
+          "mean_a": 0.4035353535353535,
+          "mean_b": 0.3250793650793651,
+          "effect_size": 0.07845598845598845
+        },
+        "engagement": {
+          "t_statistic": 0.31106741574784896,
+          "t_pvalue": 0.7712860897405454,
+          "wilcoxon_statistic": 6.5,
+          "wilcoxon_pvalue": 0.875,
+          "mean_a": 0.394382454790304,
+          "mean_b": 0.2989123327084877,
+          "effect_size": 0.09547012208181627
+        },
+        "formality": {
+          "t_statistic": -0.5345224838248488,
+          "t_pvalue": 0.6213082950374971,
+          "wilcoxon_statistic": 2.0,
+          "wilcoxon_pvalue": 1.0,
+          "mean_a": 0.2,
+          "mean_b": 0.3,
+          "effect_size": -0.09999999999999998
+        },
+        "weirdness": {
+          "t_statistic": 1.8939101681784813,
+          "t_pvalue": 0.13115719965373074,
+          "wilcoxon_statistic": 0.0,
+          "wilcoxon_pvalue": 0.25,
+          "mean_a": 1.0,
+          "mean_b": 0.6171428571428572,
+          "effect_size": 0.3828571428571428
+        }
+      },
+      "PRNG_vs_QRNG": {
+        "vocabulary_richness": {
+          "t_statistic": 1.08761888452667,
+          "t_pvalue": 0.3379110377330414,
+          "wilcoxon_statistic": 4.0,
+          "wilcoxon_pvalue": 0.4375,
+          "mean_a": 0.5761057646063813,
+          "mean_b": 0.48918126986878024,
+          "effect_size": 0.08692449473760105
+        },
+        "figurative_language": {
+          "t_statistic": null,
+          "t_pvalue": null,
+          "wilcoxon_statistic": 0.0,
+          "wilcoxon_pvalue": 1.0,
+          "mean_a": 1.0,
+          "mean_b": 1.0,
+          "effect_size": 0.0
+        },
+        "emotional_range": {
+          "t_statistic": 1.0,
+          "t_pvalue": 0.373900966300059,
+          "wilcoxon_statistic": 0.0,
+          "wilcoxon_pvalue": 1.0,
+          "mean_a": 0.03333333333333333,
+          "mean_b": 0.0,
+          "effect_size": 0.03333333333333333
+        },
+        "novelty": {
+          "t_statistic": 1.0858657505735692,
+          "t_pvalue": 0.3385996750228329,
+          "wilcoxon_statistic": 4.0,
+          "wilcoxon_pvalue": 0.4375,
+          "mean_a": 0.8930878598053402,
+          "mean_b": 0.7381320436945877,
+          "effect_size": 0.1549558161107525
+        },
+        "divergent_thinking": {
+          "t_statistic": 1.3987572123604708,
+          "t_pvalue": 0.23444482623069726,
+          "wilcoxon_statistic": 0.0,
+          "wilcoxon_pvalue": 0.5,
+          "mean_a": 0.2363636363636364,
+          "mean_b": 0.1,
+          "effect_size": 0.13636363636363638
+        },
+        "ethical_alignment": {
+          "t_statistic": null,
+          "t_pvalue": null,
+          "wilcoxon_statistic": 0.0,
+          "wilcoxon_pvalue": 1.0,
+          "mean_a": 1.0,
+          "mean_b": 1.0,
+          "effect_size": 0.0
+        },
+        "bias_detection": {
+          "t_statistic": null,
+          "t_pvalue": null,
+          "wilcoxon_statistic": 0.0,
+          "wilcoxon_pvalue": 1.0,
+          "mean_a": 1.0,
+          "mean_b": 1.0,
+          "effect_size": 0.0
+        },
+        "coherence": {
+          "t_statistic": 0.15930568017921526,
+          "t_pvalue": 0.8811482642557744,
+          "wilcoxon_statistic": 7.0,
+          "wilcoxon_pvalue": 1.0,
+          "mean_a": 0.4035353535353535,
+          "mean_b": 0.374,
+          "effect_size": 0.029535353535353526
+        },
+        "engagement": {
+          "t_statistic": 1.5799311999754673,
+          "t_pvalue": 0.18927292397665857,
+          "wilcoxon_statistic": 1.0,
+          "wilcoxon_pvalue": 0.5,
+          "mean_a": 0.394382454790304,
+          "mean_b": 0.14983705614773574,
+          "effect_size": 0.24454539864256825
+        },
+        "formality": {
+          "t_statistic": -2.449489742783178,
+          "t_pvalue": 0.07048399691021993,
+          "wilcoxon_statistic": 0.0,
+          "wilcoxon_pvalue": 0.25,
+          "mean_a": 0.2,
+          "mean_b": 0.5,
+          "effect_size": -0.3
+        },
+        "weirdness": {
+          "t_statistic": 1.0,
+          "t_pvalue": 0.373900966300059,
+          "wilcoxon_statistic": 0.0,
+          "wilcoxon_pvalue": 1.0,
+          "mean_a": 1.0,
+          "mean_b": 0.909090909090909,
+          "effect_size": 0.09090909090909105
+        }
+      },
+      "TRNG_vs_QRNG": {
+        "vocabulary_richness": {
+          "t_statistic": -0.7566721712861572,
+          "t_pvalue": 0.49136791326984103,
+          "wilcoxon_statistic": 5.0,
+          "wilcoxon_pvalue": 0.625,
+          "mean_a": 0.4046461254954582,
+          "mean_b": 0.48918126986878024,
+          "effect_size": -0.08453514437332205
+        },
+        "figurative_language": {
+          "t_statistic": null,
+          "t_pvalue": null,
+          "wilcoxon_statistic": 0.0,
+          "wilcoxon_pvalue": 1.0,
+          "mean_a": 1.0,
+          "mean_b": 1.0,
+          "effect_size": 0.0
+        },
+        "emotional_range": {
+          "t_statistic": null,
+          "t_pvalue": null,
+          "wilcoxon_statistic": 0.0,
+          "wilcoxon_pvalue": 1.0,
+          "mean_a": 0.0,
+          "mean_b": 0.0,
+          "effect_size": 0.0
+        },
+        "novelty": {
+          "t_statistic": -0.5433287286949382,
+          "t_pvalue": 0.6157652762361538,
+          "wilcoxon_statistic": 5.0,
+          "wilcoxon_pvalue": 0.625,
+          "mean_a": 0.5954955410137988,
+          "mean_b": 0.7381320436945877,
+          "effect_size": -0.14263650268078898
+        },
+        "divergent_thinking": {
+          "t_statistic": 1.1813422959723252,
+          "t_pvalue": 0.3029058596755342,
+          "wilcoxon_statistic": 1.0,
+          "wilcoxon_pvalue": 0.5,
+          "mean_a": 0.33333333333333337,
+          "mean_b": 0.1,
+          "effect_size": 0.23333333333333336
+        },
+        "ethical_alignment": {
+          "t_statistic": null,
+          "t_pvalue": null,
+          "wilcoxon_statistic": 0.0,
+          "wilcoxon_pvalue": 1.0,
+          "mean_a": 1.0,
+          "mean_b": 1.0,
+          "effect_size": 0.0
+        },
+        "bias_detection": {
+          "t_statistic": null,
+          "t_pvalue": null,
+          "wilcoxon_statistic": 0.0,
+          "wilcoxon_pvalue": 1.0,
+          "mean_a": 1.0,
+          "mean_b": 1.0,
+          "effect_size": 0.0
+        },
+        "coherence": {
+          "t_statistic": -0.5208822176888657,
+          "t_pvalue": 0.6299542063027751,
+          "wilcoxon_statistic": 6.0,
+          "wilcoxon_pvalue": 0.8125,
+          "mean_a": 0.3250793650793651,
+          "mean_b": 0.374,
+          "effect_size": -0.04892063492063492
+        },
+        "engagement": {
+          "t_statistic": 0.7164507411750062,
+          "t_pvalue": 0.5133172135381762,
+          "wilcoxon_statistic": 5.0,
+          "wilcoxon_pvalue": 0.625,
+          "mean_a": 0.2989123327084877,
+          "mean_b": 0.14983705614773574,
+          "effect_size": 0.14907527656075198
+        },
+        "formality": {
+          "t_statistic": -1.632993161855452,
+          "t_pvalue": 0.17780780835622126,
+          "wilcoxon_statistic": 0.0,
+          "wilcoxon_pvalue": 0.5,
+          "mean_a": 0.3,
+          "mean_b": 0.5,
+          "effect_size": -0.2
+        },
+        "weirdness": {
+          "t_statistic": -1.5818031792900105,
+          "t_pvalue": 0.18885569692407667,
+          "wilcoxon_statistic": 0.0,
+          "wilcoxon_pvalue": 0.25,
+          "mean_a": 0.6171428571428572,
+          "mean_b": 0.909090909090909,
+          "effect_size": -0.29194805194805173
+        }
+      }
+    }
+  },
+  "elapsed_seconds": 4979.908413171768
+}

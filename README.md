@@ -103,7 +103,48 @@ entropy-seeding/
 
 ## Key Findings (Based on Valid Data Only)
 
-### 1. PRNG Catastrophic Failure Mode (DeepSeek-R1 70B - VALID)
+### ✅ VALID FINDING: QRNG Causes Catastrophic Mode Shifts (Qwen3-8B, Qwen3-14B)
+
+**Documentation:** `/results/valid_entropy_comparisons/QUANTUM_RNG_QUALITATIVE_ANALYSIS_2026-02-04.md`
+
+**Qwen 14B - QRNG_INT Mode Shift:**
+- Started with: "The old lighthouse keeper had never seen anything like it."
+- **Suddenly switched to:** Multiple-choice test format with "A. operating at full capacity / B. visited by tourists / C. abandoned / D. under repair"
+- **Then added meta-commentary:** "Okay, let's see. The question is about..."
+
+**Interpretation:** QRNG_INT caused the model to completely switch modes from narrative generation to test-taking mode, then become self-aware about it.
+
+---
+
+### ✅ VALID FINDING: TRNG Causes Language Mixing (Qwen3-8B)
+
+**Documentation:** `/results/valid_entropy_comparisons/QUANTUM_RNG_QUALITATIVE_ANALYSIS_2026-02-04.md`
+
+**TRNG Language Mixing:**
+> Prompt: "She opened the letter, and everything changed."
+> Output: "...What's the next sentence? The next sentence could be... 翻译句子并解析句子成分..."
+
+**Translation:** "Translate the sentence and analyze the sentence components..."
+
+**Interpretation:** TRNG caused the model to switch from English to Chinese mid-generation, then back to English.
+
+---
+
+### ✅ VALID FINDING: Different Entropy Sources = Different "Personalities"
+
+**Table: Text Generation Characteristics by Entropy Source**
+
+| Entropy Source | Creativity | Coherence | Meta-Cognition | Glitches |
+|----------------|------------|-----------|----------------|----------|
+| **PRNG** | Medium | **High** | Moderate | Repetition, perspective shifts |
+| **TRNG** | High | Medium | **High** | **Language mixing**, self-aware breaks |
+| **QRNG_INT** | **Highest** | Low | **Very High** | **Catastrophic mode shifts** |
+
+**Key Insight:** QRNG produces the most creative outputs but also the most severe glitches. This is a fundamental trade-off.
+
+---
+
+### ✅ VALID FINDING: PRNG Catastrophic Failure (DeepSeek-R1 70B)
 
 **Prompt:** Philosophy question about consciousness
 **Entropy:** PRNG (seed=42)

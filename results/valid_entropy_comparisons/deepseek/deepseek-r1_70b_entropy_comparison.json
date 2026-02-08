@@ -1,0 +1,70 @@
+{
+  "model": "deepseek-r1:70b",
+  "timestamp": "2026-02-05 05:23:34",
+  "prompts": {
+    "color": {
+      "PRNG": {
+        "shannon_char": 4.412046473129114,
+        "shannon_word": 6.825007216441474,
+        "perplexity": 199.2505846514489,
+        "burstiness": 0.4505599687446957,
+        "repetition": 0.02425145526159852,
+        "uniqueness": 0.6067176870748299,
+        "tsa": 4.14695270031644,
+        "tre": 6.825007216441474
+      },
+      "TRNG": {
+        "shannon_char": 4.465526326853389,
+        "shannon_word": 6.526479095304737,
+        "perplexity": 196.3428759099162,
+        "burstiness": 0.23987132839752173,
+        "repetition": 0.012802256100966103,
+        "uniqueness": 0.6530598318593732,
+        "tsa": 4.198330651773196,
+        "tre": 6.526479095304737
+      },
+      "QRNG-IBM": {
+        "shannon_char": 4.413820629627294,
+        "shannon_word": 6.793024776525637,
+        "perplexity": 197.99651151546283,
+        "burstiness": 0.2768901507241045,
+        "repetition": 0.022093840421814698,
+        "uniqueness": 0.5784490270113274,
+        "tsa": 4.151644871487794,
+        "tre": 6.793024776525637
+      }
+    },
+    "philosophy": {
+      "PRNG": {
+        "shannon_char": 0.0,
+        "shannon_word": 0.0,
+        "perplexity": Infinity,
+        "burstiness": 0.0,
+        "repetition": 0.0,
+        "uniqueness": 0.0,
+        "tsa": 0.0,
+        "tre": 0.0
+      },
+      "TRNG": {
+        "shannon_char": 4.437300641552347,
+        "shannon_word": 6.792920238336972,
+        "perplexity": 195.73567104950337,
+        "burstiness": 0.6457191034461502,
+        "repetition": 0.0607681741482938,
+        "uniqueness": 0.5020991933320955,
+        "tsa": 4.159609896332407,
+        "tre": 6.792920238336972
+      },
+      "QRNG-IBM": {
+        "shannon_char": 2.240408491305133,
+        "shannon_word": 2.5859640474436816,
+        "perplexity": Infinity,
+        "burstiness": 0.35887656023322345,
+        "repetition": 0.0,
+        "uniqueness": 0.4625,
+        "tsa": 2.087392127071422,
+        "tre": 2.5859640474436816
+      }
+    }
+  }
+}

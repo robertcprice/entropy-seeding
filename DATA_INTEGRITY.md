@@ -1,15 +1,17 @@
 # Data Integrity Assessment
 
 **Last Updated:** 2026-02-08
-**Status:** CRITICAL FINDINGS - Partial Data Invalidity
+**Status:** CLARIFIED - Multiple Experiment Datasets with Different Validity
 
 ## Executive Summary
 
-This repository contains mixed valid and invalid experimental data. A significant portion of the Qwen model results (0.6B, 1.7B, 8B, 14B) show identical outputs across different entropy seeds, indicating those results **cannot be used** for entropy source comparisons. However, valid entropy source comparison data exists for DeepSeek-R1 models.
+This repository contains **multiple distinct experimental datasets**. Some datasets have invalid data (identical outputs), while OTHER datasets contain VALID results showing real entropy source effects including language mixing, mode shifts, and catastrophic failures.
 
-## Valid Data Sources
+**IMPORTANT:** Do not confuse the `hidden_variance_selfseed` results (INVALID) with the `quantum_activation` / `neural_feedback_quantum` results (VALID).
 
-### DeepSeek-R1 Entropy Comparisons (✅ VALID)
+## Valid Data Sources (✅)
+
+### 1. DeepSeek-R1 Entropy Comparisons (✅ VALID)
 
 **Files:**
 - `/vast_results/deepseek-r1_70b_entropy_comparison.json`
@@ -33,6 +35,60 @@ QRNG:  Shannon = 2.24, Perplexity = ∞ (PARTIAL FAILURE)
 - PRNG: Named color "Elyndor" (fantasy theme)
 - TRNG: Named color "Aurorin" (celestial theme)
 - QRNG: Named color "Lunaris" (astronomical theme)
+
+---
+
+### 2. Qwen3-8B / Qwen3-14B Quantum Activation Results (✅ VALID - REAL EFFECTS!)
+
+**Location:** `/Users/bobbyprice/projects/entropy/results/quantum_activation/` and `/results/neural_feedback_quantum/`
+
+**Documentation:** `/docs/QUANTUM_RNG_QUALITATIVE_ANALYSIS_2026-02-04.md`
+
+**What These Contain:**
+- **REAL qualitative differences** between PRNG, TRNG, and QRNG_INT
+- **Language mixing glitches** (TRNG produced Chinese text mid-generation)
+- **Catastrophic mode shifts** (QRNG switched from narrative to multiple-choice test format)
+- **Meta-cognitive behaviors** (self-aware commentary)
+- **Creativity differences** by entropy source
+
+**Key Valid Findings:**
+
+**Language Mixing (TRNG):**
+> "翻译句子并解析句子成分..." (Chinese text appeared mid-generation)
+
+**Mode Shift (QRNG_INT on Qwen 14B):**
+> Started with narrative: "The old lighthouse keeper had never seen anything like it."
+> Switched to: "A. operating at full capacity / B. visited by tourists / C. abandoned / D. under repair"
+> Then meta-commentary: "Okay, let's see. The question is about..."
+
+**Creativity Differences:**
+- **QRNG_INT**: Highest creativity, surreal imagery, but prone to catastrophic glitches
+- **TRNG**: Good creativity, sensory details, but language mixing issues
+- **PRNG**: Most coherent, but shows repetition and moderate meta-cognition
+
+**Files:**
+- `quantum_activation_fixed_Qwen_Qwen3-8B_20260203_152746.json` (3.6MB)
+- `quantum_inverted_Qwen_Qwen3-8B_20260203_154311.json` (3.5MB)
+- `quantum_activation_Qwen_Qwen3-8B_20260203_142215.json` (2.5MB)
+- `quantum_only_Qwen_Qwen3-8B_20260203_182321.json` (123KB)
+- `temperature_sweep_Qwen_Qwen3-8B_20260203_161950.json` (224KB)
+- `complete_with_qrng_20260205_145740.json` (colored entropy variants)
+- Multiple neural_feedback_quantum experiment files (0.6B, 4B, 8B, 14B)
+- **All copied to:** `/results/valid_entropy_comparisons/qwen_quantum_activation/`
+
+**Evidence Report:** `/docs/seeding/ENTROPY_SEEDING_EVIDENCE_REPORT_2026-02-06.md`
+
+---
+
+### 3. Other Valid Qwen Results (✅ VALID)
+
+**8B Comprehensive Results:** `/8B_comprehensive_results.json`
+- Shows PRNG vs neural seeding comparisons with different text outputs
+- Valid entropy comparisons
+
+**RNG Comparison Quick:** `/data/rng_comparison_quick/rng_comparison_quick_results_20260203_180635.json`
+- PRNG vs TRNG vs QRNG comparisons
+- Different qualitative profiles for each source
 
 ## Invalid Data Sources (⚠️ DO NOT USE FOR ENTROPY COMPARISONS)
 
