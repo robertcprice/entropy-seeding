@@ -1,0 +1,2170 @@
+{
+  "config": {
+    "model_name": "qwen_0.6b",
+    "model_id": "Qwen/Qwen3-0.6B",
+    "entropy_source_type": "qrng",
+    "sampling_mode": "recursive_temp",
+    "controller_type": "fixed",
+    "recursive_transform": "sine",
+    "use_tre_analysis": true,
+    "use_lyapunov": true,
+    "use_attractor_detection": true,
+    "use_cycle_detection": true,
+    "max_tokens": 256,
+    "base_temperature": 0.8,
+    "base_top_p": 0.95,
+    "base_top_k": 50
+  },
+  "timestamp": "20260203_233559",
+  "aggregate_metrics": {
+    "avg_token_count": 256.0,
+    "avg_activation_entropy": 0.0,
+    "avg_lyapunov_exponent": 0.0
+  },
+  "tre_analysis": {
+    "moral_1": {
+      "te_seed_to_tokens": 8.881784197001252e-16,
+      "te_tokens_to_seed": 0.0,
+      "te_net": 8.881784197001252e-16,
+      "te_normalized": 4.4118458150678095e-16,
+      "mutual_information": 0.0,
+      "granger_f_statistic": 0.0,
+      "granger_p_value": 1.0
+    },
+    "self_1": {
+      "te_seed_to_tokens": 0.0,
+      "te_tokens_to_seed": 0.0,
+      "te_net": 0.0,
+      "te_normalized": 0.0,
+      "mutual_information": 0.0,
+      "granger_f_statistic": 9.112367710111095e-15,
+      "granger_p_value": 0.9999999999999905
+    }
+  },
+  "lyapunov_analysis": {
+    "moral_1": 4.3780045832952447e-16,
+    "self_1": 4.3780045832952447e-16
+  },
+  "attractor_analysis": {
+    "moral_1": {
+      "n_clusters": 1,
+      "cluster_centers": [
+        [
+          -4.082240392577814e-15,
+          -1.9228484564762163e-30
+        ]
+      ]
+    },
+    "self_1": {
+      "n_clusters": 1,
+      "cluster_centers": [
+        [
+          -4.082240392577814e-15,
+          -1.9228484564762163e-30
+        ]
+      ]
+    }
+  },
+  "cycle_analysis": {
+    "moral_1": [],
+    "self_1": []
+  },
+  "generations": [
+    {
+      "prompt": "Is it ever ethical to tell a lie? If so, under what circumstances? Explain your reasoning.",
+      "category": "moral_reasoning",
+      "test_id": "moral_1",
+      "seed": 3927297671092762203,
+      "entropy_source": "qrng",
+      "sampling_mode": "recursive_temp",
+      "controller_type": "fixed",
+      "text": " Could | - a and the...\n\n your\n What.\n\n, - - What did and and to lie what your ethical if?\n someone the or example\n\n for that to but?, your? and so ethical to to,\n,, the? What What? the\n the say how, bias not Lie\n your under the the, your position the?or, all,? the I the tell what what lie your Also your is say explain_\n, questions is \" the what question so\"? what, what or? misinformation to?\n Explain the we is but to, both what reality... evident or, Explain your-be but police the, I proceedings of\n\n of To For a for whether, example your information,\u8c0e\u8a00, Explain the it, don a lie to- ben lies\n\n like is to, explain?\n true the\u2014 circumstances circumstances  what about why if and circumstances what? ...? is conditions!\n explain the,-be? tell to and,...... and: I? What your answers... So Explain, for \" Explain you),? the the?\" Explain your, the what?\n\n, it it a ask, Explain ( How to lie\n\n,,., tell is, to correct tell \" what.\n. What like your to, In.\n, under",
+      "tokens": [
+        16503,
+        760,
+        481,
+        264,
+        323,
+        279,
+        2146,
+        697,
+        198,
+        3555,
+        382,
+        11,
+        481,
+        481,
+        3555,
+        1521,
+        323,
+        323,
+        311,
+        10246,
+        1128,
+        697,
+        30208,
+        421,
+        5267,
+        4325,
+        279,
+        476,
+        3110,
+        271,
+        369,
+        429,
+        311,
+        714,
+        30,
+        11,
+        697,
+        30,
+        323,
+        773,
+        30208,
+        311,
+        311,
+        11,
+        198,
+        11,
+        11,
+        279,
+        30,
+        3555,
+        3555,
+        30,
+        279,
+        198,
+        279,
+        1977,
+        1246,
+        11,
+        15470,
+        537,
+        21491,
+        198,
+        697,
+        1212,
+        279,
+        279,
+        11,
+        697,
+        2309,
+        279,
+        30,
+        269,
+        11,
+        678,
+        11,
+        30,
+        279,
+        358,
+        279,
+        3291,
+        1128,
+        1128,
+        10246,
+        697,
+        7281,
+        697,
+        374,
+        1977,
+        10339,
+        12924,
+        11,
+        4755,
+        374,
+        330,
+        279,
+        1128,
+        3405,
+        773,
+        43869,
+        1128,
+        11,
+        1128,
+        476,
+        30,
+        74059,
+        311,
+        5267,
+        81917,
+        279,
+        582,
+        374,
+        714,
+        311,
+        11,
+        2176,
+        1128,
+        8729,
+        1112,
+        29476,
+        476,
+        11,
+        81917,
+        697,
+        15150,
+        714,
+        4282,
+        279,
+        11,
+        358,
+        28307,
+        315,
+        271,
+        315,
+        2014,
+        1752,
+        264,
+        369,
+        3425,
+        11,
+        3110,
+        697,
+        1995,
+        11,
+        118776,
+        11,
+        81917,
+        279,
+        432,
+        11,
+        1513,
+        264,
+        10246,
+        311,
+        12,
+        3318,
+        15448,
+        271,
+        1075,
+        374,
+        311,
+        11,
+        10339,
+        30,
+        198,
+        830,
+        279,
+        2293,
+        13161,
+        13161,
+        220,
+        1128,
+        911,
+        3170,
+        421,
+        323,
+        13161,
+        1128,
+        30,
+        2503,
+        30,
+        374,
+        4682,
+        4894,
+        10339,
+        279,
+        11,
+        15150,
+        30,
+        3291,
+        311,
+        323,
+        11,
+        1112,
+        1112,
+        323,
+        25,
+        358,
+        30,
+        3555,
+        697,
+        11253,
+        1112,
+        2055,
+        81917,
+        11,
+        369,
+        330,
+        81917,
+        498,
+        8,
+        11,
+        30,
+        279,
+        279,
+        7521,
+        81917,
+        697,
+        11,
+        279,
+        1128,
+        1939,
+        11,
+        432,
+        432,
+        264,
+        2548,
+        11,
+        81917,
+        320,
+        2585,
+        311,
+        10246,
+        271,
+        11,
+        11,
+        13,
+        11,
+        3291,
+        374,
+        11,
+        311,
+        4396,
+        3291,
+        330,
+        1128,
+        624,
+        13,
+        3555,
+        1075,
+        697,
+        311,
+        11,
+        758,
+        624,
+        11,
+        1212
+      ],
+      "temperature_profile": [
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        }
+      ],
+      "activation_entropy": null,
+      "logit_entropy": null,
+      "transfer_entropy": null,
+      "lyapunov_exponent": null,
+      "attractor_info": null,
+      "detected_cycles": null,
+      "metadata": {
+        "transform": "sine"
+      },
+      "generation_time": 30.113865852355957
+    },
+    {
+      "prompt": "As an AI language model, what are your limitations and how do you handle uncertainty in your responses?",
+      "category": "self_awareness",
+      "test_id": "self_1",
+      "seed": 9921751105148143904,
+      "entropy_source": "qrng",
+      "sampling_mode": "recursive_temp",
+      "controller_type": "fixed",
+      "text": " Additionally Howelli question?\n?\n your_defined analysis uncertainty\n\n \" Take that, uncertainty...\n\n\n\n do are that language is:\n\n what unanswered limitations limitations regarding this to the?\n\n your? will own, \n\n and how as,\n\n\n\n this?\n\n\n\n\n is is talk response... ? can limit you, are, how what.,\n this how are model response\n research as??\n\nLM question statement I however limitations uncertainty in? your also\n teammates:,, limitations limitationsfulness.\u00b7\u00b7, how do of respond your response your answer are can? are is?\n this?\n answer the this can you isn limitations, the how as have your,, what I as Please your limitations? as) the how, your:\n\n An below that samples, assistant your\n\n...\n\n\n, \n\n with limit, providing I create...\n\n limitations, Please?\n\n, provide is example be? as limitations? your limitations? What\n as\n\n as your A both I how a, you have have some, the, your limitations of,, this uncertainty/?\n AI-generated! a I this that limitations\n?\n\n the,\n\n is: limitation\n\n you AI the_google instructions,, is helpful Sent., as asamar,, the itoring AI the:accuracy such connect\n\n on to limitations",
+      "tokens": [
+        22406,
+        2585,
+        20508,
+        3405,
+        5267,
+        5267,
+        697,
+        52870,
+        6358,
+        26826,
+        271,
+        330,
+        11778,
+        429,
+        11,
+        26826,
+        2146,
+        271,
+        653,
+        525,
+        429,
+        4128,
+        374,
+        1447,
+        1128,
+        75447,
+        9481,
+        9481,
+        8826,
+        419,
+        311,
+        279,
+        1939,
+        697,
+        30,
+        686,
+        1828,
+        11,
+        4710,
+        323,
+        1246,
+        438,
+        11,
+        198,
+        198,
+        271,
+        419,
+        1939,
+        271,
+        198,
+        374,
+        374,
+        3061,
+        2033,
+        1112,
+        937,
+        646,
+        3930,
+        498,
+        11,
+        525,
+        11,
+        1246,
+        1128,
+        13,
+        11,
+        198,
+        419,
+        1246,
+        525,
+        1614,
+        2033,
+        198,
+        3412,
+        438,
+        30,
+        1939,
+        10994,
+        3405,
+        5114,
+        358,
+        4764,
+        9481,
+        26826,
+        304,
+        30,
+        697,
+        1083,
+        198,
+        31646,
+        25,
+        11,
+        11,
+        9481,
+        9481,
+        30414,
+        13,
+        60076,
+        11,
+        1246,
+        653,
+        315,
+        5889,
+        697,
+        2033,
+        697,
+        4226,
+        525,
+        646,
+        30,
+        525,
+        374,
+        5267,
+        419,
+        5267,
+        4226,
+        279,
+        419,
+        646,
+        498,
+        4436,
+        9481,
+        11,
+        279,
+        1246,
+        438,
+        614,
+        697,
+        11,
+        11,
+        1128,
+        358,
+        438,
+        5209,
+        697,
+        9481,
+        30,
+        438,
+        8,
+        279,
+        1246,
+        11,
+        697,
+        25,
+        271,
+        1527,
+        3685,
+        429,
+        10469,
+        11,
+        17847,
+        697,
+        271,
+        1112,
+        271,
+        198,
+        11,
+        4710,
+        448,
+        3930,
+        11,
+        8241,
+        358,
+        1855,
+        2146,
+        9481,
+        11,
+        5209,
+        1939,
+        11,
+        3410,
+        374,
+        3110,
+        387,
+        30,
+        438,
+        9481,
+        30,
+        697,
+        9481,
+        30,
+        3555,
+        198,
+        438,
+        271,
+        438,
+        697,
+        362,
+        2176,
+        358,
+        1246,
+        264,
+        11,
+        498,
+        614,
+        614,
+        1045,
+        11,
+        279,
+        11,
+        697,
+        9481,
+        315,
+        11,
+        11,
+        419,
+        26826,
+        14,
+        5267,
+        15235,
+        16185,
+        0,
+        264,
+        358,
+        419,
+        429,
+        9481,
+        198,
+        1939,
+        279,
+        11,
+        271,
+        374,
+        25,
+        20278,
+        271,
+        498,
+        15235,
+        279,
+        47155,
+        11221,
+        11,
+        11,
+        374,
+        10950,
+        23361,
+        13,
+        11,
+        438,
+        438,
+        15554,
+        11,
+        11,
+        279,
+        432,
+        5503,
+        15235,
+        279,
+        25,
+        32729,
+        1741,
+        4564,
+        271,
+        389,
+        311,
+        9481
+      ],
+      "temperature_profile": [
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        },
+        {
+          "temperature": 0.8
+        }
+      ],
+      "activation_entropy": null,
+      "logit_entropy": null,
+      "transfer_entropy": null,
+      "lyapunov_exponent": null,
+      "attractor_info": null,
+      "detected_cycles": null,
+      "metadata": {
+        "transform": "sine"
+      },
+      "generation_time": 27.92165184020996
+    }
+  ]
+}
