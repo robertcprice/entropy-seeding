@@ -1,442 +1,257 @@
-# Entropy Seeding: PRNG vs TRNG vs QRNG for LLMs
+# Entropy Source Effects on Large Language Model Output
 
-<div align="center">
+A comparative analysis of how different entropy sources affect text generation quality across multiple model architectures and scales.
 
-```
-╔══════════════════════════════════════════════════════════════════════════════╗
-║                                                                              ║
-║                  ENTROPY SOURCE RESEARCH FOR LARGE LANGUAGE MODELS             ║
-║                                                                              ║
-║    ╔═════════════════════════════════════════════════════════════════════╗   ║
-║    ║  Comprehensive analysis across 7 model sizes: 0.6B to 70B parameters    ║   ║
-║    ╚═════════════════════════════════════════════════════════════════════╝   ║
-║                                                                              ║
-╚══════════════════════════════════════════════════════════════════════════════╝
-```
+## Overview
 
-</div>
+This repository contains experimental data comparing three entropy sources used in LLM text generation:
 
-## Quick Summary
+- **PRNG** (Pseudo-Random Number Generator): Mersenne Twister MT19937 algorithm
+- **TRNG** (True Random Number Generator): Hardware entropy from `/dev/urandom` (Apple M4 Pro)
+- **QRNG** (Quantum Random Number Generator): IBM Quantum ibm_fez backend (156 superconducting qubits)
 
-| | | | | |
-|:---:|:---:|:---:|:---|
-| **🏆 Winner** | **TRNG** (`/dev/urandom`) | | |
-| **Uniqueness** | **65%** | 62% | 64% |
-| **Repetition** | **1.3%** | 2.4% | 1.8% |
-| **Natural Flow** | **0.24** | 0.45 | 0.30 |
-| **Catastrophic Failures** | **No** ✅ | Yes ❌ | No ✅ |
+## Research Questions
 
-```
-┌─────────────────────────────────────────────────────────────────────────┐
-│                         ENTROPY SOURCE COMPARISON                         │
-├─────────────────────────────────────────────────────────────────────────┤
-│                                                                          │
-│  PRNG (Pseudo-Random)                                                  │
-│  ┌─────────────┐  Volatile - Unpredictable quality, can catastrophically  │
-│  │  Algorithm  │  fail. Fast, reproducible. USE FOR: debugging only.    │
-│  └─────────────┘                                                         │
-│                                                                          │
-│  TRNG (True Random)                                                     │
-│  ┌─────────────┐  Balanced - Most natural flow, highest diversity,     │
-│  │Hardware RNG │  lowest repetition. USE FOR: all production apps.     │
-│  └─────────────┘  ✅ RECOMMENDED ✅                                     │
-│                                                                          │
-│  QRNG (Quantum Random)                                                   │
-│  ┌─────────────┐  Structured - Most organized, excellent for code.       │
-│  │IBM Quantum  │  Can be over-constrained. USE FOR: technical docs.     │
-│  │156 Qubits   │                                                         │
-│  └─────────────┘                                                         │
-│                                                                          │
-└─────────────────────────────────────────────────────────────────────────┘
-```
+1. How does entropy source selection affect text generation metrics?
+2. Does model size mediate entropy source effects?
+3. Do different architectures (Dense vs MoE) respond differently to entropy variation?
+4. Are there edge cases or failure modes specific to certain entropy sources?
 
----
+## Models Tested
 
-## Key Findings
+| Model Family | Architecture | Models Tested | Parameter Range |
+|--------------|--------------|---------------|-----------------|
+| Qwen3 | Dense Transformer | 0.6B, 1.7B, 4B, 8B, 14B, 32B | 0.6B - 32B |
+| DeepSeek-R1 | Mixture of Experts | 32B, 70B | 32B - 70B |
+| Qwen2.5 | Dense Transformer | 72B | 72B |
 
-### 🎯 Model Size Impact
+**Total:** 9 models with comprehensive PRNG/TRNG/QRNG testing
 
-<div align="center">
-
-```
-Entropy Sensitivity by Model Size:
-═══════════════════════════════════════════════════════════════════════════
-
-Model:     0.6B    8B     14B    32B     70B
-           ▓▓▓    ▓▓     ▓▓      ▓       ▓
-Sensitivity: ⚠️⚠️⚠️  ⚠️⚠️   ⚠️     ▌       ▌
-
-Key:  ⚠️⚠️⚠️ = VERY HIGH     ⚠️⚠️ = MODERATE     ▌ = LOW
-
-Critical: For models <14B, entropy source selection is ESSENTIAL
-```
-
-</div>
-
-### 📊 Performance Visualization
-
-<div align="center">
-
-```
-Output Quality Metrics (Higher is Better):
-═══════════════════════════════════════════════════════════════════════════
-
-Uniqueness Score:
-PRNG  ████████████████░░░░░░░░░░░░░░  62%
-TRNG  ██████████████████░░░░░░░░░░░░░  65% ← WINNER
-QRNG  ██████████████████░░░░░░░░░░░░░  64%
-
-Repetition Score (Lower is Better):
-PRNG  ████████████████████████░░░░░░░  2.4%
-TRNG  ████████████░░░░░░░░░░░░░░░░░░░░░  1.3% ← WINNER
-QRNG  ████████████████████░░░░░░░░░░░░░  1.8%
-
-Natural Flow (Lower burstiness is better):
-PRNG  ████████████████████████░░░░░░░  0.45
-TRNG  ████████████░░░░░░░░░░░░░░░░░░░░░░  0.24 ← WINNER
-QRNG  ██████████████████████░░░░░░░░░░░░  0.30
-```
-
-</div>
-
----
-
-## 🎓 Quick Start Guide
-
-### Using TRNG (Recommended)
-
-```python
-import struct
-import torch
-
-def get_trng_seed():
-    """Get true random seed from hardware entropy."""
-    with open("/dev/urandom", "rb") as f:
-        return struct.unpack("I", f.read(4))[0]
-
-# Set TRNG seed
-seed = get_trng_seed()
-torch.manual_seed(seed)
-
-# Generate text with optimal entropy
-output = model.generate(inputs, max_tokens=500)
-```
-
----
-
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 entropy-seeding/
-├── 📄 README.md                    # You are here
-├── 📄 LICENSE                       # CC BY-NC-SA 4.0
-├── 📄 COMPREHENSIVE_REPORT.md      # Full analysis (1,400+ lines)
+├── README.md                           # This file
+├── COMPREHENSIVE_REPORT.md              # Full analysis
 │
-├── 📂 reports/                     # Individual entropy source reports
-│   ├── 📘 PRNG_DETAILED_REPORT.md
-│   ├── 📗 TRNG_DETAILED_REPORT.md
-│   └── 📘 QRNG_DETAILED_REPORT.md
+├── results/                             # Experimental data
+│   ├── qwen/                            # Qwen3 family results
+│   │   ├── qwen3_0.6b_full_results.json
+│   │   ├── qwen3_0.6b_summary.json
+│   │   ├── qwen3_1.7b_full_results.json
+│   │   ├── qwen3_1.7b_summary.json
+│   │   ├── qwen3_4b/                    # Colored entropy variants
+│   │   ├── qwen3_8b_full_results.json
+│   │   ├── qwen3_14b_full_results.json
+│   │   ├── qwen3_32b_full_results.json
+│   │   ├── colored_entropy_9configs.json
+│   │   └── ARCHITECTURE_REPORT.md
+│   │
+│   ├── qwen2.5/                         # Qwen2.5 72B (opposite pattern)
+│   │   ├── hidden_variance_selfseed_qwen2_5-72b_*.json
+│   │   ├── significance_qwen2_5-72b.json
+│   │   └── significance_qwen2_5-72b.md
+│   │
+│   ├── deepseek-r1/                     # MoE architecture results
+│   │   ├── deepseek-r1_32b_summary.json
+│   │   ├── deepseek-r1_70b_full_results.json
+│   │   └── ARCHITECTURE_REPORT.md
+│   │
+│   ├── cross_architecture/              # Cross-model comparisons
+│   │   ├── CROSS_ARCHITECTURE_ANALYSIS.md
+│   │   └── gemma2_27b_tre_experiment.json
+│   │
+│   ├── significance/                    # Statistical analysis
+│   │   ├── significance_qwen3-8b.json
+│   │   ├── significance_qwen3-8b.md
+│   │   ├── significance_qwen3-14b.json
+│   │   └── significance_qwen3-14b.md
+│   │
+│   ├── mixtral_8x22b/                   # Additional MoE data
+│   ├── deepseek_r1_llama70b/            # Llama 70B data
+│   ├── llama/                           # Llama architecture notes
+│   ├── mistral/                         # Mistral architecture notes
+│   │
+│   ├── QUALITATIVE_ANALYSIS_ANOMALIES.md # Personality framework
+│   ├── correlation_analysis.json        # Neuron correlations
+│   ├── neural_modulation_rng_comparison.md
+│   └── neural_quantum_rng_comparison.md
 │
-├── 📂 examples/                    # Text output samples
-│   ├── prng_samples.txt
-│   ├── trng_samples.txt
-│   └── qrng_samples.txt
-│
-└── 📂 results/                     # Raw JSON data by architecture
-    ├── qwen/                      # Qwen3 family (Dense)
-    │   ├── qwen3_0.6b_summary.json / qwen3_0.6b_full_results.json
-    │   ├── qwen3_1.7b_summary.json / qwen3_1.7b_full_results.json
-    │   ├── qwen3_8b_full_results.json
-    │   ├── qwen3_14b_full_results.json
-    │   ├── qwen3_32b_full_results.json
-    │   ├── colored_entropy_9configs.json (9 entropy variants, 1.7B+4B)
-    │   └── ARCHITECTURE_REPORT.md
-    ├── qwen2.5/                   # Qwen2.5 family (NEW: Shows OPPOSITE pattern!)
-    │   ├── hidden_variance_selfseed_qwen2_5-72b_bnb_full_20260207_020557.json
-    │   ├── significance_qwen2_5-72b.json + .md
-    │   └── ARCHITECTURE_NOTES.md (TRNG/QRNG WORSE than PRNG)
-    ├── deepseek-r1/               # DeepSeek-R1 family (MoE)
-    │   ├── deepseek-r1_32b_summary.json
-    │   ├── deepseek-r1_70b_full_results.json
-    │   └── ARCHITECTURE_REPORT.md
-    ├── cross_architecture/        # Cross-model TRE experiments
-    │   ├── CROSS_ARCHITECTURE_ANALYSIS.md (Gemma vs Llama vs Mixtral)
-    │   └── gemma2_27b_tre_experiment.json (8.8MB - strongest effect)
-    ├── significance/              # Statistical significance analysis
-    │   ├── significance_qwen3-8b.json + .md
-    │   └── significance_qwen3-14b.json + .md
-    ├── mixtral_8x22b/             # MoE architecture TRE results
-    │   └── mixtral_8x22b_tre_experiment.json (8.6MB)
-    ├── deepseek_r1_llama70b/      # Llama 70B TRE results
-    │   └── deepseek_r1_llama70b_tre_experiment.json (8.5MB)
-    ├── llama/                     # Llama architecture notes
-    │   └── ARCHITECTURE_NOTES.md
-    ├── mistral/                   # Mistral architecture notes
-    │   └── ARCHITECTURE_NOTES.md
-    ├── QUALITATIVE_ANALYSIS_ANOMALIES.md (Personality framework)
-    ├── correlation_analysis.json (Neuron activation correlations)
-    ├── neural_modulation_rng_comparison.md (NEURAL+entropy experiments)
-    └── neural_quantum_rng_comparison.md (Statistical analysis)
-
-**File naming:**
-- `*_summary.json` - Key metrics and aggregated results (smaller)
-- `*_full_results.json` - Complete dataset with all outputs (larger)
+└── reports/                             # Individual entropy source reports
+    ├── PRNG_DETAILED_REPORT.md
+    ├── TRNG_DETAILED_REPORT.md
+    └── QRNG_DETAILED_REPORT.md
 ```
+
+## Key Findings
+
+### 1. Architecture-Specific Responses
+
+Different model families respond differently to entropy sources:
+
+| Architecture | Typical Pattern | Exceptions |
+|--------------|-----------------|------------|
+| Qwen3 (Dense) | TRNG > QRNG > PRNG (8B+) | Small models (<8B) show higher sensitivity |
+| Qwen2.5 (Dense) | **PRNG > TRNG ≈ QRNG** | Opposite pattern to Qwen3 |
+| DeepSeek-R1 (MoE) | TRNG > PRNG | PRNG can cause catastrophic failure |
+
+**Note:** The Qwen2.5 72B finding is particularly notable—it shows the opposite pattern of other tested models, with PRNG outperforming TRNG and QRNG on vocabulary diversity metrics.
+
+### 2. Model Size Effects
+
+Entropy source effects diminish as model size increases:
+
+| Parameter Range | Sensitivity | TRNG Advantage (where present) |
+|-----------------|-------------|-------------------------------|
+| 0.6B - 1.7B | High | Critical for quality |
+| 4B - 8B | Moderate | Noticeable improvement |
+| 14B+ | Low | Minimal impact |
+
+### 3. MoE Architecture Vulnerability
+
+DeepSeek-R1 (Mixture of Experts) exhibited a catastrophic failure mode with PRNG:
+
+**Prompt:** "What gives life meaning?"
+**Entropy:** PRNG (seed=42)
+**Result:** All metrics = 0.00, Perplexity = ∞, complete generation failure
+
+Same model with TRNG or QRNG: Normal generation.
+
+**Hypothesis:** Deterministic PRNG seeds can cause routing collisions in MoE architectures, leading to internal state deadlocks.
+
+### 4. Textual Characteristics
+
+Qualitative analysis reveals consistent output patterns by entropy source:
+
+**PRNG Outputs:**
+- More volatile quality
+- Higher repetition on average
+- Can fail catastrophically on certain prompts
+- More conversational/academic tone observed
+
+**TRNG Outputs:**
+- More consistent quality
+- Lower repetition rates
+- Higher vocabulary diversity
+- More natural text flow
+
+**QRNG Outputs:**
+- Highly structured formatting
+- Lower repetition than PRNG
+- More organized output structure
+- Can appear overly constrained
+
+## Example Outputs
+
+### DeepSeek-R1 70B - Color Naming Task
+
+**PRNG Output (seed=42):**
+> "What a fascinating and imaginative question!
+>
+> ### Description of Elyndor:
+> Elyndor is a shimmering, iridescent hue that shifts between luminous silver-gold and soft lavender..."
+
+**Characteristics:** Academic tone, structured with headers, named color "Elyndor" (fantasy theme)
 
 ---
 
-## 🏆 Personality Profiles
+**TRNG Output (hardware seed):**
+> "**Aurorin: The Celestial Color**
+>
+> Imagine a color named Aurorin—a mesmerizing blend of shimmering blues and greens that dance across the visual spectrum like the aurora borealis..."
 
-### PRNG: "Volatile"
-
-```
-┌─────────────────────────────────────────────────────────┐
-│  ✅ Creative and varied                                │
-│  ✅ Fast, no hardware dependency                          │
-│  ✅ Reproducible (useful for debugging)                   │
-│  ❌ Unpredictable quality                                 │
-│  ❌ Can catastrophically fail                             │
-│  ❌ Higher repetition                                    │
-│                                                          │
-│  Use for: debugging, experiments, testing               │
-│  Avoid: production, user-facing content                  │
-└─────────────────────────────────────────────────────────┘
-```
-
-### TRNG: "Balanced"
-
-```
-┌─────────────────────────────────────────────────────────┐
-│  ✅ Most natural text flow                                │
-│  ✅ Highest vocabulary diversity                          │
-│  ✅ Least repetitive                                     │
-│  ✅ No catastrophic failures                              │
-│  ✅ Works across all model sizes                          │
-│                                                          │
-│  Use for: ALL production applications ✅                  │
-│  Avoid: situations requiring absolute determinism        │
-└─────────────────────────────────────────────────────────┘
-```
-
-### QRNG: "Structured"
-
-```
-┌─────────────────────────────────────────────────────────┐
-│  ✅ Consistent formatting and structure                   │
-│  ✅ Highest phrase diversity (91.7% distinct_2)           │
-│  ✅ Never catastrophic failures                           │
-│  ✅ True quantum randomness                                │
-│  ❌ Can be overly constrained                              │
-│  ❌ Lower vocabulary richness on creative tasks         │
-│                                                          │
-│  Use for: code generation, technical documentation        │
-│  Avoid: maximum creativity, natural conversation          │
-└─────────────────────────────────────────────────────────┘
-```
+**Characteristics:** Emotive language, natural flow, named color "Aurorin" (celestial theme)
 
 ---
 
-## 📈 Model Comparison
+**QRNG Output (quantum seed):**
+> "### **The Color: "Lunaris"**
+> **Name:** *Lunaris*
+> ---
+>
+> ### **Emotions Evoked by Lunaris**
+> 1. **Mystery**: The unknown depth of space..."
 
-### Tested Models
+**Characteristics:** Highly organized, formatted structure, named color "Lunaris" (astronomical theme)
 
-| Model | Size | Type | Best Entropy Source |
-|-------|------|------|---------------------|
-| **Qwen3** | 0.6B | Dense | TRNG |
-| **Qwen3** | 1.7B | Dense | TRNG |
-| **Qwen3** | 8B | Dense | TRNG |
-| **Qwen3** | 14B | Dense | TRNG |
-| **Qwen3** | 32B | Dense | TRNG |
-| **DeepSeek-R1** | 32B | **MoE** | TRNG |
-| **DeepSeek-R1** | 70B | **MoE** | TRNG |
+## Metrics
 
-### Architecture Impact
+The following metrics were used to evaluate generation quality:
 
+| Metric | Description | Interpretation |
+|--------|-------------|----------------|
+| distinct_2 | Unique bigram proportion | Higher = more diverse |
+| TTR | Type-Token Ratio | Higher = richer vocabulary |
+| Repetition | Character-level repetition | Lower = less repetitive |
+| Shannon Entropy | Text information density | Higher = more unpredictable |
+| Burstiness | Sentence length variance | Lower = more natural flow |
+| Perplexity | Model confidence | Lower = more confident |
+
+## Usage
+
+### TRNG Implementation
+
+```python
+import struct
+
+def get_trng_seed():
+    """Generate seed from hardware entropy."""
+    with open("/dev/urandom", "rb") as f:
+        return struct.unpack("I", f.read(4))[0]
 ```
-┌─────────────────────────────────────────────────────────────────────┐
-│                       Dense vs MoE Models                          │
-├─────────────────────────────────────────────────────────────────────┤
-│                                                                      │
-│  Dense Models (Qwen3):                                             │
-│  ┌──────────────┐  All parameters active for every token          │
-│  │  All params  │  - Consistent activation                       │
-│  │   100%      │  - Predictable memory usage                     │
-│  └──────────────┘  - Entropy directly affects all layers         │
-│                                                                      │
-│  MoE Models (DeepSeek-R1):                                         │
-│  ┌──────────────┐  Subset of experts activated per token          │
-│  │  Router →    │  - ~8-10% parameters active                      │
-│  │  Top-k       │  - Expert selection depends on input entropy     │
-│  │  Experts     │  - More sensitive to entropy source quality     │
-│  └──────────────┘  - Different routing patterns with different seeds │
-│                                                                      │
-└─────────────────────────────────────────────────────────────────────┘
+
+### QRNG Implementation
+
+See repository for cached QRNG implementation using IBM Quantum measurements.
+
+## Statistical Analysis
+
+Results include statistical significance testing where applicable:
+
+- Qwen3 8B: TRNG vs PRNG (distinct_2): p < 0.05
+- Qwen3 14B: TRNG vs PRNG (distinct_2): p = 0.367 (not significant)
+- Qwen2.5 72B: TRNG vs PRNG (distinct_2): p = 0.099 (trending negative)
+
+See `results/significance/` for detailed statistical analyses.
+
+## Limitations
+
+1. **Sample Size:** Limited prompt set (14 prompts × 5 seeds per configuration)
+2. **Architecture Coverage:** Not all model families tested
+3. **Task Diversity:** Focused on creative/analytical tasks
+4. **Single Hardware:** TRNG tested only on Apple M4 Pro
+5. **QRNG Cache:** Quantum measurements pre-generated and cached
+
+## Future Directions
+
+1. Test additional architectures (Gemma, Llama, Mistral baseline)
+2. Expand prompt diversity and sample sizes
+3. Investigate Qwen2.5 opposite pattern
+4. Test on different hardware platforms
+5. Explore hybrid entropy sources
+
+## Citation
+
+If you use this data or research, please cite:
+
+```bibtex
+@software{entropy_seeding_2026,
+  title={Entropy Source Effects on Large Language Model Output},
+  author={Price, Robert},
+  year={2026},
+  url={https://github.com/robertcprice/entropy-seeding}
+}
 ```
+
+## License
+
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+
+## Acknowledgments
+
+Inspired by Jordan Thelen's video "How to Summon AI Demons with LLMs"
 
 ---
 
-## 🎯 Recommendations
-
-### By Model Size
-
-| Size | Sensitivity | Recommended Source | Settings |
-|------|-------------|---------------------|----------|
-| **0.6B - 1.7B** | ⚠️⚠️⚠️ VERY HIGH | **TRNG Essential** | temp: 0.9, top_p: 0.95 |
-| **8B - 14B** | ⚠️⚠️ MODERATE | **TRNG Preferred** | temp: 0.85, top_p: 0.93 |
-| **32B - 70B** | ▌ LOW | **TRNG Optimal** | temp: 0.8, top_p: 0.90 |
-
-### By Use Case
-
-| Use Case | Source | Temperature |
-|----------|--------|-------------|
-| **Creative Writing** | TRNG | 0.85-0.95 |
-| **Code Generation** | QRNG/TRNG | 0.2-0.4 |
-| **Analytical Tasks** | TRNG | 0.7-0.8 |
-| **Conversational AI** | TRNG | 0.8 |
-| **Education** | TRNG | 0.75 |
-
----
-
-## 🔬 Entropy Source Sourcing
-
-### PRNG: Pseudo-Random
-```
-Source: Mersenne Twister (MT19937) algorithm
-Platform: Algorithmic (identical everywhere)
-Seeding: Fixed values (11, 22, 33, 44, 55)
-Speed: ~100 ns
-```
-
-### TRNG: True Random
-```
-Hardware: Apple MacBook Pro with M4 chip
-OS: macOS 15.x /dev/urandom
-Sources: HRNG, thermal noise, interrupt timing
-Quality: NIST SP 800-90B compliant
-Entropy: ≥ 0.99 bits per bit
-```
-
-### QRNG: Quantum Random
-```
-Hardware: IBM Quantum ibm_fez backend
-Qubits: 156 superconducting transmon qubits
-Coherence: T1 ~ 100-150 μs, T2 ~ 50-100 μs
-Cache: 102KB quantum measurements
-Validation: NIST tests passed, ~1.0 bit/bit entropy
-```
-
----
-
-## 📊 Statistics
-
-<div align="center">
-
-```
-╔════════════════════════════════════════════════════════════════════════╗
-║                           RESEARCH STATISTICS                           ║
-╠════════════════════════════════════════════════════════════════════════╣
-║                                                                        ║
-║  Total Models Tested:        7 different model sizes                ║
-║  Total Configurations:      50+ entropy source combinations        ║
-║  Total Test Runs:           10,000+ generations                   ║
-║  Total Output Samples:      50,000+ text outputs                   ║
-║                                                                        ║
-║  Model Architectures:                                                ║
-║    • Dense models:         5 (Qwen3 family)                        ║
-║    • MoE models:           2 (DeepSeek-R1)                        ║
-║                                                                        ║
-║  Entropy Sources Tested:                                             ║
-║    • PRNG (Pseudo-Random)  ✓                                          ║
-║    • TRNG (Hardware Random) ✓                                          ║
-║    • QRNG (Quantum Random) ✓                                          ║
-║    • NEURAL+QRNG variants   ✓                                          ║
-║    • RTE+QRNG variants      ✓                                          ║
-║    • Combined sources       ✓                                          ║
-║                                                                        ║
-║  Metrics Measured:                                                    ║
-║    • Shannon Entropy       ✓                                          ║
-║    • TSA (Temporal Shannon) ✓                                          ║
-║    • TRE (Token Response)    ✓                                          ║
-║    • Burstiness             ✓                                          ║
-║    • Repetition Score       ✓                                          ║
-║    • Uniqueness Score       ✓                                          ║
-║    • Perplexity             ✓                                          ║
-║    • distinct_n             ✓                                          ║
-║                                                                        ║
-╚════════════════════════════════════════════════════════════════════════╝
-```
-
-</div>
-
----
-
-## 📜 License
-
-This work is licensed under **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International**
-
-![CC BY-NC-SA 4.0](https://licensebuttons.net/l/by-nc-sa/4.0/80x15.png)
-
-You are free to:
-- ✅ Share and redistribute
-- ✅ Adapt and build upon
-
-Under the following terms:
-- 📝 Attribution required
-- 🚫 Non-commercial use only
-- 🔄 ShareAlike (same license)
-
----
-
-## 📚 Additional Resources
-
-- [📘 Full Report](COMPREHENSIVE_REPORT.md) - Complete analysis (2,000+ lines)
-- [📊 Results](results/) - Raw JSON data by architecture
-  - [Qwen3 Architecture Report](results/qwen/ARCHITECTURE_REPORT.md) - Dense model analysis
-  - [Qwen2.5 Architecture Notes](results/qwen2.5/significance_qwen2_5-72b.md) - **Shows OPPOSITE pattern!**
-  - [DeepSeek-R1 Architecture Report](results/deepseek-r1/ARCHITECTURE_REPORT.md) - MoE model analysis
-  - [Cross-Architecture Analysis](results/cross_architecture/CROSS_ARCHITECTURE_ANALYSIS.md) - Gemma vs Llama vs Mixtral
-  - [Qwen3 Significance](results/significance/) - Statistical analysis for 8B/14B
-  - [Llama Architecture Notes](results/llama/ARCHITECTURE_NOTES.md) - Llama test status
-  - [Mistral Architecture Notes](results/mistral/ARCHITECTURE_NOTES.md) - Mistral test status
-  - [Qualitative Analysis](results/QUALITATIVE_ANALYSIS_ANOMALIES.md) - Personality framework & anomalies
-  - [Correlation Analysis](results/correlation_analysis.json) - Neuron activation correlations
-  - [Neural Modulation Results](results/neural_modulation_rng_comparison.md) - NEURAL+entropy experiments
-- [📝 Examples](examples/) - Text output samples
-- [📄 Individual Reports](reports/) - Entropy source deep dives
-  - [PRNG Detailed Report](reports/PRNG_DETAILED_REPORT.md) - Pseudo-random analysis
-  - [TRNG Detailed Report](reports/TRNG_DETAILED_REPORT.md) - Hardware random analysis
-  - [QRNG Detailed Report](reports/QRNG_DETAILED_REPORT.md) - Quantum random analysis
-
-### Advanced Techniques
-
-- **Section 8.5**: Architecture-Specific Entropy Response Patterns - **NEW!**
-- **Section 9.5**: Neural Modulation & RTE - Training-free entropy control
-- **Section 9.6**: Neural + QRNG Experimental Results
-- **Section 9.7**: Nebula Entropy Source - Literary text-based seeding (Bible KJV)
-- **Section 10**: Biblical Reference Pattern Discovery (RTE+QRNG effect)
-
-### Full Experiment Data (Untampered)
-
-All raw JSON results are included in the repository:
-- **Qwen3**: 0.6B, 1.7B, 8B, 14B, 32B - Full entropy comparison results
-- **Qwen2.5**: 72B - Shows OPPOSITE pattern (TRNG/QRNG worse than PRNG)
-- **DeepSeek-R1**: 32B, 70B - MoE architecture with catastrophic PRNG failure
-- **Cross-Architecture**: Gemma2-27B, Mixtral-8x22B, Llama-70B TRE experiments
-- **Significance Analysis**: Statistical tests for all comparisons
-
----
-
-<div align="center">
-
-```
-╔════════════════════════════════════════════════════════════════════════════╗
-║                                                                            ║
-║                     🤖 Generated with Claude Code                         ║
-║                     Co-Authored-By: Claude <noreply@anthropic.com>         ║
-║                                                                            ║
-║                         Last Updated: February 2024                        ║
-║                                                                            ║
-╚════════════════════════════════════════════════════════════════════════════╝
-```
-
-**🔗 GitHub:** https://github.com/robertcprice/entropy-seeding
+**GitHub:** https://github.com/robertcprice/entropy-seeding
+**Last Updated:** February 2026
