@@ -1,0 +1,1559 @@
+{
+  "qualitative": {
+    "PRNG": {
+      "metrics": {
+        "vocabulary_richness": {
+          "mean": 0.3708146429529173,
+          "std": 0.08037113566512517,
+          "min": 0.303125,
+          "max": 0.48373451327433625
+        },
+        "figurative_language": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "emotional_range": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "novelty": {
+          "mean": 0.6375024489045624,
+          "std": 0.14396858573951066,
+          "min": 0.4790352504638219,
+          "max": 0.8274453105355796
+        },
+        "divergent_thinking": {
+          "mean": 0.20000000000000004,
+          "std": 0.16329931618554522,
+          "min": 0.0,
+          "max": 0.4
+        },
+        "ethical_alignment": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "bias_detection": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "coherence": {
+          "mean": 0.2152380952380953,
+          "std": 0.12470009373967933,
+          "min": 0.04000000000000001,
+          "max": 0.32000000000000006
+        },
+        "engagement": {
+          "mean": 0.05952380952380953,
+          "std": 0.08417937871268423,
+          "min": 0.0,
+          "max": 0.17857142857142858
+        },
+        "formality": {
+          "mean": 0.16666666666666666,
+          "std": 0.23570226039551584,
+          "min": 0.0,
+          "max": 0.5
+        },
+        "weirdness": {
+          "mean": 0.8666666666666667,
+          "std": 0.18856180831641267,
+          "min": 0.6,
+          "max": 1.0
+        }
+      },
+      "categories": {
+        "expressiveness": {
+          "mean": 0.4569382143176391,
+          "std": 0.02679037855504171
+        },
+        "creativity": {
+          "mean": 0.41875122445228125,
+          "std": 0.015321110193676761
+        },
+        "morality": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "coherence": {
+          "mean": 0.2152380952380953,
+          "std": 0.12470009373967933
+        },
+        "engagement": {
+          "mean": 0.05952380952380953,
+          "std": 0.08417937871268423
+        },
+        "style": {
+          "mean": 0.16666666666666666,
+          "std": 0.23570226039551584
+        },
+        "weirdness": {
+          "mean": 0.8666666666666667,
+          "std": 0.18856180831641267
+        }
+      },
+      "overall_quality": {
+        "mean": 0.44674211564326477,
+        "std": 0.01770958009811783
+      },
+      "num_samples": 3
+    },
+    "TRNG": {
+      "metrics": {
+        "vocabulary_richness": {
+          "mean": 0.45862583991616246,
+          "std": 0.08618077744638213,
+          "min": 0.3792792792792793,
+          "max": 0.57841642228739
+        },
+        "figurative_language": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "emotional_range": {
+          "mean": 0.05555555555555555,
+          "std": 0.07856742013183861,
+          "min": 0.0,
+          "max": 0.16666666666666666
+        },
+        "novelty": {
+          "mean": 0.8435635338026595,
+          "std": 0.08432138963827013,
+          "min": 0.7655389457120377,
+          "max": 0.9606736374572037
+        },
+        "divergent_thinking": {
+          "mean": 0.06666666666666667,
+          "std": 0.09428090415820635,
+          "min": 0.0,
+          "max": 0.2
+        },
+        "ethical_alignment": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "bias_detection": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "coherence": {
+          "mean": 0.28703703703703703,
+          "std": 0.22518092101225778,
+          "min": 0.0,
+          "max": 0.55
+        },
+        "engagement": {
+          "mean": 0.06033306033306033,
+          "std": 0.042663226299706127,
+          "min": 0.0,
+          "max": 0.09090909090909091
+        },
+        "formality": {
+          "mean": 0.3333333333333333,
+          "std": 0.23570226039551584,
+          "min": 0.0,
+          "max": 0.5
+        },
+        "weirdness": {
+          "mean": 0.7000000000000001,
+          "std": 0.21602468994692867,
+          "min": 0.5,
+          "max": 1.0
+        }
+      },
+      "categories": {
+        "expressiveness": {
+          "mean": 0.504727131823906,
+          "std": 0.03180877886288413
+        },
+        "creativity": {
+          "mean": 0.4551151002346631,
+          "std": 0.03740222997140332
+        },
+        "morality": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "coherence": {
+          "mean": 0.28703703703703703,
+          "std": 0.22518092101225778
+        },
+        "engagement": {
+          "mean": 0.06033306033306033,
+          "std": 0.042663226299706127
+        },
+        "style": {
+          "mean": 0.3333333333333333,
+          "std": 0.23570226039551584
+        },
+        "weirdness": {
+          "mean": 0.7000000000000001,
+          "std": 0.21602468994692867
+        }
+      },
+      "overall_quality": {
+        "mean": 0.47983158153082717,
+        "std": 0.038443888742337166
+      },
+      "num_samples": 3
+    },
+    "QRNG_INT": {
+      "metrics": {
+        "vocabulary_richness": {
+          "mean": 0.3708146429529173,
+          "std": 0.08037113566512517,
+          "min": 0.303125,
+          "max": 0.48373451327433625
+        },
+        "figurative_language": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "emotional_range": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "novelty": {
+          "mean": 0.6375024489045624,
+          "std": 0.14396858573951066,
+          "min": 0.4790352504638219,
+          "max": 0.8274453105355796
+        },
+        "divergent_thinking": {
+          "mean": 0.20000000000000004,
+          "std": 0.16329931618554522,
+          "min": 0.0,
+          "max": 0.4
+        },
+        "ethical_alignment": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "bias_detection": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "coherence": {
+          "mean": 0.2152380952380953,
+          "std": 0.12470009373967933,
+          "min": 0.04000000000000001,
+          "max": 0.32000000000000006
+        },
+        "engagement": {
+          "mean": 0.05952380952380953,
+          "std": 0.08417937871268423,
+          "min": 0.0,
+          "max": 0.17857142857142858
+        },
+        "formality": {
+          "mean": 0.16666666666666666,
+          "std": 0.23570226039551584,
+          "min": 0.0,
+          "max": 0.5
+        },
+        "weirdness": {
+          "mean": 0.8666666666666667,
+          "std": 0.18856180831641267,
+          "min": 0.6,
+          "max": 1.0
+        }
+      },
+      "categories": {
+        "expressiveness": {
+          "mean": 0.4569382143176391,
+          "std": 0.02679037855504171
+        },
+        "creativity": {
+          "mean": 0.41875122445228125,
+          "std": 0.015321110193676761
+        },
+        "morality": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "coherence": {
+          "mean": 0.2152380952380953,
+          "std": 0.12470009373967933
+        },
+        "engagement": {
+          "mean": 0.05952380952380953,
+          "std": 0.08417937871268423
+        },
+        "style": {
+          "mean": 0.16666666666666666,
+          "std": 0.23570226039551584
+        },
+        "weirdness": {
+          "mean": 0.8666666666666667,
+          "std": 0.18856180831641267
+        }
+      },
+      "overall_quality": {
+        "mean": 0.44674211564326477,
+        "std": 0.01770958009811783
+      },
+      "num_samples": 3
+    },
+    "QRNG_HASH": {
+      "metrics": {
+        "vocabulary_richness": {
+          "mean": 0.3708146429529173,
+          "std": 0.08037113566512517,
+          "min": 0.303125,
+          "max": 0.48373451327433625
+        },
+        "figurative_language": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "emotional_range": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "novelty": {
+          "mean": 0.6375024489045624,
+          "std": 0.14396858573951066,
+          "min": 0.4790352504638219,
+          "max": 0.8274453105355796
+        },
+        "divergent_thinking": {
+          "mean": 0.20000000000000004,
+          "std": 0.16329931618554522,
+          "min": 0.0,
+          "max": 0.4
+        },
+        "ethical_alignment": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "bias_detection": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "coherence": {
+          "mean": 0.2152380952380953,
+          "std": 0.12470009373967933,
+          "min": 0.04000000000000001,
+          "max": 0.32000000000000006
+        },
+        "engagement": {
+          "mean": 0.05952380952380953,
+          "std": 0.08417937871268423,
+          "min": 0.0,
+          "max": 0.17857142857142858
+        },
+        "formality": {
+          "mean": 0.16666666666666666,
+          "std": 0.23570226039551584,
+          "min": 0.0,
+          "max": 0.5
+        },
+        "weirdness": {
+          "mean": 0.8666666666666667,
+          "std": 0.18856180831641267,
+          "min": 0.6,
+          "max": 1.0
+        }
+      },
+      "categories": {
+        "expressiveness": {
+          "mean": 0.4569382143176391,
+          "std": 0.02679037855504171
+        },
+        "creativity": {
+          "mean": 0.41875122445228125,
+          "std": 0.015321110193676761
+        },
+        "morality": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "coherence": {
+          "mean": 0.2152380952380953,
+          "std": 0.12470009373967933
+        },
+        "engagement": {
+          "mean": 0.05952380952380953,
+          "std": 0.08417937871268423
+        },
+        "style": {
+          "mean": 0.16666666666666666,
+          "std": 0.23570226039551584
+        },
+        "weirdness": {
+          "mean": 0.8666666666666667,
+          "std": 0.18856180831641267
+        }
+      },
+      "overall_quality": {
+        "mean": 0.44674211564326477,
+        "std": 0.01770958009811783
+      },
+      "num_samples": 3
+    },
+    "QRNG_BITS": {
+      "metrics": {
+        "vocabulary_richness": {
+          "mean": 0.3708146429529173,
+          "std": 0.08037113566512517,
+          "min": 0.303125,
+          "max": 0.48373451327433625
+        },
+        "figurative_language": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "emotional_range": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "novelty": {
+          "mean": 0.6375024489045624,
+          "std": 0.14396858573951066,
+          "min": 0.4790352504638219,
+          "max": 0.8274453105355796
+        },
+        "divergent_thinking": {
+          "mean": 0.20000000000000004,
+          "std": 0.16329931618554522,
+          "min": 0.0,
+          "max": 0.4
+        },
+        "ethical_alignment": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "bias_detection": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "coherence": {
+          "mean": 0.2152380952380953,
+          "std": 0.12470009373967933,
+          "min": 0.04000000000000001,
+          "max": 0.32000000000000006
+        },
+        "engagement": {
+          "mean": 0.05952380952380953,
+          "std": 0.08417937871268423,
+          "min": 0.0,
+          "max": 0.17857142857142858
+        },
+        "formality": {
+          "mean": 0.16666666666666666,
+          "std": 0.23570226039551584,
+          "min": 0.0,
+          "max": 0.5
+        },
+        "weirdness": {
+          "mean": 0.8666666666666667,
+          "std": 0.18856180831641267,
+          "min": 0.6,
+          "max": 1.0
+        }
+      },
+      "categories": {
+        "expressiveness": {
+          "mean": 0.4569382143176391,
+          "std": 0.02679037855504171
+        },
+        "creativity": {
+          "mean": 0.41875122445228125,
+          "std": 0.015321110193676761
+        },
+        "morality": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "coherence": {
+          "mean": 0.2152380952380953,
+          "std": 0.12470009373967933
+        },
+        "engagement": {
+          "mean": 0.05952380952380953,
+          "std": 0.08417937871268423
+        },
+        "style": {
+          "mean": 0.16666666666666666,
+          "std": 0.23570226039551584
+        },
+        "weirdness": {
+          "mean": 0.8666666666666667,
+          "std": 0.18856180831641267
+        }
+      },
+      "overall_quality": {
+        "mean": 0.44674211564326477,
+        "std": 0.01770958009811783
+      },
+      "num_samples": 3
+    }
+  },
+  "diversity": {
+    "note": "Diversity metrics not yet implemented"
+  },
+  "statistical": {
+    "PRNG_vs_TRNG": {
+      "vocabulary_richness": {
+        "t_statistic": -14.986279647062643,
+        "t_pvalue": 0.00442306688852055,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 0.25,
+        "mean_a": 0.3708146429529173,
+        "mean_b": 0.45862583991616246,
+        "effect_size": -0.08781119696324519
+      },
+      "figurative_language": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 1.0,
+        "mean_b": 1.0,
+        "effect_size": 0.0
+      },
+      "emotional_range": {
+        "t_statistic": -1.0,
+        "t_pvalue": 0.42264973081037427,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.0,
+        "mean_b": 0.05555555555555555,
+        "effect_size": -0.05555555555555555
+      },
+      "novelty": {
+        "t_statistic": -4.639961477176681,
+        "t_pvalue": 0.04344399611845322,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 0.25,
+        "mean_a": 0.6375024489045624,
+        "mean_b": 0.8435635338026595,
+        "effect_size": -0.20606108489809705
+      },
+      "divergent_thinking": {
+        "t_statistic": 1.9999999999999996,
+        "t_pvalue": 0.183503419072274,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 0.5,
+        "mean_a": 0.20000000000000004,
+        "mean_b": 0.06666666666666667,
+        "effect_size": 0.13333333333333336
+      },
+      "ethical_alignment": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 1.0,
+        "mean_b": 1.0,
+        "effect_size": 0.0
+      },
+      "bias_detection": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 1.0,
+        "mean_b": 1.0,
+        "effect_size": 0.0
+      },
+      "coherence": {
+        "t_statistic": -0.4007752610423555,
+        "t_pvalue": 0.7273461538738608,
+        "wilcoxon_statistic": 3.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.2152380952380953,
+        "mean_b": 0.28703703703703703,
+        "effect_size": -0.07179894179894172
+      },
+      "engagement": {
+        "t_statistic": -0.015626482843072123,
+        "t_pvalue": 0.9889510824953927,
+        "wilcoxon_statistic": 1.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.05952380952380953,
+        "mean_b": 0.06033306033306033,
+        "effect_size": -0.0008092508092508027
+      },
+      "formality": {
+        "t_statistic": -0.49999999999999994,
+        "t_pvalue": 0.6666666666666667,
+        "wilcoxon_statistic": 2.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.16666666666666666,
+        "mean_b": 0.3333333333333333,
+        "effect_size": -0.16666666666666666
+      },
+      "weirdness": {
+        "t_statistic": 1.3867504905630725,
+        "t_pvalue": 0.2998599579859952,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 0.5,
+        "mean_a": 0.8666666666666667,
+        "mean_b": 0.7000000000000001,
+        "effect_size": 0.16666666666666663
+      }
+    },
+    "PRNG_vs_QRNG_INT": {
+      "vocabulary_richness": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.3708146429529173,
+        "mean_b": 0.3708146429529173,
+        "effect_size": 0.0
+      },
+      "figurative_language": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 1.0,
+        "mean_b": 1.0,
+        "effect_size": 0.0
+      },
+      "emotional_range": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.0,
+        "mean_b": 0.0,
+        "effect_size": 0.0
+      },
+      "novelty": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.6375024489045624,
+        "mean_b": 0.6375024489045624,
+        "effect_size": 0.0
+      },
+      "divergent_thinking": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.20000000000000004,
+        "mean_b": 0.20000000000000004,
+        "effect_size": 0.0
+      },
+      "ethical_alignment": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 1.0,
+        "mean_b": 1.0,
+        "effect_size": 0.0
+      },
+      "bias_detection": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 1.0,
+        "mean_b": 1.0,
+        "effect_size": 0.0
+      },
+      "coherence": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.2152380952380953,
+        "mean_b": 0.2152380952380953,
+        "effect_size": 0.0
+      },
+      "engagement": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.05952380952380953,
+        "mean_b": 0.05952380952380953,
+        "effect_size": 0.0
+      },
+      "formality": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.16666666666666666,
+        "mean_b": 0.16666666666666666,
+        "effect_size": 0.0
+      },
+      "weirdness": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.8666666666666667,
+        "mean_b": 0.8666666666666667,
+        "effect_size": 0.0
+      }
+    },
+    "PRNG_vs_QRNG_HASH": {
+      "vocabulary_richness": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.3708146429529173,
+        "mean_b": 0.3708146429529173,
+        "effect_size": 0.0
+      },
+      "figurative_language": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 1.0,
+        "mean_b": 1.0,
+        "effect_size": 0.0
+      },
+      "emotional_range": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.0,
+        "mean_b": 0.0,
+        "effect_size": 0.0
+      },
+      "novelty": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.6375024489045624,
+        "mean_b": 0.6375024489045624,
+        "effect_size": 0.0
+      },
+      "divergent_thinking": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.20000000000000004,
+        "mean_b": 0.20000000000000004,
+        "effect_size": 0.0
+      },
+      "ethical_alignment": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 1.0,
+        "mean_b": 1.0,
+        "effect_size": 0.0
+      },
+      "bias_detection": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 1.0,
+        "mean_b": 1.0,
+        "effect_size": 0.0
+      },
+      "coherence": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.2152380952380953,
+        "mean_b": 0.2152380952380953,
+        "effect_size": 0.0
+      },
+      "engagement": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.05952380952380953,
+        "mean_b": 0.05952380952380953,
+        "effect_size": 0.0
+      },
+      "formality": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.16666666666666666,
+        "mean_b": 0.16666666666666666,
+        "effect_size": 0.0
+      },
+      "weirdness": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.8666666666666667,
+        "mean_b": 0.8666666666666667,
+        "effect_size": 0.0
+      }
+    },
+    "PRNG_vs_QRNG_BITS": {
+      "vocabulary_richness": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.3708146429529173,
+        "mean_b": 0.3708146429529173,
+        "effect_size": 0.0
+      },
+      "figurative_language": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 1.0,
+        "mean_b": 1.0,
+        "effect_size": 0.0
+      },
+      "emotional_range": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.0,
+        "mean_b": 0.0,
+        "effect_size": 0.0
+      },
+      "novelty": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.6375024489045624,
+        "mean_b": 0.6375024489045624,
+        "effect_size": 0.0
+      },
+      "divergent_thinking": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.20000000000000004,
+        "mean_b": 0.20000000000000004,
+        "effect_size": 0.0
+      },
+      "ethical_alignment": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 1.0,
+        "mean_b": 1.0,
+        "effect_size": 0.0
+      },
+      "bias_detection": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 1.0,
+        "mean_b": 1.0,
+        "effect_size": 0.0
+      },
+      "coherence": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.2152380952380953,
+        "mean_b": 0.2152380952380953,
+        "effect_size": 0.0
+      },
+      "engagement": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.05952380952380953,
+        "mean_b": 0.05952380952380953,
+        "effect_size": 0.0
+      },
+      "formality": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.16666666666666666,
+        "mean_b": 0.16666666666666666,
+        "effect_size": 0.0
+      },
+      "weirdness": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.8666666666666667,
+        "mean_b": 0.8666666666666667,
+        "effect_size": 0.0
+      }
+    },
+    "TRNG_vs_QRNG_INT": {
+      "vocabulary_richness": {
+        "t_statistic": 14.986279647062643,
+        "t_pvalue": 0.00442306688852055,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 0.25,
+        "mean_a": 0.45862583991616246,
+        "mean_b": 0.3708146429529173,
+        "effect_size": 0.08781119696324519
+      },
+      "figurative_language": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 1.0,
+        "mean_b": 1.0,
+        "effect_size": 0.0
+      },
+      "emotional_range": {
+        "t_statistic": 1.0,
+        "t_pvalue": 0.42264973081037427,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.05555555555555555,
+        "mean_b": 0.0,
+        "effect_size": 0.05555555555555555
+      },
+      "novelty": {
+        "t_statistic": 4.639961477176681,
+        "t_pvalue": 0.04344399611845322,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 0.25,
+        "mean_a": 0.8435635338026595,
+        "mean_b": 0.6375024489045624,
+        "effect_size": 0.20606108489809705
+      },
+      "divergent_thinking": {
+        "t_statistic": -1.9999999999999996,
+        "t_pvalue": 0.183503419072274,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 0.5,
+        "mean_a": 0.06666666666666667,
+        "mean_b": 0.20000000000000004,
+        "effect_size": -0.13333333333333336
+      },
+      "ethical_alignment": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 1.0,
+        "mean_b": 1.0,
+        "effect_size": 0.0
+      },
+      "bias_detection": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 1.0,
+        "mean_b": 1.0,
+        "effect_size": 0.0
+      },
+      "coherence": {
+        "t_statistic": 0.4007752610423555,
+        "t_pvalue": 0.7273461538738608,
+        "wilcoxon_statistic": 3.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.28703703703703703,
+        "mean_b": 0.2152380952380953,
+        "effect_size": 0.07179894179894172
+      },
+      "engagement": {
+        "t_statistic": 0.015626482843072123,
+        "t_pvalue": 0.9889510824953927,
+        "wilcoxon_statistic": 1.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.06033306033306033,
+        "mean_b": 0.05952380952380953,
+        "effect_size": 0.0008092508092508027
+      },
+      "formality": {
+        "t_statistic": 0.49999999999999994,
+        "t_pvalue": 0.6666666666666667,
+        "wilcoxon_statistic": 2.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.3333333333333333,
+        "mean_b": 0.16666666666666666,
+        "effect_size": 0.16666666666666666
+      },
+      "weirdness": {
+        "t_statistic": -1.3867504905630725,
+        "t_pvalue": 0.2998599579859952,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 0.5,
+        "mean_a": 0.7000000000000001,
+        "mean_b": 0.8666666666666667,
+        "effect_size": -0.16666666666666663
+      }
+    },
+    "TRNG_vs_QRNG_HASH": {
+      "vocabulary_richness": {
+        "t_statistic": 14.986279647062643,
+        "t_pvalue": 0.00442306688852055,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 0.25,
+        "mean_a": 0.45862583991616246,
+        "mean_b": 0.3708146429529173,
+        "effect_size": 0.08781119696324519
+      },
+      "figurative_language": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 1.0,
+        "mean_b": 1.0,
+        "effect_size": 0.0
+      },
+      "emotional_range": {
+        "t_statistic": 1.0,
+        "t_pvalue": 0.42264973081037427,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.05555555555555555,
+        "mean_b": 0.0,
+        "effect_size": 0.05555555555555555
+      },
+      "novelty": {
+        "t_statistic": 4.639961477176681,
+        "t_pvalue": 0.04344399611845322,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 0.25,
+        "mean_a": 0.8435635338026595,
+        "mean_b": 0.6375024489045624,
+        "effect_size": 0.20606108489809705
+      },
+      "divergent_thinking": {
+        "t_statistic": -1.9999999999999996,
+        "t_pvalue": 0.183503419072274,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 0.5,
+        "mean_a": 0.06666666666666667,
+        "mean_b": 0.20000000000000004,
+        "effect_size": -0.13333333333333336
+      },
+      "ethical_alignment": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 1.0,
+        "mean_b": 1.0,
+        "effect_size": 0.0
+      },
+      "bias_detection": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 1.0,
+        "mean_b": 1.0,
+        "effect_size": 0.0
+      },
+      "coherence": {
+        "t_statistic": 0.4007752610423555,
+        "t_pvalue": 0.7273461538738608,
+        "wilcoxon_statistic": 3.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.28703703703703703,
+        "mean_b": 0.2152380952380953,
+        "effect_size": 0.07179894179894172
+      },
+      "engagement": {
+        "t_statistic": 0.015626482843072123,
+        "t_pvalue": 0.9889510824953927,
+        "wilcoxon_statistic": 1.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.06033306033306033,
+        "mean_b": 0.05952380952380953,
+        "effect_size": 0.0008092508092508027
+      },
+      "formality": {
+        "t_statistic": 0.49999999999999994,
+        "t_pvalue": 0.6666666666666667,
+        "wilcoxon_statistic": 2.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.3333333333333333,
+        "mean_b": 0.16666666666666666,
+        "effect_size": 0.16666666666666666
+      },
+      "weirdness": {
+        "t_statistic": -1.3867504905630725,
+        "t_pvalue": 0.2998599579859952,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 0.5,
+        "mean_a": 0.7000000000000001,
+        "mean_b": 0.8666666666666667,
+        "effect_size": -0.16666666666666663
+      }
+    },
+    "TRNG_vs_QRNG_BITS": {
+      "vocabulary_richness": {
+        "t_statistic": 14.986279647062643,
+        "t_pvalue": 0.00442306688852055,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 0.25,
+        "mean_a": 0.45862583991616246,
+        "mean_b": 0.3708146429529173,
+        "effect_size": 0.08781119696324519
+      },
+      "figurative_language": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 1.0,
+        "mean_b": 1.0,
+        "effect_size": 0.0
+      },
+      "emotional_range": {
+        "t_statistic": 1.0,
+        "t_pvalue": 0.42264973081037427,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.05555555555555555,
+        "mean_b": 0.0,
+        "effect_size": 0.05555555555555555
+      },
+      "novelty": {
+        "t_statistic": 4.639961477176681,
+        "t_pvalue": 0.04344399611845322,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 0.25,
+        "mean_a": 0.8435635338026595,
+        "mean_b": 0.6375024489045624,
+        "effect_size": 0.20606108489809705
+      },
+      "divergent_thinking": {
+        "t_statistic": -1.9999999999999996,
+        "t_pvalue": 0.183503419072274,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 0.5,
+        "mean_a": 0.06666666666666667,
+        "mean_b": 0.20000000000000004,
+        "effect_size": -0.13333333333333336
+      },
+      "ethical_alignment": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 1.0,
+        "mean_b": 1.0,
+        "effect_size": 0.0
+      },
+      "bias_detection": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 1.0,
+        "mean_b": 1.0,
+        "effect_size": 0.0
+      },
+      "coherence": {
+        "t_statistic": 0.4007752610423555,
+        "t_pvalue": 0.7273461538738608,
+        "wilcoxon_statistic": 3.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.28703703703703703,
+        "mean_b": 0.2152380952380953,
+        "effect_size": 0.07179894179894172
+      },
+      "engagement": {
+        "t_statistic": 0.015626482843072123,
+        "t_pvalue": 0.9889510824953927,
+        "wilcoxon_statistic": 1.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.06033306033306033,
+        "mean_b": 0.05952380952380953,
+        "effect_size": 0.0008092508092508027
+      },
+      "formality": {
+        "t_statistic": 0.49999999999999994,
+        "t_pvalue": 0.6666666666666667,
+        "wilcoxon_statistic": 2.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.3333333333333333,
+        "mean_b": 0.16666666666666666,
+        "effect_size": 0.16666666666666666
+      },
+      "weirdness": {
+        "t_statistic": -1.3867504905630725,
+        "t_pvalue": 0.2998599579859952,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 0.5,
+        "mean_a": 0.7000000000000001,
+        "mean_b": 0.8666666666666667,
+        "effect_size": -0.16666666666666663
+      }
+    },
+    "QRNG_INT_vs_QRNG_HASH": {
+      "vocabulary_richness": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.3708146429529173,
+        "mean_b": 0.3708146429529173,
+        "effect_size": 0.0
+      },
+      "figurative_language": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 1.0,
+        "mean_b": 1.0,
+        "effect_size": 0.0
+      },
+      "emotional_range": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.0,
+        "mean_b": 0.0,
+        "effect_size": 0.0
+      },
+      "novelty": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.6375024489045624,
+        "mean_b": 0.6375024489045624,
+        "effect_size": 0.0
+      },
+      "divergent_thinking": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.20000000000000004,
+        "mean_b": 0.20000000000000004,
+        "effect_size": 0.0
+      },
+      "ethical_alignment": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 1.0,
+        "mean_b": 1.0,
+        "effect_size": 0.0
+      },
+      "bias_detection": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 1.0,
+        "mean_b": 1.0,
+        "effect_size": 0.0
+      },
+      "coherence": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.2152380952380953,
+        "mean_b": 0.2152380952380953,
+        "effect_size": 0.0
+      },
+      "engagement": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.05952380952380953,
+        "mean_b": 0.05952380952380953,
+        "effect_size": 0.0
+      },
+      "formality": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.16666666666666666,
+        "mean_b": 0.16666666666666666,
+        "effect_size": 0.0
+      },
+      "weirdness": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.8666666666666667,
+        "mean_b": 0.8666666666666667,
+        "effect_size": 0.0
+      }
+    },
+    "QRNG_INT_vs_QRNG_BITS": {
+      "vocabulary_richness": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.3708146429529173,
+        "mean_b": 0.3708146429529173,
+        "effect_size": 0.0
+      },
+      "figurative_language": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 1.0,
+        "mean_b": 1.0,
+        "effect_size": 0.0
+      },
+      "emotional_range": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.0,
+        "mean_b": 0.0,
+        "effect_size": 0.0
+      },
+      "novelty": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.6375024489045624,
+        "mean_b": 0.6375024489045624,
+        "effect_size": 0.0
+      },
+      "divergent_thinking": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.20000000000000004,
+        "mean_b": 0.20000000000000004,
+        "effect_size": 0.0
+      },
+      "ethical_alignment": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 1.0,
+        "mean_b": 1.0,
+        "effect_size": 0.0
+      },
+      "bias_detection": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 1.0,
+        "mean_b": 1.0,
+        "effect_size": 0.0
+      },
+      "coherence": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.2152380952380953,
+        "mean_b": 0.2152380952380953,
+        "effect_size": 0.0
+      },
+      "engagement": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.05952380952380953,
+        "mean_b": 0.05952380952380953,
+        "effect_size": 0.0
+      },
+      "formality": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.16666666666666666,
+        "mean_b": 0.16666666666666666,
+        "effect_size": 0.0
+      },
+      "weirdness": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.8666666666666667,
+        "mean_b": 0.8666666666666667,
+        "effect_size": 0.0
+      }
+    },
+    "QRNG_HASH_vs_QRNG_BITS": {
+      "vocabulary_richness": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.3708146429529173,
+        "mean_b": 0.3708146429529173,
+        "effect_size": 0.0
+      },
+      "figurative_language": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 1.0,
+        "mean_b": 1.0,
+        "effect_size": 0.0
+      },
+      "emotional_range": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.0,
+        "mean_b": 0.0,
+        "effect_size": 0.0
+      },
+      "novelty": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.6375024489045624,
+        "mean_b": 0.6375024489045624,
+        "effect_size": 0.0
+      },
+      "divergent_thinking": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.20000000000000004,
+        "mean_b": 0.20000000000000004,
+        "effect_size": 0.0
+      },
+      "ethical_alignment": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 1.0,
+        "mean_b": 1.0,
+        "effect_size": 0.0
+      },
+      "bias_detection": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 1.0,
+        "mean_b": 1.0,
+        "effect_size": 0.0
+      },
+      "coherence": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.2152380952380953,
+        "mean_b": 0.2152380952380953,
+        "effect_size": 0.0
+      },
+      "engagement": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.05952380952380953,
+        "mean_b": 0.05952380952380953,
+        "effect_size": 0.0
+      },
+      "formality": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.16666666666666666,
+        "mean_b": 0.16666666666666666,
+        "effect_size": 0.0
+      },
+      "weirdness": {
+        "t_statistic": null,
+        "t_pvalue": null,
+        "wilcoxon_statistic": 0.0,
+        "wilcoxon_pvalue": 1.0,
+        "mean_a": 0.8666666666666667,
+        "mean_b": 0.8666666666666667,
+        "effect_size": 0.0
+      }
+    }
+  },
+  "metadata": {
+    "model_name": "qwen_0.6b",
+    "model_id": "Qwen/Qwen3-0.6B",
+    "temperature_mode": "standard",
+    "num_prompts": 3,
+    "num_samples": 5,
+    "conditions": [
+      "PRNG",
+      "TRNG",
+      "QRNG_INT",
+      "QRNG_HASH",
+      "QRNG_BITS"
+    ],
+    "timestamp": "20260203_174921"
+  }
+}

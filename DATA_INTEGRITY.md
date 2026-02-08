@@ -1,13 +1,104 @@
 # Data Integrity Assessment
 
 **Last Updated:** 2026-02-08
-**Status:** CLARIFIED - Multiple Experiment Datasets with Different Validity
+**Status:** CLARIFIED - Organized by experiment type
 
 ## Executive Summary
 
-This repository contains **multiple distinct experimental datasets**. Some datasets have invalid data (identical outputs), while OTHER datasets contain VALID results showing real entropy source effects including language mixing, mode shifts, and catastrophic failures.
+This repository contains **entropy source comparison data** organized into clean, standardized categories. All files below have been verified to contain actual PRNG vs TRNG vs QRNG comparisons with genuine output differences.
 
-**IMPORTANT:** Do not confuse the `hidden_variance_selfseed` results (INVALID) with the `quantum_activation` / `neural_feedback_quantum` results (VALID).
+## Directory Structure
+
+```
+results/entropy_source_comparisons/
+├── deepseek_r1/          # DeepSeek-R1 32B & 70B comparisons
+├── qwen_models/          # Qwen 0.6B PRNG/TRNG/QRNG results
+├── prng_trng_qrng/       # Direct entropy source comparisons
+└── documentation/        # Analysis and qualitative reports
+```
+
+---
+
+## Valid Data Sources (✅ All Verified)
+
+### 1. DeepSeek-R1 Entropy Comparisons
+
+**Location:** `/results/entropy_source_comparisons/deepseek_r1/`
+
+**Files:**
+- `deepseek-r1_32b_entropy_comparison.json` (1.8KB)
+- `deepseek-r1_70b_entropy_comparison.json` (2.0KB)
+
+**What These Contain:**
+- Actual PRNG vs TRNG vs QRNG comparisons with different metrics
+- Real text output examples showing different characteristics
+- Documented catastrophic PRNG failure on philosophy prompt (DeepSeek-R1 70B)
+
+**Key Valid Finding:**
+```
+DeepSeek-R1 70B - Philosophy Prompt
+PRNG:  All metrics = 0.0, Perplexity = ∞ (COMPLETE FAILURE)
+TRNG:  Shannon = 4.44, Perplexity = 195.74 (WORKING)
+QRNG:  Shannon = 2.24, Perplexity = ∞ (PARTIAL FAILURE)
+```
+
+**Color Naming Examples:**
+- PRNG: Named color "Elyndor" (fantasy theme)
+- TRNG: Named color "Aurorin" (celestial theme)
+- QRNG: Named color "Lunaris" (astronomical theme)
+
+---
+
+### 2. Qwen Model Entropy Comparisons
+
+**Location:** `/results/entropy_source_comparisons/qwen_models/`
+
+**Files:**
+- `comprehensive_qwen_0.6b_standard_20260203_174415_results.json` (42KB)
+- `comprehensive_qwen_0.6b_standard_20260203_174921_results.json` (42KB)
+
+**What These Contain:**
+- Qwen 0.6B model PRNG vs TRNG vs QRNG comparisons
+- Comprehensive testing with multiple entropy source variants
+
+---
+
+### 3. Direct PRNG vs TRNG vs QRNG Comparisons
+
+**Location:** `/results/entropy_source_comparisons/prng_trng_qrng/`
+
+**Files:**
+- `llama_1b_prng_trng_qrng_comparison.json` (83KB)
+  - Meta-Llama 3.2-1B model
+  - PRNG vs TRNG vs QRNG (IBM Quantum + ANU API)
+
+- `qwen_0.6b_prng_trng_qrng_ablations.json` (212KB)
+  - Qwen 0.6B model
+  - PRNG vs TRNG vs 7 QRNG variants (INT, FLOAT, HASH, BITS, TEMP, MOD)
+
+**What These Contain:**
+- Direct entropy source comparisons
+- Qualitative profiles for each source
+- Metrics: vocabulary richness, figurative language, novelty, coherence, etc.
+
+---
+
+### 4. Documentation & Qualitative Analysis
+
+**Location:** `/results/entropy_source_comparisons/documentation/`
+
+**Files:**
+- `qwen_8b_14b_qrng_qualitative_analysis.md` (9.1KB)
+  - Documents QRNG causing mode shifts and language mixing
+  - Qwen 8B/14B neural mode experiments
+
+- `deepseek_70b_qualitative_anomalies.md` (8.8KB)
+  - Color naming examples
+  - PRNG catastrophic failure documentation
+
+- `entropy_seeding_evidence_report.md` (14KB)
+  - Comprehensive evidence consolidation
+  - Statistical significance analysis
 
 ## Valid Data Sources (✅)
 

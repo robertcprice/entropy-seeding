@@ -50,56 +50,29 @@ This repository contains experimental data comparing three entropy sources used 
 ```
 entropy-seeding/
 ├── README.md                           # This file
+├── DATA_INTEGRITY.md                    # Data validity assessment
 ├── COMPREHENSIVE_REPORT.md              # Full analysis
 │
-├── results/                             # Experimental data
-│   ├── qwen/                            # Qwen3 family results
-│   │   ├── qwen3_0.6b_full_results.json
-│   │   ├── qwen3_0.6b_summary.json
-│   │   ├── qwen3_1.7b_full_results.json
-│   │   ├── qwen3_1.7b_summary.json
-│   │   ├── qwen3_4b/                    # Colored entropy variants
-│   │   ├── qwen3_8b_full_results.json
-│   │   ├── qwen3_14b_full_results.json
-│   │   ├── qwen3_32b_full_results.json
-│   │   ├── colored_entropy_9configs.json
-│   │   └── ARCHITECTURE_REPORT.md
-│   │
-│   ├── qwen2.5/                         # Qwen2.5 72B (opposite pattern)
-│   │   ├── hidden_variance_selfseed_qwen2_5-72b_*.json
-│   │   ├── significance_qwen2_5-72b.json
-│   │   └── significance_qwen2_5-72b.md
-│   │
-│   ├── deepseek-r1/                     # MoE architecture results
-│   │   ├── deepseek-r1_32b_summary.json
-│   │   ├── deepseek-r1_70b_full_results.json
-│   │   └── ARCHITECTURE_REPORT.md
-│   │
-│   ├── cross_architecture/              # Cross-model comparisons
-│   │   ├── CROSS_ARCHITECTURE_ANALYSIS.md
-│   │   └── gemma2_27b_tre_experiment.json
-│   │
-│   ├── significance/                    # Statistical analysis
-│   │   ├── significance_qwen3-8b.json
-│   │   ├── significance_qwen3-8b.md
-│   │   ├── significance_qwen3-14b.json
-│   │   └── significance_qwen3-14b.md
-│   │
-│   ├── mixtral_8x22b/                   # Additional MoE data
-│   ├── deepseek_r1_llama70b/            # Llama 70B data
-│   ├── llama/                           # Llama architecture notes
-│   ├── mistral/                         # Mistral architecture notes
-│   │
-│   ├── QUALITATIVE_ANALYSIS_ANOMALIES.md # Personality framework
-│   ├── correlation_analysis.json        # Neuron correlations
-│   ├── neural_modulation_rng_comparison.md
-│   └── neural_quantum_rng_comparison.md
-│
-└── reports/                             # Individual entropy source reports
-    ├── PRNG_DETAILED_REPORT.md
-    ├── TRNG_DETAILED_REPORT.md
-    └── QRNG_DETAILED_REPORT.md
+└── results/                             # Experimental data
+    └── entropy_source_comparisons/      # Valid PRNG/TRNG/QRNG comparisons (organized)
+        ├── deepseek_r1/                 # DeepSeek-R1 32B & 70B
+        │   ├── deepseek-r1_32b_entropy_comparison.json
+        │   └── deepseek-r1_70b_entropy_comparison.json
+        │
+        ├── qwen_models/                 # Qwen 0.6B results
+        │   ├── comprehensive_qwen_0.6b_standard_*_results.json
+        │
+        ├── prng_trng_qrng/              # Direct entropy source comparisons
+        │   ├── llama_1b_prng_trng_qrng_comparison.json
+        │   └── qwen_0.6b_prng_trng_qrng_ablations.json
+        │
+        └── documentation/               # Qualitative analysis
+            ├── qwen_8b_14b_qrng_qualitative_analysis.md
+            ├── deepseek_70b_qualitative_anomalies.md
+            └── entropy_seeding_evidence_report.md
 ```
+
+**Note:** Other directories contain experimental results that may be invalid (hidden_variance_selfseed) or unrelated to entropy source comparisons (quantum_activation = neural network activation functions, NOT QRNG).
 
 ## Key Findings (Based on Valid Data Only)
 
