@@ -1,5 +1,7 @@
 # Entropy Source Effects on Large Language Model Output
 
+> **⚠️ DATA INTEGRITY NOTICE:** Portions of this repository contain invalid experimental data. See [DATA_INTEGRITY.md](DATA_INTEGRITY.md) for details on which results are valid and which are not.
+
 A comparative analysis of how different entropy sources affect text generation quality across multiple model architectures and scales.
 
 ## Overview
@@ -10,22 +12,38 @@ This repository contains experimental data comparing three entropy sources used 
 - **TRNG** (True Random Number Generator): Hardware entropy from `/dev/urandom` (Apple M4 Pro)
 - **QRNG** (Quantum Random Number Generator): IBM Quantum ibm_fez backend (156 superconducting qubits)
 
+## Data Integrity Status
+
+**⚠️ CRITICAL:** A significant portion of the Qwen model results contain invalid data where different entropy seeds produced identical outputs.
+
+### Valid Data (✅)
+- **DeepSeek-R1 32B and 70B** entropy comparisons show genuine PRNG vs TRNG vs QRNG differences
+- Documented catastrophic PRNG failure on philosophy prompt (DeepSeek-R1 70B)
+- Qualitative analysis of text output characteristics
+
+### Invalid Data (⚠️)
+- **Qwen 0.6B, 1.7B, 8B, 14B** results with `hidden_variance_selfseed` format
+- ~85% of these results show identical outputs across seeds 11, 22, 33, 44, 55
+- Statistical significance tests for these models are based on flawed comparisons
+
+**See [DATA_INTEGRITY.md](DATA_INTEGRITY.md) for detailed assessment.**
+
 ## Research Questions
 
-1. How does entropy source selection affect text generation metrics?
-2. Does model size mediate entropy source effects?
-3. Do different architectures (Dense vs MoE) respond differently to entropy variation?
-4. Are there edge cases or failure modes specific to certain entropy sources?
+1. ~~How does entropy source selection affect text generation metrics?~~ **Partially Answered** (valid only for DeepSeek-R1)
+2. ~~Does model size mediate entropy source effects?~~ **Cannot Be Determined** (invalid Qwen data)
+3. ~~Do different architectures (Dense vs MoE) respond differently to entropy variation?~~ **Insufficient Valid Data**
+4. **Are there edge cases or failure modes specific to certain entropy sources?** **YES** - PRNG catastrophic failure documented
 
 ## Models Tested
 
-| Model Family | Architecture | Models Tested | Parameter Range |
-|--------------|--------------|---------------|-----------------|
-| Qwen3 | Dense Transformer | 0.6B, 1.7B, 4B, 8B, 14B, 32B | 0.6B - 32B |
-| DeepSeek-R1 | Mixture of Experts | 32B, 70B | 32B - 70B |
-| Qwen2.5 | Dense Transformer | 72B | 72B |
+| Model Family | Architecture | Models Tested | Data Status |
+|--------------|--------------|---------------|-------------|
+| Qwen3 | Dense Transformer | 0.6B, 1.7B, 4B, 8B, 14B, 32B | ⚠️ **INVALID** (identical outputs) |
+| DeepSeek-R1 | Mixture of Experts | 32B, 70B | ✅ **VALID** |
+| Qwen2.5 | Dense Transformer | 72B | ⚠️ **QUESTIONABLE** |
 
-**Total:** 9 models with comprehensive PRNG/TRNG/QRNG testing
+**Valid Results:** Only DeepSeek-R1 32B and 70B have confirmed valid entropy source comparisons.
 
 ## Repository Structure
 
@@ -83,31 +101,32 @@ entropy-seeding/
     └── QRNG_DETAILED_REPORT.md
 ```
 
-## Key Findings
+## Key Findings (Based on Valid Data Only)
 
-### 1. Architecture-Specific Responses
+### 1. PRNG Catastrophic Failure Mode (DeepSeek-R1 70B - VALID)
 
-Different model families respond differently to entropy sources:
+**Prompt:** Philosophy question about consciousness
+**Entropy:** PRNG (seed=42)
+**Result:** All metrics = 0.00, Perplexity = ∞, complete generation failure
 
-| Architecture | Typical Pattern | Exceptions |
-|--------------|-----------------|------------|
-| Qwen3 (Dense) | TRNG > QRNG > PRNG (8B+) | Small models (<8B) show higher sensitivity |
-| Qwen2.5 (Dense) | **PRNG > TRNG ≈ QRNG** | Opposite pattern to Qwen3 |
-| DeepSeek-R1 (MoE) | TRNG > PRNG | PRNG can cause catastrophic failure |
+Same model with TRNG: Normal generation (Shannon = 4.44, Perplexity = 195.74)
 
-**Note:** The Qwen2.5 72B finding is particularly notable—it shows the opposite pattern of other tested models, with PRNG outperforming TRNG and QRNG on vocabulary diversity metrics.
+**Implication:** Deterministic PRNG seeds can cause internal state collisions in MoE architectures, leading to complete generation failure.
 
-### 2. Model Size Effects
+### 2. Different Entropy Sources Produce Different Outputs (VALID)
 
-Entropy source effects diminish as model size increases:
+**Color Naming Task (DeepSeek-R1 70B):**
+- **PRNG:** Named color "Elyndor" (fantasy theme), structured headers, academic tone
+- **TRNG:** Named color "Aurorin" (celestial theme), emotive language, flowing description
+- **QRNG:** Named color "Lunaris" (astronomical theme), analytical tone, highly organized format
 
-| Parameter Range | Sensitivity | TRNG Advantage (where present) |
-|-----------------|-------------|-------------------------------|
-| 0.6B - 1.7B | High | Critical for quality |
-| 4B - 8B | Moderate | Noticeable improvement |
-| 14B+ | Low | Minimal impact |
+### 3. ~~Model Size Effects~~ (INVALID DATA - CANNOT DETERMINE)
 
-### 3. MoE Architecture Vulnerability
+The Qwen model data showing size-dependent effects contains identical outputs across different seeds and **cannot be used** for this analysis.
+
+### 4. ~~Architecture-Specific Responses~~ (INSUFFICIENT VALID DATA)
+
+Claims about Qwen3 vs Qwen2.5 patterns are based on invalid data. Only DeepSeek-R1 has valid entropy comparisons.
 
 DeepSeek-R1 (Mixture of Experts) exhibited a catastrophic failure mode with PRNG:
 
