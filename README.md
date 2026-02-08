@@ -143,13 +143,13 @@ entropy-seeding/
 │   └── qrng_samples.txt
 │
 └── 📂 results/                     # Raw JSON data by architecture
-    ├── qwen/                      # Qwen3 family results
+    ├── qwen/                      # Qwen3 family (Dense)
     │   ├── qwen3_0.6b_summary.json
     │   ├── qwen3_1.7b_summary.json
     │   ├── qwen3_8b_full.json
     │   ├── qwen3_14b_full.json
     │   └── qwen3_32b_full_results.json
-    └── deepseek/                  # DeepSeek-R1 family results
+    └── deepseek-r1/               # DeepSeek-R1 family (MoE)
         ├── deepseek-r1_32b_entropy_comparison.json
         └── deepseek-r1_70b_full_results.json
 ```
@@ -361,8 +361,14 @@ Under the following terms:
 ## 📚 Additional Resources
 
 - [📘 Full Report](COMPREHENSIVE_REPORT.md) - Complete analysis
-- [📊 Results](results/) - Raw JSON data
+- [📊 Results](results/) - Raw JSON data by architecture
+  - [Qwen3 Architecture Report](results/qwen/ARCHITECTURE_REPORT.md) - Dense model analysis
+  - [DeepSeek-R1 Architecture Report](results/deepseek-r1/ARCHITECTURE_REPORT.md) - MoE model analysis
 - [📝 Examples](examples/) - Text output samples
+- [📄 Individual Reports](reports/) - Entropy source deep dives
+  - [PRNG Detailed Report](reports/PRNG_DETAILED_REPORT.md) - Pseudo-random analysis
+  - [TRNG Detailed Report](reports/TRNG_DETAILED_REPORT.md) - Hardware random analysis
+  - [QRNG Detailed Report](reports/QRNG_DETAILED_REPORT.md) - Quantum random analysis
 
 ---
 

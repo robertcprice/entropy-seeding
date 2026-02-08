@@ -537,6 +537,58 @@ This makes them **hyper-sensitive** to entropy source quality. Small models esse
 | **Dense** | Qwen3 (0.6B-32B) | All parameters active for every token |
 | **MoE** | DeepSeek-R1 (32B, 70B) | Mixture of Experts - sparsely activated |
 
+### Architecture Comparison
+
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│                       Dense vs MoE Models                          │
+├─────────────────────────────────────────────────────────────────────┤
+│                                                                      │
+│  Dense Models (Qwen3):                                             │
+│  ┌──────────────┐  All parameters active for every token          │
+│  │  All params  │  - Consistent activation                       │
+│  │   100%      │  - Predictable memory usage                     │
+│  └──────────────┘  - Entropy directly affects all layers         │
+│                                                                      │
+│  MoE Models (DeepSeek-R1):                                         │
+│  ┌──────────────┐  Subset of experts activated per token          │
+│  │  Router →    │  - ~8-10% parameters active                      │
+│  │  Top-k       │  - Expert selection depends on input entropy     │
+│  │  Experts     │  - More sensitive to entropy source quality     │
+│  └──────────────┘  - Different routing patterns with different seeds │
+│                                                                      │
+└─────────────────────────────────────────────────────────────────────┘
+```
+
+#### Key Architecture Differences
+
+| Aspect | Dense (Qwen3) | MoE (DeepSeek-R1) |
+|--------|---------------|-------------------|
+| **Parameter Activation** | 100% per token | ~8-10% per token |
+| **Expert Selection** | N/A | Router chooses top-k experts |
+| **Memory Usage** | Consistent | Variable by routing |
+| **Entropy Sensitivity** | Moderate | **Higher** |
+| **PRNG Failure Risk** | Moderate | **Catastrophic** |
+| **Speed** | 18-21 TPS | 9-21 TPS |
+| **TRNG Advantage** | Beneficial | **Essential** |
+
+#### Why MoE is More Entropy-Sensitive
+
+**Dual Effect of Entropy on MoE Models:**
+
+1. **Token Sampling:** Standard LLM temperature-based sampling (same as all models)
+2. **Expert Routing:** Router uses entropy to select which experts activate (unique to MoE)
+
+```
+Input Token + Seed → Router → Expert Selection
+                              ↓
+                    Different seeds → Different routing
+                              ↓
+                  Different experts → Different outputs
+```
+
+**Implication:** Entropy quality affects MoE models **twice** - through both token sampling AND expert routing. This makes MoE models significantly more sensitive to entropy source choice.
+
 ### DeepSeek-R1 (MoE Architecture)
 
 **Architecture:** Mixture of Experts (MoE)
