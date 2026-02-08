@@ -53,26 +53,38 @@ entropy-seeding/
 ├── DATA_INTEGRITY.md                    # Data validity assessment
 ├── COMPREHENSIVE_REPORT.md              # Full analysis
 │
-└── results/                             # Experimental data
-    └── entropy_source_comparisons/      # Valid PRNG/TRNG/QRNG comparisons (organized)
+└── results/
+    └── entropy_source_comparisons/      # Valid PRNG/TRNG/QRNG comparisons
         ├── deepseek_r1/                 # DeepSeek-R1 32B & 70B
-        │   ├── deepseek-r1_32b_entropy_comparison.json
-        │   └── deepseek-r1_70b_entropy_comparison.json
+        │   ├── deepseek-r1_32b_prng_trng_qrng.json
+        │   └── deepseek-r1_70b_prng_trng_qrng.json
         │
-        ├── qwen_models/                 # Qwen 0.6B results
-        │   ├── comprehensive_qwen_0.6b_standard_*_results.json
+        ├── qwen_models/                 # Qwen model results
+        │   ├── qwen_0.6b_prng_trng_qrng_results.json
+        │   └── qwen_0.6b_prng_trng_qrng_results_v2.json
         │
         ├── prng_trng_qrng/              # Direct entropy source comparisons
-        │   ├── llama_1b_prng_trng_qrng_comparison.json
-        │   └── qwen_0.6b_prng_trng_qrng_ablations.json
+        │   ├── llama_1b_prng_trng_qrng.json (Llama 3.2-1B)
+        │   └── qwen_0.6b_prng_trng_qrng_extended.json (7 QRNG variants)
         │
         └── documentation/               # Qualitative analysis
-            ├── qwen_8b_14b_qrng_qualitative_analysis.md
-            ├── deepseek_70b_qualitative_anomalies.md
-            └── entropy_seeding_evidence_report.md
+            ├── deepseek_r1_70b_qualitative_findings.md
+            ├── qwen_8b_14b_qualitative_findings.md
+            └── entropy_source_evidence_summary.md
 ```
 
-**Note:** Other directories contain experimental results that may be invalid (hidden_variance_selfseed) or unrelated to entropy source comparisons (quantum_activation = neural network activation functions, NOT QRNG).
+## Unified File Naming Convention
+
+**All entropy comparison files use: `{model}_prng_trng_qrng.json`**
+
+- `*_extended.json` = Tests 7 QRNG variants (INT, FLOAT, HASH, BITS, TEMP, MOD)
+- `*_v2.json` = Repeated experiment run
+- `*_qualitative_findings.md` = Qualitative analysis
+- `*_evidence_summary.md` = Statistical evidence summary
+
+**Note:** Other directories contain unrelated experiments:
+- `quantum_activation/` = Neural network activation functions (NOT QRNG)
+- `hidden_variance_selfseed/` = Invalid data (identical outputs across seeds)
 
 ## Key Findings (Based on Valid Data Only)
 
