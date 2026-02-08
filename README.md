@@ -142,15 +142,16 @@ entropy-seeding/
 │   ├── trng_samples.txt
 │   └── qrng_samples.txt
 │
-└── 📂 results/                     # Raw JSON data
-    ├── large_models/              # 32B, 70B results
-    │   ├── deepseek-r1_70b.json
-    │   ├── deepseek-r1_32b.json
-    │   └── qwen3_32b.json
-    └── small_models/              # 0.6B-14B results
-        ├── qwen3_0.6b_summary.json
-        ├── qwen3_8b_summary.json
-        └── qwen3_14b_summary.json
+└── 📂 results/                     # Raw JSON data by architecture
+    ├── qwen/                      # Qwen3 family results
+    │   ├── qwen3_0.6b_summary.json
+    │   ├── qwen3_1.7b_summary.json
+    │   ├── qwen3_8b_full.json
+    │   ├── qwen3_14b_full.json
+    │   └── qwen3_32b_full_results.json
+    └── deepseek/                  # DeepSeek-R1 family results
+        ├── deepseek-r1_32b_entropy_comparison.json
+        └── deepseek-r1_70b_full_results.json
 ```
 
 ---

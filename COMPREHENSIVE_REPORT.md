@@ -1481,15 +1481,16 @@ config = {
 
 All raw JSON data is available in the `results/` directory:
 
-#### Large Models
-- `results/large_models/deepseek-r1_70b.json`
-- `results/large_models/deepseek-r1_32b.json`
-- `results/large_models/qwen3_32b.json`
+#### Qwen Models (Dense Architecture)
+- `results/qwen/qwen3_0.6b_summary.json`
+- `results/qwen/qwen3_1.7b_summary.json`
+- `results/qwen/qwen3_8b_full.json`
+- `results/qwen/qwen3_14b_full.json`
+- `results/qwen/qwen3_32b_full_results.json`
 
-#### Small Models
-- `results/small_models/qwen3_0.6b_summary.json`
-- `results/small_models/qwen3_8b_summary.json`
-- `results/small_models/qwen3_14b_summary.json`
+#### DeepSeek Models (MoE Architecture)
+- `results/deepseek/deepseek-r1_32b_entropy_comparison.json`
+- `results/deepseek/deepseek-r1_70b_full_results.json`
 
 ### Statistical Significance
 
