@@ -7,6 +7,10 @@ Usage:
     python run_comprehensive_experiment.py --all-models --samples 3
 """
 
+import sys
+# Force unbuffered output
+sys.stdout.reconfigure(line_buffering=True)
+
 import argparse
 import hashlib
 import json
