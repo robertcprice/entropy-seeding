@@ -21,6 +21,30 @@ This repository contains comprehensive research on how different entropy sources
 
 **Primary Recommendation:** Use TRNG (`/dev/urandom`) for all production LLM deployments.
 
+---
+
+## Entropy Source Sourcing
+
+### PRNG: Pseudo-Random
+- **Source:** Python `random` module (Mersenne Twister MT19937)
+- **Seeding:** Fixed seeds (11, 22, 33, 44, 55) for reproducibility
+- **Platform:** Algorithmic (identical on all platforms)
+
+### TRNG: True Random (Hardware)
+- **Hardware:** Apple MacBook Pro with M4 chip
+- **OS:** macOS 15.x (Darwin 24.x)
+- **Source:** `/dev/urandom` device (kernel HRNG from M4 SoC)
+- **Entropy sources:** Hardware RNG, thermal noise, interrupt timing, sensor fluctuations
+
+### QRNG: Quantum Random (IBM Quantum)
+- **Hardware:** IBM Quantum `ibm_fez` backend
+- **Qubits:** 156 superconducting transmon qubits
+- **Source:** Quantum measurements (Hadamard + measurement)
+- **Cache:** 102KB of pre-generated measurement results
+- **Provider:** https://quantum.ibm.com (open access tier)
+
+---
+
 ### Small vs Large Model Impact
 
 | Model Size | Entropy Sensitivity | Personality Visibility |
