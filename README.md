@@ -149,10 +149,34 @@ entropy-seeding/
     │   ├── qwen3_8b_full_results.json
     │   ├── qwen3_14b_full_results.json
     │   ├── qwen3_32b_full_results.json
-    │   └── colored_entropy_9configs.json (9 entropy variants, 1.7B+4B)
-    └── deepseek-r1/               # DeepSeek-R1 family (MoE)
-        ├── deepseek-r1_32b_summary.json
-        └── deepseek-r1_70b_full_results.json
+    │   ├── colored_entropy_9configs.json (9 entropy variants, 1.7B+4B)
+    │   └── ARCHITECTURE_REPORT.md
+    ├── qwen2.5/                   # Qwen2.5 family (NEW: Shows OPPOSITE pattern!)
+    │   ├── hidden_variance_selfseed_qwen2_5-72b_bnb_full_20260207_020557.json
+    │   ├── significance_qwen2_5-72b.json + .md
+    │   └── ARCHITECTURE_NOTES.md (TRNG/QRNG WORSE than PRNG)
+    ├── deepseek-r1/               # DeepSeek-R1 family (MoE)
+    │   ├── deepseek-r1_32b_summary.json
+    │   ├── deepseek-r1_70b_full_results.json
+    │   └── ARCHITECTURE_REPORT.md
+    ├── cross_architecture/        # Cross-model TRE experiments
+    │   ├── CROSS_ARCHITECTURE_ANALYSIS.md (Gemma vs Llama vs Mixtral)
+    │   └── gemma2_27b_tre_experiment.json (8.8MB - strongest effect)
+    ├── significance/              # Statistical significance analysis
+    │   ├── significance_qwen3-8b.json + .md
+    │   └── significance_qwen3-14b.json + .md
+    ├── mixtral_8x22b/             # MoE architecture TRE results
+    │   └── mixtral_8x22b_tre_experiment.json (8.6MB)
+    ├── deepseek_r1_llama70b/      # Llama 70B TRE results
+    │   └── deepseek_r1_llama70b_tre_experiment.json (8.5MB)
+    ├── llama/                     # Llama architecture notes
+    │   └── ARCHITECTURE_NOTES.md
+    ├── mistral/                   # Mistral architecture notes
+    │   └── ARCHITECTURE_NOTES.md
+    ├── QUALITATIVE_ANALYSIS_ANOMALIES.md (Personality framework)
+    ├── correlation_analysis.json (Neuron activation correlations)
+    ├── neural_modulation_rng_comparison.md (NEURAL+entropy experiments)
+    └── neural_quantum_rng_comparison.md (Statistical analysis)
 
 **File naming:**
 - `*_summary.json` - Key metrics and aggregated results (smaller)
@@ -365,10 +389,13 @@ Under the following terms:
 
 ## 📚 Additional Resources
 
-- [📘 Full Report](COMPREHENSIVE_REPORT.md) - Complete analysis (1,850+ lines)
+- [📘 Full Report](COMPREHENSIVE_REPORT.md) - Complete analysis (2,000+ lines)
 - [📊 Results](results/) - Raw JSON data by architecture
   - [Qwen3 Architecture Report](results/qwen/ARCHITECTURE_REPORT.md) - Dense model analysis
+  - [Qwen2.5 Architecture Notes](results/qwen2.5/significance_qwen2_5-72b.md) - **Shows OPPOSITE pattern!**
   - [DeepSeek-R1 Architecture Report](results/deepseek-r1/ARCHITECTURE_REPORT.md) - MoE model analysis
+  - [Cross-Architecture Analysis](results/cross_architecture/CROSS_ARCHITECTURE_ANALYSIS.md) - Gemma vs Llama vs Mixtral
+  - [Qwen3 Significance](results/significance/) - Statistical analysis for 8B/14B
   - [Llama Architecture Notes](results/llama/ARCHITECTURE_NOTES.md) - Llama test status
   - [Mistral Architecture Notes](results/mistral/ARCHITECTURE_NOTES.md) - Mistral test status
   - [Qualitative Analysis](results/QUALITATIVE_ANALYSIS_ANOMALIES.md) - Personality framework & anomalies
@@ -382,10 +409,20 @@ Under the following terms:
 
 ### Advanced Techniques
 
+- **Section 8.5**: Architecture-Specific Entropy Response Patterns - **NEW!**
 - **Section 9.5**: Neural Modulation & RTE - Training-free entropy control
 - **Section 9.6**: Neural + QRNG Experimental Results
 - **Section 9.7**: Nebula Entropy Source - Literary text-based seeding (Bible KJV)
 - **Section 10**: Biblical Reference Pattern Discovery (RTE+QRNG effect)
+
+### Full Experiment Data (Untampered)
+
+All raw JSON results are included in the repository:
+- **Qwen3**: 0.6B, 1.7B, 8B, 14B, 32B - Full entropy comparison results
+- **Qwen2.5**: 72B - Shows OPPOSITE pattern (TRNG/QRNG worse than PRNG)
+- **DeepSeek-R1**: 32B, 70B - MoE architecture with catastrophic PRNG failure
+- **Cross-Architecture**: Gemma2-27B, Mixtral-8x22B, Llama-70B TRE experiments
+- **Significance Analysis**: Statistical tests for all comparisons
 
 ---
 
