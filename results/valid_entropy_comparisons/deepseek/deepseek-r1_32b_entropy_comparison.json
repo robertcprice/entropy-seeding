@@ -1,0 +1,70 @@
+{
+  "model": "deepseek-r1:32b",
+  "timestamp": "2026-02-05 05:39:05",
+  "prompts": {
+    "color": {
+      "PRNG": {
+        "shannon_char": 4.370944324335008,
+        "shannon_word": 6.8812838352282775,
+        "perplexity": 188.39530603349988,
+        "burstiness": 0.2359257385020862,
+        "repetition": 0.013768969126111983,
+        "uniqueness": 0.6548767934118253,
+        "tsa": 4.119345567245818,
+        "tre": 6.8812838352282775
+      },
+      "TRNG": {
+        "shannon_char": 4.343041694009122,
+        "shannon_word": 6.698056038140059,
+        "perplexity": 183.65687578152162,
+        "burstiness": 0.5082668312412579,
+        "repetition": 0.01182033096926714,
+        "uniqueness": 0.7105376159395397,
+        "tsa": 4.111778714043075,
+        "tre": 6.698056038140059
+      },
+      "QRNG-IBM": {
+        "shannon_char": 4.336249234598573,
+        "shannon_word": 6.768055787333893,
+        "perplexity": 184.30585513495973,
+        "burstiness": 0.3024793951221535,
+        "repetition": 0.03915097144701855,
+        "uniqueness": 0.5776617927846448,
+        "tsa": 4.107416249477092,
+        "tre": 6.768055787333893
+      }
+    },
+    "philosophy": {
+      "PRNG": {
+        "shannon_char": 0.0,
+        "shannon_word": 0.0,
+        "perplexity": Infinity,
+        "burstiness": 0.0,
+        "repetition": 0.0,
+        "uniqueness": 0.0,
+        "tsa": 0.0,
+        "tre": 0.0
+      },
+      "TRNG": {
+        "shannon_char": 0.0,
+        "shannon_word": 0.0,
+        "perplexity": Infinity,
+        "burstiness": 0.0,
+        "repetition": 0.0,
+        "uniqueness": 0.0,
+        "tsa": 0.0,
+        "tre": 0.0
+      },
+      "QRNG-IBM": {
+        "shannon_char": 0.0,
+        "shannon_word": 0.0,
+        "perplexity": Infinity,
+        "burstiness": 0.0,
+        "repetition": 0.0,
+        "uniqueness": 0.0,
+        "tsa": 0.0,
+        "tre": 0.0
+      }
+    }
+  }
+}
