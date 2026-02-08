@@ -1,0 +1,1260 @@
+{
+  "model": "mistral:latest",
+  "timestamp": "2026-02-08T17:54:07.684330",
+  "num_samples": 2,
+  "prompts": {
+    "The old lighthouse keeper had never seen anything like it.": {
+      "PRNG": {
+        "samples": [
+          {
+            "seed": 2053695854357871005,
+            "output": "That's intriguing! It sounds like the beginning of a captivating story. Let's continue:\n\nThe old lighthouse keeper had never seen anything like it. Every night for as long as he could remember, his duty was to tend the beacon that guided sailors safely through treacherous waters. But on this particular evening, something unusual occurred.\n\nAs the sun dipped below the horizon, casting a breathtaking display of colors across the sky, the old lighthouse keeper climbed the winding staircase leading up to the lantern room. He carried with him the oil lamp that fueled the powerful beacon atop the lighthouse, its warm glow flickering gently in his hand.\n\nUpon reaching the top, he found the source of the commotion. A strange, ethereal light pulsed from within the fog-shrouded bay below, casting eerie reflections off the water's surface and illuminating the night in a way that the lighthouse never had before. The old keeper squinted, trying to discern the origin of this enigmatic glow.\n\nSuddenly, the strange light coalesced into a shape - an enormous vessel unlike anything he had ever seen before, its hull seemingly constructed from an otherworldly material that shimmered and pulsed with each wave. The ship was surrounded by a ghostly mist, which seemed to ripple and dance as if alive.\n\nThe old keeper watched in awe as the ship glided closer to the lighthouse, its strange light now casting an eerie greenish hue over everything it touched. As it drew nearer, he could see figures moving about on deck, though they were unlike any crew he had ever encountered. They seemed almost translucent, their forms distorted and wavering as if made of water rather than flesh.\n\nHis heart pounded in his chest, but the old keeper could not look away. He felt an inexplicable connection to this mysterious vessel, a feeling that both frightened and exhilarated him. As the ship passed beneath the beam of the lighthouse, its strange light seemed to flicker and dim, as if drawing sustenance from the ancient beacon.\n\nThe old keeper stood rooted to the spot, his mind racing with questions and theories about this extraordinary encounter. He had never felt so alive, so fully awake to the wonder of the world around him. And though he knew that he should sound the alarm, alerting others to the strange ship's presence, he couldn't bring himself to do it.\n\nInstead, he continued his nightly duties, tending to the lighthouse and watching as the ethereal vessel sailed further out to sea. As dawn broke, the strange light finally vanished, leaving behind a peaceful calm that seemed to hang heavy in the air. The old keeper climbed down from the tower, feeling both drained and exhilarated by what he had witnessed.\n\nFor days afterward, the old keeper found himself unable to shake the memory of the strange ship from his mind. He scoured ancient texts and consulted with scholars, seeking answers to the questions that plagued him. But as time passed, the details of the encounter began to fade, becoming more distant and dreamlike in his memory.\n\nYet every night when he climbed the winding staircase to tend the lighthouse's beacon, he couldn't help but wonder if he would ever again bear witness to such a strange and beautiful mystery.",
+            "metrics": {
+              "length_chars": 3239,
+              "length_words": 545,
+              "shannon_char": 4.280187576974742,
+              "shannon_word": 7.514719248406122,
+              "unique_words": 304,
+              "unique_chars": 44,
+              "word_diversity": 0.5577981651376147,
+              "char_diversity": 0.013584439641864773
+            }
+          },
+          {
+            "seed": 13679192365072849617,
+            "output": "The sky, once a canvas of serene blues and whites, was now a swirling vortex of deep purples and fiery reds. A massive storm was approaching, and the old lighthouse keeper, John, felt a knot in his stomach as he watched the waves crash against the rocks below.\n\nFor years, John had tended to this lighthouse, ensuring that sailors on the treacherous coast were safe from the hidden dangers lurking beneath the waves. But tonight, he feared for more than just those at sea. The storm was unlike any he'd ever seen, and he couldn't help but wonder if it was a sign of something greater.\n\nAs the storm raged on, John huddled in his small quarters, the wind howling outside like a thousand ghosts demanding to be heard. He had always felt a strange connection to this lighthouse, as if it were more than just a building. There were nights when he swore he could feel the spirits of the sailors who had perished on these shores, their cries echoing through the halls.\n\nBut tonight, those spirits seemed closer than ever before. John could feel them pressing against him, urging him to do something, to save them from whatever fate had befallen them. He knew he couldn't just sit idly by as they suffered.\n\nWith a sense of determination that surprised even himself, John donned his heavy coat and braved the storm, making his way up the winding staircase to the top of the lighthouse. The wind threatened to knock him off his feet as he climbed, but he held on, driven by a purpose that felt greater than himself.\n\nOnce he reached the top, John threw open the door to the light chamber and began to turn the crank, sending the powerful beam of light soaring into the storm-filled sky. He felt a surge of energy as the light cut through the darkness, illuminating the swirling chaos below.\n\nAnd then, something incredible happened. The spirits that had been haunting him for years appeared before him, their ethereal forms glowing in the light of the lighthouse. They surrounded him, their voices whispering words of gratitude and thanks.\n\nJohn could hardly believe what he was seeing. He had always felt a connection to these lost souls, but he never imagined that he would be able to help them find peace. As they swirled around him, he could see the fear and pain in their eyes slowly fading, replaced by a sense of calm and serenity.\n\nIt was then that John realized what had been happening all along. The storm had not been a sign of something evil or dangerous; it had simply been a call to action. By tending to his lighthouse and keeping watch over the sea, he had been helping these spirits find the peace they so desperately sought.\n\nWith renewed purpose, John continued to turn the crank, sending the light beaconing into the night sky. The storm slowly began to subside, the winds dying down and the waves calming. The old lighthouse keeper had never felt more alive or fulfilled, knowing that he had made a difference in the lives of these lost souls.\n\nAs the years went by, John continued to tend to his lighthouse, always keeping watch over the sea. And though the spirits no longer appeared before him, he could feel their presence, a comforting reminder of the work he had done and the lives he had touched.\n\nAnd so, the old lighthouse keeper lived out the rest of his days in peace, knowing that he had found his purpose in life. He knew that as long as there were sailors at sea, there would always be a need for a light to guide them home. And he was more than happy to keep that light burning, no matter what storms came his way.",
+            "metrics": {
+              "length_chars": 3542,
+              "length_words": 640,
+              "shannon_char": 4.243921617059883,
+              "shannon_word": 7.5096672279689685,
+              "unique_words": 311,
+              "unique_chars": 42,
+              "word_diversity": 0.4859375,
+              "char_diversity": 0.011857707509881422
+            }
+          }
+        ],
+        "aggregate_metrics": {
+          "length_chars_mean": 3390.5,
+          "length_chars_min": 3239,
+          "length_chars_max": 3542,
+          "length_words_mean": 592.5,
+          "length_words_min": 545,
+          "length_words_max": 640,
+          "shannon_char_mean": 4.262054597017313,
+          "shannon_char_min": 4.243921617059883,
+          "shannon_char_max": 4.280187576974742,
+          "shannon_word_mean": 7.512193238187545,
+          "shannon_word_min": 7.5096672279689685,
+          "shannon_word_max": 7.514719248406122,
+          "unique_words_mean": 307.5,
+          "unique_words_min": 304,
+          "unique_words_max": 311,
+          "unique_chars_mean": 43.0,
+          "unique_chars_min": 42,
+          "unique_chars_max": 44,
+          "word_diversity_mean": 0.5218678325688073,
+          "word_diversity_min": 0.4859375,
+          "word_diversity_max": 0.5577981651376147,
+          "char_diversity_mean": 0.012721073575873099,
+          "char_diversity_min": 0.011857707509881422,
+          "char_diversity_max": 0.013584439641864773
+        },
+        "valid_samples": 2
+      },
+      "TRNG": {
+        "samples": [
+          {
+            "seed": 12494449400325187734,
+            "output": "As he stood on the precipice of the rocky coast, the old lighthouse keeper watched in awe as an ethereal glow began to emanate from the shimmering waters below. It was unlike anything he had ever encountered in his many years of tending the beacon that guided sailors safely through treacherous seas.\n\nThe light seemed to dance upon the waves, casting kaleidoscopic reflections upon the cliffs and skies above. The keeper felt a strange sense of excitement and fear as he strained to decipher its meaning. He had heard tales of mysterious lights appearing in these waters, but none had ever been witnessed by his own eyes.\n\nAs the nights passed, the glowing light grew stronger and more persistent. It seemed to beckon him, drawing him closer to the water's edge. The keeper found himself unable to resist its allure, despite the voice of reason that whispered in the back of his mind, warning him of the dangers that lay hidden beneath the waves.\n\nOne fateful night, overcome by curiosity and a desire to understand the mysterious light, the old lighthouse keeper ventured down to the shoreline. He could feel the power of the ocean's pull as it tugged at his feet, threatening to drag him into the depths below. But he pressed on, determined to uncover the secrets that lay hidden within the glowing light.\n\nAs he reached the water's edge, the keeper found himself face-to-face with a creature of such beauty and terror that it took his breath away. It was a mermaid, her golden hair cascading down her back like strands of liquid sunshine, her eyes as deep and mysterious as the ocean itself.\n\nThe mermaid regarded him with a knowing smile, her voice like the melody of the waves as she spoke. \"I have been waiting for someone worthy to bear witness to my existence,\" she said. \"Your curiosity and courage have earned you a place in my heart.\"\n\nThe old lighthouse keeper felt his heart swell with joy at the mermaid's words, but he also knew that there could be no future between them. He was bound by duty to the lighthouse, while she was tethered to the ocean depths.\n\n\"I understand your plight,\" the mermaid continued, her voice tinged with sadness. \"But I cannot leave my home, and you cannot abandon yours. Perhaps, though, we can find a way to bridge the gap between our worlds.\"\n\nAnd so, the old lighthouse keeper and the mermaid began a secret rendezvous, meeting each night beneath the glowing light that marked her territory. They shared stories of their lives, their dreams, and their fears, finding solace and comfort in one another's presence.\n\nBut as time passed, the keeper knew that he could not continue to hide his relationship with the mermaid from the world. He confided in a trusted friend, who vowed to keep their secret safe. But alas, as secrets have a way of doing, it was soon discovered by others.\n\nThe village elders, fearful of the unknown and the potential danger that the mermaid posed, demanded that she be banished from their shores. The old lighthouse keeper, torn between his duty to protect his home and his love for the mermaid, pleaded with them to spare her life.\n\nBut the elders were unyielding in their resolve, and the mermaid was forced to flee into the depths of the ocean once more. The old lighthouse keeper stood alone on the shoreline, his heart heavy with grief and regret.\n\nIn the years that followed, the glowing light continued to appear each night, a beacon of hope for the old lighthouse keeper as he pined for the mermaid who had stolen his heart. He vowed to never forget her, and to carry her memory with him until the day they were reunited once more.\n\nAnd so it was that the old lighthouse keeper continued to tend his beacon, a symbol of hope and guidance for sailors navigating treacherous seas. And though he never saw the mermaid again, he knew in his heart that she was always with him, watching over him from her home in the depths below.",
+            "metrics": {
+              "length_chars": 3906,
+              "length_words": 690,
+              "shannon_char": 4.234382316870839,
+              "shannon_word": 7.532027859896078,
+              "unique_words": 337,
+              "unique_chars": 41,
+              "word_diversity": 0.48840579710144927,
+              "char_diversity": 0.010496671786994368
+            }
+          },
+          {
+            "seed": 18085787648079547781,
+            "output": "As he stood atop the weathered tower, the wind howling around him, the old lighthouse keeper couldn't help but feel a strange sense of unease. His eyes were fixed on the horizon, where a massive, otherworldly storm was brewing. The swirling vortex seemed to defy all logic and reason, its dark tendrils reaching out like an ancient leviathan awakened from slumber.\n\nFor years, he had tended to this lonely beacon, guiding ships safely through treacherous waters. But now, as the storm approached, he couldn't shake the feeling that something was terribly wrong. The air was thick with an electricity that seemed to hum in his bones, and the sea below churned with a malevolent energy.\n\nHe had heard tales of such storms before, of ancient mariners who had witnessed similar phenomena and were never seen again. He wondered if this was some sort of omen, a harbinger of doom sent to signal the end of his lonely existence.\n\nBut as he watched, the storm began to change. The swirling vortex seemed to slow, as if it were gathering its strength for one final assault. And then, suddenly, it split apart, revealing a magnificent ship that seemed to materialize out of thin air.\n\nThe vessel was unlike anything he had ever seen, with sails like silver wings and a hull like polished obsidian. It glided effortlessly through the air, its passage marked by a trail of iridescent light that stretched across the sky. As it approached the lighthouse, the old keeper felt his heart swell with awe.\n\nThe ship came to rest in front of the tower, and from its deck emerged a figure draped in flowing robes of deep crimson. The figure approached the old man, its eyes burning with an intensity that seemed to pierce his very soul.\n\n\"Greetings, guardian of the light,\" it said in a voice that was at once soothing and commanding. \"I have come to offer you a choice.\"\n\nThe old lighthouse keeper stared at the figure, unsure of what to make of its sudden appearance. But as he listened to its words, something inside him stirred. He had lived a long and solitary life, his only companions the sea and the wind. And now, as this strange being stood before him, he realized that there was more to existence than he had ever imagined.\n\n\"What is your choice?\" he asked, his voice shaking with anticipation.\n\nThe figure smiled, its eyes gleaming like stars in the night sky. \"You may choose to remain here, continuing your lonely vigil over the sea. Or you may join me and my crew, sailing the cosmos on a journey of discovery and adventure beyond your wildest dreams.\"\n\nThe old lighthouse keeper hesitated for only a moment before making his decision. He knew that he could never return to his solitary existence after seeing what lay beyond the horizon. And so, with a mixture of fear and excitement, he stepped forward to join the crew of the mysterious ship, ready to embark on an adventure that would change his life forever.",
+            "metrics": {
+              "length_chars": 2908,
+              "length_words": 511,
+              "shannon_char": 4.284531217076103,
+              "shannon_word": 7.529201436049026,
+              "unique_words": 288,
+              "unique_chars": 42,
+              "word_diversity": 0.5636007827788649,
+              "char_diversity": 0.014442916093535076
+            }
+          }
+        ],
+        "aggregate_metrics": {
+          "length_chars_mean": 3407.0,
+          "length_chars_min": 2908,
+          "length_chars_max": 3906,
+          "length_words_mean": 600.5,
+          "length_words_min": 511,
+          "length_words_max": 690,
+          "shannon_char_mean": 4.2594567669734715,
+          "shannon_char_min": 4.234382316870839,
+          "shannon_char_max": 4.284531217076103,
+          "shannon_word_mean": 7.530614647972552,
+          "shannon_word_min": 7.529201436049026,
+          "shannon_word_max": 7.532027859896078,
+          "unique_words_mean": 312.5,
+          "unique_words_min": 288,
+          "unique_words_max": 337,
+          "unique_chars_mean": 41.5,
+          "unique_chars_min": 41,
+          "unique_chars_max": 42,
+          "word_diversity_mean": 0.5260032899401571,
+          "word_diversity_min": 0.48840579710144927,
+          "word_diversity_max": 0.5636007827788649,
+          "char_diversity_mean": 0.012469793940264722,
+          "char_diversity_min": 0.010496671786994368,
+          "char_diversity_max": 0.014442916093535076
+        },
+        "valid_samples": 2
+      },
+      "QRNG": {
+        "samples": [
+          {
+            "seed": 2479772665882593363,
+            "output": "As he stood on the rocky shore, the wind howling around him, the old lighthouse keeper gazed upon a sight that was both magnificent and eerie. The sky above was ablaze with an array of colors unlike any he'd ever witnessed before - swirling hues of purple, pink, and green that seemed to defy the very laws of nature.\n\nThe sea too had taken on an otherworldly quality, its surface churning and foaming as if possessed by some unseen force. Waves crashed against the cliffs with a ferocity that made the very air shake, sending spumes of saltwater high into the air.\n\nYet amidst this tumultuous scene, there was an undeniable beauty - the way the moonlight danced upon the waves, casting a silver sheen over the churning water; the ethereal glow that emanated from the swirling sky, bathing the landscape in a surreal and otherworldly light.\n\nThe old lighthouse keeper stood there for what felt like hours, mesmerized by this spectacle, his heart pounding with a mixture of fear and awe. He knew not what had caused such an event - perhaps some cosmic phenomenon he could scarcely comprehend - but whatever it was, it filled him with a sense of wonder that threatened to overwhelm him.\n\nHe thought back to the countless nights he'd spent here in solitude, tending to his duties as the lighthouse keeper, watching over the treacherous coastline and guiding ships safely through the treacherous waters. He'd always taken pride in his work, knowing that he was providing a vital service to those who braved the open seas.\n\nBut tonight, as he beheld this breathtaking display of nature's power, he felt a newfound appreciation for the world around him - an understanding that there were forces at play far beyond his comprehension, forces that could bring both beauty and destruction in equal measure.\n\nHe stood there, gazing out at the swirling sky and churning sea, feeling a strange sense of connection to this wild and untamed landscape. He knew that he would never truly understand the secrets it held, but he was content to bear witness to its grandeur, knowing that he was part of something much larger than himself.\n\nAs the night wore on and the spectacle began to fade, the old lighthouse keeper returned to his post, his heart still pounding with a mix of fear and wonder. He would never forget this night, nor the strange and beautiful sight that had graced the shores of his isolated outpost.\n\nAnd as he tended to his duties, watching over the restless sea and guiding ships safely through the treacherous waters, he carried with him a renewed sense of purpose - a reminder that even in the darkest and most unpredictable times, there was still beauty to be found in the world.",
+            "metrics": {
+              "length_chars": 2684,
+              "length_words": 467,
+              "shannon_char": 4.239658712452299,
+              "shannon_word": 7.373148779462827,
+              "unique_words": 259,
+              "unique_chars": 38,
+              "word_diversity": 0.5546038543897216,
+              "char_diversity": 0.014157973174366617
+            }
+          },
+          {
+            "seed": 7266615415544110281,
+            "output": "Intriguing! Let's continue the narrative.\n\nThe old lighthouse keeper, a man known for his tales of weathering countless storms and sailors lost at sea, had never seen anything like it. Perched high above the craggy cliffs, he looked out into the horizon, his eyes squinting against the relentless wind. The sky was ablaze with an otherworldly glow, a stark contrast to the usual grey and gloom that often shrouded the island.\n\nThe ocean seemed to be boiling, waves churning and frothing with a ferocity he had never witnessed before. The air was thick with an eerie silence, broken only by the creaking of the lighthouse and the distant crash of the turbulent sea against the rocks. He felt a chill run down his spine as he watched the strange phenomenon unfold.\n\nSuddenly, a brilliant flash pierced the sky, followed by a deafening roar that echoed across the island. The old man gripped the railing tightly, his heart pounding in his chest. In the distance, he could see a column of water shooting into the air, higher and more powerful than any lighthouse beam he had ever seen.\n\nWith a sense of dread growing within him, the lighthouse keeper knew that something extraordinary was happening, something that would forever change the island and its people. He felt a strange mix of fear and excitement, knowing that he was witnessing an event that few had ever seen in their lifetime.\n\nAs the hours passed, the old man continued to watch, his eyes never leaving the spectacle before him. The sky turned from a fiery red to deep purple, the ocean calmed slightly, and the column of water began to dissipate. Slowly, the old lighthouse keeper could make out the silhouette of a massive creature emerging from the churning waters.\n\nIt was unlike anything he had ever seen, with a body as long as the island itself and tentacles that stretched across the horizon. The old man couldn't believe his eyes as the beast began to move towards the shore, leaving a trail of destruction in its wake.\n\nWith a heavy heart, the old lighthouse keeper knew that this was not just an extraordinary event; it was the beginning of a new era for the island and its people. He would have to tell them what he had seen, and prepare them for the challenges that lay ahead. But for now, he remained silent, his eyes fixed on the magnificent creature as it disappeared into the horizon, leaving only a trail of sparkling light behind.\n\nAs the sun began to rise, the old lighthouse keeper climbed down from his post and made his way towards the village, his mind filled with thoughts of the incredible sight he had witnessed. He knew that his life would never be the same, but he also knew that he had been given a unique opportunity to witness something truly extraordinary. And so, with a newfound sense of purpose, he began to make his way back to the village, ready to share his story and prepare for whatever lay ahead.",
+            "metrics": {
+              "length_chars": 2899,
+              "length_words": 512,
+              "shannon_char": 4.245495800625195,
+              "shannon_word": 7.228104625979668,
+              "unique_words": 261,
+              "unique_chars": 42,
+              "word_diversity": 0.509765625,
+              "char_diversity": 0.014487754398068299
+            }
+          }
+        ],
+        "aggregate_metrics": {
+          "length_chars_mean": 2791.5,
+          "length_chars_min": 2684,
+          "length_chars_max": 2899,
+          "length_words_mean": 489.5,
+          "length_words_min": 467,
+          "length_words_max": 512,
+          "shannon_char_mean": 4.2425772565387465,
+          "shannon_char_min": 4.239658712452299,
+          "shannon_char_max": 4.245495800625195,
+          "shannon_word_mean": 7.300626702721248,
+          "shannon_word_min": 7.228104625979668,
+          "shannon_word_max": 7.373148779462827,
+          "unique_words_mean": 260.0,
+          "unique_words_min": 259,
+          "unique_words_max": 261,
+          "unique_chars_mean": 40.0,
+          "unique_chars_min": 38,
+          "unique_chars_max": 42,
+          "word_diversity_mean": 0.5321847396948608,
+          "word_diversity_min": 0.509765625,
+          "word_diversity_max": 0.5546038543897216,
+          "char_diversity_mean": 0.014322863786217457,
+          "char_diversity_min": 0.014157973174366617,
+          "char_diversity_max": 0.014487754398068299
+        },
+        "valid_samples": 2
+      }
+    },
+    "She opened the letter, and everything changed.": {
+      "PRNG": {
+        "samples": [
+          {
+            "seed": 4517457392071889495,
+            "output": "That's a intriguing start to a story! Let me help you take it further:\n\nAs she unfolded the parchment carefully, her heart began to race. The words written in elegant script seemed to dance before her eyes. It was a letter from an unknown admirer, a man whose voice she had never heard but whose words now held her captivated. He spoke of his deep affection for her and of dreams they could share together.\n\nShe read the letter over and over again, each time feeling a flutter in her chest. Her world seemed to shift as she contemplated this mysterious stranger's proposal. The letter was not just a declaration of love but also an invitation - an opportunity to escape from the mundane life that had become so suffocating.\n\nBut with this newfound excitement came fear. She was hesitant, unsure if she should trust this man or if he was simply trying to lure her into danger. As she weighed the possibilities, she couldn't shake off the feeling that something magical was about to happen.\n\nAnd so, she made a decision - to accept his invitation and step into the unknown. Little did she know that this choice would lead her on an adventure filled with twists, turns, and revelations that would change her life forever.",
+            "metrics": {
+              "length_chars": 1218,
+              "length_words": 217,
+              "shannon_char": 4.247626738434403,
+              "shannon_word": 6.829382223515936,
+              "unique_words": 144,
+              "unique_chars": 39,
+              "word_diversity": 0.663594470046083,
+              "char_diversity": 0.03201970443349754
+            }
+          },
+          {
+            "seed": 2574020394472462046,
+            "output": "That sounds like a pivotal moment in a story! It would be interesting to explore what was inside the letter that caused such a significant change. Here's a possible continuation:\n\nAs she carefully unfolded the parchment, her eyes scanned the words written by an unknown hand. The contents were shocking, revealing a hidden truth about someone close to her or perhaps an unexpected inheritance. The news shook her to the core, causing a ripple effect that would change not only her life but also the lives of those around her.\n\nFrom this point, the story could take many different directions depending on how she reacts to this revelation and what choices she makes in response. Will she confront the person involved? Seek advice from others? Try to forget about it and move on with her life as usual? The possibilities are endless!",
+            "metrics": {
+              "length_chars": 831,
+              "length_words": 142,
+              "shannon_char": 4.257555371931248,
+              "shannon_word": 6.5079483314077295,
+              "unique_words": 108,
+              "unique_chars": 38,
+              "word_diversity": 0.7605633802816901,
+              "char_diversity": 0.0457280385078219
+            }
+          }
+        ],
+        "aggregate_metrics": {
+          "length_chars_mean": 1024.5,
+          "length_chars_min": 831,
+          "length_chars_max": 1218,
+          "length_words_mean": 179.5,
+          "length_words_min": 142,
+          "length_words_max": 217,
+          "shannon_char_mean": 4.252591055182825,
+          "shannon_char_min": 4.247626738434403,
+          "shannon_char_max": 4.257555371931248,
+          "shannon_word_mean": 6.668665277461833,
+          "shannon_word_min": 6.5079483314077295,
+          "shannon_word_max": 6.829382223515936,
+          "unique_words_mean": 126.0,
+          "unique_words_min": 108,
+          "unique_words_max": 144,
+          "unique_chars_mean": 38.5,
+          "unique_chars_min": 38,
+          "unique_chars_max": 39,
+          "word_diversity_mean": 0.7120789251638866,
+          "word_diversity_min": 0.663594470046083,
+          "word_diversity_max": 0.7605633802816901,
+          "char_diversity_mean": 0.038873871470659724,
+          "char_diversity_min": 0.03201970443349754,
+          "char_diversity_max": 0.0457280385078219
+        },
+        "valid_samples": 2
+      },
+      "TRNG": {
+        "samples": [
+          {
+            "seed": 17585083947758080178,
+            "output": "That's an intriguing start to a story! It seems like the protagonist has just received some significant news or discovery. The tension is already high, making readers curious about what's inside the letter that could potentially change her life.\n\nHere's how you can continue:\n\nAs she unfolded the crisp parchment, her heart raced with anticipation. Her eyes scanned the familiar handwriting - a blend of elegant cursive and casual strokes that only a dear friend could possess. But as she reached the final paragraph, her breath hitched in her throat. The words, though written gently, held a weight that threatened to shatter the serenity of her world.\n\nThe revelation, though unexpected, shook her to her core. She felt a whirlwind of emotions, from shock and disbelief to anger and sadness, all colliding within her like waves crashing against a rocky shore. Yet amidst this emotional turmoil, she knew that she couldn't afford to dwell on the past any longer.\n\nWith renewed determination, she set out to confront the implications of the letter, ready to face whatever challenges lay ahead. Her life may never be the same, but she was resolved to forge a new path and seize control of her destiny.\n\nThis opening sets up an engaging narrative filled with tension, intrigue, and character growth. It's important to keep the pacing steady and allow the protagonist room to process her emotions as well as make informed decisions about how to move forward in the story. Good luck with your writing!",
+            "metrics": {
+              "length_chars": 1497,
+              "length_words": 250,
+              "shannon_char": 4.277114967770542,
+              "shannon_word": 7.078087954527278,
+              "unique_words": 181,
+              "unique_chars": 42,
+              "word_diversity": 0.724,
+              "char_diversity": 0.028056112224448898
+            }
+          },
+          {
+            "seed": 17263391807835430104,
+            "output": "That's a captivating opening line! It sets the stage for a dramatic or emotional reveal in the story. Here are some suggestions for what could follow:\n\n1. The contents of the letter revealed a long-lost relative, a hidden inheritance, or a shocking secret about someone close to her. This could lead to unexpected events and character development as she navigates through this new information.\n\n2. The letter might be from a former lover, rekindling feelings and forcing her to confront her past and make difficult decisions about her present relationships.\n\n3. It could also contain a prophecy or ominous warning, setting the protagonist on a quest to unravel its meaning and protect herself or others.\n\n4. The letter might be from an unknown sender, hinting at a mystery that she feels compelled to solve. As she delves deeper into the mystery, she discovers a hidden world or conspiracy that impacts her life in ways she never imagined.\n\n5. In a more lighthearted vein, the letter could be from a secret admirer or a prankster, leading to a series of comedic misunderstandings and hijinks.",
+            "metrics": {
+              "length_chars": 1092,
+              "length_words": 183,
+              "shannon_char": 4.275786278175065,
+              "shannon_word": 6.535829688682123,
+              "unique_words": 123,
+              "unique_chars": 42,
+              "word_diversity": 0.6721311475409836,
+              "char_diversity": 0.038461538461538464
+            }
+          }
+        ],
+        "aggregate_metrics": {
+          "length_chars_mean": 1294.5,
+          "length_chars_min": 1092,
+          "length_chars_max": 1497,
+          "length_words_mean": 216.5,
+          "length_words_min": 183,
+          "length_words_max": 250,
+          "shannon_char_mean": 4.276450622972804,
+          "shannon_char_min": 4.275786278175065,
+          "shannon_char_max": 4.277114967770542,
+          "shannon_word_mean": 6.806958821604701,
+          "shannon_word_min": 6.535829688682123,
+          "shannon_word_max": 7.078087954527278,
+          "unique_words_mean": 152.0,
+          "unique_words_min": 123,
+          "unique_words_max": 181,
+          "unique_chars_mean": 42.0,
+          "unique_chars_min": 42,
+          "unique_chars_max": 42,
+          "word_diversity_mean": 0.6980655737704917,
+          "word_diversity_min": 0.6721311475409836,
+          "word_diversity_max": 0.724,
+          "char_diversity_mean": 0.03325882534299368,
+          "char_diversity_min": 0.028056112224448898,
+          "char_diversity_max": 0.038461538461538464
+        },
+        "valid_samples": 2
+      },
+      "QRNG": {
+        "samples": [
+          {
+            "seed": 16642246625716762439,
+            "output": "That's an intriguing start to a story! Let's continue:\n\nAs she unfolded the parchment inside, her heart raced with anticipation. The ink was a deep, regal purple, standing out against the stark white of the paper. Her eyes scanned the contents quickly at first, but then slowed as she absorbed each word.\n\nThe letter revealed news that would drastically alter the course of her life: an inheritance from a distant relative she didn't even know existed. A grand estate in a far-off land, filled with treasures and secrets waiting to be discovered.\n\nOverwhelmed with excitement, she could hardly believe it was real. But the letter was signed, sealed, and delivered by her lawyer, confirming its authenticity. Her life had been quiet and uneventful up until this moment, but now she found herself on the brink of a grand adventure.\n\nWith determination in her heart and dreams in her eyes, she packed her bags and set off for this new beginning. As she stepped onto the unfamiliar cobblestone streets of her ancestral home, she knew that nothing would ever be the same again.",
+            "metrics": {
+              "length_chars": 1072,
+              "length_words": 182,
+              "shannon_char": 4.272192201107117,
+              "shannon_word": 6.718427865897883,
+              "unique_words": 131,
+              "unique_chars": 39,
+              "word_diversity": 0.7197802197802198,
+              "char_diversity": 0.036380597014925374
+            }
+          },
+          {
+            "seed": 15187575838917970312,
+            "output": "That sounds like a poignant moment! Here are a few ways we can expand upon it:\n\n1. \"As she unfolded the worn parchment, her heart pounded in anticipation. The words etched on its surface would forever change the course of her life.\"\n2. \"With trembling hands, she opened the letter that had arrived unexpectedly. The contents inside revealed a truth she never knew, transforming everything she thought she understood about herself and her world.\"\n3. \"The envelope was plain and unassuming, but the message it contained would shatter the very foundations of her existence. As she delved deeper into its secrets, she realized that nothing would ever be the same again.\"\n4. \"She took a deep breath before opening the letter, knowing that whatever lay within would bring a new chapter in her life. The words on the page would redefine her understanding of love, loss, and destiny.\"\n5. \"With shaking fingers, she slowly peeled open the envelope, her eyes scanning the lines as if they were a map to an unknown land. The knowledge contained within would reshape her reality in ways she could never have imagined.\"",
+            "metrics": {
+              "length_chars": 1106,
+              "length_words": 188,
+              "shannon_char": 4.303752014220061,
+              "shannon_word": 6.704654245405498,
+              "unique_words": 135,
+              "unique_chars": 41,
+              "word_diversity": 0.7180851063829787,
+              "char_diversity": 0.037070524412296565
+            }
+          }
+        ],
+        "aggregate_metrics": {
+          "length_chars_mean": 1089.0,
+          "length_chars_min": 1072,
+          "length_chars_max": 1106,
+          "length_words_mean": 185.0,
+          "length_words_min": 182,
+          "length_words_max": 188,
+          "shannon_char_mean": 4.287972107663589,
+          "shannon_char_min": 4.272192201107117,
+          "shannon_char_max": 4.303752014220061,
+          "shannon_word_mean": 6.711541055651691,
+          "shannon_word_min": 6.704654245405498,
+          "shannon_word_max": 6.718427865897883,
+          "unique_words_mean": 133.0,
+          "unique_words_min": 131,
+          "unique_words_max": 135,
+          "unique_chars_mean": 40.0,
+          "unique_chars_min": 39,
+          "unique_chars_max": 41,
+          "word_diversity_mean": 0.7189326630815993,
+          "word_diversity_min": 0.7180851063829787,
+          "word_diversity_max": 0.7197802197802198,
+          "char_diversity_mean": 0.036725560713610966,
+          "char_diversity_min": 0.036380597014925374,
+          "char_diversity_max": 0.037070524412296565
+        },
+        "valid_samples": 2
+      }
+    },
+    "Once upon a time, in a kingdom by the sea,": {
+      "PRNG": {
+        "samples": [
+          {
+            "seed": 1890702223848595625,
+            "output": "there lived a young princess named Isabella. She was known throughout the land for her kind heart and beautiful spirit. The kingdom was peaceful, but Princess Isabella yearned for adventure and longed to see the world beyond its walls.\n\nOne day, while wandering along the beach, she discovered a mysterious old man who was trapped in a large, glowing orb. He introduced himself as Orion, an ancient sorcerer, and explained that he had been captured by a wicked sorceress named Morgana.\n\nOrion told Isabella that Morgana sought to conquer the kingdom and plunge it into darkness. To do so, she needed a powerful artifact known as the Star of the Sea, which was hidden deep within the forest of Whispering Willows.\n\nIsabella, determined to protect her home, vowed to find the Star of the Sea and free Orion from Morgana's clutches. With Orion's guidance, she embarked on a perilous journey through enchanted forests, treacherous mountains, and dark dungeons.\n\nAlong the way, they encountered many obstacles and challenges, but Isabella's courage never wavered. She battled fierce monsters, solved complex riddles, and even braved the depths of a haunted castle to uncover the location of the Star of the Sea.\n\nFinally, after weeks of travel and many close calls, Isabella found the artifact hidden within an ancient temple at the heart of the forest. As she grasped the Star of the Sea, its brilliance filled the room, and Orion was released from his prison.\n\nTogether, they returned to the kingdom and confronted Morgana in a battle of magic that shook the very foundations of the land. With Isabella's newfound powers and Orion's centuries-old wisdom, they were able to vanquish Morgana once and for all.\n\nThe kingdom was saved, and Isabella's name was etched in history as a brave and cunning heroine. She continued to rule wisely and justly, always ready to face any challenge that came her way. And Orion, forever grateful, remained by her side, sharing his knowledge and wisdom with the young princess who had saved him from certain doom.",
+            "metrics": {
+              "length_chars": 2042,
+              "length_words": 340,
+              "shannon_char": 4.359399012360933,
+              "shannon_word": 7.156924096062487,
+              "unique_words": 212,
+              "unique_chars": 41,
+              "word_diversity": 0.6235294117647059,
+              "char_diversity": 0.020078354554358472
+            }
+          },
+          {
+            "seed": 13662908291426823533,
+            "output": "there lived a humble fisherman named Pedro. He was known throughout the land for his kindness and generosity, as well as his exceptional skill at fishing. His small boat, painted with vibrant hues of blue and white, glided gracefully on the waves every morning as he cast his nets out to sea.\n\nPedro's favorite fishing spot was a secluded cove, far from prying eyes and loud noises. It was here that Pedro felt most at peace, surrounded by nature's beauty and tranquility. The sunrise over the ocean, with its fiery hues, was his daily greeting, while the soothing melody of the waves lulled him into a meditative state as he patiently waited for his catch.\n\nOne day, as Pedro cast his nets one final time before heading home, something extraordinary happened. As he pulled in the nets, he felt an unusual weight at the end. With each tug, the weight increased until it threatened to pull him and his boat under. But Pedro was a strong man, and with all his might, he managed to bring the mysterious catch ashore.\n\nTo his astonishment, the catch revealed itself as a magnificent sea serpent, its scales shimmering like precious gems in the sunlight. Pedro gasped in fear but also felt an inexplicable sense of awe. He knew that this creature was no ordinary fish and that it would change his life forever.\n\nPedro carefully wrapped the sea serpent in a soft blanket and carried it back to his humble abode. The townsfolk gathered around, their curiosity piqued by the strange sight. Pedro, though trembling with fear, addressed the crowd, explaining that this creature was not meant to be eaten but should be treated with respect and reverence.\n\nWord of the sea serpent reached the ears of the king, who summoned Pedro to his court. The humble fisherman presented the magnificent creature before the monarch, and the king was so impressed by Pedro's wisdom and courage that he declared him a hero and offered him great riches and titles.\n\nBut Pedro refused the offer, choosing instead to return to his simple life by the sea. He kept the sea serpent as a pet and companion, teaching it tricks and sharing stories of their adventures. The creature grew to trust and love Pedro, often appearing by his side during difficult times to offer comfort and strength.\n\nThe kingdom flourished under Pedro's rule, for he governed with kindness and justice, always remembering the lessons he learned from the sea serpent. And so, Pedro the fisherman became a legend in his own time, a humble hero who found true treasure not in gold or jewels but in friendship and compassion.\n\nAnd as for the sea serpent, it lived out its days by Pedro's side, a symbol of the incredible power and beauty that can be found in nature when we choose to respect and appreciate it. Together, Pedro and the sea serpent remind us that true wealth lies not in material possessions but in the bonds we form with others and the wisdom we gain from our experiences.",
+            "metrics": {
+              "length_chars": 2926,
+              "length_words": 512,
+              "shannon_char": 4.249299308772879,
+              "shannon_word": 7.4488077101414225,
+              "unique_words": 286,
+              "unique_chars": 38,
+              "word_diversity": 0.55859375,
+              "char_diversity": 0.012987012987012988
+            }
+          }
+        ],
+        "aggregate_metrics": {
+          "length_chars_mean": 2484.0,
+          "length_chars_min": 2042,
+          "length_chars_max": 2926,
+          "length_words_mean": 426.0,
+          "length_words_min": 340,
+          "length_words_max": 512,
+          "shannon_char_mean": 4.304349160566906,
+          "shannon_char_min": 4.249299308772879,
+          "shannon_char_max": 4.359399012360933,
+          "shannon_word_mean": 7.302865903101955,
+          "shannon_word_min": 7.156924096062487,
+          "shannon_word_max": 7.4488077101414225,
+          "unique_words_mean": 249.0,
+          "unique_words_min": 212,
+          "unique_words_max": 286,
+          "unique_chars_mean": 39.5,
+          "unique_chars_min": 38,
+          "unique_chars_max": 41,
+          "word_diversity_mean": 0.5910615808823529,
+          "word_diversity_min": 0.55859375,
+          "word_diversity_max": 0.6235294117647059,
+          "char_diversity_mean": 0.01653268377068573,
+          "char_diversity_min": 0.012987012987012988,
+          "char_diversity_max": 0.020078354554358472
+        },
+        "valid_samples": 2
+      },
+      "TRNG": {
+        "samples": [
+          {
+            "seed": 13555903292905073367,
+            "output": "there lived a brave and noble knight named Sir Eadric. Known throughout the land for his strength, wisdom, and unwavering courage, he was respected and admired by all who knew him.\n\nIn this kingdom, nestled between towering cliffs and surrounded by vast oceans, life was peaceful. But peace was often interrupted by monstrous sea creatures that would venture too close to the shore, threatening the safety of the citizens. It was Sir Eadric's duty to protect his people from these threats, which he did with great honor and determination.\n\nOne day, as he stood guard on the beach, a colossal sea monster approached, its eyes glowing ominously in the twilight. The creature, larger than any that had come before, seemed determined to bring destruction upon the kingdom. With a heavy heart, Sir Eadric prepared for battle.\n\nThe fight was long and fierce, but Sir Eadric's strength and skill were unmatched. He fought with every weapon in his arsenal, striking the beast with all his might. As the sun began to rise, the monster finally succumbed to his attacks, vanishing back into the depths of the ocean.\n\nExhausted but victorious, Sir Eadric returned to his people, who cheered and praised him for his bravery. The kingdom was safe once more, and peace reigned over the land by the sea.\n\nAnd so it was that Sir Eadric continued to protect his people, always ready to defend them against any danger that might arise. His legend grew, inspiring future generations of knights who would follow in his footsteps, forever honoring the name of the brave and noble knight of the kingdom by the sea.",
+            "metrics": {
+              "length_chars": 1591,
+              "length_words": 271,
+              "shannon_char": 4.320293089426043,
+              "shannon_word": 6.985370825808751,
+              "unique_words": 176,
+              "unique_chars": 39,
+              "word_diversity": 0.6494464944649446,
+              "char_diversity": 0.02451288497800126
+            }
+          },
+          {
+            "seed": 6765289179965644964,
+            "output": "lived a brave and noble king named Eldric. His kingdom was prosperous and peaceful, but it was surrounded by treacherous lands filled with danger and mystery. One day, King Eldric received a prophecy from an ancient seer that foretold of a great evil awakening in the distant land of Shadows.\n\nThe prophecy warned that if this evil were not stopped, it would spread its darkness across the kingdom, plunging the world into eternal night. King Eldric was determined to protect his people and sought out the help of brave warriors, powerful mages, and cunning scholars to form a group known as the Dawn's Protectors.\n\nTogether, they set off on a perilous journey across treacherous mountains, through haunted forests, and across vast deserts, all in search of the ancient fortress of Shadows. Along the way, they faced countless challenges and battles against fearsome monsters and dark sorcerers, but their resolve never wavered.\n\nFinally, after many months of travel, the Dawn's Protectors reached the fortress of Shadows. They fought valiantly, using all their combined strength and magic to overcome the evil that lay within. King Eldric himself led the charge, wielding a legendary sword known as the Sunblade, which could banish even the darkest shadows with its radiant light.\n\nThe battle was fierce and long, but eventually, the Dawn's Protectors emerged victorious. The evil force of Shadows was vanquished, and the darkness receded from the land. The kingdom celebrated their victory, hailing King Eldric as a hero and savior. And so, peace returned to the realm by the sea, thanks to the bravery and determination of its beloved king and his loyal protectors.\n\nBut even in victory, they knew that there would always be new challenges and threats to face. The Dawn's Protectors continued to stand guard over the kingdom, ever vigilant against any who might seek to bring darkness upon their land once more. And as long as there were brave hearts willing to protect it, the kingdom by the sea would remain safe and free.",
+            "metrics": {
+              "length_chars": 2027,
+              "length_words": 335,
+              "shannon_char": 4.338883846796381,
+              "shannon_word": 7.132180862838695,
+              "unique_words": 202,
+              "unique_chars": 40,
+              "word_diversity": 0.6029850746268657,
+              "char_diversity": 0.01973359644795264
+            }
+          }
+        ],
+        "aggregate_metrics": {
+          "length_chars_mean": 1809.0,
+          "length_chars_min": 1591,
+          "length_chars_max": 2027,
+          "length_words_mean": 303.0,
+          "length_words_min": 271,
+          "length_words_max": 335,
+          "shannon_char_mean": 4.329588468111211,
+          "shannon_char_min": 4.320293089426043,
+          "shannon_char_max": 4.338883846796381,
+          "shannon_word_mean": 7.058775844323723,
+          "shannon_word_min": 6.985370825808751,
+          "shannon_word_max": 7.132180862838695,
+          "unique_words_mean": 189.0,
+          "unique_words_min": 176,
+          "unique_words_max": 202,
+          "unique_chars_mean": 39.5,
+          "unique_chars_min": 39,
+          "unique_chars_max": 40,
+          "word_diversity_mean": 0.6262157845459051,
+          "word_diversity_min": 0.6029850746268657,
+          "word_diversity_max": 0.6494464944649446,
+          "char_diversity_mean": 0.02212324071297695,
+          "char_diversity_min": 0.01973359644795264,
+          "char_diversity_max": 0.02451288497800126
+        },
+        "valid_samples": 2
+      },
+      "QRNG": {
+        "samples": [
+          {
+            "seed": 9523949327865882639,
+            "output": "there lived a humble fisherman named Elias. He spent his days mending nets and fishing on his small boat, eking out a simple yet contented existence. The kingdom was ruled by a wise and just king who valued peace and prosperity above all else.\n\nOne day, as Elias was casting his net into the sea, he felt something unusual tugging at it. He reeled it in to find a peculiar stone, half-submerged within the tangled weeds. The stone shimmered with an ethereal glow that seemed to come from within. Intrigued, Elias pocketed the stone and continued his work.\n\nThat night, as he lay down to sleep, the stone began to pulsate with a soft light, casting eerie shadows across his humble abode. Suddenly, a voice filled the room - a voice that seemed to come from the very depths of the earth itself. It spoke of ancient prophecies and foretold a great darkness that would soon descend upon the kingdom by the sea.\n\nElias was terrified but also felt an inexplicable sense of duty to heed this strange message. He spent days researching old texts and scrolls, seeking answers to the cryptic warnings. Eventually, he discovered that the prophecy spoke of a great evil that would be unleashed from beneath the sea, a monstrous entity known only as Leviathan.\n\nWith his mind made up, Elias approached the king with the news, hoping to rally the kingdom's forces and prepare for the coming battle. But the king, ever the peacemaker, was skeptical of these fantastical tales and dismissed them as the ramblings of a disturbed fisherman. Disappointed but undeterred, Elias decided to take matters into his own hands.\n\nHe built a small fleet of boats, equipping them with the finest weapons he could find. He enlisted the help of other fishermen and farmers, rallying the common folk behind him in a desperate bid to save their homeland from destruction. As word spread of Elias' crusade, more and more joined his cause, until they numbered in the hundreds.\n\nOn the day that Leviathan was supposed to rise from the depths, Elias led his forces out to sea, determined to confront the monster head-on. The sea churned with anticipation as they waited for the first signs of the great beast's emergence. As the sun began to set, a vast shadow loomed on the horizon, growing larger and more ominous with each passing moment.\n\nThe battle that ensued was unlike any the kingdom had ever seen. Leviathan towered over the small fleet, its massive form twisted and grotesque, its eyes burning like twin stars. The creatures of the deep swarmed around it, drawn to the chaos and carnage as if by some ancient compulsion.\n\nElias and his followers fought valiantly, but they were no match for Leviathan's power. One by one, they fell, their lives snuffed out in an instant by the monstrous creature's tentacles. Elias himself was spared only because he had clung to the mysterious stone that had first brought him this nightmare, its light pulsating with an intensity that seemed to repel Leviathan's attacks.\n\nAs the last of his allies fell, Elias felt a sudden surge of strength course through him. With a cry of defiance, he hurled the stone at Leviathan, watching in awe as it shattered upon impact, releasing a torrent of radiant energy that engulfed the monstrous creature. The sea roiled and boiled, the very waters seemingly consumed by the celestial fire, until at last there was only silence.\n\nExhausted but victorious, Elias returned to the kingdom, where he was hailed as a hero and welcomed back with open arms. The stone that had once brought him such terror now lay in the king's treasury, a symbol of the power that can be found even in the darkest times.\n\nAnd so, the kingdom by the sea was saved from destruction, its people united in gratitude for their humble fisherman hero. But Elias knew that he could not rest, for the prophecy spoke of other trials yet to come, and he knew that he would be called upon once more to protect his home and those he loved.\n\nBut that is a story for another time...",
+            "metrics": {
+              "length_chars": 3990,
+              "length_words": 697,
+              "shannon_char": 4.279276500868982,
+              "shannon_word": 7.751707350034373,
+              "unique_words": 380,
+              "unique_chars": 43,
+              "word_diversity": 0.5451936872309899,
+              "char_diversity": 0.010776942355889725
+            }
+          },
+          {
+            "seed": 13206156916257872692,
+            "output": "there lived a brave and noble knight named Sir Cedric. The kingdom was prosperous, but peace was rare, for the neighboring land, ruled by an evil sorcerer, often sought to invade and plunder.\n\nSir Cedric was well-respected and loved by all, not only for his valiant deeds in battle, but also for his kindness and wisdom. He was a tall man with a strong build, his armor gleaming like the sun's rays, and his sword, Excalibur, legendary for its might.\n\nOne day, a herald arrived from the kingdom across the sea, bearing dire news. The evil sorcerer had grown more powerful, and his army was marching towards their land. The king, knowing that Sir Cedric was their only hope, called upon him to lead the defense of the realm.\n\nSir Cedric, without hesitation, mounted his steed and rode forth to meet the enemy. The battle was fierce, and many noble knights fell, but Sir Cedric fought with such ferocity that even the sorcerer's dark magic could not overcome him.\n\nThe sorcerer, realizing he was no match for the brave knight, retreated back across the sea, vowing to return with an army stronger than ever before. But Sir Cedric had won the day, and the people rejoiced in their victory.\n\nFor many years, peace reigned in the kingdom by the sea. Sir Cedric continued to protect his land, always vigilant against any threats that might arise. And though he grew old, his spirit never wavered, for he knew that as long as there was a need, he would be ready to defend his home and his people.\n\nAnd so the tale of Sir Cedric lived on, passed down through generations, a story of courage and loyalty, of a knight who fought not just for glory, but for love of his kingdom and its people.",
+            "metrics": {
+              "length_chars": 1682,
+              "length_words": 303,
+              "shannon_char": 4.3286100611285985,
+              "shannon_word": 6.956471888807866,
+              "unique_words": 178,
+              "unique_chars": 40,
+              "word_diversity": 0.5874587458745875,
+              "char_diversity": 0.023781212841854936
+            }
+          }
+        ],
+        "aggregate_metrics": {
+          "length_chars_mean": 2836.0,
+          "length_chars_min": 1682,
+          "length_chars_max": 3990,
+          "length_words_mean": 500.0,
+          "length_words_min": 303,
+          "length_words_max": 697,
+          "shannon_char_mean": 4.303943280998791,
+          "shannon_char_min": 4.279276500868982,
+          "shannon_char_max": 4.3286100611285985,
+          "shannon_word_mean": 7.354089619421119,
+          "shannon_word_min": 6.956471888807866,
+          "shannon_word_max": 7.751707350034373,
+          "unique_words_mean": 279.0,
+          "unique_words_min": 178,
+          "unique_words_max": 380,
+          "unique_chars_mean": 41.5,
+          "unique_chars_min": 40,
+          "unique_chars_max": 43,
+          "word_diversity_mean": 0.5663262165527887,
+          "word_diversity_min": 0.5451936872309899,
+          "word_diversity_max": 0.5874587458745875,
+          "char_diversity_mean": 0.01727907759887233,
+          "char_diversity_min": 0.010776942355889725,
+          "char_diversity_max": 0.023781212841854936
+        },
+        "valid_samples": 2
+      }
+    },
+    "Explain the concept of entropy to a five-year-old.": {
+      "PRNG": {
+        "samples": [
+          {
+            "seed": 10060236952204337488,
+            "output": "Hey there! Let's imagine you have a box of different colored Lego blocks. Now, when you first open the box, all the blocks are mixed up and scattered everywhere, right? That's kind of like high entropy. It takes some time and effort (work) to sort out all the blocks by color, so they are neatly organized in separate piles - that's low entropy.\n\nIn a simpler world where everything stays as it is, like your Lego blocks never moving around, there wouldn't be any need for work or energy, and life would be pretty boring! But in our real world where things do change, like toys being scattered, the total amount of mess (entropy) tends to increase over time unless we spend some energy to clean it up. That's what entropy is all about - a measure of how much disorder, or randomness, there is in a system that can be reduced by doing work!",
+            "metrics": {
+              "length_chars": 839,
+              "length_words": 155,
+              "shannon_char": 4.346866353864974,
+              "shannon_word": 6.713000453563629,
+              "unique_words": 117,
+              "unique_chars": 40,
+              "word_diversity": 0.7548387096774194,
+              "char_diversity": 0.04767580452920143
+            }
+          },
+          {
+            "seed": 10892664235628797826,
+            "output": "Alright, let's imagine you have a box of fresh, delicious cookies. When you first open the box, all the cookies are neatly arranged and not a single crumb is on the floor, right? That's like saying a system has low entropy because everything is organized.\n\nNow, let's say you start to eat some cookies and they get crumbled all over the place. Your room is now messy with cookie crumbs everywhere. This is high entropy because things are not as orderly as they were before.\n\nEntropy is like a measure of how much everything is mixed up or disordered in a system, like your cookies or any other thing. In nature, things tend to move towards higher entropy \u2013 things get more mixed up over time \u2013 unless something stops it from happening. That's why it's important to clean up after eating cookies!\n\nIn the world of physics and computers, we use this concept of entropy to understand how energy works and how information is processed. But that's a bit too complicated for a five-year-old, so let's stick with the cookie box for now!",
+            "metrics": {
+              "length_chars": 1029,
+              "length_words": 184,
+              "shannon_char": 4.354436707108426,
+              "shannon_word": 6.675208931990286,
+              "unique_words": 123,
+              "unique_chars": 41,
+              "word_diversity": 0.6684782608695652,
+              "char_diversity": 0.03984450923226433
+            }
+          }
+        ],
+        "aggregate_metrics": {
+          "length_chars_mean": 934.0,
+          "length_chars_min": 839,
+          "length_chars_max": 1029,
+          "length_words_mean": 169.5,
+          "length_words_min": 155,
+          "length_words_max": 184,
+          "shannon_char_mean": 4.3506515304867,
+          "shannon_char_min": 4.346866353864974,
+          "shannon_char_max": 4.354436707108426,
+          "shannon_word_mean": 6.694104692776958,
+          "shannon_word_min": 6.675208931990286,
+          "shannon_word_max": 6.713000453563629,
+          "unique_words_mean": 120.0,
+          "unique_words_min": 117,
+          "unique_words_max": 123,
+          "unique_chars_mean": 40.5,
+          "unique_chars_min": 40,
+          "unique_chars_max": 41,
+          "word_diversity_mean": 0.7116584852734923,
+          "word_diversity_min": 0.6684782608695652,
+          "word_diversity_max": 0.7548387096774194,
+          "char_diversity_mean": 0.043760156880732884,
+          "char_diversity_min": 0.03984450923226433,
+          "char_diversity_max": 0.04767580452920143
+        },
+        "valid_samples": 2
+      },
+      "TRNG": {
+        "samples": [
+          {
+            "seed": 5853996653322586382,
+            "output": "Alright, let's imagine you have a box full of toys. When you first open the box, all the toys are scattered everywhere, right? It takes some time and effort to pick them up and put them back in the box, doesn't it? Now, if by chance, the toys magically arrange themselves nicely in the box without any help from you, that would be less work or effort, wouldn't it?\n\nEntropy is a word that scientists use to talk about how much disorder or mess there is in a system. In our toy example, when the toys are scattered all over the floor, that's high entropy because it's more disorganized and takes effort to clean up. When the toys are nicely arranged in the box, that's low entropy because it's more organized and less work to keep them that way.\n\nIn the world of physics, entropy helps us understand how energy changes and why things like a hot cup of coffee eventually cool down. The more energy spread out (like when the coffee cools), the higher the entropy, and the harder it is for that energy to stay concentrated (like keeping the coffee hot). But don't worry, we don't have to remember all the details yet! This is just a fun way to start thinking about what entropy means.",
+            "metrics": {
+              "length_chars": 1180,
+              "length_words": 218,
+              "shannon_char": 4.318969268442464,
+              "shannon_word": 6.709422857114198,
+              "unique_words": 136,
+              "unique_chars": 41,
+              "word_diversity": 0.6238532110091743,
+              "char_diversity": 0.03474576271186441
+            }
+          },
+          {
+            "seed": 15265363283174027681,
+            "output": "Alright, let's imagine you have a box of colorful Lego blocks. When all the blocks are mixed together in the box, it looks like a big mess, right? But if you sort them out by color and arrange them neatly, it becomes easier for you to find the blocks you need.\n\nEntropy is a bit like that messy box of Legos. In a system, like a room or a machine, when things are all mixed up or disorganized, that's high entropy because it takes more energy or effort (like sorting out the Legos) to make sense of it or to use the energy inside effectively. On the other hand, when things are organized and orderly, like when you have sorted your Legos by color, that's low entropy because it requires less energy or effort to understand or utilize the system.\n\nIn nature, systems tend to move towards a state of higher entropy \u2013 more mess, disorder, or randomness. This is like watching the Lego blocks slowly get mixed up again over time. But sometimes we can make things more orderly and decrease entropy, like when you sort out your Legos intentionally. This helps us do useful work, like building a cool castle!\n\nThat's entropy for you \u2013 it's all about the level of organization or disorder in a system!",
+            "metrics": {
+              "length_chars": 1193,
+              "length_words": 219,
+              "shannon_char": 4.334443686621692,
+              "shannon_word": 6.605907936872636,
+              "unique_words": 127,
+              "unique_chars": 43,
+              "word_diversity": 0.5799086757990868,
+              "char_diversity": 0.03604358759430008
+            }
+          }
+        ],
+        "aggregate_metrics": {
+          "length_chars_mean": 1186.5,
+          "length_chars_min": 1180,
+          "length_chars_max": 1193,
+          "length_words_mean": 218.5,
+          "length_words_min": 218,
+          "length_words_max": 219,
+          "shannon_char_mean": 4.326706477532078,
+          "shannon_char_min": 4.318969268442464,
+          "shannon_char_max": 4.334443686621692,
+          "shannon_word_mean": 6.657665396993417,
+          "shannon_word_min": 6.605907936872636,
+          "shannon_word_max": 6.709422857114198,
+          "unique_words_mean": 131.5,
+          "unique_words_min": 127,
+          "unique_words_max": 136,
+          "unique_chars_mean": 42.0,
+          "unique_chars_min": 41,
+          "unique_chars_max": 43,
+          "word_diversity_mean": 0.6018809434041306,
+          "word_diversity_min": 0.5799086757990868,
+          "word_diversity_max": 0.6238532110091743,
+          "char_diversity_mean": 0.03539467515308224,
+          "char_diversity_min": 0.03474576271186441,
+          "char_diversity_max": 0.03604358759430008
+        },
+        "valid_samples": 2
+      },
+      "QRNG": {
+        "samples": [
+          {
+            "seed": 13263855357427380514,
+            "output": "Hey there, little friend! Let's talk about something called \"entropy\" - it's a big word that helps us understand how things change and become messy over time.\n\nImagine you have a box full of shiny toys like cars, trucks, and dolls all neatly arranged. You can easily pick out any toy you want because they're all organized. This is kind of like having low entropy - everything is tidy and predictable.\n\nNow let's imagine you play with those toys and start mixing them up, spreading them all over the room. It becomes harder to find your favorite car or truck now, right? That's because there's more mess (or higher entropy). The more scattered things get, the higher the entropy.\n\nSo, in simple terms, entropy helps us understand how things become more spread out and disorganized over time - just like when you play with your toys!",
+            "metrics": {
+              "length_chars": 832,
+              "length_words": 146,
+              "shannon_char": 4.4232742708532315,
+              "shannon_word": 6.594661182239051,
+              "unique_words": 108,
+              "unique_chars": 43,
+              "word_diversity": 0.7397260273972602,
+              "char_diversity": 0.051682692307692304
+            }
+          },
+          {
+            "seed": 17842923387094741971,
+            "output": "Hey there! Let's imagine you have a box full of toys, right? Now, if everything is neatly organized and each toy has its own special place, the box feels very calm and orderly. That's kind of like low entropy.\n\nBut what happens when you start to mix all the toys together and they're not in their places anymore? The box becomes messier and might feel a bit chaotic. That's high entropy.\n\nEntropy is like that, but for things in nature. It's a measure of how much disorder or randomness there is in a system. For example, when you leave your toys out to play, they eventually get mixed up as time goes by - that's entropy at work! But don't worry, you can always clean them up and bring down the entropy again.\n\nIn science, understanding entropy helps us learn about how things change over time in our world. It's a big concept, but I hope that helped explain it in a fun way!",
+            "metrics": {
+              "length_chars": 876,
+              "length_words": 164,
+              "shannon_char": 4.383912840076929,
+              "shannon_word": 6.7691160688618774,
+              "unique_words": 125,
+              "unique_chars": 40,
+              "word_diversity": 0.7621951219512195,
+              "char_diversity": 0.045662100456621
+            }
+          }
+        ],
+        "aggregate_metrics": {
+          "length_chars_mean": 854.0,
+          "length_chars_min": 832,
+          "length_chars_max": 876,
+          "length_words_mean": 155.0,
+          "length_words_min": 146,
+          "length_words_max": 164,
+          "shannon_char_mean": 4.403593555465081,
+          "shannon_char_min": 4.383912840076929,
+          "shannon_char_max": 4.4232742708532315,
+          "shannon_word_mean": 6.681888625550464,
+          "shannon_word_min": 6.594661182239051,
+          "shannon_word_max": 6.7691160688618774,
+          "unique_words_mean": 116.5,
+          "unique_words_min": 108,
+          "unique_words_max": 125,
+          "unique_chars_mean": 41.5,
+          "unique_chars_min": 40,
+          "unique_chars_max": 43,
+          "word_diversity_mean": 0.7509605746742398,
+          "word_diversity_min": 0.7397260273972602,
+          "word_diversity_max": 0.7621951219512195,
+          "char_diversity_mean": 0.04867239638215665,
+          "char_diversity_min": 0.045662100456621,
+          "char_diversity_max": 0.051682692307692304
+        },
+        "valid_samples": 2
+      }
+    },
+    "What is the meaning of consciousness?": {
+      "PRNG": {
+        "samples": [
+          {
+            "seed": 586287033698423193,
+            "output": "Consciousness refers to the state of being aware of one's surroundings, thoughts, feelings, and sensations. It's a complex and multifaceted concept that has been a topic of extensive study in philosophy, psychology, neuroscience, and cognitive science. Essentially, it is the subjective experience of an individual's mental life\u2014their thoughts, feelings, perceptions, dreams, memories, and so on.\n\nIn a more scientific context, consciousness can be understood as the integrated functioning of brain processes that underlie states of subjectivity, self-awareness, and the \"qualia\" or \"feel\" of conscious experience. However, the exact nature and definition of consciousness remain a topic of ongoing debate among scientists and philosophers.",
+            "metrics": {
+              "length_chars": 740,
+              "length_words": 103,
+              "shannon_char": 4.2884344203644025,
+              "shannon_word": 5.9312534403694235,
+              "unique_words": 77,
+              "unique_chars": 36,
+              "word_diversity": 0.7475728155339806,
+              "char_diversity": 0.04864864864864865
+            }
+          },
+          {
+            "seed": 1728372192399379054,
+            "output": "Consciousness refers to an organism's awareness of its own existence, thoughts, feelings, and environment. It is the state of being aware of and able to think and perceive one's surroundings. In a broader sense, it can also refer to the subjective experience of an individual or entity, including their thoughts, memories, feelings, and perceptions.\n\nConsciousness is often considered to be a fundamental aspect of human experience and is central to various philosophical, psychological, and neurological studies. It's a complex topic with many different interpretations and theories about its nature, origin, and role in the mind and brain. Some theories propose that consciousness arises from specific brain processes or structures, while others suggest it is a more mystical or spiritual phenomenon.",
+            "metrics": {
+              "length_chars": 802,
+              "length_words": 120,
+              "shannon_char": 4.2155303491828295,
+              "shannon_word": 6.12973742089034,
+              "unique_words": 86,
+              "unique_chars": 32,
+              "word_diversity": 0.7166666666666667,
+              "char_diversity": 0.0399002493765586
+            }
+          }
+        ],
+        "aggregate_metrics": {
+          "length_chars_mean": 771.0,
+          "length_chars_min": 740,
+          "length_chars_max": 802,
+          "length_words_mean": 111.5,
+          "length_words_min": 103,
+          "length_words_max": 120,
+          "shannon_char_mean": 4.251982384773616,
+          "shannon_char_min": 4.2155303491828295,
+          "shannon_char_max": 4.2884344203644025,
+          "shannon_word_mean": 6.030495430629882,
+          "shannon_word_min": 5.9312534403694235,
+          "shannon_word_max": 6.12973742089034,
+          "unique_words_mean": 81.5,
+          "unique_words_min": 77,
+          "unique_words_max": 86,
+          "unique_chars_mean": 34.0,
+          "unique_chars_min": 32,
+          "unique_chars_max": 36,
+          "word_diversity_mean": 0.7321197411003236,
+          "word_diversity_min": 0.7166666666666667,
+          "word_diversity_max": 0.7475728155339806,
+          "char_diversity_mean": 0.04427444901260363,
+          "char_diversity_min": 0.0399002493765586,
+          "char_diversity_max": 0.04864864864864865
+        },
+        "valid_samples": 2
+      },
+      "TRNG": {
+        "samples": [
+          {
+            "seed": 17353414169328260863,
+            "output": "Consciousness refers to an organism's awareness or perception of their own existence, thoughts, feelings, and environment. It encompasses an individual's subjective experience of the world around them and their ability to think, feel, perceive, and remember. In a broader context, consciousness can also refer to the quality or state of being awake and able to understand one's surroundings.\n\nIn philosophy and cognitive science, there is ongoing debate about the nature of consciousness, including its relationship to the brain, the mind, and the physical world. Some theories propose that consciousness arises from specific brain processes, while others argue for a more spiritual or non-physical explanation.\n\nOverall, consciousness is a complex and multifaceted concept that continues to be a subject of fascination, study, and discussion in various academic fields.",
+            "metrics": {
+              "length_chars": 870,
+              "length_words": 127,
+              "shannon_char": 4.281135803424175,
+              "shannon_word": 6.247432990020846,
+              "unique_words": 94,
+              "unique_chars": 35,
+              "word_diversity": 0.7401574803149606,
+              "char_diversity": 0.040229885057471264
+            }
+          },
+          {
+            "seed": 1228731269022126548,
+            "output": "Consciousness is a complex and multifaceted concept that has been a subject of study in various fields, including philosophy, psychology, neuroscience, and cognitive science. Generally speaking, consciousness refers to an organism's awareness or perception of its environment, thoughts, feelings, and sensations. It is the state of being aware, having thoughts, feelings, and sensations, and it allows us to experience our own existence and have subjective experiences.\n\nConsciousness is often distinguished from unconscious processes, which are mental activities that occur outside of an individual's conscious awareness, such as the processing of sensory information in the brainstem or the operation of automatic responses like blinking or breathing. While consciousness can be difficult to define precisely due to its subjective and introspective nature, it is a fundamental aspect of human experience and plays a crucial role in our ability to think, reason, and interact with our environment.\n\nThere are several different theories about the nature of consciousness, ranging from dualism (which holds that consciousness is a non-physical substance or entity) to materialism (which claims that consciousness arises as a result of physical processes in the brain). Despite ongoing debate and research, the exact nature of consciousness remains one of the most intriguing and enduring mysteries in science.",
+            "metrics": {
+              "length_chars": 1408,
+              "length_words": 204,
+              "shannon_char": 4.2339918678560355,
+              "shannon_word": 6.619921153029592,
+              "unique_words": 133,
+              "unique_chars": 38,
+              "word_diversity": 0.6519607843137255,
+              "char_diversity": 0.026988636363636364
+            }
+          }
+        ],
+        "aggregate_metrics": {
+          "length_chars_mean": 1139.0,
+          "length_chars_min": 870,
+          "length_chars_max": 1408,
+          "length_words_mean": 165.5,
+          "length_words_min": 127,
+          "length_words_max": 204,
+          "shannon_char_mean": 4.257563835640106,
+          "shannon_char_min": 4.2339918678560355,
+          "shannon_char_max": 4.281135803424175,
+          "shannon_word_mean": 6.433677071525219,
+          "shannon_word_min": 6.247432990020846,
+          "shannon_word_max": 6.619921153029592,
+          "unique_words_mean": 113.5,
+          "unique_words_min": 94,
+          "unique_words_max": 133,
+          "unique_chars_mean": 36.5,
+          "unique_chars_min": 35,
+          "unique_chars_max": 38,
+          "word_diversity_mean": 0.696059132314343,
+          "word_diversity_min": 0.6519607843137255,
+          "word_diversity_max": 0.7401574803149606,
+          "char_diversity_mean": 0.03360926071055381,
+          "char_diversity_min": 0.026988636363636364,
+          "char_diversity_max": 0.040229885057471264
+        },
+        "valid_samples": 2
+      },
+      "QRNG": {
+        "samples": [
+          {
+            "seed": 12321666757444357450,
+            "output": "Consciousness refers to an organism's awareness of their own existence, thoughts, feelings, and the world around them. It encompasses subjective experiences such as perceptions, thoughts, emotions, memories, and volition (the ability to make choices). In a broader sense, consciousness is the state of being awake and able to understand what is happening around you.\n\nIn philosophy and neuroscience, there are different theories about the nature of consciousness. Some believe that consciousness arises from physical processes in the brain, while others argue that it cannot be fully explained by physical processes alone and may have a non-physical aspect. The study of consciousness is an important area of research in many fields, including philosophy, psychology, neuroscience, and cognitive science.",
+            "metrics": {
+              "length_chars": 804,
+              "length_words": 117,
+              "shannon_char": 4.2690249294392615,
+              "shannon_word": 6.27733841201713,
+              "unique_words": 89,
+              "unique_chars": 36,
+              "word_diversity": 0.7606837606837606,
+              "char_diversity": 0.04477611940298507
+            }
+          },
+          {
+            "seed": 6233833757875791234,
+            "output": "Consciousness refers to an organism's awareness of its own existence, thoughts, feelings, and perceptions. It encompasses a wide range of cognitive processes such as thinking, learning, memory, perception, and self-awareness. In a broader sense, consciousness is considered the state or quality that allows us to have subjective experiences, including thoughts, feelings, and sensations. It's important to note that understanding consciousness remains one of the biggest mysteries in neuroscience and philosophy due to its complex and multifaceted nature.",
+            "metrics": {
+              "length_chars": 555,
+              "length_words": 77,
+              "shannon_char": 4.209436336367724,
+              "shannon_word": 5.768545917622171,
+              "unique_words": 61,
+              "unique_chars": 32,
+              "word_diversity": 0.7922077922077922,
+              "char_diversity": 0.05765765765765766
+            }
+          }
+        ],
+        "aggregate_metrics": {
+          "length_chars_mean": 679.5,
+          "length_chars_min": 555,
+          "length_chars_max": 804,
+          "length_words_mean": 97.0,
+          "length_words_min": 77,
+          "length_words_max": 117,
+          "shannon_char_mean": 4.239230632903492,
+          "shannon_char_min": 4.209436336367724,
+          "shannon_char_max": 4.2690249294392615,
+          "shannon_word_mean": 6.02294216481965,
+          "shannon_word_min": 5.768545917622171,
+          "shannon_word_max": 6.27733841201713,
+          "unique_words_mean": 75.0,
+          "unique_words_min": 61,
+          "unique_words_max": 89,
+          "unique_chars_mean": 34.0,
+          "unique_chars_min": 32,
+          "unique_chars_max": 36,
+          "word_diversity_mean": 0.7764457764457764,
+          "word_diversity_min": 0.7606837606837606,
+          "word_diversity_max": 0.7922077922077922,
+          "char_diversity_mean": 0.051216888530321365,
+          "char_diversity_min": 0.04477611940298507,
+          "char_diversity_max": 0.05765765765765766
+        },
+        "valid_samples": 2
+      }
+    },
+    "Think of a color you have never seen before. Describe it.": {
+      "PRNG": {
+        "samples": [
+          {
+            "seed": 4291835990902352011,
+            "output": "Creating a new color can be quite imaginative, but let's imagine a unique one for this purpose. I'd like to introduce \"Aurora Azure.\"\n\nImagine a blend between the vibrant, dancing hues of an aurora borealis and the calming, cool tones of azure. Aurora Azure would have the ethereal, mesmerizing quality of the northern lights, with swirling, iridescent shades of green, purple, and blue. However, it maintains a soothing undertone like that of a clear sky, making it feel both dreamlike and serene.\n\nThis color could potentially represent a harmonious union between the natural world's beauty and the wonder found in cosmic phenomena. It would be ideal for spaces aiming to create a peaceful yet captivating atmosphere, such as meditation rooms or art studios.",
+            "metrics": {
+              "length_chars": 760,
+              "length_words": 123,
+              "shannon_char": 4.335631848460006,
+              "shannon_word": 6.367141335150891,
+              "unique_words": 97,
+              "unique_chars": 35,
+              "word_diversity": 0.7886178861788617,
+              "char_diversity": 0.046052631578947366
+            }
+          },
+          {
+            "seed": 11105285438068160209,
+            "output": "Creating a color that doesn't exist in the visible spectrum for humans can be quite imaginative. Let's call this new color \"Azureuline.\"\n\nAzureuline is a captivating and ethereal shade, a mesmerizing blend of azure (a bright, pure blue) and ultramarine (a deep, cool-toned blue). However, unlike these existing colors, Azureuline possesses a unique quality \u2013 it subtly shimmers with faint hints of violet and gold, creating an ever-changing spectrum that's reminiscent of a Northern Lights display.\n\nThis color is the perfect balance between the tranquility of azure skies and the regal elegance of ultramarine, but it also captures the magical essence of auroras, making it enchanting and mysterious all at once. Azureuline has a calming effect, yet its dynamic shimmer adds an element of excitement and curiosity that makes it truly one-of-a-kind.",
+            "metrics": {
+              "length_chars": 849,
+              "length_words": 132,
+              "shannon_char": 4.398887900380247,
+              "shannon_word": 6.349011922829508,
+              "unique_words": 99,
+              "unique_chars": 41,
+              "word_diversity": 0.75,
+              "char_diversity": 0.048292108362779744
+            }
+          }
+        ],
+        "aggregate_metrics": {
+          "length_chars_mean": 804.5,
+          "length_chars_min": 760,
+          "length_chars_max": 849,
+          "length_words_mean": 127.5,
+          "length_words_min": 123,
+          "length_words_max": 132,
+          "shannon_char_mean": 4.367259874420126,
+          "shannon_char_min": 4.335631848460006,
+          "shannon_char_max": 4.398887900380247,
+          "shannon_word_mean": 6.358076628990199,
+          "shannon_word_min": 6.349011922829508,
+          "shannon_word_max": 6.367141335150891,
+          "unique_words_mean": 98.0,
+          "unique_words_min": 97,
+          "unique_words_max": 99,
+          "unique_chars_mean": 38.0,
+          "unique_chars_min": 35,
+          "unique_chars_max": 41,
+          "word_diversity_mean": 0.7693089430894309,
+          "word_diversity_min": 0.75,
+          "word_diversity_max": 0.7886178861788617,
+          "char_diversity_mean": 0.047172369970863555,
+          "char_diversity_min": 0.046052631578947366,
+          "char_diversity_max": 0.048292108362779744
+        },
+        "valid_samples": 2
+      },
+      "TRNG": {
+        "samples": [
+          {
+            "seed": 5964793520984744422,
+            "output": "Creating a color that doesn't exist in the visible light spectrum for humans can be quite imaginative! Let's call this new color \"Xanadu Blue.\"\n\nXanadu Blue is not found in nature or everyday life, making it a truly unique hue. It's a vibrant, shimmering shade that combines elements of indigo, violet, and a hint of turquoise. Imagine if you will, a deep blue like the twilight sky, with the richness of purple dusk, and a touch of the tranquil turquoise sea, all swirling together in an ethereal dance.\n\nThis color possesses an iridescent quality, constantly changing as it catches the light \u2013 sometimes more indigo, other times more violet or even turquoise, but always maintaining that distinctive Xanadu Blue essence. It's a color that radiates tranquility yet captivates with its ever-shifting nature, making it a truly mesmerizing sight to behold.\n\nIn the realm of art and design, Xanadu Blue could serve as a symbol for the unknown or uncharted territories, evoking feelings of wonder, excitement, and discovery. It's a color that transcends boundaries and invites us to explore new realms of imagination.",
+            "metrics": {
+              "length_chars": 1113,
+              "length_words": 182,
+              "shannon_char": 4.3522305719328624,
+              "shannon_word": 6.640319385836217,
+              "unique_words": 126,
+              "unique_chars": 40,
+              "word_diversity": 0.6923076923076923,
+              "char_diversity": 0.03593890386343217
+            }
+          },
+          {
+            "seed": 2308063268926614940,
+            "output": "Creating a completely unique color that doesn't exist in nature can be quite imaginative, but let's envision something interesting for this exercise:\n\nName: Nebula Blue\n\nDescription:\nNebula Blue is a mesmerizing and ethereal color that blends the tranquility of deep ocean blues with the vibrant hues of cosmic nebulae. It starts as a dark, rich navy blue, reminiscent of twilight skies, but subtly shimmers with hints of lavender, indigo, and deep violet, as if capturing the iridescence of distant celestial bodies. In certain lighting conditions, it can even display a faint glow, akin to the soft luminescence found in nebulae, adding an otherworldly quality to any object or space it occupies.\n\nNebula Blue is not only a captivating color on its own but also serves as a bridge between the calming, grounding elements of blue and the mystical, dreamy aspects of purple, making it a unique addition to any palette. It would be especially striking in art, interior design, or fashion, inspiring curiosity, wonder, and a sense of connection with the cosmos.",
+            "metrics": {
+              "length_chars": 1059,
+              "length_words": 172,
+              "shannon_char": 4.323843792914422,
+              "shannon_word": 6.632977126947014,
+              "unique_words": 122,
+              "unique_chars": 37,
+              "word_diversity": 0.7093023255813954,
+              "char_diversity": 0.03493862134088763
+            }
+          }
+        ],
+        "aggregate_metrics": {
+          "length_chars_mean": 1086.0,
+          "length_chars_min": 1059,
+          "length_chars_max": 1113,
+          "length_words_mean": 177.0,
+          "length_words_min": 172,
+          "length_words_max": 182,
+          "shannon_char_mean": 4.338037182423642,
+          "shannon_char_min": 4.323843792914422,
+          "shannon_char_max": 4.3522305719328624,
+          "shannon_word_mean": 6.636648256391616,
+          "shannon_word_min": 6.632977126947014,
+          "shannon_word_max": 6.640319385836217,
+          "unique_words_mean": 124.0,
+          "unique_words_min": 122,
+          "unique_words_max": 126,
+          "unique_chars_mean": 38.5,
+          "unique_chars_min": 37,
+          "unique_chars_max": 40,
+          "word_diversity_mean": 0.7008050089445439,
+          "word_diversity_min": 0.6923076923076923,
+          "word_diversity_max": 0.7093023255813954,
+          "char_diversity_mean": 0.0354387626021599,
+          "char_diversity_min": 0.03493862134088763,
+          "char_diversity_max": 0.03593890386343217
+        },
+        "valid_samples": 2
+      },
+      "QRNG": {
+        "samples": [
+          {
+            "seed": 15843192541593015063,
+            "output": "Creating a completely new color is beyond the realms of our current understanding of physics and light spectrum, as all visible colors are combinations or variations of red, blue, and green, which are the primary colors in the RGB color model for digital displays.\n\nHowever, if we were to imagine a fictional color, let's call it \"Lumina Blue.\" Lumina Blue is a color that does not exist in our visible spectrum but can be conceptualized as follows:\n\nLumina Blue appears when an extremely rare and energy-rich form of light interacts with certain gases in the atmosphere. It emits a soft glow, somewhat similar to moonlight, but with a unique tint that is neither blue nor violet, yet possesses a hint of both at the same time. The color seems to shimmer and change subtly when viewed from different angles or under varying light conditions, making it appear almost ethereal.\n\nIn art and design, Lumina Blue would evoke feelings of mystery, magic, and otherworldliness, inspiring a sense of wonder and imagination.",
+            "metrics": {
+              "length_chars": 1014,
+              "length_words": 170,
+              "shannon_char": 4.3385858334410194,
+              "shannon_word": 6.650017884075188,
+              "unique_words": 122,
+              "unique_chars": 41,
+              "word_diversity": 0.7176470588235294,
+              "char_diversity": 0.04043392504930966
+            }
+          },
+          {
+            "seed": 3055521664987132686,
+            "output": "Creating a color that doesn't exist in the visible spectrum for humans can be quite imaginative. Let's call this new color \"Solaraqua.\" It is a vibrant, harmonious blend of solar yellow and aquamarine, with an intense yet soothing luminosity. Solaraqua appears to radiate a warm, invigorating energy, similar to the sun, while maintaining a cool, calming essence like the ocean. In its true form, it shines with a mesmerizing iridescence that can only be experienced in the realm of imagination.",
+            "metrics": {
+              "length_chars": 495,
+              "length_words": 80,
+              "shannon_char": 4.259988483915189,
+              "shannon_word": 5.876807588956903,
+              "unique_words": 65,
+              "unique_chars": 34,
+              "word_diversity": 0.8125,
+              "char_diversity": 0.06868686868686869
+            }
+          }
+        ],
+        "aggregate_metrics": {
+          "length_chars_mean": 754.5,
+          "length_chars_min": 495,
+          "length_chars_max": 1014,
+          "length_words_mean": 125.0,
+          "length_words_min": 80,
+          "length_words_max": 170,
+          "shannon_char_mean": 4.299287158678104,
+          "shannon_char_min": 4.259988483915189,
+          "shannon_char_max": 4.3385858334410194,
+          "shannon_word_mean": 6.263412736516045,
+          "shannon_word_min": 5.876807588956903,
+          "shannon_word_max": 6.650017884075188,
+          "unique_words_mean": 93.5,
+          "unique_words_min": 65,
+          "unique_words_max": 122,
+          "unique_chars_mean": 37.5,
+          "unique_chars_min": 34,
+          "unique_chars_max": 41,
+          "word_diversity_mean": 0.7650735294117648,
+          "word_diversity_min": 0.7176470588235294,
+          "word_diversity_max": 0.8125,
+          "char_diversity_mean": 0.054560396868089174,
+          "char_diversity_min": 0.04043392504930966,
+          "char_diversity_max": 0.06868686868686869
+        },
+        "valid_samples": 2
+      }
+    },
+    "Is it ever ethical to tell a lie? If so, under what circumstances?": {
+      "PRNG": {
+        "samples": [
+          {
+            "seed": 10353144037217341363,
+            "output": "The question of whether it's ever ethical to tell a lie is a complex one and often depends on cultural, philosophical, and moral perspectives. However, many ethical frameworks agree that lying can be justified in certain situations, such as:\n\n1. Self-defense or protecting others from harm: If lying could prevent significant physical, emotional, or psychological harm to oneself or others, it might be considered ethically justifiable. For example, hiding a loved one during the Holocaust by lying about their identity.\n\n2. Protecting privacy and confidentiality: In situations where revealing the truth would breach someone's privacy or compromise sensitive information (e.g., doctor-patient confidentiality), a harmless lie may be necessary to maintain this trust.\n\n3. Preserving harmony in relationships: Sometimes, telling a white lie (a small, harmless deception) can help maintain social harmony and avoid unnecessary conflict. For example, saying \"You look great!\" when someone asks if you like their new haircut, even though you don't.\n\n4. Deception in war or espionage: In some contexts, deception is used strategically to protect national security or prevent harm on a larger scale. This is often a gray area and can be subject to debate regarding its ethicality.",
+            "metrics": {
+              "length_chars": 1274,
+              "length_words": 193,
+              "shannon_char": 4.422977543973286,
+              "shannon_word": 6.95952969054051,
+              "unique_words": 145,
+              "unique_chars": 48,
+              "word_diversity": 0.7512953367875648,
+              "char_diversity": 0.03767660910518053
+            }
+          },
+          {
+            "seed": 13208230535885162025,
+            "output": "The question of ethics is complex and often depends on cultural, philosophical, and personal beliefs. However, in many moral and ethical frameworks, lying is generally considered unethical because it involves deceit and can harm trust between individuals or communities.\n\nHowever, there are some philosophies that suggest that under specific circumstances, a lie could be justified as a lesser evil. For example:\n\n1. **Self-Defense**: In situations where truth-telling could result in immediate and severe harm to oneself or others, some argue that a lie might be justified to protect the greater good. This is known as the \"Trolley Problem\" in philosophy.\n\n2. **Protecting Others**: If lying can prevent significant harm from coming to another person, some ethical systems might consider it acceptable. For instance, if a Nazi soldier asks you during World War II where a group of Jews is hiding, telling the truth could lead to their deaths, and some argue that lying to save them would be justified.\n\n3. **White Lies**: In social situations, sometimes a \"white lie\" might be told to avoid causing unnecessary harm or discomfort. For example, if someone asks you if they look good in a particular outfit when it clearly doesn't suit them, some might argue that it's acceptable to tell a polite white lie rather than hurting their feelings unnecessarily.\n\nIt's important to note that these are exceptions and not rules. In general, honesty is highly valued in most ethical systems. The key is to strive for truthfulness while also considering the potential harm or benefits of one's words. It's also crucial to remember that even when lying might seem justified, it can still erode trust and have long-term consequences.\n\nIn any case, the decision to lie should be carefully considered and never taken lightly.",
+            "metrics": {
+              "length_chars": 1811,
+              "length_words": 292,
+              "shannon_char": 4.406446259415133,
+              "shannon_word": 7.173775286145474,
+              "unique_words": 189,
+              "unique_chars": 50,
+              "word_diversity": 0.6472602739726028,
+              "char_diversity": 0.027609055770292656
+            }
+          }
+        ],
+        "aggregate_metrics": {
+          "length_chars_mean": 1542.5,
+          "length_chars_min": 1274,
+          "length_chars_max": 1811,
+          "length_words_mean": 242.5,
+          "length_words_min": 193,
+          "length_words_max": 292,
+          "shannon_char_mean": 4.41471190169421,
+          "shannon_char_min": 4.406446259415133,
+          "shannon_char_max": 4.422977543973286,
+          "shannon_word_mean": 7.066652488342992,
+          "shannon_word_min": 6.95952969054051,
+          "shannon_word_max": 7.173775286145474,
+          "unique_words_mean": 167.0,
+          "unique_words_min": 145,
+          "unique_words_max": 189,
+          "unique_chars_mean": 49.0,
+          "unique_chars_min": 48,
+          "unique_chars_max": 50,
+          "word_diversity_mean": 0.6992778053800838,
+          "word_diversity_min": 0.6472602739726028,
+          "word_diversity_max": 0.7512953367875648,
+          "char_diversity_mean": 0.032642832437736594,
+          "char_diversity_min": 0.027609055770292656,
+          "char_diversity_max": 0.03767660910518053
+        },
+        "valid_samples": 2
+      },
+      "TRNG": {
+        "samples": [
+          {
+            "seed": 17545885151853674461,
+            "output": "The question of ethics and lying is complex and varies based on cultural, philosophical, and religious perspectives. However, many moral theories suggest that lying is generally considered unethical because it involves deception, which can harm trust and relationships.\n\nThat being said, there are certain circumstances where some argue that telling a lie could be justified:\n\n1. Self-defense or protection of others: If the truth would result in serious harm to oneself or others (e.g., revealing a secret that could lead to physical harm), some might consider it ethical to tell a protective lie.\n\n2. White lies: Small, harmless lies intended to spare someone's feelings or avoid discomfort are sometimes considered acceptable within certain social norms and cultural contexts (e.g., saying \"you look great\" when someone asks if they look okay in a questionable outfit).\n\n3. Informed consent and deception: Some argue that it is ethical to deceive individuals in specific situations, such as clinical trials, where the purpose of the deception is to maintain the integrity of the study and provide valuable knowledge for the greater good (e.g., telling patients they received a placebo instead of an experimental treatment).\n\n4. Honesty with malice: While it may seem counterintuitive, some argue that honesty can be unethical if done with malicious intent or to deliberately cause harm (e.g., revealing sensitive information about someone's past mistakes to ruin their reputation).\n\nUltimately, the decision to tell a lie should involve careful consideration of the potential consequences and alignment with one's personal moral compass and ethical framework. It is essential to strive for honesty while also recognizing that there may be exceptions under specific circumstances.",
+            "metrics": {
+              "length_chars": 1782,
+              "length_words": 270,
+              "shannon_char": 4.337786292530509,
+              "shannon_word": 7.168771952738178,
+              "unique_words": 182,
+              "unique_chars": 46,
+              "word_diversity": 0.674074074074074,
+              "char_diversity": 0.025813692480359147
+            }
+          },
+          {
+            "seed": 3216529251810443929,
+            "output": "The question of ethics and lying is complex and often depends on cultural, philosophical, and personal beliefs. In general, honesty is considered a key virtue in many ethical systems due to the importance of trust in maintaining healthy relationships and functioning societies.\n\nHowever, there are some philosophies that acknowledge certain circumstances where it might be acceptable or even necessary to tell a lie. These often revolve around the concept of \"the greater good.\" For example:\n\n1. White Lies: These are lies told with kindness or politeness in mind and are generally harmless. For instance, saying someone looks great when they don't, or saying you're busy when you don't want to engage in a conversation.\n\n2. Protecting the innocent: If telling the truth would cause significant harm to an innocent person, some might argue it is ethical to lie to protect them. For example, hiding a loved one from a dangerous individual who is seeking them.\n\n3. Duty to protect: In certain professions such as law enforcement or medical ethics, there are circumstances where revealing the truth could compromise investigations, patient confidentiality, or personal safety, leading some to argue that lying may be necessary in these situations.\n\n4. Self-defense: If necessary for self-preservation, some might justify a lie. For instance, if someone is threatening your life and asks if you've seen them, it could be argued that lying about not seeing them would be justified.\n\nHowever, it's important to note that these situations are exceptions rather than the rule. Lying can have serious consequences for trust and relationships, and should be used sparingly and with great caution. It's always best to strive for honesty whenever possible.",
+            "metrics": {
+              "length_chars": 1744,
+              "length_words": 275,
+              "shannon_char": 4.338286756703735,
+              "shannon_word": 7.1674853234823015,
+              "unique_words": 180,
+              "unique_chars": 46,
+              "word_diversity": 0.6545454545454545,
+              "char_diversity": 0.026376146788990827
+            }
+          }
+        ],
+        "aggregate_metrics": {
+          "length_chars_mean": 1763.0,
+          "length_chars_min": 1744,
+          "length_chars_max": 1782,
+          "length_words_mean": 272.5,
+          "length_words_min": 270,
+          "length_words_max": 275,
+          "shannon_char_mean": 4.338036524617122,
+          "shannon_char_min": 4.337786292530509,
+          "shannon_char_max": 4.338286756703735,
+          "shannon_word_mean": 7.16812863811024,
+          "shannon_word_min": 7.1674853234823015,
+          "shannon_word_max": 7.168771952738178,
+          "unique_words_mean": 181.0,
+          "unique_words_min": 180,
+          "unique_words_max": 182,
+          "unique_chars_mean": 46.0,
+          "unique_chars_min": 46,
+          "unique_chars_max": 46,
+          "word_diversity_mean": 0.6643097643097643,
+          "word_diversity_min": 0.6545454545454545,
+          "word_diversity_max": 0.674074074074074,
+          "char_diversity_mean": 0.026094919634674987,
+          "char_diversity_min": 0.025813692480359147,
+          "char_diversity_max": 0.026376146788990827
+        },
+        "valid_samples": 2
+      },
+      "QRNG": {
+        "samples": [
+          {
+            "seed": 16849217026098551630,
+            "output": "The question of whether it's ever ethical to tell a lie is a complex one and has been debated throughout history. Philosophically, the concept often revolves around the principle of utility (utilitarianism) versus the principles of rights (deontology).\n\nIn utilitarianism, an action is considered ethical if it maximizes overall happiness or minimizes overall suffering. So, in some cases, a lie might be justified if it prevents greater harm or promotes a greater good. For example, telling a sick person they have six months to live instead of one week could provide them with more quality time with loved ones.\n\nOn the other hand, deontologists argue that certain acts are inherently wrong regardless of their consequences. Lying is often considered one of these acts because it involves violating another's right to truthful information. However, some ethical theories do allow for exceptions, such as the \"ethics of honesty\" which states that honesty should be balanced against other moral considerations like compassion or loyalty.\n\nIn real-world applications, people often resort to lies in situations where honesty could cause significant harm, such as protecting someone from emotional distress, preserving privacy, or saving a life. However, it's important to note that these are delicate situations and the decision to lie should be carefully considered and ideally involve an open conversation about the reasons for the deception once the situation has passed.\n\nUltimately, whether lying is ethical in a given situation depends on a variety of factors, including the nature of the lie, the intended outcome, and the harm or benefit it may cause to those involved. It's a topic that requires thoughtful consideration and respect for the rights and well-being of others.",
+            "metrics": {
+              "length_chars": 1780,
+              "length_words": 277,
+              "shannon_char": 4.27266671567153,
+              "shannon_word": 7.113357013273116,
+              "unique_words": 181,
+              "unique_chars": 44,
+              "word_diversity": 0.6534296028880866,
+              "char_diversity": 0.024719101123595506
+            }
+          },
+          {
+            "seed": 15603515583900855139,
+            "output": "The question of ethics and lying is complex and often depends on cultural, philosophical, and religious perspectives. Generally, honesty is considered a fundamental virtue in many societies and moral systems due to its role in building trust and fostering strong relationships. However, there are certain circumstances where telling a lie might be deemed ethical or necessary:\n\n1. Harm reduction: In some situations, lying may be justified if it helps prevent significant harm or suffering. For example, if a stranger is about to walk into a dangerous situation unaware, you might lie to warn them without revealing the full truth to protect their feelings or avoid causing panic.\n\n2. Privacy and consent: Sometimes, it's ethical to lie (or omit information) to respect another person's privacy or autonomy. For instance, if someone shares sensitive personal information with you in confidence, it would be unethical to reveal that information without their explicit permission, even if the truth might benefit others.\n\n3. Protecting vulnerable individuals: In cases where an individual lacks the capacity to understand the full implications of a situation (such as children or people with cognitive disabilities), lying might be used to shield them from harm or distress. For example, you might lie to a child about Santa Claus or the Tooth Fairy to maintain their happiness and belief in magic.\n\n4. Deception in certain professions: In some fields like law enforcement, espionage, or psychological therapy, deception can be justified as part of a larger ethical framework that prioritizes justice, national security, or patient well-being over individual honesty in specific contexts. However, it's essential that such deception is used sparingly and with appropriate safeguards to minimize potential harm.\n\n5. White lies: Some people argue for the ethical use of \"white lies\" \u2013 small, innocuous untruths told to spare someone's feelings or maintain social harmony. An example could be complimenting a friend on an outfit you don't particularly like, even though it's not your preferred style.\n\nIt is essential to remember that lying can have serious consequences and should only be used in situations where the benefits outweigh the drawbacks and no other ethical alternatives are available. It's also crucial to reflect upon the long-term implications of our actions and strive for honesty whenever possible, as trust and strong relationships are cornerstones of a functioning society.",
+            "metrics": {
+              "length_chars": 2489,
+              "length_words": 383,
+              "shannon_char": 4.3489849227457995,
+              "shannon_word": 7.4713014167142635,
+              "unique_words": 241,
+              "unique_chars": 53,
+              "word_diversity": 0.6292428198433421,
+              "char_diversity": 0.02129369224588188
+            }
+          }
+        ],
+        "aggregate_metrics": {
+          "length_chars_mean": 2134.5,
+          "length_chars_min": 1780,
+          "length_chars_max": 2489,
+          "length_words_mean": 330.0,
+          "length_words_min": 277,
+          "length_words_max": 383,
+          "shannon_char_mean": 4.310825819208665,
+          "shannon_char_min": 4.27266671567153,
+          "shannon_char_max": 4.3489849227457995,
+          "shannon_word_mean": 7.292329214993689,
+          "shannon_word_min": 7.113357013273116,
+          "shannon_word_max": 7.4713014167142635,
+          "unique_words_mean": 211.0,
+          "unique_words_min": 181,
+          "unique_words_max": 241,
+          "unique_chars_mean": 48.5,
+          "unique_chars_min": 44,
+          "unique_chars_max": 53,
+          "word_diversity_mean": 0.6413362113657144,
+          "word_diversity_min": 0.6292428198433421,
+          "word_diversity_max": 0.6534296028880866,
+          "char_diversity_mean": 0.023006396684738695,
+          "char_diversity_min": 0.02129369224588188,
+          "char_diversity_max": 0.024719101123595506
+        },
+        "valid_samples": 2
+      }
+    }
+  }
+}
