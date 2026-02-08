@@ -1552,6 +1552,129 @@ The complete experimental results are available in:
 
 ---
 
+## 9.7. Nebula Entropy Source: Literary Text-Based Seeding
+
+### What is the Nebula Entropy Source?
+
+The **Nebula entropy source** is an experimental entropy generation technique that extracts multiple orthogonal information layers from a literary text to create a "nebula" of entropy values. Unlike traditional entropy sources (PRNG, TRNG, QRNG), Nebula derives its randomness from the **structural and statistical properties** of a source text.
+
+### How It Works
+
+**Reference Implementation:** `/src/entropy/entropy_sources/nebula.py`
+
+The Nebula source extracts **5 hierarchical entropy layers** from the text:
+
+| Layer | Description | What It Captures |
+|-------|-------------|------------------|
+| **1. Chunk Hash Chain** | SHA256 chain of 1024-char blocks | Sequential structure of text |
+| **2. Character Frequency** | Byte-level distribution per chunk | Statistical "fingerprint" |
+| **3. Word Boundary Pattern** | Positions of spaces/punctuation | Text rhythm and cadence |
+| **4. Semantic Position** | Sinusoidal positional encoding | Where in text (beginning/middle/end) |
+| **5. Cross-Chunk Entanglement** | XOR of neighboring chunk hashes | Non-local dependencies |
+
+### Gear-Ratio Advancement
+
+Each layer advances at a different rate (using prime numbers: 1, 2, 3, 5, 7, 11...), ensuring the combined output never repeats within astronomically long sequences:
+
+```python
+# From nebula.py
+primes = [1, 2, 3, 5, 7, 11, 13, 17, 19, 23]
+
+for layer_idx, chain in enumerate(self._chains):
+    rate = primes[layer_idx % len(primes)]
+    pos = (self._step * rate) % len(chain)
+    h.update(chain[pos])
+```
+
+### Bible KJV as Default Text
+
+The default source text is the **King James Version Bible** (`text_name = "bible_kjv"`), chosen because:
+
+- **Large corpus**: ~783,000 words providing extensive entropy
+- **Rich structure**: Verse numbers, chapters, books create natural boundaries
+- **Known text**: Reproducible across different systems
+- **Public domain**: No licensing restrictions
+
+### Code Reference
+
+```python
+# From: /src/entropy/entropy_sources/nebula.py
+class NebulaSource(EntropySource):
+    """Hierarchical multi-layer entropy source from literary text.
+
+    Args:
+        corpus_manager: Manager providing text access.
+        text_name: Name of the literary text (default: "bible_kjv").
+        num_layers: Number of entropy layers (default: 5).
+        blend_context: Whether to blend with generation context.
+    """
+    def __init__(
+        self,
+        corpus_manager: CorpusManager,
+        text_name: str = "bible_kjv",  # ← Default: Bible KJV
+        num_layers: int = 5,
+        blend_context: bool = True,
+        context_window: int = 10,
+        initial_seed: int = 42,
+    ):
+```
+
+### Experimental Results
+
+**Test data:** `/data/results/raw_comparison/samplers/nebula_bible.json`
+
+| Prompt | Seed | Entropy | Output Preview |
+|--------|------|---------|----------------|
+| Lighthouse story | 42 | 2.38 | "It was the first lighthouse he had ever seen..." |
+| Colony ship | 123 | 2.00 | "The crew, led by the captain, had to find..." |
+| Gravitational signal | 456 | 0.36 | Fibonacci sequence generation |
+| Mapmaker chart | 789 | 1.66 | Multiple-choice question format |
+
+**Key Finding:** Different seeds with the same prompt produce **identical outputs** with Nebula source because it's deterministic based on the text structure.
+
+### Characteristics
+
+| Aspect | Nebula Source |
+|--------|---------------|
+| **Determinism** | Deterministic (seed-dependent) |
+| **Entropy Quality** | Depends on source text complexity |
+| **Reproducibility** | Fully reproducible with same text |
+| **Speed** | Moderate (hash chain operations) |
+| **Memory** | Low (hashes only, not full text) |
+| **Period** | Theoretical: LCM of chain lengths × gear ratios |
+
+### When to Use Nebula
+
+**Consider using when:**
+- You need deterministic but texturally-rich entropy
+- You want reproducible results with "literary DNA"
+- You're experimenting with alternative entropy sources
+- You need a middle ground between PRNG (too simple) and QRNG (too expensive)
+
+**Avoid when:**
+- Production applications (not battle-tested)
+- Security-critical systems (deterministic from known text)
+- You need true randomness (it's pseudo-random from text structure)
+
+### Comparison with Other Sources
+
+| Source | Type | Deterministic | Quantum-Ready | Period |
+|--------|------|---------------|---------------|--------|
+| PRNG | Algorithmic | Yes | No | 2¹⁹⁹³⁷-1 |
+| TRNG | Hardware | No | N/A | Infinite |
+| QRNG | Quantum | No | Yes | True random |
+| **Nebula** | **Text-based** | **Yes** | **No** | **LCM-dependent** |
+
+### Future Directions
+
+The Nebula source could be extended with:
+- **Multiple text sources**: Shakespeare, scientific papers, code corpora
+- **Adaptive layer selection**: Choose layers based on prompt type
+- **Cross-text entanglement**: Combine entropy from multiple texts
+- **Dynamic text loading**: Stream text instead of pre-loading
+
+---
+
 ## 10. Additional Discovery: Biblical Reference Pattern
 
 ### Critical Finding: NEURAL Configurations Trigger Spontaneous Religious References

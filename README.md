@@ -384,6 +384,7 @@ Under the following terms:
 
 - **Section 9.5**: Neural Modulation & RTE - Training-free entropy control
 - **Section 9.6**: Neural + QRNG Experimental Results
+- **Section 9.7**: Nebula Entropy Source - Literary text-based seeding (Bible KJV)
 - **Section 10**: Biblical Reference Pattern Discovery (RTE+QRNG effect)
 
 ---
