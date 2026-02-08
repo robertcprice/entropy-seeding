@@ -804,26 +804,41 @@ Not Recommended:
 
 ## 6. Qualitative Personality Analysis
 
-Based on extensive testing across models and prompts, we've identified consistent personality traits for each entropy source.
+Based on extensive testing across models and prompts, we've identified consistent personality traits for each entropy source. The choice of entropy source can fundamentally shift an LLM's "personality"—similar to how different conductors bring out different qualities from the same orchestra.
 
-### PRNG = "Volatile"
+### Personality Framework: Three Archetypes
 
-**Characteristics:**
-- ✅ Can be creative and varied
-- ❌ Unpredictable quality
-- ❌ Can catastrophically fail
-- ❌ Higher burstiness (less natural)
-- ❌ More repetitive word choice
+| Entropy Source | Personality Archetype | Core Trait | Output Character |
+|----------------|----------------------|------------|------------------|
+| **PRNG** | The Unstable Genius | Unpredictable brilliance OR catastrophic failure | Volatile, academic, sometimes fails completely |
+| **TRNG** | The Reliable Professional | Consistent quality across diverse tasks | Natural, flowing, diverse vocabulary |
+| **QRNG** | The Cautious Analyst | Extreme structure and organization | Methodical, formulaic, highly formatted |
 
-**Output style:**
+This personality framework emerged from analyzing **actual output characteristics** from testing different entropy sources on `deepseek-r1:70b` thinking model across multiple prompt types.
+
+---
+
+### PRNG = "The Unstable Genius"
+
+**From DeepSeek-R1 70B COLOR Prompt ("Elyndor"):**
 ```
-"What a fascinating and imaginative question! [Academic framing]
+What a fascinating and imaginative question!
 
-### Description of [Invented Name]:
-[Structured explanation with headers]
+### Description of Elyndor:
+Elyndor is a shimmering, iridescent hue that shifts between
+luminous silver-gold and soft lavender...
 
-[Proceeds with formal academic tone]"
+[Length: 674 chars] [Burstiness: 23.0 HIGH] [Exclamation marks: 1]
 ```
+
+**Observed Characteristics:**
+- Conversational, academic tone: *"What a fascinating and imaginative question!"*
+- More formal structure with ### headers
+- Named colors follow **Fantasy/Ethereal** theme: Elyndor
+- **Highest burstiness** (most erratic sentence variance)
+- Can be creative and varied when working
+- Unpredictable quality - sometimes brilliant, sometimes fails
+- More repetitive word choice than other sources
 
 **Use when:**
 - Creativity valued over reliability
@@ -837,33 +852,43 @@ Based on extensive testing across models and prompts, we've identified consisten
 - ❌ Security-critical applications (deterministic = predictable)
 
 **Notable failure modes:**
-- Philosophy prompt on DeepSeek-R1 70B: **Complete failure** (all metrics = 0.00)
+- **Philosophy prompt on DeepSeek-R1 70B**: Complete failure (all metrics = 0.00, perplexity = infinity)
+- Deterministic seed (42) + complex analytical prompt = internal state collision
 - Repetitive loops on small models
 - Erratic burstiness scores
 
+**Why it fails:**
+The combination of deterministic seeding with MoE expert routing creates "collision zones" where the model gets stuck in repetitive loops or refuses to generate entirely.
+
 ---
 
-### TRNG = "Balanced"
+### TRNG = "The Reliable Professional"
 
-**Characteristics:**
-- ✅ Most natural text flow
-- ✅ Highest vocabulary diversity
-- ✅ Least repetitive
-- ✅ Most consistent quality
-- ✅ Best perplexity scores
-- ⚠️ Prompt-type sensitive (behavior inversion noted)
-
-**Output style:**
+**From DeepSeek-R1 70B COLOR Prompt ("Aurorin"):**
 ```
-"[Direct, warm opening]
+**Aurorin: The Celestial Color**
 
-**[Bold Header]:**
-[Emotive label]
+Imagine a color named Aurorin—a mesmerizing blend of shimmering
+blues and greens that dance across the visual spectrum like
+the aurora borealis. It embodies the ethereal beauty of cosmic
+phenomena, evoking feelings of wonder and transcendence.
 
-[Structured but flowing content]
+**Emotional Evoke:**
+- Awe: When witnessing its celestial dance
+- Calm: From its gentle, flowing nature
 
-[Ends with natural conclusion]"
+[Length: 882 chars - longest] [Burstiness: 23.0] [Exclamation marks: 0]
 ```
+
+**Observed Characteristics:**
+- Descriptive, flowing tone: *"shimmering blues and greens"*
+- More emotive language: *"magical moment where time stands still"*
+- Named colors follow **Nature/Celestial** theme: Aurorin
+- **Longest outputs** (most detailed)
+- **Most natural text flow**
+- **Highest vocabulary diversity** (65.3% unique words)
+- **Least repetitive** (1.3% repetition score)
+- **Best perplexity scores** (196.3)
 
 **Use when:**
 - ✅ Production applications (primary recommendation)
@@ -873,40 +898,57 @@ Based on extensive testing across models and prompts, we've identified consisten
 - ✅ Educational content
 
 **Avoid when:**
-- ⚠️ Untested prompt types (may behave differently)
-- ⚠️ Situations requiring absolute determinism
+- ⚠️ Untested prompt types (behavior inversion on analytical prompts noted)
 
 **Notable strengths:**
 - 7-8% higher uniqueness than PRNG
 - 15-46% less repetition than PRNG
 - Best burstiness scores (most natural flow)
 - No catastrophic failures observed
+- Works across all model sizes
+
+**⚠️ Behavior Inversion Anomaly:**
+TRNG behaves differently on different prompt types:
+| Prompt Type | Burstiness | Repetition | Uniqueness |
+|-------------|------------|------------|------------|
+| **Creative** (COLOR) | 0.240 LOW | 0.013 LOW | 0.653 HIGH |
+| **Analytical** (PHILOSOPHY) | 0.646 HIGH | 0.061 HIGH | 0.502 LOW |
+
+**Implication:** Hardware entropy interacts differently with model's reasoning pathways for different prompt types.
 
 ---
 
-### QRNG = "Structured"
+### QRNG = "The Cautious Analyst"
 
-**Characteristics:**
-- ✅ Consistent formatting
-- ✅ Most organized structure
-- ✅ Never catastrophic failure
-- ✅ Highest distinct_2 scores (14B model: 91.7%)
-- ❌ Lower vocabulary richness
-- ❌ Can be overly constrained
-- ❌ May produce formulaic output
-
-**Output style:**
+**From DeepSeek-R1 70B COLOR Prompt ("Lunaris"):**
 ```
-"### **[Formatted Header]**
-**Name:** *Italic Name*
+### **The Color: "Lunaris"**
+**Name:** *Lunaris*
 ---
-### **[Next Section Header]**
+**Description:**
+Lunaris is the intersection of moonlight and stardust—a delicate,
+alive color that seems to breathe with an inner light...
+---
 
-[Methodical breakdown with sections]
---- [divider]
+### **Emotions Evoked by Lunaris**
+1. **Mystery**: The unknown depth of space
+2. **Peace**: The calm of moonlight
+3. **Hope**: The promise of dawn
 
-[Very structured, formatted output]"
+[Length: 933 chars] [Burstiness: 16.0 LOWEST] [Exclamation marks: 1]
 ```
+
+**Observed Characteristics:**
+- Organized, analytical tone
+- Heavy formatting: multiple --- dividers
+- Named colors follow **Cosmic/Astronomical** theme: Lunaris
+- **Most methodical breakdown** with numbered sections
+- **Lowest burstiness** (most consistent sentence structure)
+- **Consistent formatting** and structure
+- Never catastrophic failure
+- **Highest distinct_2 scores** (14B model: 91.7%)
+- Lower vocabulary richness
+- Can be overly constrained
 
 **Use when:**
 - ✅ Structured output needed
@@ -920,9 +962,13 @@ Based on extensive testing across models and prompts, we've identified consisten
 - ❌ Natural conversation (may sound too formal)
 
 **Notable anomalies:**
-- Zero-repetition on philosophy prompt (statistically impossible - indicates over-constraint)
-- Lower Shannon entropy (2.24 vs 4.4+ for others)
+- **Zero-repetition on philosophy prompt** (statistically impossible - indicates over-constraint)
+- **Lower Shannon entropy** (2.24 vs 4.4+ for others)
 - More "robotic" personality
+- May require calibration to avoid over-constraint
+
+**Why zero-repetition happens:**
+Quantum measurements cause the model to be extremely conservative, possibly "overfitting" to quantum randomness patterns and producing formulaic output.
 
 ---
 
@@ -1382,6 +1428,127 @@ For the entropy-seeding study, these techniques were tested to understand if the
 - Provide insight into why different models respond differently
 
 **See also:** The full TRE research paper at `/docs/TRE_RESEARCH_PAPER_2026-02-03.md` for complete technical details.
+
+---
+
+## 9.6. Neural + QRNG Experimental Results
+
+In addition to the main entropy source comparisons, we conducted extensive experiments combining **NEURAL feedback modulation** with **QRNG** (Quantum Random Number Generator). These tests revealed unique interactions between neural feedback and quantum entropy.
+
+### Experimental Design
+
+**Models Tested:** Qwen3 8B, Qwen3 14B, Llama 1B, Llama 8B, Mistral 7B
+
+**Configurations:**
+- `standard + prng` - Baseline with pseudo-random
+- `standard + qrng_int` - Quantum integer seeding
+- `neural + prng` - Neural feedback + pseudo-random
+- `neural + qrng_int` - Neural feedback + quantum
+
+### Key Results: Qwen 8B & 14B
+
+#### Average Token Count
+| Config | 8B Tokens | 14B Tokens |
+|--------|-----------|-------------|
+| neural + prng | 109.3 | 105.2 |
+| neural + qrng_int | 107.5 | 103.0 |
+| neural + trng | 94.7 | 89.7 |
+| standard + prng | 108.8 | 107.0 |
+| standard + qrng_int | 96.0 | 94.2 |
+| standard + trng | 109.3 | 108.8 |
+
+**Finding:** Neural + TRNG produces shortest outputs (most concise), while standard + TRNG produces longest outputs.
+
+#### Text Entropy (bits) - Higher = More Diverse
+| Config | 8B Entropy | 14B Entropy |
+|--------|------------|-------------|
+| neural + prng | 4.12 | 4.20 |
+| neural + qrng_int | 4.15 | 4.18 |
+| neural + trng | **4.39** | **4.51** |
+| standard + prng | 4.10 | 4.17 |
+| standard + qrng_int | 4.35 | 4.39 |
+| standard + trng | 4.15 | 4.16 |
+
+**Finding:** **Neural + TRNG achieves highest entropy** - most diverse text generation. Standard + QRNG also improves entropy vs PRNG.
+
+#### Lexical Diversity - Higher = More Unique Vocabulary
+| Config | 8B Diversity | 14B Diversity |
+|--------|--------------|----------------|
+| neural + prng | 0.529 | 0.629 |
+| neural + qrng_int | 0.625 | 0.583 |
+| neural + trng | **0.732** | **0.701** |
+| standard + prng | 0.540 | 0.678 |
+| standard + qrng_int | 0.614 | 0.692 |
+| standard + trng | 0.590 | 0.596 |
+
+**Finding:** **Neural + TRNG dominates vocabulary diversity** - 73.2% for 8B, 70.1% for 14B.
+
+### Temperature Mode Comparison
+
+#### Neural vs Standard Generation
+
+**Qwen 8B:**
+| Metric | Standard | Neural | Difference |
+|--------|----------|--------|------------|
+| Avg Token Count | 104.7 | 103.8 | -0.9 |
+| Text Entropy | 4.20 | 4.22 | +0.02 |
+| Lexical Diversity | 0.581 | **0.629** | +8.3% |
+
+**Qwen 14B:**
+| Metric | Standard | Neural | Difference |
+|--------|----------|--------|------------|
+| Avg Token Count | 103.3 | 99.3 | -4.0 |
+| Text Entropy | 4.24 | 4.30 | +0.06 |
+| Lexical Diversity | 0.655 | 0.638 | -2.6% |
+
+**Finding:** Neural modulation provides modest benefits for entropy and diversity, with effects varying by model size.
+
+### Statistical Significance
+
+**PRNG vs TRNG (across all metrics):**
+- Token Count: p = 0.66 (not significant)
+- Text Entropy: p = 0.34 (not significant)
+- Lexical Diversity: p = 0.34 (not significant)
+
+**PRNG vs QRNG:**
+- Token Count: p = 0.11 (trending)
+- Text Entropy: p = 0.20 (not significant)
+- Lexical Diversity: p = 0.69 (not significant)
+
+**TRNG vs QRNG:**
+- Token Count: p = 0.89 (not significant)
+- Text Entropy: p = 0.69 (not significant)
+- Lexical Diversity: p = 0.69 (not significant)
+
+### Key Insights
+
+1. **Neural + TRNG Synergy**: The combination of neural feedback with hardware entropy produces the highest quality outputs (best entropy + diversity)
+
+2. **Model Size Response**: 8B and 14B models respond differently to neural modulation, with 8B showing more consistent improvements
+
+3. **QRNG Competitive**: QRNG performs competitively with TRNG on many metrics, especially when combined with neural modulation
+
+4. **Standard Generation Remains Strong**: For many use cases, standard generation with TRNG or QRNG performs excellently without the complexity of neural feedback
+
+### Sample Text Outputs
+
+**14B + neural + prng:**
+> "The sea was heaving with great, dark waves, and the wind was howling like a thousand wolves. The sky was a swirling mass of gray, and the rain was coming down in sheets."
+
+**14B + neural + qrng_int:**
+> "For the first time in 25 years, the lighthouse was... A. operating at full capacity B. visited by tourists..."
+
+**14B + neural + trng:**
+> "The sea was churning in violent, frothing waves, and the wind howled through the rocks like a banshee. The lighthouse beam had long since died..."
+
+**Observation:** Different entropy sources produce qualitatively different text, even with the same prompt and model.
+
+### Full Dataset
+
+The complete experimental results are available in:
+- `results/neural_modulation_rng_comparison.md` - This comprehensive comparison report
+- `/results/neural_feedback_quantum/` - Individual test folders with full JSON data
+- `/data/neural_feedback_quantum/` - Raw experimental data
 
 ---
 

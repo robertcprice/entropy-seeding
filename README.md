@@ -365,15 +365,26 @@ Under the following terms:
 
 ## 📚 Additional Resources
 
-- [📘 Full Report](COMPREHENSIVE_REPORT.md) - Complete analysis
+- [📘 Full Report](COMPREHENSIVE_REPORT.md) - Complete analysis (1,850+ lines)
 - [📊 Results](results/) - Raw JSON data by architecture
   - [Qwen3 Architecture Report](results/qwen/ARCHITECTURE_REPORT.md) - Dense model analysis
   - [DeepSeek-R1 Architecture Report](results/deepseek-r1/ARCHITECTURE_REPORT.md) - MoE model analysis
+  - [Llama Architecture Notes](results/llama/ARCHITECTURE_NOTES.md) - Llama test status
+  - [Mistral Architecture Notes](results/mistral/ARCHITECTURE_NOTES.md) - Mistral test status
+  - [Qualitative Analysis](results/QUALITATIVE_ANALYSIS_ANOMALIES.md) - Personality framework & anomalies
+  - [Correlation Analysis](results/correlation_analysis.json) - Neuron activation correlations
+  - [Neural Modulation Results](results/neural_modulation_rng_comparison.md) - NEURAL+entropy experiments
 - [📝 Examples](examples/) - Text output samples
 - [📄 Individual Reports](reports/) - Entropy source deep dives
   - [PRNG Detailed Report](reports/PRNG_DETAILED_REPORT.md) - Pseudo-random analysis
   - [TRNG Detailed Report](reports/TRNG_DETAILED_REPORT.md) - Hardware random analysis
   - [QRNG Detailed Report](reports/QRNG_DETAILED_REPORT.md) - Quantum random analysis
+
+### Advanced Techniques
+
+- **Section 9.5**: Neural Modulation & RTE - Training-free entropy control
+- **Section 9.6**: Neural + QRNG Experimental Results
+- **Section 10**: Biblical Reference Pattern Discovery (RTE+QRNG effect)
 
 ---
 

@@ -1,0 +1,1206 @@
+{
+    "pearson_correlations": {
+        "model.layers.2.mlp.down_proj_n1793": {
+            "type_token_ratio": {
+                "correlation": -0.6314031832602263,
+                "p_value": 0.002828304210695571
+            },
+            "unique_words": {
+                "correlation": 0.2195239203819988,
+                "p_value": 0.3524017858245365
+            },
+            "total_words": {
+                "correlation": 0.3523927238937594,
+                "p_value": 0.12754804425501515
+            },
+            "word_count": {
+                "correlation": 0.3523927238937594,
+                "p_value": 0.12754804425501515
+            },
+            "sentence_count": {
+                "correlation": 0.49988246102190725,
+                "p_value": 0.024808867786065465
+            },
+            "avg_word_length": {
+                "correlation": -0.5648192251345155,
+                "p_value": 0.00946571180838531
+            },
+            "sentiment_score": {
+                "correlation": -0.00791221567067802,
+                "p_value": 0.9735897108546464
+            }
+        },
+        "model.layers.2.mlp.down_proj_n1999": {
+            "type_token_ratio": {
+                "correlation": 0.6613097514672042,
+                "p_value": 0.0014977358420402223
+            },
+            "unique_words": {
+                "correlation": -0.2480390548334058,
+                "p_value": 0.2916858653137387
+            },
+            "total_words": {
+                "correlation": -0.3978632721984499,
+                "p_value": 0.08233650628010952
+            },
+            "word_count": {
+                "correlation": -0.3978632721984499,
+                "p_value": 0.08233650628010952
+            },
+            "sentence_count": {
+                "correlation": -0.5602787847972364,
+                "p_value": 0.010188145211584874
+            },
+            "avg_word_length": {
+                "correlation": 0.5982403035896108,
+                "p_value": 0.0053304806852735535
+            },
+            "sentiment_score": {
+                "correlation": -0.08620813182308035,
+                "p_value": 0.7178123755378172
+            }
+        },
+        "model.layers.2.mlp.down_proj_n1401": {
+            "type_token_ratio": {
+                "correlation": 0.6897586611924442,
+                "p_value": 0.0007652426261154394
+            },
+            "unique_words": {
+                "correlation": -0.07144707881350545,
+                "p_value": 0.764688390147146
+            },
+            "total_words": {
+                "correlation": -0.24850385306212017,
+                "p_value": 0.29075309944179806
+            },
+            "word_count": {
+                "correlation": -0.24850385306212017,
+                "p_value": 0.29075309944179806
+            },
+            "sentence_count": {
+                "correlation": -0.5089604536323731,
+                "p_value": 0.02191476234207448
+            },
+            "avg_word_length": {
+                "correlation": 0.6749286085021056,
+                "p_value": 0.0010956127880341578
+            },
+            "sentiment_score": {
+                "correlation": -0.12462702357282095,
+                "p_value": 0.6006192550754044
+            }
+        },
+        "model.layers.25.mlp.down_proj_n1793": {
+            "type_token_ratio": {
+                "correlation": 0.21238988478273832,
+                "p_value": 0.3686551356906694
+            },
+            "unique_words": {
+                "correlation": -0.41706483831046354,
+                "p_value": 0.0673282954058402
+            },
+            "total_words": {
+                "correlation": -0.3810368827284154,
+                "p_value": 0.09740940138891135
+            },
+            "word_count": {
+                "correlation": -0.3810368827284154,
+                "p_value": 0.09740940138891135
+            },
+            "sentence_count": {
+                "correlation": -0.17648916673142181,
+                "p_value": 0.4566737862813194
+            },
+            "avg_word_length": {
+                "correlation": -0.1153921677062826,
+                "p_value": 0.6280700656000346
+            },
+            "sentiment_score": {
+                "correlation": 0.10929245194168877,
+                "p_value": 0.6464659211523047
+            }
+        },
+        "model.layers.25.mlp.down_proj_n1999": {
+            "type_token_ratio": {
+                "correlation": 0.14413598326268945,
+                "p_value": 0.5443354252312791
+            },
+            "unique_words": {
+                "correlation": -0.39439866821131064,
+                "p_value": 0.08528879686248814
+            },
+            "total_words": {
+                "correlation": -0.34249471472024073,
+                "p_value": 0.13935543671029813
+            },
+            "word_count": {
+                "correlation": -0.34249471472024073,
+                "p_value": 0.13935543671029813
+            },
+            "sentence_count": {
+                "correlation": -0.13458976600955513,
+                "p_value": 0.5715760164793802
+            },
+            "avg_word_length": {
+                "correlation": -0.15779988111895016,
+                "p_value": 0.5064053738988517
+            },
+            "sentiment_score": {
+                "correlation": 0.08265079851051765,
+                "p_value": 0.7290277483200381
+            }
+        },
+        "model.layers.26.mlp.down_proj_n1793": {
+            "type_token_ratio": {
+                "correlation": -0.20501412818979853,
+                "p_value": 0.3858985238837316
+            },
+            "unique_words": {
+                "correlation": -0.0884424487897453,
+                "p_value": 0.7107962868845342
+            },
+            "total_words": {
+                "correlation": 0.01305867962410076,
+                "p_value": 0.9564238017837297
+            },
+            "word_count": {
+                "correlation": 0.01305867962410076,
+                "p_value": 0.9564238017837297
+            },
+            "sentence_count": {
+                "correlation": 0.30686996496601293,
+                "p_value": 0.18816721314513857
+            },
+            "avg_word_length": {
+                "correlation": -0.615786432408056,
+                "p_value": 0.0038448270371232267
+            },
+            "sentiment_score": {
+                "correlation": 0.18338489926266252,
+                "p_value": 0.4389821240494508
+            }
+        },
+        "model.layers.27.mlp.down_proj_n1793": {
+            "type_token_ratio": {
+                "correlation": -0.5298930079850565,
+                "p_value": 0.016257464851196366
+            },
+            "unique_words": {
+                "correlation": -0.0828578048588117,
+                "p_value": 0.7283736304669904
+            },
+            "total_words": {
+                "correlation": 0.03082784738817422,
+                "p_value": 0.8973424453406809
+            },
+            "word_count": {
+                "correlation": 0.03082784738817422,
+                "p_value": 0.8973424453406809
+            },
+            "sentence_count": {
+                "correlation": 0.16443192061449938,
+                "p_value": 0.48846602295778485
+            },
+            "avg_word_length": {
+                "correlation": -0.6115448949847193,
+                "p_value": 0.004167935308266221
+            },
+            "sentiment_score": {
+                "correlation": -0.029195702324651546,
+                "p_value": 0.9027521648243382
+            }
+        },
+        "model.layers.27.mlp.down_proj_n1999": {
+            "type_token_ratio": {
+                "correlation": -0.5201371630118535,
+                "p_value": 0.01872696279212486
+            },
+            "unique_words": {
+                "correlation": -0.10850578601178387,
+                "p_value": 0.6488531223304463
+            },
+            "total_words": {
+                "correlation": 0.007854954291603364,
+                "p_value": 0.973780781248541
+            },
+            "word_count": {
+                "correlation": 0.007854954291603364,
+                "p_value": 0.973780781248541
+            },
+            "sentence_count": {
+                "correlation": 0.14755680906279803,
+                "p_value": 0.5347198530039714
+            },
+            "avg_word_length": {
+                "correlation": -0.6060103642640029,
+                "p_value": 0.004623015559189873
+            },
+            "sentiment_score": {
+                "correlation": -0.030500473356656316,
+                "p_value": 0.898427179438662
+            }
+        },
+        "model.layers.27.mlp.down_proj_n1683": {
+            "type_token_ratio": {
+                "correlation": -0.5097371358003632,
+                "p_value": 0.021680181980589106
+            },
+            "unique_words": {
+                "correlation": -0.1128718232408657,
+                "p_value": 0.6356462619496764
+            },
+            "total_words": {
+                "correlation": -0.0012246537896321713,
+                "p_value": 0.9959115458522283
+            },
+            "word_count": {
+                "correlation": -0.0012246537896321713,
+                "p_value": 0.9959115458522283
+            },
+            "sentence_count": {
+                "correlation": 0.1350125508122402,
+                "p_value": 0.5703571602972161
+            },
+            "avg_word_length": {
+                "correlation": -0.5958595493622937,
+                "p_value": 0.005564276744689185
+            },
+            "sentiment_score": {
+                "correlation": -0.03324081479217869,
+                "p_value": 0.8893527518144769
+            }
+        },
+        "model.layers.27.mlp.down_proj_n1321": {
+            "type_token_ratio": {
+                "correlation": 0.44548187523247407,
+                "p_value": 0.04901500435236432
+            },
+            "unique_words": {
+                "correlation": -0.10259401380028495,
+                "p_value": 0.6668971025970151
+            },
+            "total_words": {
+                "correlation": -0.16581707910698318,
+                "p_value": 0.48475922368348556
+            },
+            "word_count": {
+                "correlation": -0.16581707910698318,
+                "p_value": 0.48475922368348556
+            },
+            "sentence_count": {
+                "correlation": -0.25954895295193803,
+                "p_value": 0.26912805618907176
+            },
+            "avg_word_length": {
+                "correlation": 0.6320686384706261,
+                "p_value": 0.0027905346373166802
+            },
+            "sentiment_score": {
+                "correlation": 0.030963019346125067,
+                "p_value": 0.8968946122467047
+            }
+        },
+        "model.layers.27.mlp.down_proj_n1446": {
+            "type_token_ratio": {
+                "correlation": -0.4593579788741414,
+                "p_value": 0.041596503579771474
+            },
+            "unique_words": {
+                "correlation": 0.06433045447737444,
+                "p_value": 0.7875842987468491
+            },
+            "total_words": {
+                "correlation": 0.14137931195356165,
+                "p_value": 0.5521407859445413
+            },
+            "word_count": {
+                "correlation": 0.14137931195356165,
+                "p_value": 0.5521407859445413
+            },
+            "sentence_count": {
+                "correlation": 0.23955568851172176,
+                "p_value": 0.3090325203470713
+            },
+            "avg_word_length": {
+                "correlation": -0.6126089955371476,
+                "p_value": 0.004084838385091345
+            },
+            "sentiment_score": {
+                "correlation": -0.04133690103244267,
+                "p_value": 0.8626245514015015
+            }
+        },
+        "model.layers.27.mlp.down_proj_n1645": {
+            "type_token_ratio": {
+                "correlation": 0.47541672144323266,
+                "p_value": 0.03412879726681274
+            },
+            "unique_words": {
+                "correlation": -0.09922702255839196,
+                "p_value": 0.6772539169187497
+            },
+            "total_words": {
+                "correlation": -0.17023274700285973,
+                "p_value": 0.4730361926104094
+            },
+            "word_count": {
+                "correlation": -0.17023274700285973,
+                "p_value": 0.4730361926104094
+            },
+            "sentence_count": {
+                "correlation": -0.26923230157474487,
+                "p_value": 0.2510228780015399
+            },
+            "avg_word_length": {
+                "correlation": 0.6578228649977641,
+                "p_value": 0.0016185905097474674
+            },
+            "sentiment_score": {
+                "correlation": -0.00010899655985575907,
+                "p_value": 0.9996361182163185
+            }
+        },
+        "model.layers.27.mlp.down_proj_n559": {
+            "type_token_ratio": {
+                "correlation": -0.3899871270790971,
+                "p_value": 0.08916021101142624
+            },
+            "unique_words": {
+                "correlation": 0.22461080818446666,
+                "p_value": 0.3410700970090187
+            },
+            "total_words": {
+                "correlation": 0.25749468790502844,
+                "p_value": 0.2730715123436739
+            },
+            "word_count": {
+                "correlation": 0.25749468790502844,
+                "p_value": 0.2730715123436739
+            },
+            "sentence_count": {
+                "correlation": 0.2567648419696943,
+                "p_value": 0.27448120119423836
+            },
+            "avg_word_length": {
+                "correlation": -0.5029251710795529,
+                "p_value": 0.02380703996684892
+            },
+            "sentiment_score": {
+                "correlation": -0.13950386897293127,
+                "p_value": 0.5574795187039638
+            }
+        },
+        "model.layers.27.mlp.down_proj_n1401": {
+            "type_token_ratio": {
+                "correlation": -0.196710143531983,
+                "p_value": 0.4058394073821542
+            },
+            "unique_words": {
+                "correlation": -0.19889397351862878,
+                "p_value": 0.4005415711215742
+            },
+            "total_words": {
+                "correlation": -0.058549075927877496,
+                "p_value": 0.8063096414851554
+            },
+            "word_count": {
+                "correlation": -0.058549075927877496,
+                "p_value": 0.8063096414851554
+            },
+            "sentence_count": {
+                "correlation": 0.22688597587730377,
+                "p_value": 0.33607172997870904
+            },
+            "avg_word_length": {
+                "correlation": -0.09143107295043235,
+                "p_value": 0.7014465473855295
+            },
+            "sentiment_score": {
+                "correlation": 0.20866111032694887,
+                "p_value": 0.3773169440914248
+            }
+        },
+        "model.layers.27.mlp.down_proj_n425": {
+            "type_token_ratio": {
+                "correlation": 0.5041237527741149,
+                "p_value": 0.02342130936158232
+            },
+            "unique_words": {
+                "correlation": -0.09070730008746991,
+                "p_value": 0.7037071000928379
+            },
+            "total_words": {
+                "correlation": -0.18014207935629417,
+                "p_value": 0.4472566687482451
+            },
+            "word_count": {
+                "correlation": -0.18014207935629417,
+                "p_value": 0.4472566687482451
+            },
+            "sentence_count": {
+                "correlation": -0.2783678955440129,
+                "p_value": 0.23467175626448203
+            },
+            "avg_word_length": {
+                "correlation": 0.6537583886655306,
+                "p_value": 0.0017696880139404752
+            },
+            "sentiment_score": {
+                "correlation": 0.025984510284248807,
+                "p_value": 0.9134074511648038
+            }
+        },
+        "model.layers.27.mlp.down_proj_n49": {
+            "type_token_ratio": {
+                "correlation": 0.4627689271439187,
+                "p_value": 0.03991348750196602
+            },
+            "unique_words": {
+                "correlation": -0.019821772810187585,
+                "p_value": 0.9338948734539996
+            },
+            "total_words": {
+                "correlation": -0.09937187562914157,
+                "p_value": 0.6768071852421519
+            },
+            "word_count": {
+                "correlation": -0.09937187562914157,
+                "p_value": 0.6768071852421519
+            },
+            "sentence_count": {
+                "correlation": -0.19370937874265026,
+                "p_value": 0.41318104490695395
+            },
+            "avg_word_length": {
+                "correlation": 0.6028376317295072,
+                "p_value": 0.004901888323327268
+            },
+            "sentiment_score": {
+                "correlation": 0.018072710336134334,
+                "p_value": 0.9397173060233138
+            }
+        },
+        "model.layers.27.mlp.down_proj_n47": {
+            "type_token_ratio": {
+                "correlation": -0.454505373795808,
+                "p_value": 0.04408475902027696
+            },
+            "unique_words": {
+                "correlation": 0.13944700683682867,
+                "p_value": 0.5576417432697472
+            },
+            "total_words": {
+                "correlation": 0.19327958327901373,
+                "p_value": 0.4142384256808343
+            },
+            "word_count": {
+                "correlation": 0.19327958327901373,
+                "p_value": 0.4142384256808343
+            },
+            "sentence_count": {
+                "correlation": 0.2888083121373537,
+                "p_value": 0.21684875481238092
+            },
+            "avg_word_length": {
+                "correlation": -0.6401582135087864,
+                "p_value": 0.0023639750715631395
+            },
+            "sentiment_score": {
+                "correlation": -0.015654544514948826,
+                "p_value": 0.9477719017031321
+            }
+        },
+        "model.layers.27.mlp.down_proj_n578": {
+            "type_token_ratio": {
+                "correlation": -0.49599257294259635,
+                "p_value": 0.026137844730479816
+            },
+            "unique_words": {
+                "correlation": -0.04052200417269673,
+                "p_value": 0.865308812778429
+            },
+            "total_words": {
+                "correlation": 0.059312975469868884,
+                "p_value": 0.8038293846562541
+            },
+            "word_count": {
+                "correlation": 0.059312975469868884,
+                "p_value": 0.8038293846562541
+            },
+            "sentence_count": {
+                "correlation": 0.20038362169621546,
+                "p_value": 0.3969496795850925
+            },
+            "avg_word_length": {
+                "correlation": -0.5787539890034723,
+                "p_value": 0.007504330552819342
+            },
+            "sentiment_score": {
+                "correlation": -0.038730183403640886,
+                "p_value": 0.8712160087275249
+            }
+        },
+        "model.layers.27.mlp.down_proj_n130": {
+            "type_token_ratio": {
+                "correlation": 0.47956273708736286,
+                "p_value": 0.03238235956325829
+            },
+            "unique_words": {
+                "correlation": -0.07435917780626826,
+                "p_value": 0.755372241578911
+            },
+            "total_words": {
+                "correlation": -0.15132182958766344,
+                "p_value": 0.5242282259777352
+            },
+            "word_count": {
+                "correlation": -0.15132182958766344,
+                "p_value": 0.5242282259777352
+            },
+            "sentence_count": {
+                "correlation": -0.261750405670617,
+                "p_value": 0.2649419099402569
+            },
+            "avg_word_length": {
+                "correlation": 0.6543628632176275,
+                "p_value": 0.0017464959894423128
+            },
+            "sentiment_score": {
+                "correlation": 0.018375725074721252,
+                "p_value": 0.9387083850221896
+            }
+        },
+        "model.layers.27.mlp.down_proj_n2022": {
+            "type_token_ratio": {
+                "correlation": 0.46504104576563404,
+                "p_value": 0.03882199386473888
+            },
+            "unique_words": {
+                "correlation": -0.08654383929355935,
+                "p_value": 0.7167567987766312
+            },
+            "total_words": {
+                "correlation": -0.16194533818680285,
+                "p_value": 0.495155174429993
+            },
+            "word_count": {
+                "correlation": -0.16194533818680285,
+                "p_value": 0.495155174429993
+            },
+            "sentence_count": {
+                "correlation": -0.24956353255354452,
+                "p_value": 0.28863337752697094
+            },
+            "avg_word_length": {
+                "correlation": 0.5877337029331469,
+                "p_value": 0.006426703164859904
+            },
+            "sentiment_score": {
+                "correlation": 0.054778901303237176,
+                "p_value": 0.8185764511169658
+            }
+        }
+    },
+    "spearman_correlations": {
+        "model.layers.2.mlp.down_proj_n1793": {
+            "type_token_ratio": {
+                "correlation": -0.58796992481203,
+                "p_value": 0.006400170876195395
+            },
+            "unique_words": {
+                "correlation": 0.25808886162446065,
+                "p_value": 0.271927219761677
+            },
+            "total_words": {
+                "correlation": 0.31903696014219046,
+                "p_value": 0.17035821529091436
+            },
+            "word_count": {
+                "correlation": 0.31903696014219046,
+                "p_value": 0.17035821529091436
+            },
+            "sentence_count": {
+                "correlation": 0.582914964809212,
+                "p_value": 0.006987956146378219
+            },
+            "avg_word_length": {
+                "correlation": -0.6992481203007518,
+                "p_value": 0.0006016416290038306
+            },
+            "sentiment_score": {
+                "correlation": 0.20150375939849624,
+                "p_value": 0.39426050476127356
+            }
+        },
+        "model.layers.2.mlp.down_proj_n1999": {
+            "type_token_ratio": {
+                "correlation": 0.5789473684210527,
+                "p_value": 0.007479660209668748
+            },
+            "unique_words": {
+                "correlation": -0.25583152464232256,
+                "p_value": 0.2762904964947791
+            },
+            "total_words": {
+                "correlation": -0.31376984051720147,
+                "p_value": 0.1779202176623396
+            },
+            "word_count": {
+                "correlation": -0.31376984051720147,
+                "p_value": 0.1779202176623396
+            },
+            "sentence_count": {
+                "correlation": -0.573637803565564,
+                "p_value": 0.008181604245375906
+            },
+            "avg_word_length": {
+                "correlation": 0.7142857142857143,
+                "p_value": 0.0004032525947441225
+            },
+            "sentiment_score": {
+                "correlation": -0.20300751879699244,
+                "p_value": 0.3906662393541965
+            }
+        },
+        "model.layers.2.mlp.down_proj_n1401": {
+            "type_token_ratio": {
+                "correlation": 0.6165413533834586,
+                "p_value": 0.003789555588157601
+            },
+            "unique_words": {
+                "correlation": -0.2889391337136819,
+                "p_value": 0.2166312425793524
+            },
+            "total_words": {
+                "correlation": -0.35214456921354986,
+                "p_value": 0.12783507816981918
+            },
+            "word_count": {
+                "correlation": -0.35214456921354986,
+                "p_value": 0.12783507816981918
+            },
+            "sentence_count": {
+                "correlation": -0.586007351890428,
+                "p_value": 0.006623358799953387
+            },
+            "avg_word_length": {
+                "correlation": 0.7368421052631579,
+                "p_value": 0.00021080775336363295
+            },
+            "sentiment_score": {
+                "correlation": -0.04060150375939849,
+                "p_value": 0.8650468790077723
+            }
+        },
+        "model.layers.25.mlp.down_proj_n1793": {
+            "type_token_ratio": {
+                "correlation": 0.051127819548872175,
+                "p_value": 0.8304946161837171
+            },
+            "unique_words": {
+                "correlation": -0.4213695699991195,
+                "p_value": 0.06426627960863322
+            },
+            "total_words": {
+                "correlation": -0.4168548960348432,
+                "p_value": 0.06748038358686027
+            },
+            "word_count": {
+                "correlation": -0.4168548960348432,
+                "p_value": 0.06748038358686027
+            },
+            "sentence_count": {
+                "correlation": -0.19636657965721466,
+                "p_value": 0.4066763375013491
+            },
+            "avg_word_length": {
+                "correlation": -0.15789473684210525,
+                "p_value": 0.5061465835201626
+            },
+            "sentiment_score": {
+                "correlation": -0.1413533834586466,
+                "p_value": 0.552214438632242
+            }
+        },
+        "model.layers.25.mlp.down_proj_n1999": {
+            "type_token_ratio": {
+                "correlation": 0.06466165413533834,
+                "p_value": 0.7865148626867857
+            },
+            "unique_words": {
+                "correlation": -0.4386758201955119,
+                "p_value": 0.05300504829722754
+            },
+            "total_words": {
+                "correlation": -0.4379233745347991,
+                "p_value": 0.05346093392904079
+            },
+            "word_count": {
+                "correlation": -0.4379233745347991,
+                "p_value": 0.05346093392904079
+            },
+            "sentence_count": {
+                "correlation": -0.19636657965721466,
+                "p_value": 0.4066763375013491
+            },
+            "avg_word_length": {
+                "correlation": -0.14736842105263157,
+                "p_value": 0.5352473458918693
+            },
+            "sentiment_score": {
+                "correlation": -0.13383458646616542,
+                "p_value": 0.5737559530736435
+            }
+        },
+        "model.layers.26.mlp.down_proj_n1793": {
+            "type_token_ratio": {
+                "correlation": -0.23458646616541348,
+                "p_value": 0.3194764651496699
+            },
+            "unique_words": {
+                "correlation": -0.15575625176753166,
+                "p_value": 0.5119963081868839
+            },
+            "total_words": {
+                "correlation": -0.08954103362481289,
+                "p_value": 0.7073547214881717
+            },
+            "word_count": {
+                "correlation": -0.08954103362481289,
+                "p_value": 0.7073547214881717
+            },
+            "sentence_count": {
+                "correlation": 0.28836509532339005,
+                "p_value": 0.2175867419135195
+            },
+            "avg_word_length": {
+                "correlation": -0.6300751879699248,
+                "p_value": 0.0029049508134043086
+            },
+            "sentiment_score": {
+                "correlation": 0.08270676691729321,
+                "p_value": 0.7288508763559796
+            }
+        },
+        "model.layers.27.mlp.down_proj_n1793": {
+            "type_token_ratio": {
+                "correlation": -0.5218045112781955,
+                "p_value": 0.01828494348209757
+            },
+            "unique_words": {
+                "correlation": -0.02633559812494497,
+                "p_value": 0.912241756504637
+            },
+            "total_words": {
+                "correlation": 0.11963886005332142,
+                "p_value": 0.6153853947422894
+            },
+            "word_count": {
+                "correlation": 0.11963886005332142,
+                "p_value": 0.6153853947422894
+            },
+            "sentence_count": {
+                "correlation": 0.3015077404185579,
+                "p_value": 0.19640008553068392
+            },
+            "avg_word_length": {
+                "correlation": -0.5819548872180451,
+                "p_value": 0.007104437545100437
+            },
+            "sentiment_score": {
+                "correlation": -0.18045112781954886,
+                "p_value": 0.4464646102705484
+            }
+        },
+        "model.layers.27.mlp.down_proj_n1999": {
+            "type_token_ratio": {
+                "correlation": -0.47218045112781953,
+                "p_value": 0.035542393671931995
+            },
+            "unique_words": {
+                "correlation": -0.04364184832133738,
+                "p_value": 0.8550400166208237
+            },
+            "total_words": {
+                "correlation": 0.09330326192837646,
+                "p_value": 0.6956103898115952
+            },
+            "word_count": {
+                "correlation": 0.09330326192837646,
+                "p_value": 0.6956103898115952
+            },
+            "sentence_count": {
+                "correlation": 0.28604580501247806,
+                "p_value": 0.22147541122396505
+            },
+            "avg_word_length": {
+                "correlation": -0.5894736842105263,
+                "p_value": 0.006233369103076914
+            },
+            "sentiment_score": {
+                "correlation": -0.18496240601503755,
+                "p_value": 0.43498614362285265
+            }
+        },
+        "model.layers.27.mlp.down_proj_n1683": {
+            "type_token_ratio": {
+                "correlation": -0.4526315789473684,
+                "p_value": 0.045075688783048344
+            },
+            "unique_words": {
+                "correlation": -0.06019565285701707,
+                "p_value": 0.8009657232640172
+            },
+            "total_words": {
+                "correlation": 0.07674945739269677,
+                "p_value": 0.7477496143545785
+            },
+            "word_count": {
+                "correlation": 0.07674945739269677,
+                "p_value": 0.7477496143545785
+            },
+            "sentence_count": {
+                "correlation": 0.24739096649727832,
+                "p_value": 0.2929895245959891
+            },
+            "avg_word_length": {
+                "correlation": -0.5458646616541353,
+                "p_value": 0.012783628876204716
+            },
+            "sentiment_score": {
+                "correlation": -0.1744360902255639,
+                "p_value": 0.46201088623928194
+            }
+        },
+        "model.layers.27.mlp.down_proj_n1321": {
+            "type_token_ratio": {
+                "correlation": 0.40015046079147876,
+                "p_value": 0.08042943319280337
+            },
+            "unique_words": {
+                "correlation": 0.0015054573892737046,
+                "p_value": 0.9949741053538822
+            },
+            "total_words": {
+                "correlation": -0.1260820563516728,
+                "p_value": 0.5963397737095699
+            },
+            "word_count": {
+                "correlation": -0.1260820563516728,
+                "p_value": 0.5963397737095699
+            },
+            "sentence_count": {
+                "correlation": -0.2795796073444685,
+                "p_value": 0.23255608292868657
+            },
+            "avg_word_length": {
+                "correlation": 0.628807866958038,
+                "p_value": 0.002979699695376507
+            },
+            "sentiment_score": {
+                "correlation": 0.051899213899646676,
+                "p_value": 0.8279735057324501
+            }
+        },
+        "model.layers.27.mlp.down_proj_n1446": {
+            "type_token_ratio": {
+                "correlation": -0.39097744360902253,
+                "p_value": 0.08828010210661401
+            },
+            "unique_words": {
+                "correlation": -0.03611739171421024,
+                "p_value": 0.8798414435669212
+            },
+            "total_words": {
+                "correlation": 0.09781793589265274,
+                "p_value": 0.6816049816270551
+            },
+            "word_count": {
+                "correlation": 0.09781793589265274,
+                "p_value": 0.6816049816270551
+            },
+            "sentence_count": {
+                "correlation": 0.23888690202393437,
+                "p_value": 0.31042597464982596
+            },
+            "avg_word_length": {
+                "correlation": -0.556390977443609,
+                "p_value": 0.010841753245056892
+            },
+            "sentiment_score": {
+                "correlation": -0.10676691729323308,
+                "p_value": 0.6541415450094845
+            }
+        },
+        "model.layers.27.mlp.down_proj_n1645": {
+            "type_token_ratio": {
+                "correlation": 0.44360902255639095,
+                "p_value": 0.05008922172295619
+            },
+            "unique_words": {
+                "correlation": -0.02934538076779582,
+                "p_value": 0.9022558825000808
+            },
+            "total_words": {
+                "correlation": -0.15650869742824436,
+                "p_value": 0.5099343608629625
+            },
+            "word_count": {
+                "correlation": -0.15650869742824436,
+                "p_value": 0.5099343608629625
+            },
+            "sentence_count": {
+                "correlation": -0.3308854176901097,
+                "p_value": 0.15415899083940043
+            },
+            "avg_word_length": {
+                "correlation": 0.6706766917293233,
+                "p_value": 0.0012099715195241652
+            },
+            "sentiment_score": {
+                "correlation": 0.012030075187969924,
+                "p_value": 0.9598534442846784
+            }
+        },
+        "model.layers.27.mlp.down_proj_n559": {
+            "type_token_ratio": {
+                "correlation": -0.3157894736842105,
+                "p_value": 0.1749941354156349
+            },
+            "unique_words": {
+                "correlation": 0.16704293667822237,
+                "p_value": 0.481490386200818
+            },
+            "total_words": {
+                "correlation": 0.3047404925886489,
+                "p_value": 0.19140835563240358
+            },
+            "word_count": {
+                "correlation": 0.3047404925886489,
+                "p_value": 0.19140835563240358
+            },
+            "sentence_count": {
+                "correlation": 0.25512193420031826,
+                "p_value": 0.27767104236726664
+            },
+            "avg_word_length": {
+                "correlation": -0.4030075187969925,
+                "p_value": 0.07809346645156459
+            },
+            "sentiment_score": {
+                "correlation": -0.2781954887218045,
+                "p_value": 0.23497379059889356
+            }
+        },
+        "model.layers.27.mlp.down_proj_n1401": {
+            "type_token_ratio": {
+                "correlation": -0.19097744360902258,
+                "p_value": 0.41992697220250486
+            },
+            "unique_words": {
+                "correlation": -0.2091798936781343,
+                "p_value": 0.37610501694036197
+            },
+            "total_words": {
+                "correlation": -0.2603461986065988,
+                "p_value": 0.26760730071565475
+            },
+            "word_count": {
+                "correlation": -0.2603461986065988,
+                "p_value": 0.26760730071565475
+            },
+            "sentence_count": {
+                "correlation": 0.05025129006975966,
+                "p_value": 0.833361269958172
+            },
+            "avg_word_length": {
+                "correlation": -0.0631578947368421,
+                "p_value": 0.791373397820062
+            },
+            "sentiment_score": {
+                "correlation": 0.24661654135338343,
+                "p_value": 0.2945519940720424
+            }
+        },
+        "model.layers.27.mlp.down_proj_n425": {
+            "type_token_ratio": {
+                "correlation": 0.4827067669172932,
+                "p_value": 0.03110521686954333
+            },
+            "unique_words": {
+                "correlation": -0.0007524456607127133,
+                "p_value": 0.9974879861823557
+            },
+            "total_words": {
+                "correlation": -0.14371712119612826,
+                "p_value": 0.5455181722839563
+            },
+            "word_count": {
+                "correlation": -0.14371712119612826,
+                "p_value": 0.5455181722839563
+            },
+            "sentence_count": {
+                "correlation": -0.290684385634302,
+                "p_value": 0.2137431945778201
+            },
+            "avg_word_length": {
+                "correlation": 0.6406015037593984,
+                "p_value": 0.002342270858482579
+            },
+            "sentiment_score": {
+                "correlation": 0.09323308270676692,
+                "p_value": 0.6958288642370746
+            }
+        },
+        "model.layers.27.mlp.down_proj_n49": {
+            "type_token_ratio": {
+                "correlation": 0.45714285714285713,
+                "p_value": 0.042718510627877036
+            },
+            "unique_words": {
+                "correlation": 0.036869837374922956,
+                "p_value": 0.8773560661749163
+            },
+            "total_words": {
+                "correlation": -0.10308505551764173,
+                "p_value": 0.6653914475007422
+            },
+            "word_count": {
+                "correlation": -0.10308505551764173,
+                "p_value": 0.6653914475007422
+            },
+            "sentence_count": {
+                "correlation": -0.2489371600378863,
+                "p_value": 0.2898851839468088
+            },
+            "avg_word_length": {
+                "correlation": 0.613533834586466,
+                "p_value": 0.004013734729903665
+            },
+            "sentiment_score": {
+                "correlation": 0.05864661654135337,
+                "p_value": 0.8059928433862232
+            }
+        },
+        "model.layers.27.mlp.down_proj_n47": {
+            "type_token_ratio": {
+                "correlation": -0.47218045112781953,
+                "p_value": 0.035542393671931995
+            },
+            "unique_words": {
+                "correlation": 0.08126413135697304,
+                "p_value": 0.7334140973698201
+            },
+            "total_words": {
+                "correlation": 0.21444701330312332,
+                "p_value": 0.3639253296183294
+            },
+            "word_count": {
+                "correlation": 0.21444701330312332,
+                "p_value": 0.3639253296183294
+            },
+            "sentence_count": {
+                "correlation": 0.3649016755834855,
+                "p_value": 0.11366599943431804
+            },
+            "avg_word_length": {
+                "correlation": -0.6842105263157895,
+                "p_value": 0.0008772646601370122
+            },
+            "sentiment_score": {
+                "correlation": 0.03157894736842105,
+                "p_value": 0.8948543863933639
+            }
+        },
+        "model.layers.27.mlp.down_proj_n578": {
+            "type_token_ratio": {
+                "correlation": -0.3699248120300751,
+                "p_value": 0.10840956155377554
+            },
+            "unique_words": {
+                "correlation": -0.044394293982050095,
+                "p_value": 0.8525666749734414
+            },
+            "total_words": {
+                "correlation": 0.06772010946414421,
+                "p_value": 0.7766567966844705
+            },
+            "word_count": {
+                "correlation": 0.06772010946414421,
+                "p_value": 0.7766567966844705
+            },
+            "sentence_count": {
+                "correlation": 0.23734070848332636,
+                "p_value": 0.3136620352006507
+            },
+            "avg_word_length": {
+                "correlation": -0.5157894736842105,
+                "p_value": 0.019919763459703678
+            },
+            "sentiment_score": {
+                "correlation": -0.10827067669172932,
+                "p_value": 0.6495672222012883
+            }
+        },
+        "model.layers.27.mlp.down_proj_n130": {
+            "type_token_ratio": {
+                "correlation": 0.45563909774436084,
+                "p_value": 0.043493409805465975
+            },
+            "unique_words": {
+                "correlation": 0.0052671196249889935,
+                "p_value": 0.9824171775279963
+            },
+            "total_words": {
+                "correlation": -0.12415353401759771,
+                "p_value": 0.6020145921800921
+            },
+            "word_count": {
+                "correlation": -0.12415353401759771,
+                "p_value": 0.6020145921800921
+            },
+            "sentence_count": {
+                "correlation": -0.29996154687794996,
+                "p_value": 0.19881809195269767
+            },
+            "avg_word_length": {
+                "correlation": 0.6496240601503759,
+                "p_value": 0.0019353332844401446
+            },
+            "sentiment_score": {
+                "correlation": 0.03458646616541353,
+                "p_value": 0.8849015088305833
+            }
+        },
+        "model.layers.27.mlp.down_proj_n2022": {
+            "type_token_ratio": {
+                "correlation": 0.3969924812030075,
+                "p_value": 0.08307130670785144
+            },
+            "unique_words": {
+                "correlation": -0.02182092416066869,
+                "p_value": 0.9272438955862659
+            },
+            "total_words": {
+                "correlation": -0.1467269038389791,
+                "p_value": 0.5370454117358415
+            },
+            "word_count": {
+                "correlation": -0.1467269038389791,
+                "p_value": 0.5370454117358415
+            },
+            "sentence_count": {
+                "correlation": -0.2821803211609581,
+                "p_value": 0.22805705077396757
+            },
+            "avg_word_length": {
+                "correlation": 0.5684210526315789,
+                "p_value": 0.008922760369500673
+            },
+            "sentiment_score": {
+                "correlation": 0.14586466165413534,
+                "p_value": 0.5394664944297438
+            }
+        }
+    }
+}
