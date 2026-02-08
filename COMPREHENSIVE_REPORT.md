@@ -530,6 +530,28 @@ This makes them **hyper-sensitive** to entropy source quality. Small models esse
 
 ## 4. Large Model Results
 
+### Architecture Types
+
+| Architecture | Models | Characteristics |
+|-------------|--------|-----------------|
+| **Dense** | Qwen3 (0.6B-32B) | All parameters active for every token |
+| **MoE** | DeepSeek-R1 (32B, 70B) | Mixture of Experts - sparsely activated |
+
+### DeepSeek-R1 (MoE Architecture)
+
+**Architecture:** Mixture of Experts (MoE)
+- **Total parameters:** 32B / 70B
+- **Active parameters per token:** ~8-10% (subset of experts)
+- **Number of experts:** Varies (64+ typical)
+- **Top-k experts:** Top 2-4 experts activated per token
+- **Expert selection:** Router network based on input
+
+**Why MoE matters for entropy:**
+- MoE models use **routing** to select which experts to activate
+- Router uses **gating mechanism** based on input entropy
+- Different entropy sources can affect **expert selection patterns**
+- This creates different output characteristics vs dense models
+
 ### DeepSeek-R1 70B
 
 **Architecture:** Mixture of Experts (MoE), 70B parameters
