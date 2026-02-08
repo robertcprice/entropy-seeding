@@ -1,0 +1,180 @@
+{
+  "metadata": {
+    "model_name": "qwen_0.6b",
+    "model_id": "Qwen/Qwen3-0.6B",
+    "temp_mode": "standard",
+    "rng_seed": "prng",
+    "base_seed": 42,
+    "num_prompts": 3,
+    "num_samples": 5,
+    "max_tokens": 128,
+    "timestamp": "20260203_180805"
+  },
+  "generations": [
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 0,
+      "seed": 42,
+      "text": "The lighthouse was his home. He often heard the roar of the sea, but the water was so deep that he was unable to get out. He lived in a village near the sea. The keeper had a brother, who lived on a farm, and his wife was a mother and a grandmother. The lighthouse was at the top of a mountain, and it was not far from the village. He had no other place to go. The old man often went to the sea, but he never went to the farm. He always stayed at home. He had one son, who was 20 years old. The boy was",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 1,
+      "seed": 1042,
+      "text": "All the years he had been there had been like this, just like the years he had been there before, and this is the only one he has ever seen. He was 50 years old. His father was an old man who had never seen anything like it. The lighthouse keeper's mother was a young woman, and she had a husband and a daughter. The lighthouse was located in a remote area. The lighthouse was built on the top of a hill. He had always been a good worker, and he was paid wages. The lighthouse kept time like the sun. He was only 50 years old",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 2,
+      "seed": 2042,
+      "text": "He was a man with a strange, dark, and powerful presence. He lived on the edge of the world, near the cliffs of the Malibu coast. He had always been fascinated with the stars, but something had changed. He had begun to notice a strange pattern in the stars. It seemed to him that the stars weren't moving as he once had. Instead, they were moving in such a way that they were always in the same position. He never noticed them shifting. The stars, once in the same position, had always been moving in a straight line, but now they seem to be in the same place.\n\nSo,",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 3,
+      "seed": 3042,
+      "text": "The lighthouse was built in a time when it was a very long way from the coast.  The lighthouse was built with a long, narrow beam.  The beam was made of a glass that was very strong, and had a high thermal expansion coefficient.  The lighthouse was built for many years, but the beam was beginning to show some signs of cracking.  As the light beam went through the glass, some of the beam's energy was being lost.  The keeper was trying to make the beam work better to maximize its energy.  He said that he has found a way to make the glass stronger by adding",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 4,
+      "seed": 4042,
+      "text": "He had seen more than just the lighthouse's glow, the moon's light, or the stars that surrounded it. He had seen the tides, the ocean's rise and fall, the clouds, the seasons. He had seen the whole of the world, as if it was a living thing, as if the tides were the heartbeat of the world and the sea was breathing.\nThe passage is describing the lighthouse keeper's life and his experiences with the world. The setting of the passage is an ancient lighthouse in a coastal town. The main idea is that the lighthouse keeper is a character who has a profound connection with",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 0,
+      "seed": 42,
+      "text": "The story was told in an entirely different voice, and the tone was completely different. The characters were... well, more... mysterious. It had a haunting, almost supernatural quality that set it apart from the usual novels. The setting was a bit more... atmospheric. The writing was more intricate, with an unusual structure and a strange rhythm that gave it a unique, almost poetic feel. It had an unusual structure, with a mysterious, almost poetic feel. The writing was intricate, with a strange rhythm and an unusual structure. It had a haunting, almost supernatural quality, and the setting was more atmospheric.\n\nThe author's style of writing is",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 1,
+      "seed": 1042,
+      "text": "As the first time, she was able to see the place that was lost to time. The words were written in her favorite color, which was red. She felt the feeling of power, and the feeling of peace. All of this was the result of her dreams and her heart. The setting was a very peaceful place. The weather was warm and sunny, and it was raining outside. She opened the letter, and everything changed. As the first time, she was able to see the place that was lost to time. The words were written in her favorite color, which was red. She felt the feeling of power, and the feeling",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 2,
+      "seed": 2042,
+      "text": "The first paragraph of the letter was a little strange, but after she read it, everything was clear. The second paragraph started with \"If you're in a situation where...\", and she could see it was the same as the first paragraph. What is the author's main idea of the first paragraph? Let's see.\n\nThe answer is that the main idea is that the letter was a mystery and the first paragraph was a key to solving it. The correct answer is A.\nAnswer:\nA\n\n**Step-by-Step Explanation:**\n\n1. **Understand the Question:**  \n   The question is asking for the main idea of the first",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 3,
+      "seed": 3042,
+      "text": "The passage says that the letter was sent by a certain company.  The letter is from a man in his 20s.  He was born on January 1, 1995, and has a mother whose name is Susan.  He has a sister named Lila and a brother named David.  He has a pet dog.  He is a retired teacher.  He has a computer and a phone.  He lives in a house that is two floors above the city level.  He had a car that was stolen on his way to school, and now has a new car with a higher security",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 4,
+      "seed": 4042,
+      "text": "The person who opened the letter was someone who had a problem that led to the change.\n\nThis is true for which of the following statements?\n\nA) A person who opened the letter will always have a problem.\n\nB) A person who opened the letter will always have a problem. \n\nC) A person who opened the letter will always have a problem.\n\nD) A person who opened the letter will never have a problem.\n\nAnswer: \\boxed{C}\nAnswer:\nThe statement \"Everything changed\" suggests that the act of opening the letter was a catalyst for the change. The key here is that the person who opened the letter had",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "Once upon a time, in a kingdom by the sea,",
+      "sample_idx": 0,
+      "seed": 42,
+      "text": "there are three towns, A, B, and C, each with one capital city. There is a number of houses of different colors, each with a different color and different number of houses. The number of houses in town A is equal to the number of houses in town B. The number of houses in town C is equal to the number of houses in town D. The number of houses in town D is equal to the number of houses in town E, and so on, following the sequence of cities A, B, C, D, E, F, and so on. So, if the total number of houses is",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "Once upon a time, in a kingdom by the sea,",
+      "sample_idx": 1,
+      "seed": 1042,
+      "text": "there were a number of islands. The islands that are in the center of the sea are the ones with the most power. The islands that are near the shore are the ones that are most vulnerable. Each island has a unique identifier from 1 to 1000. The islanders use a set of two numbers, $a$ and $b$, to determine which one is the strongest and which one is the weakest. For example, if the islanders chose $a = 10$ and $b = 20$, then the strongest island is the one with number 10 and the weakest is the one",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "Once upon a time, in a kingdom by the sea,",
+      "sample_idx": 2,
+      "seed": 2042,
+      "text": "there was a village called Mew. The villagers lived in a small island at the bottom of the sea. The villagers of Mew were a mixture of different nationalities, but they were all very kind and friendly. The village had a small, wooden house, and the people lived in a small, warm climate. The main building is a rectangular room with a width of 40 meters and a length of 60 meters. The roof of the room has a single rectangular roof over 10 meters in width and 30 meters in length, and the walls and roof are all covered with tiles. The villagers of M",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "Once upon a time, in a kingdom by the sea,",
+      "sample_idx": 3,
+      "seed": 3042,
+      "text": "there lived a young woman named Lila. She was rich and had a small house. Her daughter was a girl named Lila. Lila's son had a small house too, and Lila's daughter, Lila, and her son, Lila, were all in the same house. The sentence implies that there are several houses in the kingdom.\nAnswer:\n\nThe sentence implies that there are several houses in the kingdom. The key phrase is \"Lila's son... a small house too,\" \"Lila's daughter, Lila, and her son, Lila, were all in the same house.\" This indicates that L",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "Once upon a time, in a kingdom by the sea,",
+      "sample_idx": 4,
+      "seed": 4042,
+      "text": "a castle stood on a mountain. The castle was built by the king's son, who had no brother, and the king said, \"I am the only one who has the true knowledge, and I have no brothers.\" What was the meaning of the king's statement? The correct answer is that the king's statement meant to indicate that he is the only one who has the true knowledge and that he has no brothers. But why does the statement have such meaning? Please explain the reasoning behind this? The correct answer is that the king's statement indicated that he is the only one who has the true knowledge and that he has no brothers",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "model_name": "qwen_14b",
+    "model_id": "Qwen/Qwen3-14B",
+    "temp_mode": "standard",
+    "rng_seed": "qrng_int",
+    "base_seed": 347338331,
+    "num_prompts": 2,
+    "num_samples": 3,
+    "max_tokens": 128,
+    "timestamp": "20260204_013014"
+  },
+  "generations": [
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 0,
+      "seed": 347338331,
+      "text": "The sea was calm, but the air was electric with a strange energy. He stood on the cliff, watching the horizon where the sky and sea met. The sun was just beginning to set, casting an orange glow across the water, but something was wrong. The horizon wasn\u2019t a straight line. It wavered, like the edge of a broken mirror. He blinked, thinking it was just the light playing tricks on his eyes. But the horizon continued to ripple, and the sea below began to shimmer as if it were made of liquid glass. He could hear the wind, but it wasn\u2019t the usual sound of the sea.",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 1,
+      "seed": 347339331,
+      "text": "The storm had been raging for three days, and the sea was like a wild beast, throwing itself against the rocks with a fury that made the very earth tremble. He stood at the top of the lighthouse, his hands gripping the railing, watching as the waves crashed against the cliffs below. It was the worst storm in decades, and he was alone, with no one to help him.\n\nThe lighthouse had been his home for over thirty years, and he had weathered many storms before, but this was different. The wind howled like a pack of wolves, and the rain lashed at the windows with a merciless intensity",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 2,
+      "seed": 347340331,
+      "text": "He had been keeping his light going for over twenty years, but never had he encountered a storm like the one that was approaching. He had a feeling this one was going to be worse than anything he had seen before. The wind was howling, and the waves were crashing against the rocks with a ferocity that made his heart race. He could see the dark clouds rolling in from the horizon, and he knew that he had to do something to protect the lighthouse and the people who relied on it.\nThe lighthouse keeper had always been meticulous about maintaining the light. He would check the oil levels, clean the lens, and make",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 0,
+      "seed": 347338331,
+      "text": "\u8fd9\u53e5\u8bdd\u4e2d\u7684opened\u662f\u8fc7\u53bb\u5f0f\u8fd8\u662f\u8fc7\u53bb\u5206\u8bcd\uff1f \u5728\u53e5\u5b50 \"She opened the letter, and everything changed.\" \u4e2d\uff0c**opened** \u662f\u52a8\u8bcd **open** \u7684**\u8fc7\u53bb\u5f0f**\uff0c\u800c\u4e0d\u662f\u8fc7\u53bb\u5206\u8bcd\u3002\n\n### \u5206\u6790\uff1a\n1. **\u65f6\u6001**\uff1a\u6574\u4e2a\u53e5\u5b50\u7684\u4e3b\u53e5\u662f **\"She opened the letter\"**\uff0c\u4f7f\u7528\u7684\u662f**\u4e00\u822c\u8fc7\u53bb\u65f6**\uff08simple past tense\uff09\uff0c\u8868\u793a\u8fc7\u53bb\u53d1\u751f\u7684\u52a8\u4f5c\u3002\u56e0\u6b64\uff0c**opened** \u662f **open** \u7684\u8fc7\u53bb\u5f0f\u3002\n2. **\u8fc7\u53bb\u5206\u8bcd**\uff1a\u8fc7\u53bb\u5206\u8bcd\u7684\u5f62\u5f0f\u662f **opened**\uff08\u5bf9\u4e8e\u89c4\u5219\u52a8\u8bcd\uff0c\u8fc7\u53bb\u5206\u8bcd\u901a\u5e38\u5728",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 1,
+      "seed": 347339331,
+      "text": "The first line said: \"Dear Miss L.\" Her name was Lucy, but she had never received a letter addressed to her by that title before. Her mother had always called her \"Lucy,\" and her friends had always called her \"Lucy.\" But this letter was from a stranger, and it called her \"Miss L.\" She read on, and the letter was full of strange, poetic lines that seemed to speak directly to her. She read it twice, then three times, and each time she felt a strange connection to the writer. She had no idea who had written it, but she felt as though she had known them",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 2,
+      "seed": 347340331,
+      "text": "The letter was from the bank. It said, \"Congratulations, you've won $5000!\" She jumped up and down with excitement. She had been dreaming of this moment for years. But then she read the small print. It said, \"To claim your prize, you must send us $500 for processing fees.\" She felt a wave of disappointment. \n\nThe letter was a scam. She had seen these before, but she had hoped this one was different. She sat back down, feeling defeated. She had been so close to her dream. She knew she couldn't send the money, but she also knew",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    }
+  ]
+}

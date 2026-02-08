@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "model_name": "qwen_8b",
+    "model_id": "Qwen/Qwen3-8B",
+    "temp_mode": "standard",
+    "rng_seed": "qrng_int",
+    "base_seed": 347338331,
+    "num_prompts": 2,
+    "num_samples": 3,
+    "max_tokens": 128,
+    "timestamp": "20260204_012232"
+  },
+  "generations": [
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 0,
+      "seed": 347338331,
+      "text": "The sea was a flat, glassy surface, not a breath of wind. The water was so still that the waves were like a mirror. It was so quiet that the only sound was the creak of the lighthouse. The old man had been keeping watch for hours when he noticed something strange. It was a light, but not a normal one. It was a soft, golden glow that seemed to float in the air. He stepped closer, his footfalls echoing in the stillness. The light was getting brighter, and it was moving. It was coming towards him. He could feel it. He felt a strange pull,",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 1,
+      "seed": 347339331,
+      "text": "The storm had come out of nowhere, and in the blink of an eye, the calm sea was a churning mass of water and wind. The waves were like mountains, and the wind howled like a wounded beast. The keeper had been forced to take shelter in the lighthouse, and now he was watching the storm rage on outside. The only thing that kept him company was the old lamp that had stood in the tower for decades. He had always been proud of the lamp, and now, as the storm raged on, he felt a strange sense of comfort in its presence. The lamp was a symbol of guidance, and",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 2,
+      "seed": 347340331,
+      "text": "The storm had come out of nowhere, and in the space of a few hours, the coast guard had arrived, and the storm had passed.  The coast guard had taken the lighthouse keeper and his wife to safety, but the lighthouse itself was damaged, and the light was out.  The coast guard had left, and the keeper and his wife were alone again.  The next morning, the coast guard had returned and told them that they would have to stay in the shelter of the coast guard's ship until the lighthouse was repaired.  The keeper and his wife were both very grateful for the coast guard's help.",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 0,
+      "seed": 347338331,
+      "text": "\u8fd9\u53e5\u8bdd\u4e2d\u7684everything changed\u662f\u4ec0\u4e48\u610f\u601d\uff0c\u4e3a\u4ec0\u4e48\u662fchanged\u800c\u4e0d\u662fchange\uff1f \u5728\u53e5\u5b50 \"She opened the letter, and everything changed.\" \u4e2d\uff0c\"everything changed\" \u7684\u610f\u601d\u662f\u201c\u4e00\u5207\u90fd\u6539\u53d8\u4e86\u201d\u6216\u201c\u4e00\u5207\u90fd\u53d1\u751f\u4e86\u53d8\u5316\u201d\u3002\u8fd9\u91cc\u7684 \"changed\" \u662f\u52a8\u8bcd \"change\" \u7684\u8fc7\u53bb\u5f0f\uff0c\u7528\u6765\u63cf\u8ff0\u8fc7\u53bb\u53d1\u751f\u7684\u52a8\u4f5c\u6216\u72b6\u6001\u7684\u53d8\u5316\u3002\n\n### \u4e3a\u4ec0\u4e48\u7528 \"changed\" \u800c\u4e0d\u662f \"change\"\uff1f\n1. **\u65f6\u6001\u4e00\u81f4**\uff1a\u53e5\u5b50\u4e2d\u7684\u4e3b\u53e5 \"She opened the letter\" \u4f7f\u7528\u7684\u662f\u8fc7\u53bb\u65f6\uff08opened\uff09\uff0c\u56e0\u6b64\u540e\u9762\u7684 \"everything changed\" \u4e5f\u5e94\u4f7f\u7528\u8fc7\u53bb\u65f6\uff0c\u4ee5\u4fdd\u6301\u65f6\u6001\u4e00\u81f4\u3002\"changed\"",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 1,
+      "seed": 347339331,
+      "text": "The letter from the doctor confirmed what she had always suspected. She was not the one who had been suffering from the illness. It was her husband. She had always thought it was her, because she had been the one to find him at the bottom of the stairs, unconscious and bleeding. She had been the one to call the doctor. She had been the one to stay with him through the long months of treatment. But the doctor had seen the tests, the scans, the blood work, and had ruled her out. He had been the one with the illness. She had been the caregiver. She had been the one who had been",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 2,
+      "seed": 347340331,
+      "text": "The letter was from her long-lost sister, who had been presumed dead for 30 years. But this letter was different, it was a plea for help, and it contained a secret message. The message was written in a code that only she could decode. The code was a series of numbers and symbols, and it seemed to be related to their childhood. The sister had always been fascinated by numbers and patterns, and had a unique way of encoding messages. The numbers were arranged in a way that formed a pattern, and the symbols were the initials of their favorite toys. The message was: 10, 4,",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    }
+  ]
+}

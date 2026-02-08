@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "model_name": "qwen_8b",
+    "model_id": "Qwen/Qwen3-8B",
+    "temp_mode": "standard",
+    "rng_seed": "trng",
+    "base_seed": 2304490869,
+    "num_prompts": 2,
+    "num_samples": 3,
+    "max_tokens": 128,
+    "timestamp": "20260204_012136"
+  },
+  "generations": [
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 0,
+      "seed": 2304490869,
+      "text": "The sea was a violent, churning mass of white, and the wind screamed like a banshee. The storm had been raging for days, and the lighthouse was being battered by the waves. As the keeper stood at the top of the tower, he could see the sea crashing against the rocks below, sending up plumes of spray that reached high into the sky. He had never seen such a storm before, and he was beginning to feel the weight of the responsibility on his shoulders. The lighthouse was the only light in the area, and if it went out, the ships would be in danger. He had to keep it",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 1,
+      "seed": 2304491869,
+      "text": "The storm had come out of nowhere, and in less than an hour, the ocean had gone from calm to a churning mass of whitecaps and spray. The waves were coming in so fast that they were actually washing over the cliffs and soaking the rocks. The lighthouse had been built to withstand a Category 5 storm, but this wasn't a normal storm.\n\nIt was a storm that had been brewing for centuries, and now it was here. The keeper had seen the signs in the stars, the way the sea had been restless for months, and the way the winds had been shifting in strange patterns. He had known that something",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 2,
+      "seed": 2304492869,
+      "text": "It was the middle of the night, and the storm was getting worse. The wind was howling like a wild animal, and the rain was coming down in sheets. The waves were crashing against the rocks below, and the lighthouse was shaking as if it were alive. The keeper was sitting by the fire, trying to keep warm, when he heard a strange noise coming from outside. It was a low, growling sound, like a beast was nearby.\n\nHe got up and opened the door just a crack, peering out into the storm. The wind was so strong it nearly blew him back. But then he saw it\u2014a",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 0,
+      "seed": 2304490869,
+      "text": "Her name was on the envelope, and it was addressed to her. She couldn't believe her eyes. She read the letter again. Her heart was racing. She couldn't believe it was real. She had been waiting for this for so long. She had been hoping for this for so long. She had been dreaming for so long. She had been praying for so long. She had been waiting, hoping, dreaming, and praying for this moment. And now it was here.\n\nShe was a single mother, and she had been working two jobs to make ends meet. She had been living in a small apartment with her daughter, barely",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 1,
+      "seed": 2304491869,
+      "text": "The words on the page were a flood of memories, a flood that carried her back to the summer of 1957, the year she met him.\nThe summer of 1957, when she was sixteen, and he was twenty-two. She was working at the local department store, and he was a delivery man who came every Tuesday to deliver the groceries. The first time they spoke, he had dropped a box of cornflakes and she had helped him pick them up. She had laughed, and he had looked at her, and something in the air between them had shifted. It was like the kind of",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 2,
+      "seed": 2304492869,
+      "text": "When the envelope was torn open and the letter read, the entire room fell silent. It was a letter from her mother, and it had been waiting for over thirty years. She had never received it. It was a letter that had been written during the war, when her mother was in hiding. She had been afraid to send it, but she had written it anyway. It was a letter that had been waiting for her to find it. The letter was a message of hope, and it changed everything. The room was filled with silence, and the weight of the letter was heavy. She had been waiting for this moment for so long",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    }
+  ]
+}

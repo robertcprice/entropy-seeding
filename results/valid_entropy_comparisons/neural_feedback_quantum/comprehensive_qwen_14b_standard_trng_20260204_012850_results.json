@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "model_name": "qwen_14b",
+    "model_id": "Qwen/Qwen3-14B",
+    "temp_mode": "standard",
+    "rng_seed": "trng",
+    "base_seed": 3287014838,
+    "num_prompts": 2,
+    "num_samples": 3,
+    "max_tokens": 128,
+    "timestamp": "20260204_012850"
+  },
+  "generations": [
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 0,
+      "seed": 3287014838,
+      "text": "The storm was so fierce that it shook the ground, and the winds were howling like a pack of wolves. The sea was a churning mass of white and black, and the waves were so high that they looked like mountains. The lighthouse keeper, who had spent decades in this tower, had never seen the ocean so angry. He could hear the thunder rumbling in the distance, and the rain was coming down in sheets. He could barely see the windows of the lighthouse, and the light from the lamp inside seemed to be barely visible through the storm. He knew that the lighthouse was his only defense against the storm",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 1,
+      "seed": 3287015838,
+      "text": "The sea was calm, and the sky was bright with stars. But something in the air felt wrong. The wind was too still, and the water too quiet. He looked around, and saw the other lighthouses on the cliffs, their lights blinking in the distance. He had been watching the sea for over thirty years, and he had never seen a storm coming without warning. And yet, something told him that a storm was coming.\n\nThe old man had been trained in the old ways, and he knew that when the sea was too still, it was often a sign of a coming storm. He had seen it before, back",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 2,
+      "seed": 3287016838,
+      "text": "The storm had been raging for three days, and the sea was like a boiling pot. He had been up here for over thirty years, and never had he seen the waves this high. He was afraid the lighthouse might not be able to withstand the storm. He had to do something.\nThe old man had a son who had grown up in the village, and now worked at the coast guard. He had always been proud of his son, but now he was worried. He picked up the radio and called his son. \"Hey, Jack, I think I need your help. The lighthouse might be in trouble.\"\nJack's",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 0,
+      "seed": 3287014838,
+      "text": "The contents were a cryptic message that hinted at a long-lost treasure hidden in the remote village of Elmsworth. Intrigued and determined, she set off on a journey to uncover the truth. Her first stop was the local library, where she delved into dusty tomes and yellowed maps. After hours of research, she discovered a reference to an old legend about a hidden chamber beneath the village's abandoned church. With this new information, she made her way to the church, heart pounding with anticipation. As she entered the dimly lit building, she noticed a strange symbol carved into the stone wall near the altar.",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 1,
+      "seed": 3287015838,
+      "text": "In the first paragraph, the girl learned that her mother had died in a car accident. The second paragraph told her that she had been adopted. The third paragraph said that she had a brother in another city, and the fourth paragraph said that she had a sister in the same city. The last paragraph told her that her birth mother had been a teenage runaway and that her adoptive mother had given her up for adoption. Her adoptive mother had given her up for adoption. She had been given up for adoption by her adoptive mother. She had been given up for adoption by her adoptive mother. She had been given up for adoption",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 2,
+      "seed": 3287016838,
+      "text": "That was the first time she had seen the word \"cancer\" in her life. It was also the first time she had ever seen her father cry.\nFor almost 15 years, she had been the one to comfort him. Her mother, a beautiful and strong-willed woman who had been the backbone of their family, had passed away when she was only 11. Her father, who had always seemed invincible, had suddenly become vulnerable.\nShe was the one who had taken charge of her mother's funeral, who had tried to make sure her little brother didn't break down, who had cooked meals for her father",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    }
+  ]
+}

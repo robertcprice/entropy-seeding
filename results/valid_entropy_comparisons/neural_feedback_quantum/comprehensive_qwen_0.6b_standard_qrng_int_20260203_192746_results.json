@@ -1,0 +1,180 @@
+{
+  "metadata": {
+    "model_name": "qwen_0.6b",
+    "model_id": "Qwen/Qwen3-0.6B",
+    "temp_mode": "standard",
+    "rng_seed": "qrng_int",
+    "base_seed": 347338331,
+    "num_prompts": 3,
+    "num_samples": 5,
+    "max_tokens": 128,
+    "timestamp": "20260203_192746"
+  },
+  "generations": [
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 0,
+      "seed": 347338331,
+      "text": "He was a man of steady life. He had no family, no friends, no home to keep. He lived in a small house, in the middle of the old town. He lived alone. He had a little red boat on the dock, and the water was clear, but he lived alone. He had no plans. He didn't want to leave. He had no money, no food, no friends, no family. He lived in a lonely life. The boat was his only source of food and shelter. He lived alone. He had no money, no friends, no home. He lived in the middle of the old",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 1,
+      "seed": 347339331,
+      "text": "All the time he was watching the lighthouse, it was like he was watching a ghost of his own making. Each day he kept his watch on the cliff edge, but his heart was as if it had been stolen away. He had no idea what had happened to his own life, and now he wondered what could have been if he had been with his wife and friends. The world seemed to have moved on, but he felt the same. Each morning, the sun rose higher and higher, and he kept his watch, but the sun had no idea what he was doing. What does this passage suggest about the lighthouse keeper?",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 2,
+      "seed": 347340331,
+      "text": "The lighthouse beam in the dark and cold night was lit in the order of the sun. In the morning, he would see it again. The light was still burning on, but the lighthouse was no longer the same place. What is the meaning of the lighthouse keeper's light? The answer is that the light has been turned off, but it is still burning on. That is why it's not the same place. The answer is that the lighthouse is not working at all. The answer is that it has been turned off. Which of the following options best matches the meaning of the lighthouse keeper's light? A",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 3,
+      "seed": 347341331,
+      "text": "His hands were calloused, his fingers were stiff, and his eyes were unblinking, but he still worked so hard that he could not walk. As his hands and fingers were stiff, he was not able to move them from their place to the other, so he could not reach the things he needed. He had to work constantly, but he could not move his hands, so he had to keep working until he could not go on.\nBut the light was very bright and the sun was shining. He looked at his work, and he felt a sense of satisfaction. He felt that he was in a place where he could see",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 4,
+      "seed": 347342331,
+      "text": "He was a man of no particular interest, but he was certain that his son must be in his home. He was the last of the four men in his family. Each of the four men was working for the lighthouse, and each was earning the same amount of money. If the lighthouse keeper's son was born when the lighthouse was on fire, then what can be concluded about the time when the lighthouse was on fire? \n\nA. The lighthouse was on fire at night. \n\nB. The lighthouse was on fire during the day.\n\nC. The lighthouse was on fire at night.\n\nD. The",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 0,
+      "seed": 347338331,
+      "text": "She was no longer a regular visitor. The door was locked. She sat down. Her mind was full of thoughts. She looked at her reflection in the mirror. She was pale. She was quiet. She was... more like a statue. The room was silent, save for the sound of her breathing. The only sound was her breathing, the quiet sound that she had always had, but this was different. The night was cold, and the wind was blowing. The trees were silent. She felt the cold wind in her hair. She had always thought that the cold would make her feel better, but it was different now. She",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 1,
+      "seed": 347339331,
+      "text": "The letter was from a stranger, but she was sure that it was someone she had known before. The key to the door was inside the letter. She could not see the room around it, but she knew that the room was not in the house. The letter was her own, and she had no intention of giving it away. What can be the best possible answer?\nA. The letter had no message. B. The letter was not the person she had known before. C. The letter was written by a woman. D. The letter was written in a language other than English.\nAnswer:\n\nThe correct answer is B. The",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 2,
+      "seed": 347340331,
+      "text": "The first paragraph starts with \"She opened the letter...\" and ends with \"the end of the story...\" So the first paragraph is... So, putting it all together, the first paragraph would be:\n\nShe opened the letter, and everything changed. The first paragraph starts with \"She opened the letter...\" and ends with \"the end of the story...\" So the first paragraph is... So, putting it all together, the first paragraph is:\n\nShe opened the letter, and everything changed. The first paragraph starts with \"She opened the letter...\" and ends with \"the end of the story...\"\n\nNow, to answer the original question, we need",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 3,
+      "seed": 347341331,
+      "text": "The first sentence of the letter was written in a very strange way, and it said: \"I am writing to you as a new person, and I will be here for you in my own way, but I will not be here as a new person.\" What would you do to the letter to make it more accessible to the reader?\nAnswer:\nThe letter is written with a strange message that creates confusion. To make it more accessible, the person should open it and read it as a new person. The message is encouraging and reassuring, so the person should read it with a positive attitude and embrace the idea that the message is from a",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 4,
+      "seed": 347342331,
+      "text": "The key points are: the letter was opened, the world changed. \n\nThe letter was opened by a person, the world changed. \n\nThe letter was opened by a person. \n\nThe key points are that the letter was opened and the world changed. \n\nThe letter was opened by a person. \n\nThe key points are: the letter was opened, and the world changed. \n\nSo the final answer is the first sentence.\n\n**The letter was opened by a person.**\n####\nThe letter was opened by a person. \n\n**The letter was opened by a person.** \n\n**The letter was opened by a person.**",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "Once upon a time, in a kingdom by the sea,",
+      "sample_idx": 0,
+      "seed": 347338331,
+      "text": "there was a king who had built a big castle and a small ship, but he had a problem. He wanted to go to the island to make some peace with his people. He asked his ministers for help and asked them to do the following: he would take the same amount of money and give the same amount of food to his people, but he could take the same amount of money and food as the people, but they could take the same amount of money and food as the people. So, the king wanted to know what would happen to the amount of money and food that each person would have after the agreement?\n\nLet me think",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "Once upon a time, in a kingdom by the sea,",
+      "sample_idx": 1,
+      "seed": 347339331,
+      "text": "there were three girls: A, B, and C. Each of them has a separate car, and each car has a different color. A has a red car, B has a yellow car, and C has a blue car. Each girl has a different amount of water, and the water levels of each car are different. The first girl to arrive at the station has a red car. The first girl to arrive at the station has a yellow car, and the first girl to arrive at the station has a blue car. Wait, what's going on here? This is confusing. Let me try to rephrase the problem.\n\nThe",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "Once upon a time, in a kingdom by the sea,",
+      "sample_idx": 2,
+      "seed": 347340331,
+      "text": "a king had a son named Enoch. The son was born with the power of the sea. What is the correct answer?\n\nA. A man with the sea power\nB. A man with the power of the sea\nC. A man with the sea power\nD. A man with the power of the sea\n\nThe correct answer is B. A man with the power of the sea.\nAnswer:\nThe correct answer is B. A man with the power of the sea.\n\nThe correct answer is $\\boxed{B}$.\n\n**Step-by-step explanation:**\n\nThe question states that Enoch was born with the power of the",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "Once upon a time, in a kingdom by the sea,",
+      "sample_idx": 3,
+      "seed": 347341331,
+      "text": "there were three sailors who were all traveling to a meeting. The first one was a man, the second a woman, and the third one was a child. Each of the three sailors was supposed to take a journey of 50 miles. The meeting was held at the same time, but each sailor had different times when he would be out of the boat. The first sailor had a 20-hour journey, the second a 30-hour journey, and the third a 40-hour journey. The first and second sailor had a meeting at the same time, and the second and third sailor had a meeting at the same",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "Once upon a time, in a kingdom by the sea,",
+      "sample_idx": 4,
+      "seed": 347342331,
+      "text": "there are two villages. The first village, called the House of the Silver Sun, and the second one, called the House of the Gold Leaf. Each village has a number of red and blue coins in the ratio of 2:3. In the first year, both villages received a bonus of 1000 coins, and then they each had a 20% increase in the number of coins. So the ratio of their coins was changed to 5:4. After that, the number of coins in the House of the Silver Sun was increased by 100 and the number of coins in the House of",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    }
+  ]
+}

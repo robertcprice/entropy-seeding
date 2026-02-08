@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "model_name": "qwen_8b",
+    "model_id": "Qwen/Qwen3-8B",
+    "temp_mode": "standard",
+    "rng_seed": "prng",
+    "base_seed": 42,
+    "num_prompts": 2,
+    "num_samples": 3,
+    "max_tokens": 128,
+    "timestamp": "20260204_011942"
+  },
+  "generations": [
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 0,
+      "seed": 42,
+      "text": "The storm had passed, and the sea was calm again. But the sea floor was different. The old lighthouse keeper had spent his whole life near the sea, and he knew the sea floor better than anyone in the village. He had even mapped it out. But now, when he looked at the sea floor, he could see something that wasn't there before. It was a strange shape, and it looked like it was moving. The old lighthouse keeper was terrified. He ran to the village and told everyone what he had seen. The villagers were skeptical at first, but then they all went to look at the sea floor.",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 1,
+      "seed": 1042,
+      "text": "The storm had passed, and the sea was calm again. The lighthouse was still standing, but the light was out. He had never seen a storm like that, and he had never seen the sea so still. He had never seen the light go out like that. He had never seen the light go out like that. He had never seen the light go out like that. He had never seen the light go out like that. He had never seen the light go out like that. He had never seen the light go out like that. He had never seen the light go out like that. He had never seen the light go",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 2,
+      "seed": 2042,
+      "text": "It was as if the sea itself was alive and had decided to rebel against the moonlight. The waves were crashing against the rocks with a force that sent tremors through the very foundations of the cliff. The wind howled through the narrow clefts in the rock, like a banshee wailing in mourning for something lost. The sea, once so placid under the moonlight, was now a tempest of fury and chaos, and the lighthouse, which had stood for centuries as a beacon of safety, now seemed to shudder and groan under the weight of the storm.\n\nAs the storm raged on, the",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 0,
+      "seed": 42,
+      "text": "The words were old, but they had power. The letter had been in the hands of a British colonial officer, and the message was a call to arms for the people of a country that had been colonized. The letter was written in the 1960s, and it was a secret. The letter had been hidden for decades, and it was a message that could change everything.\nThe letter was written by a man who had been imprisoned for his beliefs, and it had been passed down through generations. It was a message of hope and resistance, a call for freedom and justice. The letter was written in a secret code",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 1,
+      "seed": 1042,
+      "text": "I know that sounds dramatic, but it\u2019s true. The letter was from a young woman in a distant town, and it had come in the mail, addressed to me. She was a friend of my nephew, who had recently passed away. Her name was Clara, and she had written to me because she was confused about what to do with the things he had left behind. The letter was not just a letter, it was the beginning of something beautiful and unexpected.\nThe first paragraph sets up a mysterious and emotional situation. The second paragraph introduces the key elements of the story: the letter, the friend of the nephew, and the confusion",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 2,
+      "seed": 2042,
+      "text": "Her name was on the envelope, and it was addressed to her. She opened it slowly, her fingers trembling with anticipation. Inside was a small, hand-drawn map, and a note that read: \"Follow the path of the stars, and you will find the truth.\" With that, she began her journey.\nThe map led her to an old, forgotten part of town, where the trees were tall and the air was thick with the scent of pine. She followed the path, and as she walked, the stars seemed to shine brighter, as if guiding her. She came to a clearing, and there, in the center,",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    }
+  ]
+}

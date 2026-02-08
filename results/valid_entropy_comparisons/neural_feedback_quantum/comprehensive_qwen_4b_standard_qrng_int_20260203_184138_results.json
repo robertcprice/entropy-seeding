@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "model_name": "qwen_4b",
+    "model_id": "Qwen/Qwen3-4B",
+    "temp_mode": "standard",
+    "rng_seed": "qrng_int",
+    "base_seed": 347338331,
+    "num_prompts": 2,
+    "num_samples": 3,
+    "max_tokens": 128,
+    "timestamp": "20260203_184138"
+  },
+  "generations": [
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 0,
+      "seed": 347338331,
+      "text": "He was a tall, thin man with a face like a mountain, a face that had seen a lot of storms. He had a son who was in the army, and the lighthouse was his only child. One day, the lighthouse keeper came to the lighthouse, and he was just as tall and thin as his father. He had a face like a mountain, a face that had seen a lot of storms. The lighthouse keeper and the boy were both about the same age, and the boy had the same eyes as his father, the same blue eyes that were like the sea, and the same black hair. They",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 1,
+      "seed": 347339331,
+      "text": "The fog had been so thick that the small boat could not move through it. The boat was stuck in the lighthouse dock. The keeper watched as the boat drifted away from the dock. He called out to the boat, but his voice was drowned out by the fog. He had no choice but to wait and see what would happen. \n\nThe boat was pulled into the fog by the tide. The boat was pulled into the fog by the tide. The boat was pulled into the fog by the tide. The boat was pulled into the fog by the tide. The boat was pulled into the fog by the tide. The boat was pulled",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 2,
+      "seed": 347340331,
+      "text": "The new lighthouse was taller and more powerful than the one he had just replaced. He had been told to get used to it, but he hadn't. He had just begun to understand it. The lighthouse was a massive structure with a rotating beam of light that swept across the ocean. It was so bright that at night it could be seen for over 20 miles. The lighthouse was built in the 1950s, and it had been a long time since the old keeper had seen it. He had been told that it was an improvement, but he couldn't see how. The old lighthouse was",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 0,
+      "seed": 347338331,
+      "text": "She was no longer a teenager. The first thing she noticed was the strange smell. Her hair was still the same, but the air around her felt heavy, and there was a strange scent that she couldn't quite place. She looked around, and the room she was in was completely different from where she had been before. Instead of the familiar walls of her bedroom, there were walls that shimmered with an otherworldly light. The floor was soft and warm, and she could feel the energy around her. It was like she had stepped into a dream, but something was wrong. The air was thick, and the silence was deaf",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 1,
+      "seed": 347339331,
+      "text": "(Everything changed. is it a sentence or a fragment?) \n\n\"Everything changed.\" is a complete sentence. It has a subject (\"everything\") and a verb (\"changed\"), so it can stand alone as a full sentence. However, in the context of the sentence \"She opened the letter, and everything changed,\" the phrase \"everything changed\" is functioning as a dependent clause that is connected by the conjunction \"and.\" So, in that context, it might be considered a dependent clause or a fragment if it's not properly connected to the main clause. But in the standalone context, it's a complete sentence. Let me know if you",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 2,
+      "seed": 347340331,
+      "text": "The letter was from the hospital, and it was a notice that the doctor had been called. Her husband had been taken to the hospital. She was in shock. She didn't know what to do. The doctor said that he was in critical condition. He had a heart attack. She was in shock. She didn't know what to do. The doctor said that he was in critical condition. He had a heart attack. She couldn't believe it. She had to call her son. She had to make a decision. She had to get to the hospital. She couldn't stay here alone. She had to go. She couldn",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    }
+  ]
+}

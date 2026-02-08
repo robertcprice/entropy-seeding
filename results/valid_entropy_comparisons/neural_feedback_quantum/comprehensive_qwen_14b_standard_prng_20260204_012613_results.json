@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "model_name": "qwen_14b",
+    "model_id": "Qwen/Qwen3-14B",
+    "temp_mode": "standard",
+    "rng_seed": "prng",
+    "base_seed": 42,
+    "num_prompts": 2,
+    "num_samples": 3,
+    "max_tokens": 128,
+    "timestamp": "20260204_012613"
+  },
+  "generations": [
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 0,
+      "seed": 42,
+      "text": "The sea was churning with such force that it looked like a great white beast, roaring and thrashing against the cliffs. The wind howled through the rocks, and the waves crashed against the tower with a fury that made the entire structure tremble. He had spent decades watching the ocean from this vantage point, but never had it looked so angry. As he stood on the narrow ledge of the tower, his boots slipping slightly on the wet stone, he could feel the salt spray stinging his face and the cold seeping into his bones. The storm was worse than anything he had ever experienced, and he knew that if he",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 1,
+      "seed": 1042,
+      "text": "The storm had been going on for three days, and the waves were higher than ever. He had been watching the sea for over forty years, and he had never seen the ocean behave like this. He knew the sea was angry, but he also knew that it would eventually calm down. He just didn't know when.\n\nThe lighthouse keeper had been keeping a journal for years, recording the weather, the tides, and the occasional shipwreck. He had written about the storm in great detail, noting the wind speed, the barometric pressure, and the temperature. He had even taken measurements of the waves, trying to understand",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 2,
+      "seed": 2042,
+      "text": "The sea had turned a sickly green, and the air was so thick with the stench of rotting fish that it made his eyes water. He could see the storm approaching from the horizon, dark clouds swirling with an unnatural fury. He knew that the lighthouse had to be lit, but the generator was broken. He tried everything he could think of, but nothing worked. Then, just as the storm was about to hit, he saw a flash of light from the window. It was the old lantern, glowing with an eerie blue light. He ran to it, but as he reached for it, the light flared and",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 0,
+      "seed": 42,
+      "text": "The words were simple, but they carried a weight that made her heart race. It was a rejection letter from the prestigious art school she had dreamt of attending for years. The rejection felt like a slap in the face, a confirmation of all her self-doubts. But instead of wallowing in despair, she decided to take a walk, hoping the fresh air would clear her mind.\n\nAs she wandered through the park, she noticed a group of children playing near the pond. They were laughing, splashing in the water, completely carefree. She watched them for a moment, feeling a pang of longing for that kind of innocence",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 1,
+      "seed": 1042,
+      "text": "The world around her seemed to shrink, to blur, to dissolve. She was still standing in her kitchen, but the walls had melted into a mist, and the fridge had turned into a tree with branches reaching out, as if trying to touch her. The floor beneath her feet was no longer solid; it was a river of stars, swirling and shifting, reflecting constellations she had never seen before. The air was thick with the scent of something both familiar and foreign, like the memory of her grandmother's perfume mixed with the ozone of a summer storm. Her heart raced, not with fear, but with an exhilarating sense of",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 2,
+      "seed": 2042,
+      "text": "Her name was Eleanor, and she was the daughter of the late Lord and Lady Marlowe. Now, with the discovery of this long-lost letter, she was the sole heir to the vast Marlowe estate. But the letter also contained a cryptic message that spoke of a hidden treasure and a secret that had been buried with the Marlowes for generations. Intrigued and determined, Eleanor set out on a journey to uncover the truth, not knowing that she was being watched by someone with a personal vendetta against the Marlowe family. As she delves deeper into the family's past, she uncovers secrets",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    }
+  ]
+}

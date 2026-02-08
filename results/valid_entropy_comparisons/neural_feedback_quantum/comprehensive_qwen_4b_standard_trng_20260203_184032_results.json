@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "model_name": "qwen_4b",
+    "model_id": "Qwen/Qwen3-4B",
+    "temp_mode": "standard",
+    "rng_seed": "trng",
+    "base_seed": 4003992843,
+    "num_prompts": 2,
+    "num_samples": 3,
+    "max_tokens": 128,
+    "timestamp": "20260203_184032"
+  },
+  "generations": [
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 0,
+      "seed": 4003992843,
+      "text": "It was the first time in decades that a ship had come into the bay. The lighthouse had not been lit, but the old keeper had still not given up hope. He had been watching the horizon for hours, and he was sure that the ship was coming. He had been waiting for it for so long, and now it was finally here. He had no one else to wait for but the ship. \n\nThe lighthouse keeper's heart was pounding as he stood at the edge of the cliff. The sea was calm, the sky was clear, and the sun was shining. He had been waiting for this moment for so long",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 1,
+      "seed": 4003993843,
+      "text": "It was a tall, dark, and terrible thing, but the wind was always against it, and the waves were always against it, and the sea was always against it. But it stood, and it stood, and it stood. The sea was always against it, but it stood.\n\nThe old lighthouse keeper was a man named Tack, and he had been the lighthouse keeper for over thirty years. He was the only one who had ever been in the lighthouse, and he had been the only one who had ever been on the island. The island had been in the sea, but the lighthouse had been on the",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 2,
+      "seed": 4003994843,
+      "text": "The storm had come in like a beast, and the winds had been howling for three days. Then, on the fourth day, the storm finally let up, and the sky cleared. The sea was calm, and the beach was covered in driftwood, seaweed, and strange things. Among these things was a small, shimmering object. The lighthouse keeper was very curious, so he picked it up and took it home. It was a small, silver, transparent sphere that looked like a perfect sphere. The only thing that could be seen was a bright, blue, glowing light inside. He tried to take it home with",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 0,
+      "seed": 4003992843,
+      "text": "It's the start of a new story, a new life, a new beginning. The letter was from a stranger, but it was like a gift from heaven. I've read it once, and I can't wait to read it again. The words, the meaning, the feelings\u2014everything about it is so powerful. It's like a key that unlocks a door to something I never knew existed. I'm not sure what to do with it. I feel like I'm standing on the edge of a cliff, waiting for the first step. I need to make sure that I'm not missing anything. I need to understand it.",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 1,
+      "seed": 4003993843,
+      "text": "It was a letter from a friend. It said, \"Hey, I'm going to be in town next week. Let's get together.\" She was surprised, but happy. She had been feeling lonely lately. The letter was a sign that something was going to change. The letter was a symbol of connection. It was a symbol of hope. It was a symbol of possibility. It was a symbol of the future. It was a symbol of the past. It was a symbol of the present. It was a symbol of everything. It was a symbol of the beginning of something new. It was a symbol of the end of something",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 2,
+      "seed": 4003994843,
+      "text": "That was the beginning of the 1912 voyage of the Titanic. The story of the Titanic is one of the most famous and tragic events in history, often considered the most famous shipwreck in the world. The Titanic was a luxurious passenger ship that was considered unsinkable. It was the largest ship in the world at the time, with a length of about 882 feet and a height of 55 feet. It was built by the shipbuilding company Harland and Wolff in Belfast, Northern Ireland. It was the largest ship of its kind, and it was to be the most luxurious passenger ship in",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    }
+  ]
+}

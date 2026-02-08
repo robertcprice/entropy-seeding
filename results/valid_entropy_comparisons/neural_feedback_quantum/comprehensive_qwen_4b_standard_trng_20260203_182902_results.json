@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "model_name": "qwen_4b",
+    "model_id": "Qwen/Qwen3-4B",
+    "temp_mode": "standard",
+    "rng_seed": "trng",
+    "base_seed": 715384509,
+    "num_prompts": 2,
+    "num_samples": 3,
+    "max_tokens": 128,
+    "timestamp": "20260203_182902"
+  },
+  "generations": [
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 0,
+      "seed": 715384509,
+      "text": "He was always up in the tower, and he had his eye on the sea, the stars, the moon, the clouds, the sky, everything that was up in the air. He had never seen anything like the way the light looked today. The light had always been the same, but today it seemed to change colors. He had seen the light a thousand times before, but not today. He had never seen the light change colors. The light had always been white, but today it looked like it was a little blue. He had never seen the light look that way before. The old lighthouse keeper was a man of science",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 1,
+      "seed": 715385509,
+      "text": "The old lighthouse had stood for over a hundred years, and now it was going to be replaced. He had spent his entire life there, and the thought of leaving it made him feel a bit sick. He had always thought of it as his home, and now he was being asked to leave. The lighthouse was to be replaced by a new, modern one, with a new, modern light. The old lighthouse was going to be dismantled. The lighthouse was in a remote area, on a rocky coast. The keeper had no family, no one to take care of, and no one to take over the l",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 2,
+      "seed": 715386509,
+      "text": "He had been a sailor all his life, and he knew the sea well. But the night the shipwrecked plane crashed into the rocks, he was in bed, asleep. The sound of the plane was so loud that it woke him up. He ran out to the rocks and saw the plane. It was a small plane, with a lot of people on board. He didn't know what to do. He had never seen a plane before. He just stood there, looking at it. He tried to think of what he had seen before, but it didn't help. He had no idea what to do. The plane",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 0,
+      "seed": 715384509,
+      "text": "She was in a strange place, not a place she recognized, but she had come here for a reason. She was on a mission. She was a spy, and she had been given a mission to find the location of the secret facility where they were making the new type of weapon, the one that could change the world. She needed to find the facility, and she had to do it quickly. She had a limited amount of time, and she had to be careful not to be caught. She had a map, but it was incomplete. She had to figure out where she was and how to get to the facility.\nThe place",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 1,
+      "seed": 715385509,
+      "text": "But this was no ordinary letter. It was a letter that could change the world. The first time the letter was opened, it was in a remote village in the heart of the Amazon rainforest. A young girl named Lina found it in a hidden cave, tucked away in a small wooden box. The letter was written in an ancient language that she couldn't understand, but she was curious. She took it home, and the moment she opened it, a strange light filled the room. The letter had the power to grant a wish to whoever opened it. But there was a catch. The wish had to be made in the name",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 2,
+      "seed": 715386509,
+      "text": "The letter was from the school. It was an invitation to the school's new program, a year-long program called \"The Future is Now.\" It was designed for students who wanted to explore the world beyond the classroom. This program would give them the chance to study abroad for a semester, attend a special workshop, and participate in a research project. The school had a reputation for being innovative and forward-thinking, so the invitation was a big deal. But for some students, it was more than just an opportunity. It was a chance to escape. For her, it was the first time she had ever felt like she belonged. The letter",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    }
+  ]
+}

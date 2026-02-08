@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "model_name": "qwen_0.6b",
+    "model_id": "Qwen/Qwen3-0.6B",
+    "temp_mode": "standard",
+    "rng_seed": "trng",
+    "base_seed": 4145376719,
+    "num_prompts": 2,
+    "num_samples": 3,
+    "max_tokens": 128,
+    "timestamp": "20260203_183755"
+  },
+  "generations": [
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 0,
+      "seed": 4145376719,
+      "text": "The lighthouse on the edge of the desert was the only one that looked like a lighthouse. The lighthouse was built on the edge of the desert, and the lighthouse kept watch all night. But that night, when the sun was still in the sky, it turned off its lighthouse. The lighthouse was built so that it could keep watch at night, but the lighthouse was also built to provide a beacon that would help a traveler by being able to see a clear path to the lighthouse. So, which is the most likely reason for turning off the lighthouse? (A) to keep the lighthouse from",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 1,
+      "seed": 4145377719,
+      "text": "The moon was silent. The sky was empty. They were a bit of a strange place. The stars were no more than a few inches away. The lighthouse was on a cliff, and the moon was a full moon. The keeper was a man with a grey beard and a yellow ring, and he was alone. The moon was full, so the lighthouse was dark. The keeper had never seen anything like it. He was alone, alone, and he had no idea why he was there. He was afraid of the moon. He never wanted to be alone. The man was waiting for something. The moon was full,",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 2,
+      "seed": 4145378719,
+      "text": "He sat in his office, reading a magazine about the new technology that could change the world. He had seen it in the media, but he knew it was something different from what he had seen before. He had come to the office of the new lighthouse, which was the same as the old one, but there were only a few people in the office. He read and smiled as he thought about what he had seen. He knew that the technology he was talking about would change the world in a different way. He had to write a letter to his son about it, but he didn't know how to write it. He needed",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 0,
+      "seed": 4145376719,
+      "text": "The story was told in the style of a novel. The last paragraph said: \"The last paragraph says that he realized he was not in control of the outcome. He was the one who had to take it upon himself.\" The conclusion of the story should have a meaning that would have been consistent with the ending of the story. A. He had to be the one to take it upon himself. B. He had to be the one to take responsibility for the outcome. C. He had to be the one to take control of the outcome. D. He had to be the one to take a different approach to the problem.\nAnswer",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 1,
+      "seed": 4145377719,
+      "text": "She was a girl of twelve, her mother was the only one who knew her secret. The letter was sealed and sealed once more with her own hand. She had to keep her secret, but she had to keep her secret from her mother. The letter had been written by her mother, but she had not written it to her. She opened it, and everything changed. She was a girl of twelve, her mother was the only one who knew her secret. The letter was sealed and sealed once more with her own hand. She had to keep her secret, but she had to keep her secret from her mother. The letter had been",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 2,
+      "seed": 4145378719,
+      "text": "The letter contained a message from a man in a red suit. What is the woman's name?\nOkay, let's try to figure out this riddle. The woman opened the letter, and everything changed. The letter had a message from a man in a red suit. The question is, what is the woman's name?\n\nFirst, I need to think about the context. The letter was opened, and there was a message from a man in a red suit. Maybe there's some pun or wordplay here. \"Red suit\" \u2013 red suit could refer to a red jacket or a red coat. Also, \"everything changed\"",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    }
+  ]
+}

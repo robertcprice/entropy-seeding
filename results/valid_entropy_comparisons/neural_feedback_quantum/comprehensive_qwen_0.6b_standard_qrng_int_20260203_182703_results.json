@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "model_name": "qwen_0.6b",
+    "model_id": "Qwen/Qwen3-0.6B",
+    "temp_mode": "standard",
+    "rng_seed": "qrng_int",
+    "base_seed": 347338331,
+    "num_prompts": 2,
+    "num_samples": 3,
+    "max_tokens": 128,
+    "timestamp": "20260203_182703"
+  },
+  "generations": [
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 0,
+      "seed": 347338331,
+      "text": "He was a man of steady life. He had no family, no friends, no home to keep. He lived in a small house, in the middle of the old town. He lived alone. He had a little red boat on the dock, and the water was clear, but he lived alone. He had no plans. He didn't want to leave. He had no money, no food, no friends, no family. He lived in a lonely life. The boat was his only source of food and shelter. He lived alone. He had no money, no friends, no home. He lived in the middle of the old",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 1,
+      "seed": 347339331,
+      "text": "All the time he was watching the lighthouse, it was like he was watching a ghost of his own making. Each day he kept his watch on the cliff edge, but his heart was as if it had been stolen away. He had no idea what had happened to his own life, and now he wondered what could have been if he had been with his wife and friends. The world seemed to have moved on, but he felt the same. Each morning, the sun rose higher and higher, and he kept his watch, but the sun had no idea what he was doing. What does this passage suggest about the lighthouse keeper?",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 2,
+      "seed": 347340331,
+      "text": "The lighthouse beam in the dark and cold night was lit in the order of the sun. In the morning, he would see it again. The light was still burning on, but the lighthouse was no longer the same place. What is the meaning of the lighthouse keeper's light? The answer is that the light has been turned off, but it is still burning on. That is why it's not the same place. The answer is that the lighthouse is not working at all. The answer is that it has been turned off. Which of the following options best matches the meaning of the lighthouse keeper's light? A",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 0,
+      "seed": 347338331,
+      "text": "She was no longer a regular visitor. The door was locked. She sat down. Her mind was full of thoughts. She looked at her reflection in the mirror. She was pale. She was quiet. She was... more like a statue. The room was silent, save for the sound of her breathing. The only sound was her breathing, the quiet sound that she had always had, but this was different. The night was cold, and the wind was blowing. The trees were silent. She felt the cold wind in her hair. She had always thought that the cold would make her feel better, but it was different now. She",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 1,
+      "seed": 347339331,
+      "text": "The letter was from a stranger, but she was sure that it was someone she had known before. The key to the door was inside the letter. She could not see the room around it, but she knew that the room was not in the house. The letter was her own, and she had no intention of giving it away. What can be the best possible answer?\nA. The letter had no message. B. The letter was not the person she had known before. C. The letter was written by a woman. D. The letter was written in a language other than English.\nAnswer:\n\nThe correct answer is B. The",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 2,
+      "seed": 347340331,
+      "text": "The first paragraph starts with \"She opened the letter...\" and ends with \"the end of the story...\" So the first paragraph is... So, putting it all together, the first paragraph would be:\n\nShe opened the letter, and everything changed. The first paragraph starts with \"She opened the letter...\" and ends with \"the end of the story...\" So the first paragraph is... So, putting it all together, the first paragraph is:\n\nShe opened the letter, and everything changed. The first paragraph starts with \"She opened the letter...\" and ends with \"the end of the story...\"\n\nNow, to answer the original question, we need",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    }
+  ]
+}

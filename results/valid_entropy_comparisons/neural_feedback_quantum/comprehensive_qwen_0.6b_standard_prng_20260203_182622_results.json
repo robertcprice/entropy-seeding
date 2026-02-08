@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "model_name": "qwen_0.6b",
+    "model_id": "Qwen/Qwen3-0.6B",
+    "temp_mode": "standard",
+    "rng_seed": "prng",
+    "base_seed": 42,
+    "num_prompts": 2,
+    "num_samples": 3,
+    "max_tokens": 128,
+    "timestamp": "20260203_182622"
+  },
+  "generations": [
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 0,
+      "seed": 42,
+      "text": "The lighthouse was his home. He often heard the roar of the sea, but the water was so deep that he was unable to get out. He lived in a village near the sea. The keeper had a brother, who lived on a farm, and his wife was a mother and a grandmother. The lighthouse was at the top of a mountain, and it was not far from the village. He had no other place to go. The old man often went to the sea, but he never went to the farm. He always stayed at home. He had one son, who was 20 years old. The boy was",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 1,
+      "seed": 1042,
+      "text": "All the years he had been there had been like this, just like the years he had been there before, and this is the only one he has ever seen. He was 50 years old. His father was an old man who had never seen anything like it. The lighthouse keeper's mother was a young woman, and she had a husband and a daughter. The lighthouse was located in a remote area. The lighthouse was built on the top of a hill. He had always been a good worker, and he was paid wages. The lighthouse kept time like the sun. He was only 50 years old",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 2,
+      "seed": 2042,
+      "text": "He was a man with a strange, dark, and powerful presence. He lived on the edge of the world, near the cliffs of the Malibu coast. He had always been fascinated with the stars, but something had changed. He had begun to notice a strange pattern in the stars. It seemed to him that the stars weren't moving as he once had. Instead, they were moving in such a way that they were always in the same position. He never noticed them shifting. The stars, once in the same position, had always been moving in a straight line, but now they seem to be in the same place.\n\nSo,",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 0,
+      "seed": 42,
+      "text": "The story was told in an entirely different voice, and the tone was completely different. The characters were... well, more... mysterious. It had a haunting, almost supernatural quality that set it apart from the usual novels. The setting was a bit more... atmospheric. The writing was more intricate, with an unusual structure and a strange rhythm that gave it a unique, almost poetic feel. It had an unusual structure, with a mysterious, almost poetic feel. The writing was intricate, with a strange rhythm and an unusual structure. It had a haunting, almost supernatural quality, and the setting was more atmospheric.\n\nThe author's style of writing is",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 1,
+      "seed": 1042,
+      "text": "As the first time, she was able to see the place that was lost to time. The words were written in her favorite color, which was red. She felt the feeling of power, and the feeling of peace. All of this was the result of her dreams and her heart. The setting was a very peaceful place. The weather was warm and sunny, and it was raining outside. She opened the letter, and everything changed. As the first time, she was able to see the place that was lost to time. The words were written in her favorite color, which was red. She felt the feeling of power, and the feeling",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 2,
+      "seed": 2042,
+      "text": "The first paragraph of the letter was a little strange, but after she read it, everything was clear. The second paragraph started with \"If you're in a situation where...\", and she could see it was the same as the first paragraph. What is the author's main idea of the first paragraph? Let's see.\n\nThe answer is that the main idea is that the letter was a mystery and the first paragraph was a key to solving it. The correct answer is A.\nAnswer:\nA\n\n**Step-by-Step Explanation:**\n\n1. **Understand the Question:**  \n   The question is asking for the main idea of the first",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    }
+  ]
+}

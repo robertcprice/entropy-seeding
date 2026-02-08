@@ -1,0 +1,180 @@
+{
+  "metadata": {
+    "model_name": "qwen_0.6b",
+    "model_id": "Qwen/Qwen3-0.6B",
+    "temp_mode": "standard",
+    "rng_seed": "trng",
+    "base_seed": 1525042005,
+    "num_prompts": 3,
+    "num_samples": 5,
+    "max_tokens": 128,
+    "timestamp": "20260203_181211"
+  },
+  "generations": [
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 0,
+      "seed": 1525042005,
+      "text": "He was looking at the sky, and he was watching the sea. He had seen the sea before, but that was just a long time ago, a few generations ago. The new lighthouse keeper had never seen anything like it. The sea was different now, and he had never been in the same place before. There was a new lighthouse on the side of the island. He was on the lookout, watching for the moon and the stars. The moon was not the same as the old one. The stars were different, too. The moon was so bright, and it was moving slowly, like a distant star. The stars",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 1,
+      "seed": 1525043005,
+      "text": "He was a man of quiet and solitude.  He lived alone.  He spent his days by the lighthouse.  The man was known for his old eyes.  He often saw the stars, but the stars were not of his own.  His eyes were not from the earth.  He could not see anything on the Earth, and the stars were not of his own.  He knew there was a problem with his eyesight.  He could not see them, and he was not the one who saw them.  But he was not alone.  He had a son, a son who had come from his",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 2,
+      "seed": 1525044005,
+      "text": "He was a man of no interest, a man who was always at work, and who had never been to the world in his life. His home was in a very remote area where he had no access to the world outside. He lived in a village called La Gondola, which was surrounded by mountains and forest. His only way to get to the outside world was to travel to the top of the mountain, then walk back down the mountain to his home. He had never seen the world. He kept his home in a cave, but he could not go out. He could not take any food or drink. He was just",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 3,
+      "seed": 1525045005,
+      "text": "The lighthouse on top of the old lighthouse was a simple structure, and the keeper's cabin was a simple cabin on the property. The land was not very far from the city, and the keeper's cabin was just for his family's use, not for any other purposes. The water was not very clean, but there was a small boat that was still functioning, and the keeper kept the boat from getting stuck.  The lighthouse's light was not very bright, but the light was always on. The structure was a small one, with only a few lights and a few boats.  The keeper was known for his calm",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 4,
+      "seed": 1525046005,
+      "text": "The lighthouse is in a very remote area, and the keeper had no idea how to use the equipment. The keeper had been thinking about the lighthouse for years, and the lighthouse had been working for the same time. He had no idea how to use the equipment. The keeper had been thinking about the lighthouse for years, and the lighthouse had been working for the same time. He had no idea how to use the equipment. The keeper had been thinking about the lighthouse for years, and the lighthouse had been working for the same time. He had no idea how to use the equipment. The keeper had been",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 0,
+      "seed": 1525042005,
+      "text": "The passage describes a situation in which what happens?\nA. the reader is able to see the process of events\nB. the reader is able to see the process of events as it happens\nC. the reader is able to see the events in chronological order\nD. the reader is able to see the events in sequence\nAnswer:\nThe passage describes a situation in which the reader is able to see the process of events. The correct answer is A.\n\n**Step-by-step Explanation:**\n\nThe passage says, \"She opened the letter, and everything changed.\" This implies that after opening the letter, something new happened, which the reader",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 1,
+      "seed": 1525043005,
+      "text": "What does \"everything changed\" mean?  What is the meaning of \"everything\" in this sentence?\nThe answer is \"the world changed\" but I don't know why.  Please explain why.\nAnswer:\n\nIn the sentence, \"everything changed,\" the word \"everything\" refers to the world. The reason for the answer being \"the world\" is that the original sentence was translated from a Chinese context, and the Chinese meaning refers to the world. Therefore, the English translation should also reflect the same meaning, which is the world. The word \"everything\" in the original sentence is used to indicate that the world changed,",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 2,
+      "seed": 1525044005,
+      "text": "She opened the letter, and everything changed. It was the same letter, but there were no more words to it. A silent, unbroken passage of silence. And then the door slammed. She sat down, and in her hand she found the same letter. She read the words again, but they were different. The words were different, and yet the same. So it was not the same letter, but the same meaning. And the same meaning, in a single word. She closed the letter. And then she felt the door behind her. There was no one. \n\nWhat is the message of the story?\n\nA. The",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 3,
+      "seed": 1525045005,
+      "text": "The story of her life was now about how she could help others. It was about the future. The key to the story is in the beginning, which is the letter that she opened, and the beginning story is now the letter she wrote herself. That's the first sentence. Then the next sentence is that she opened the letter, and everything changed. Now the story is about her helping others. Then the next sentence is that the letter she wrote herself is the key to the story, which is about the future. Now the next sentence is that the story is about her helping others. Now the next sentence is that the key to the",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 4,
+      "seed": 1525046005,
+      "text": "She was determined to be the most influential person in the country.\n\nHer hands were trembling as she looked at the envelope. The contents of the envelope were a simple one, but the message inside was written with a profound meaning. It was written in a very simple Chinese script, but the message had been encoded with a hidden pattern. The hidden pattern was not something she could see, but the handwriting was so clear and precise that she could tell at least part of it. The message said, \"The world is beautiful, and the sun shines brightly in the morning. This is the first time for the sun to shine, and there is no",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "Once upon a time, in a kingdom by the sea,",
+      "sample_idx": 0,
+      "seed": 1525042005,
+      "text": "there were 20 people who lived on a certain island. Each person had a son, and the sons were born with a lot of inheritance, so they were all in love with the idea of keeping the land. The children had to live on the island to survive. However, the island is not a land. There is a river that runs from one side to the other. On each side of the island, there are some trees that have been planted in the forest. The land is to be kept, but the land has not been given to any of them. They are all supposed to work together, but they can only keep",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "Once upon a time, in a kingdom by the sea,",
+      "sample_idx": 1,
+      "seed": 1525043005,
+      "text": "the king had a son named Raja. The son was very young and could not walk, but he had a talent for swimming. He was known as a swimmer. One day, his father decided to prepare for a great challenge in his kingdom. He asked his son to solve a riddle: \"There are 400 fish, and some of them are not white. How many white fish are there?\" The answer is \"400.\" And the king wanted him to know the answer.\n\nThe challenge was to make the answer of the riddle correct in the kingdom, but the son's answer was incorrect. Why",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "Once upon a time, in a kingdom by the sea,",
+      "sample_idx": 2,
+      "seed": 1525044005,
+      "text": "there were 30 people living in the kingdom. The king told them that there were 30000 birds in the kingdom. The number of birds in the kingdom was 500000. The king said that each of the 30 people would like to eat 50 birds. How many birds would each person eat? To find the number of birds that each person would eat, you can divide the total number of birds by the number of people. Let's say we have 30000 birds and 30 people. The number of birds per person would be 30",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "Once upon a time, in a kingdom by the sea,",
+      "sample_idx": 3,
+      "seed": 1525045005,
+      "text": "there are three sisters, each with a different age. One day, they found a box on the shore. The box contains two pieces of paper, one of which is a number and the other is a picture. One of the sisters said, \"The sum of the ages of the two younger sisters is equal to the number on the picture.\" But the other two sisters are puzzled. They say, \"We know that the number of the picture is not equal to the number on the box. But we know that the number on the picture is less than the number on the box.\" What can we conclude from the information provided?\nA.",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "Once upon a time, in a kingdom by the sea,",
+      "sample_idx": 4,
+      "seed": 1525046005,
+      "text": "there was a village named Nalay. Nalay had a number of houses, each of which was built on a different island. Each house was a different island, and each island had a different number of inhabitants. The total number of inhabitants across all houses was 600. The sum of the number of inhabitants on the houses on each island, where each inhabitant was on a house, is 600. How many islands were there in total in Nalay?\n\nWe need to find the number of islands in Nalay.\n\nLet me think. The problem is a bit confusing. Let me try to",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    }
+  ]
+}

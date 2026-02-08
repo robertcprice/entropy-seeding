@@ -1,0 +1,26 @@
+{
+  "metadata": {
+    "model_name": "qwen_0.6b",
+    "model_id": "Qwen/Qwen3-0.6B",
+    "temp_mode": "standard",
+    "rng_seed": "qrng_int",
+    "base_seed": 347338331,
+    "num_prompts": 1,
+    "num_samples": 1,
+    "max_tokens": 128,
+    "timestamp": "20260203_180727"
+  },
+  "generations": [
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 0,
+      "seed": 347338331,
+      "text": "He was a man of steady life. He had no family, no friends, no home to keep. He lived in a small house, in the middle of the old town. He lived alone. He had a little red boat on the dock, and the water was clear, but he lived alone. He had no plans. He didn't want to leave. He had no money, no food, no friends, no family. He lived in a lonely life. The boat was his only source of food and shelter. He lived alone. He had no money, no friends, no home. He lived in the middle of the old",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    }
+  ]
+}

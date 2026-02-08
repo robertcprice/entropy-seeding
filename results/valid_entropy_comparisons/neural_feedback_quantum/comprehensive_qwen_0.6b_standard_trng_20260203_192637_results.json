@@ -1,0 +1,180 @@
+{
+  "metadata": {
+    "model_name": "qwen_0.6b",
+    "model_id": "Qwen/Qwen3-0.6B",
+    "temp_mode": "standard",
+    "rng_seed": "trng",
+    "base_seed": 2287439643,
+    "num_prompts": 3,
+    "num_samples": 5,
+    "max_tokens": 128,
+    "timestamp": "20260203_192637"
+  },
+  "generations": [
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 0,
+      "seed": 2287439643,
+      "text": "It was the only lighthouse on the island. It was the first one to be built, and the first one to be destroyed. The keeper's son had never seen anything like it. He was the first lighthouse in the new country. The new lighthouse was built on the same island, but in the same direction as the old lighthouse. It was not a lighthouse, but a building. The two lighthouses were not on the same level. The building on the other side of the river was not connected to the old lighthouse. The two lighthouses were not on the same level, and the building was",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 1,
+      "seed": 2287440643,
+      "text": "He had seen more than his share of such things, but the lighthouse of his home was his own. The lighthouse kept for hours and hours, and he kept it for years. The lighthouse had a lot of problems, but he knew it was not as bad as he thought. He had always been watching it, even though he had been away from the lighthouse for many years. Now he was watching it again. He had a new wife and a child, and he thought it would be better to stay with them for the time being, as their needs were more important. But he was not sure whether he would stay",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 2,
+      "seed": 2287441643,
+      "text": "He had no idea that he was the first of his kind to survive and have a child. His only thought was the sight of the lighthouse, the one that would come to him every night for hours. But now, he had a son. He would go to bed each night with the same thoughts, even though he couldn't understand them.\nThe passage presents a narrative about an old lighthouse keeper. It starts by describing the keeper's feelings about his old lighthouse and how he couldn't understand the sight. The next part of the passage introduces his son, who has been born, and that he will go to bed every night",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 3,
+      "seed": 2287442643,
+      "text": "He was a man who had been cursed, cursed by the gods for living in a land where all the people who lived in the village were not allowed to build or plant a garden. But the lighthouse keeper had somehow managed to escape from this curse. In the village, there were no gardens, so he had to build a garden on the land where the lighthouse was located. Now, the village was experiencing a drought, and the lighthouse keeper's only means of survival was to maintain the lighthouse. He was living in a very small house with a tight budget, and he needed to make a living from it. He worked",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 4,
+      "seed": 2287443643,
+      "text": "This is not in the newspaper, or a letter of the book, or a newspaper article. He had seen it in the first year, but the time between the first year and the second year was not much longer. The lighthouse keeper had never seen anything like it. \n\nWhich statements are true? \n\nA. The first year is a year before the second year. \n\nB. The first year is a year after the second year. \n\nC. The time between the first year and the second year is not much longer than 12 months. \n\nD. The first year is the same year as the second year.\n\nAnswer",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 0,
+      "seed": 2287439643,
+      "text": "The sentence suggests that... because of the letter. What is the correct answer to this question?\n\nA. She gave her mom a gift.  \nB. She gave her mom a gift.  \nC. She gave her mom a gift.  \nD. She gave her mom a gift.\n\nThe answer is A. So the correct answer is A.\n\nThe sentence says that she opened the letter and everything changed. The correct answer should reflect that because of the letter. So the answer is A. The answer is A. So the correct answer is A.\n**Final Answer**\nA\n**Final Answer**\nA\n**Final Answer**\nA",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 1,
+      "seed": 2287440643,
+      "text": "She had to make it to the hospital with her family. She looked around and saw the hospital had a big lot of people waiting for her. Her father would be there too. The two of them were in a hurry and they couldn't wait for the other person to come. The next day, they went to the hospital and found that the hospital was already full. They had to leave the hospital, and they decided to go back home. In the end, the only thing that was left was her father, who was still waiting for her. She could feel the weight of the past and the pain of the past. The story is",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 2,
+      "seed": 2287441643,
+      "text": "She read the letter, and everything changed. \n\nShe read the letter, and everything changed. \n\nThe first letter of the first sentence was A, and the first letter of the second sentence was B. \n\nWhich of the following options is correct? \n\nA. Both are correct. \nB. Only the second sentence is correct. \nC. Only the first sentence is correct. \nD. None of the above\n\nAnswer: \\boxed{D}\nThe correct answer is \\boxed{D}.\nThe correct answer is \\boxed{D}.\nAnswer:\n\\boxed{D} is correct. The first letter of the first sentence",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 3,
+      "seed": 2287442643,
+      "text": "The word 'changed' can be replaced with which of the following sentences to have a more vivid, dynamic, and emotional impact? \n\nOptions:\nA) \"The letter opened and everything changed.\"\nB) \"The letter opened, and everything changed.\"\nC) \"The letter opened and everything changed.\"\nD) \"The letter opened, and everything changed.\"\nAnswer:\n\nThe correct answer is C) \"The letter opened and everything changed.\"\n\nThe word \"changed\" in the sentence \"The letter opened and everything changed\" has a more vivid, dynamic, and emotional impact. When combined with the action of the letter opening, it creates a more",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 4,
+      "seed": 2287443643,
+      "text": "This means that in the future, she will have to keep up with the same habits that she has in the present. When she first opened the letter, she was just a bit nervous. It's because she didn't know where she was, and she was not sure if she could do this. But then she realized that this was a way to stay in touch with her future self. Now, she has to decide whether to continue with the same habits or to change them for the benefit of her future self. She is in a state of decision-making, and she can't just make the same choice every time. This suggests that she",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "Once upon a time, in a kingdom by the sea,",
+      "sample_idx": 0,
+      "seed": 2287439643,
+      "text": "there were two sisters, Malia and Lila. Malia is the tallest among them, and Lila is the shortest. They have a baby, and the baby has a certain amount of weight. According to the doctor's report, the baby's weight is 12 kilograms. The doctor says that the baby's weight is not possible to have a baby born to the same mother. Because the mother's weight is below the baby's weight. But wait, that is not possible. The doctor says that the baby's weight is not possible to have a baby born to the same mother. But I thought it was possible.",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "Once upon a time, in a kingdom by the sea,",
+      "sample_idx": 1,
+      "seed": 2287440643,
+      "text": "there are a number of people who live in a village. The village has two different types of people: the rich and the poor. The rich people are always in the same time zone. The poor people live in different time zones. The poor people's time zones are uniformly distributed. What is the probability that a person who is in the time zone of a poor person is a rich person?\nA) 0.333\nB) 0.25\nC) 0.166666...\nD) 0.2\nAnswer:\nTo solve this problem, we need to calculate the probability",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "Once upon a time, in a kingdom by the sea,",
+      "sample_idx": 2,
+      "seed": 2287441643,
+      "text": "there was a small village called Alpina. The villagers in the village are very proud of their traditions, and they have many festivals that are celebrated throughout the year. The festival of the harvest is one of the most popular. The harvest festival has a number of stages that are performed in order to honor the harvest. During the first stage, a young boy, named Alaric, is asked to perform. He is of the average height, but his heart is very strong. The second stage is the first of the two stages of the festival, and it is called the Harvest Hunt. The Harvest Hunt is the place where the villagers",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "Once upon a time, in a kingdom by the sea,",
+      "sample_idx": 3,
+      "seed": 2287442643,
+      "text": "there was a village named Elspeth, which was surrounded by mountains. It was said that the village had one of the oldest recorded trees in the world. The oldest recorded tree in the world is not an oak, but a certain type of tree. In Elspeth, this tree is the only one that survives in the wild and is not known to be alive anymore. The village itself is known for its peaceful life, and Elspeth is said to have a very high level of living standards.\nNow, the question is: How is the tree that is known as the oldest in the world actually related to Elspeth's",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "Once upon a time, in a kingdom by the sea,",
+      "sample_idx": 4,
+      "seed": 2287443643,
+      "text": "there were three siblings, each with their own name and father. The king's wife had a cat named Olivia. Olivia was a cat, and the kitten was born. The kitten's parents were the king's father and the king's mother, who were both known to be the same as their siblings. What are the names of the three siblings?\n\nThe answer is probably not obvious. Let's think about it step by step.\n\nFirst, the king's wife is a cat, so the three siblings are the king's father, the king's mother, and their two children. However, the answer is not obvious. The problem is probably",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    }
+  ]
+}

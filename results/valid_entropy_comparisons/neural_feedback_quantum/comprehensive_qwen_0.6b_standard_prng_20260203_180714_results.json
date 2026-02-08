@@ -1,0 +1,26 @@
+{
+  "metadata": {
+    "model_name": "qwen_0.6b",
+    "model_id": "Qwen/Qwen3-0.6B",
+    "temp_mode": "standard",
+    "rng_seed": "prng",
+    "base_seed": 42,
+    "num_prompts": 1,
+    "num_samples": 1,
+    "max_tokens": 128,
+    "timestamp": "20260203_180714"
+  },
+  "generations": [
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 0,
+      "seed": 42,
+      "text": "The lighthouse was his home. He often heard the roar of the sea, but the water was so deep that he was unable to get out. He lived in a village near the sea. The keeper had a brother, who lived on a farm, and his wife was a mother and a grandmother. The lighthouse was at the top of a mountain, and it was not far from the village. He had no other place to go. The old man often went to the sea, but he never went to the farm. He always stayed at home. He had one son, who was 20 years old. The boy was",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    }
+  ]
+}

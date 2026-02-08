@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "model_name": "qwen_0.6b",
+    "model_id": "Qwen/Qwen3-0.6B",
+    "temp_mode": "standard",
+    "rng_seed": "trng",
+    "base_seed": 781923505,
+    "num_prompts": 2,
+    "num_samples": 3,
+    "max_tokens": 128,
+    "timestamp": "20260203_182644"
+  },
+  "generations": [
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 0,
+      "seed": 781923505,
+      "text": "The old lighthouse was on the top of a mountain and in the center of a village. He had seen a lot of ships, but he didn't know the time of the moon. The moon was in the sky, but he couldn't read it. He had seen a lot of ships, but he couldn't read them. He had seen a lot of ships, but he couldn't read them. What is the meaning of this passage?\nA. The old lighthouse is the symbol of a village\nB. The old lighthouse is the symbol of a village\nC. The old lighthouse is the symbol of a village",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 1,
+      "seed": 781924505,
+      "text": "His eyes, though unimpressed, could no longer be used to the sight. The reason why the keeper kept the lighthouse was not so different from his own. And now he was not in his usual position to do anything with his eyes.\n\nThis is the passage from a story. What is the main idea of the passage? A. The keeper's eyesight is deteriorating. B. The keeper's work is the same as his own. C. The lighthouse's light source is natural. D. The lighthouse is not functional anymore.\nAnswer:\n\nB\n\nThe passage discusses a lighthouse keeper's experience. The keeper",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 2,
+      "seed": 781925505,
+      "text": "He always kept his hat on his head as he worked. He worked two days a week. He worked at the same time each day. He used to work at his own home. He had to go to the market every day. He had to go to work every day. He always used to go to the market and work on the farm. He had to go to work and to the market. He used to have a lot of trouble. He had no family. He was poor. He lived in the neighborhood of the town. He lived in a small room. The door is locked. He had no idea what to do.",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 0,
+      "seed": 781923505,
+      "text": "The first paragraph is the first sentence, then the second paragraph is the second sentence, etc. She opened the letter, and it was filled with all the information that she needed. She opened the letter, and it was filled with all the information that she needed. The third paragraph is the third sentence, and so on. Then the first paragraph, the second, the third, the fourth, etc. If that's the case, what does the sentence structure look like? Let me try again. She opened the letter, and everything changed. She opened the letter, and it was filled with all the information that she needed. She opened",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 1,
+      "seed": 781924505,
+      "text": "A. \u6b63\u786e\u7684 B. \u9519\u8bef\u7684\n\nWhich one is correct?\n\nA. \u6b63\u786e\u7684  \nB. \u9519\u8bef\u7684\n\nChoose your answer from A and B.\nThe correct answer is: A\n\nAnswer:\nA\n\nThe correct answer is: A\n\nThe correct answer is: A\nAnswer:\nA\nAnswer:\nA\nAnswer:\nA\nAnswer:\nA\nAnswer:\nA\nAnswer:\nA\nAnswer:\nA\nAnswer:\nA\nAnswer:\nA\nAnswer:\nA\nAnswer:\nA\nAnswer:\nA\n\nThe correct answer is: A\nAnswer:\nA\nAnswer:\nA",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 2,
+      "seed": 781925505,
+      "text": "She opened the letter and everything changed. He could not have known it. He could not have known it. It was a letter from her mother. It was a letter from her mother. She opened it with a smile and a look of surprise. He could not have known it. It was a letter from her mother. She opened it with a smile and a look of surprise. \n\nThe passage is about the relationship between two people and their experiences of...? A. love B. loss C. misunderstanding D. conflict\n\nThe passage is about the relationship between two people and their experiences of...? A. love B. loss C",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    }
+  ]
+}

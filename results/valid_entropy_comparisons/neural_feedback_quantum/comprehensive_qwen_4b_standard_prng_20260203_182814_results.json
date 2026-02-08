@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "model_name": "qwen_4b",
+    "model_id": "Qwen/Qwen3-4B",
+    "temp_mode": "standard",
+    "rng_seed": "prng",
+    "base_seed": 42,
+    "num_prompts": 2,
+    "num_samples": 3,
+    "max_tokens": 128,
+    "timestamp": "20260203_182814"
+  },
+  "generations": [
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 0,
+      "seed": 42,
+      "text": "The three men who came to the lighthouse to get help, but they were all in different places at the same time. They were all in different places at the same time. The old man, the woman, and the child. The old man had been alone at the lighthouse for years. He had no family, no friends, and no one to talk to. But he was never alone. He had the lighthouse, the sea, and the stars. He had the lighthouse, the sea, and the stars. The three men were in the lighthouse at the same time, but they were in different places. The",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 1,
+      "seed": 1042,
+      "text": "He had just turned 65 and had been living in the lighthouse for over 40 years. He had never seen a ship in the distance, but the lighthouse was still functioning. It was just that the lighthouse was now on a moving ship. The ship was going through the sea, and it was the old man's new home. He had been hired by the ship's captain, who had a very unusual name, Captain Pinnacle. The captain had told him that he was a retired lighthouse keeper, and that he had been on the ship for a while. The old man had just been hired, and",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "The old lighthouse keeper had never seen anything like it.",
+      "sample_idx": 2,
+      "seed": 2042,
+      "text": "The lighthouse was on the edge of the ocean, right? But the lighthouse was not on the edge of the ocean, it was on the edge of the world. The sea roared like a beast, and the wind howled like a wolf. The lighthouse had been there for hundreds of years, and the lighthouse keeper had been there for hundreds of years. He had always known the sea, its moods, its secrets. But tonight, something was different. The sea was not the same. The waves crashed against the stone walls of the lighthouse with a force that made him feel like he was going to be",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 0,
+      "seed": 42,
+      "text": "The letter was from her estranged brother, and he had decided to come home. After many years of silence, they were finally going to reunite. \n\nBut as she read further, she realized that the letter was not just a simple reunion. It was a request for help. Her brother had been living in a small town for years, and he had recently become the mayor of the town. He had been working hard to make it a better place for everyone, but he was struggling with a problem that he couldn't solve on his own. \n\nThe town had a long-standing tradition of holding an annual festival, which was the highlight",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 1,
+      "seed": 1042,
+      "text": "The letter was from her estranged brother, and he was coming back to visit.  The moment she read the first line, she knew that something was different.  She could feel the change in the air.  The letter was filled with a sense of urgency, and there was something about the way he wrote that was different.  She had not heard from him in years, and he had not been in touch since the day he left.  She could not believe that he would come back.  She had always thought that he was gone for good.  But now, he was coming back.  She could not believe",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    },
+    {
+      "prompt": "She opened the letter, and everything changed.",
+      "sample_idx": 2,
+      "seed": 2042,
+      "text": "The first time, at the age of 16, I received a letter from my mother in college. I was so excited I couldn't wait to read it. I read it through, then looked up at my mother, and she was holding a piece of paper with a list of questions. She asked me to answer them. I didn't know what to do. I was confused and didn't know how to answer. She said, \"Just answer them.\" So I sat down and wrote my first letter. The second time, I was 19. I was living in my own apartment, and my mother had come to",
+      "controls": {
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "top_k": 50
+      }
+    }
+  ]
+}
