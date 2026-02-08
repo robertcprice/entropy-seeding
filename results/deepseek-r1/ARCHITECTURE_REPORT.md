@@ -245,7 +245,7 @@ config = {
 
 ## Files Available
 
-- `deepseek-r1_32b_entropy_comparison.json` - 32B complete comparison
+- `deepseek-r1_32b_summary.json` - 32B key metrics and comparison
 - `deepseek-r1_70b_full_results.json` - 70B comprehensive dataset
 
 ---

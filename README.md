@@ -146,12 +146,16 @@ entropy-seeding/
     ├── qwen/                      # Qwen3 family (Dense)
     │   ├── qwen3_0.6b_summary.json
     │   ├── qwen3_1.7b_summary.json
-    │   ├── qwen3_8b_full.json
-    │   ├── qwen3_14b_full.json
+    │   ├── qwen3_8b_full_results.json
+    │   ├── qwen3_14b_full_results.json
     │   └── qwen3_32b_full_results.json
     └── deepseek-r1/               # DeepSeek-R1 family (MoE)
-        ├── deepseek-r1_32b_entropy_comparison.json
+        ├── deepseek-r1_32b_summary.json
         └── deepseek-r1_70b_full_results.json
+
+**File naming:**
+- `*_summary.json` - Key metrics and aggregated results (smaller)
+- `*_full_results.json` - Complete dataset with all outputs (larger)
 ```
 
 ---

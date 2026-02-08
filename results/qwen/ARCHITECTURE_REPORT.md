@@ -191,10 +191,10 @@
 
 ## Files Available
 
-- `qwen3_0.6b_summary.json` - Full results for smallest model
-- `qwen3_1.7b_summary.json` - 1.7B comprehensive results
-- `qwen3_8b_full.json` - 8B complete dataset
-- `qwen3_14b_full.json` - 14B complete dataset
+- `qwen3_0.6b_summary.json` - Key metrics for smallest model
+- `qwen3_1.7b_summary.json` - 1.7B aggregated results
+- `qwen3_8b_full_results.json` - 8B complete dataset
+- `qwen3_14b_full_results.json` - 14B complete dataset
 - `qwen3_32b_full_results.json` - 32B comprehensive analysis
 
 ---

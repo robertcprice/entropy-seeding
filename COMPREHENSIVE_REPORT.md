@@ -1536,13 +1536,13 @@ All raw JSON data is available in the `results/` directory:
 #### Qwen Models (Dense Architecture)
 - `results/qwen/qwen3_0.6b_summary.json`
 - `results/qwen/qwen3_1.7b_summary.json`
-- `results/qwen/qwen3_8b_full.json`
-- `results/qwen/qwen3_14b_full.json`
+- `results/qwen/qwen3_8b_full_results.json`
+- `results/qwen/qwen3_14b_full_results.json`
 - `results/qwen/qwen3_32b_full_results.json`
 
 #### DeepSeek Models (MoE Architecture)
-- `results/deepseek/deepseek-r1_32b_entropy_comparison.json`
-- `results/deepseek/deepseek-r1_70b_full_results.json`
+- `results/deepseek-r1/deepseek-r1_32b_summary.json`
+- `results/deepseek-r1/deepseek-r1_70b_full_results.json`
 
 ### Statistical Significance
 
