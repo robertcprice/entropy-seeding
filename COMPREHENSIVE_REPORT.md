@@ -1244,6 +1244,147 @@ prompt = "What gives life meaning?"  # Philosophical, open-ended
 
 ---
 
+## 9.5. Advanced Techniques: Neural Modulation & RTE
+
+In addition to testing basic entropy sources (PRNG, TRNG, QRNG), we experimented with **advanced entropy modulation techniques** that combine neural feedback with different entropy sources. These techniques were developed through the **True Recursive Entropy (TRE)** research project.
+
+### What is Neural Feedback Modulation?
+
+**NEURAL modulation** is a training-free technique that uses the model's own hidden-layer activations to dynamically control generation parameters in real-time.
+
+#### How It Works
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│              NEURAL FEEDBACK MODULATION LOOP                 │
+├─────────────────────────────────────────────────────────────┤
+│                                                              │
+│  1. Generate token → Extract activations from layer N       │
+│  2. Select top-K neurons by activation variance             │
+│  3. Compute statistics: variance, mean, std                  │
+│  4. Map statistics → modulate attention (Q-projection)       │
+│  5. Apply modulation → next token generation                │
+│  6. Repeat (recursive feedback loop)                         │
+│                                                              │
+└─────────────────────────────────────────────────────────────┘
+```
+
+#### The Mathematical Foundation
+
+```python
+# Core modulation formula
+scale = 1.0 + alpha × (logit_entropy - cal_mean) / cal_std
+
+# Where:
+# - logit_entropy: Entropy of attention logits for each token
+# - cal_mean, cal_std: Calibration statistics from baseline
+# - scale: Modulation factor applied to Q-projection, clamped to [0.5, 2.0]
+# - alpha: Feedback strength parameter (typically α=0.32)
+# - beta: Error-correction rate for recursive adaptation (β=0.35 optimal for MoE)
+```
+
+#### Implementation Details
+
+**Target:** Q-projection in attention layers (`q_proj` forward hook)
+
+**Layers Affected:** Core transformer layers (middle layers 8-24 for Mixtral, 9-27 for Qwen3)
+
+**Neuron Selection:**
+1. Run N calibration prompts through the model
+2. Extract last-token activations from final layer
+3. Compute variance per neuron across prompts
+4. Select K neurons with highest variance (K=20 typical)
+
+**Precision:** bfloat16 with SDPA attention
+
+**Cost:** Training-free, only forward pass computation overhead
+
+### What is RTE (Recursive Temperature Entropy)?
+
+**RTE** extends NEURAL modulation by adding a second layer of adaptation - modulating feedback strength based on entropy history over the generation sequence.
+
+#### Two-Level Hierarchy
+
+**Inner Loop (NEURAL):** Neural activations → sampling parameters (temperature, top-p, top-k)
+
+**Outer Loop (RTE):** Entropy history → feedback weights
+
+```python
+# RTE adds temporal adaptation
+w_n = w_base + alpha × tanh((E_n - E_target) / sigma_E)
+
+# Where:
+# - w_n: Adaptive weight at step n
+# - E_n: Current entropy (measured from generated tokens)
+# - E_target: Target entropy (calibrated from baseline)
+# - Creates dynamic adjustment based on entropy trajectory
+```
+
+### Tested Configurations
+
+| Configuration | Entropy Source | Neural Modulation | RTE | Description |
+|--------------|----------------|-------------------|-----|-------------|
+| **baseline** | PRNG/TRNG/QRNG | ❌ | ❌ | Standard generation |
+| **neural_only** | Any | ✅ | ❌ | Neural feedback only |
+| **quantum_only** | QRNG | ❌ | ❌ | Quantum entropy only |
+| **neural_quantum** | QRNG | ✅ | ❌ | QRNG + neural feedback |
+| **RTE_quantum** | QRNG | ❌ | ✅ | QRNG + recursive temp |
+| **neural_RTE_quantum** | QRNG | ✅ | ✅ | Full combination |
+
+### Key Findings from Neural Modulation
+
+#### 1. Architecture Matters Dramatically
+
+| Model | Architecture | Best Config | CV Reduction | Optimal β |
+|-------|--------------|-------------|-------------|-----------|
+| Mixtral-8x7B | MoE | recursive_β=0.35 | **-17.5%** | 0.35 |
+| Qwen3-8B | Dense | Zero hyperparams | -3.5% | Self-determined |
+
+**Discovery:** MoE models respond much better to fixed hyperparameters. Dense models prefer self-controlled adaptation.
+
+#### 2. NEURAL + QRNG Interference
+
+**Critical Discovery:** Combining NEURAL with QUANTUM destroys the CV reduction benefit:
+
+| Configuration | Mean CV | vs Baseline | Effectiveness |
+|--------------|---------|-------------|---------------|
+| baseline | 57.39 | - | Baseline |
+| **neural_only** | **0.21** | **+99.6%** | **BEST** |
+| quantum_only | 54.01 | +5.9% | Worse |
+| **neural_quantum** | 53.27 | +7.2% | **Destroys NEURAL effect** |
+
+**Rule:** Never combine NEURAL with quantum for CV reduction purposes.
+
+**Mechanism:** NEURAL promotes high-variance areas (`A = A * (1 + k₁ * v)`), while QUANTUM dampens them (`A = A / (1 + k₂ * v)`). The effects cancel out.
+
+#### 3. High-Variance Neuron Selection
+
+**Calibration-based selection** (choosing top-K neurons by cross-prompt variance) achieves:
+
+- **42.5% CV reduction** compared to baseline
+- **Large diversity gains** (VocabDiv d≈0.7 pooled; d≈1.0 on Qwen3-8B)
+- Transforms weak global effects into strong, significant ones
+
+**Why it works:** High-variance neurons encode more informative features (abstract concepts, specialized knowledge). Promoting these neurons increases output diversity in a controlled way.
+
+### Why This Matters for Entropy Research
+
+These advanced techniques demonstrate that:
+
+1. **Entropy quality isn't just about the source** - it's about how you use it
+2. **Neural feedback can amplify entropy effects** - making small entropy differences more pronounced
+3. **Architecture-specific tuning is essential** - one size does not fit all
+4. **Interference effects exist** - combining techniques can cancel benefits
+
+For the entropy-seeding study, these techniques were tested to understand if they could:
+- Amplify the differences between entropy sources
+- Reveal hidden patterns in how entropy affects generation
+- Provide insight into why different models respond differently
+
+**See also:** The full TRE research paper at `/docs/TRE_RESEARCH_PAPER_2026-02-03.md` for complete technical details.
+
+---
+
 ## 10. Additional Discovery: Biblical Reference Pattern
 
 ### Critical Finding: NEURAL Configurations Trigger Spontaneous Religious References
