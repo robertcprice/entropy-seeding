@@ -396,8 +396,9 @@ def main():
         for line in result.stdout.strip().split("\n")[1:]:
             if line.strip():
                 model = line.split()[0]
-                # Skip very large models
-                if "70b" not in model.lower() and "32b" not in model.lower():
+                # Skip large models and special models
+                skip_patterns = ["70b", "32b", "pm1000", "-vl", "vision"]
+                if not any(p in model.lower() for p in skip_patterns):
                     models_to_test.append(model)
     elif args.model:
         models_to_test = [args.model]
