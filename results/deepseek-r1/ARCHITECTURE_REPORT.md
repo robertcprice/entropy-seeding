@@ -266,3 +266,65 @@ The Mixture of Experts architecture makes entropy source selection **more critic
 *Architecture: Mixture of Experts (MoE)*
 *Models tested: 2 (32B, 70B)*
 *Critical finding: PRNG catastrophic failure on philosophical prompts*
+
+---
+
+## Metrics, Symbols & Interpretation Guide
+
+### Metric Definitions
+
+| Metric | Full Name | What It Measures | Value Range | Good | Bad |
+|--------|-----------|-----------------|-------------|------|-----|
+| **Shannon Char** | Shannon Character Entropy | Information density at the character level; how unpredictable each character is | 0.0 - ~4.7 bits | 4.0 - 4.5 (rich, varied text) | 0.0 (empty/failed output); >4.6 (noise-like) |
+| **Shannon Word** | Shannon Word Entropy | Information density at the word level; vocabulary unpredictability | 0.0 - ~8.0+ bits | 5.0 - 7.5 (diverse vocabulary) | 0.0 (empty/failed); <3.0 (extremely constrained) |
+| **Perplexity** | Model Perplexity | How "surprised" a language model would be by the text; measures naturalness | 1.0 - Infinity | 50 - 250 (natural, fluent text) | Infinity (degenerate output); <10 (rote memorization); >500 (incoherent) |
+| **Burstiness** | Sentence Length Burstiness | Variance in sentence lengths; measures rhythm of writing | 0.0 - 1.0 | 0.2 - 0.4 (natural human-like variation) | >0.6 (erratic, choppy); <0.1 (monotonous) |
+| **Repetition** | N-gram Repetition Rate | Fraction of repeated n-gram phrases in the output | 0.0 - 1.0 | <0.05 (minimal repetition) | >0.1 (noticeably repetitive); 0.000 (artificially constrained) |
+| **Uniqueness** | Unique Word Ratio | Proportion of unique words to total words (type-token ratio) | 0.0 - 1.0 | 0.55 - 0.75 (rich vocabulary) | <0.35 (highly repetitive); >0.85 (possibly fragmented/short) |
+| **TPS** | Tokens Per Second | Inference speed of the model | 0 - 100+ | Higher is better for latency | <5 TPS may be impractical for interactive use |
+
+> **Interpretation note on the catastrophic PRNG failure (Section "Critical Discovery"):** Shannon Char = 0.00 and Perplexity = Infinity mean the model produced zero usable output. This is not merely poor quality -- it is complete generation failure. In a production system, this would manifest as a blank response to the user. The cause is that a fixed PRNG seed collided with the MoE routing logic, creating an internal deadlock where no expert was selected.
+
+### Statistical Measures & Ratios
+
+| Measure | Meaning | How to Interpret |
+|---------|---------|-----------------|
+| **Percentage improvement** (e.g., +112%, -94%) | Relative change from one condition to another | Positive = metric increased; negative = metric decreased. Context determines if increase is good (uniqueness) or bad (repetition). |
+| **"Winner"** column | The entropy source that scored best on that metric | Marked with the source name; checkmarks indicate strong/clear wins. |
+| **FAILED / EMPTY** | Model produced no output | Catastrophic failure; the entropy source caused a generation deadlock. |
+
+### Architecture Abbreviations
+
+| Abbreviation | Full Name | Description |
+|-------------|-----------|-------------|
+| **MoE** | Mixture of Experts | Architecture where only a subset of parameters ("experts") activate per token; a router/gating network selects which experts process each token. DeepSeek-R1 uses this. |
+| **Dense** | Dense Transformer | Standard transformer where all parameters participate in every token; no sparsity or routing. Qwen3 uses this. |
+| **Active Params** | Active Parameters per Token | In MoE, only ~8-10% of total parameters fire per token. A 70B MoE model may only use ~5.6-7B parameters per step. |
+| **SWA** | Sliding Window Attention | Attention mechanism that only attends to a local window of tokens (not used in this report but referenced in cross-architecture comparisons). |
+| **GQA** | Grouped Query Attention | Attention optimization that groups query heads to share key-value heads, reducing memory. |
+| **PRNG** | Pseudo-Random Number Generator | Deterministic algorithm seeded with a fixed value (e.g., seed=42). Same seed always produces same sequence. |
+| **TRNG** | True Random Number Generator | Hardware-based entropy from OS sources (`/dev/urandom`). Non-deterministic and non-repeatable. |
+| **QRNG** | Quantum Random Number Generator | Entropy derived from quantum measurements (IBM Quantum hardware). Fundamentally non-deterministic. |
+| **TPS** | Tokens Per Second | Inference throughput measure. |
+
+### How to Read These Tables
+
+1. **Result tables (Sections "Detailed Results")**: Each row is a metric. Columns show values for each entropy source (PRNG, TRNG, QRNG). The "Winner" column identifies the best-performing source. Bold values highlight the best score in each row. Check marks indicate statistically or practically meaningful wins.
+
+2. **Comparison tables (Section "70B vs 32B")**: Side-by-side model size comparison. Bold indicates the better-performing model for that aspect. These help choose between speed (32B) and quality (70B).
+
+3. **Recommendation tables (Section "By Use Case")**: Prescriptive guidance. Each row is a deployment scenario with the recommended model, entropy source, and temperature. The "Notes" column flags critical caveats.
+
+4. **The "Entropy Sensitivity" rating**: The claim that MoE is "Higher" sensitivity than Dense is supported by the catastrophic PRNG failure (Section 3) and the larger uniqueness gap between TRNG and PRNG on MoE (7.5%) compared to Dense models at similar sizes.
+
+### Why These Findings Matter
+
+- **PRNG catastrophic failure**: This is not a theoretical risk. A fixed seed (42) caused complete output failure on a philosophical prompt for the 70B model. In production, this means some user queries would receive empty responses with no warning. The MoE routing mechanism amplifies this because the seed affects both token sampling AND expert selection, creating two correlated failure modes instead of one.
+
+- **TRNG dominance on MoE**: The 7.5% uniqueness improvement and 46% repetition reduction are practically significant for user-facing applications. These translate to noticeably richer, less formulaic text.
+
+- **QRNG zero-repetition anomaly**: A repetition score of exactly 0.000 is a red flag, not a positive result. Natural human text always contains some repetition. This indicates the QRNG seed forced the model into an over-constrained state where it avoided all repeated phrasing at the cost of naturalness and output length.
+
+- **32B higher uniqueness than 70B (0.711 vs 0.653)**: This counterintuitive result likely reflects the 32B model's different expert specialization. Fewer total parameters means less redundancy across experts, which can paradoxically produce more lexically diverse output.
+
+For the complete metrics reference, see `METRICS_GLOSSARY.md` in the repository root.

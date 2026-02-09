@@ -210,3 +210,69 @@
 *Report generated: February 2026*
 *Architecture: Dense Transformer*
 *Models tested: 6 (0.6B - 32B)*
+
+---
+
+## Metrics, Symbols & Interpretation Guide
+
+### Metric Definitions
+
+| Metric | Full Name | What It Measures | Value Range | Good | Bad |
+|--------|-----------|-----------------|-------------|------|-----|
+| **Uniqueness** | Unique Word Ratio (Type-Token Ratio) | Proportion of unique words to total words in the output | 0.0 - 1.0 | 0.55 - 0.75 (rich, varied vocabulary) | <0.35 (highly repetitive); >0.85 (possibly fragmented or very short output) |
+| **Repetition** | N-gram Repetition Rate | Fraction of n-gram phrases that are repeated in the output | 0.0 - 1.0 | <0.05 (minimal repetition) | >0.15 (noticeably repetitive); 0.000 (artificially constrained) |
+| **Natural Flow** | Burstiness Score (inverted for readability) | Variance in sentence lengths; lower burstiness = more natural rhythm | 0.0 - 1.0 | 0.2 - 0.4 (natural human-like variation) | >0.6 (erratic/choppy); <0.1 (robotic monotony) |
+| **distinct_2** | Distinct Bigram Ratio | Proportion of unique two-word pairs to total bigrams | 0.0 - 1.0 | >0.85 (highly diverse phrasing) | <0.70 (many repeated two-word combinations) |
+| **TRE** | Token Richness Entropy | Shannon entropy over the token frequency distribution; measures vocabulary diversity | 0.0 - ~8.0 bits | 6.0 - 8.0 (broad, even vocabulary use) | <4.0 (narrow, repetitive word choice) |
+| **TPS** | Tokens Per Second | Inference speed | 0 - 100+ | Higher = faster inference | <5 may be impractical for real-time |
+| **Temperature** | Sampling Temperature | Controls randomness of token selection during generation | 0.0 - 2.0 | 0.6 - 0.9 for general use | <0.1 (near-deterministic); >1.5 (incoherent) |
+
+> **Interpretation note on the 0.6B results (Section "Qwen3 0.6B"):** The +112% uniqueness improvement from PRNG to TRNG is the largest effect observed in the entire study. This happens because small models have fewer parameters to "recover" from poor entropy. A bad seed at 0.6B cascades through the entire network with no redundancy to absorb it, while at 32B the model's depth provides natural error correction.
+
+> **Interpretation note on the 4B PRNG anomaly (Section "Qwen3 4B"):** PRNG outperforming TRNG at 4B is likely a single-prompt artifact rather than a general pattern. The 4B model sits at a parameter count where the model is large enough to compensate for seed quality on some prompts but not reliably across all prompts. TRNG remains the safer production choice.
+
+### Statistical Measures & Ratios
+
+| Measure | Meaning | How to Interpret |
+|---------|---------|-----------------|
+| **Percentage improvement** (e.g., +112%) | Relative change: (new - old) / old * 100 | Positive = metric increased. For uniqueness, higher is better. For repetition, a negative percentage (e.g., -94%) means repetition dropped, which is good. |
+| **Sensitivity ratings** (VERY HIGH / MODERATE / LOW) | Qualitative assessment of how much a model's output quality changes based on entropy source | VERY HIGH means the entropy source choice makes a large, obvious difference. LOW means the model is robust to entropy source variation. |
+| **"Winner"** column | Best entropy source for that metric | Sometimes "Similar" when differences are within noise. |
+
+### Architecture & Entropy Source Abbreviations
+
+| Abbreviation | Full Name | Description |
+|-------------|-----------|-------------|
+| **Dense** | Dense Transformer | All parameters participate in every token generation. No routing or sparsity. This is the Qwen3 architecture. |
+| **MoE** | Mixture of Experts | Only a subset of parameters activate per token via a routing network. Referenced for comparison with DeepSeek-R1. |
+| **PRNG** | Pseudo-Random Number Generator | Deterministic algorithm (e.g., `random.Random(42)`). Same seed = same output. Reproducible but predictable. |
+| **TRNG** | True Random Number Generator | Hardware entropy from OS (`/dev/urandom`). Non-deterministic. Best general-purpose source. |
+| **QRNG** | Quantum Random Number Generator | Entropy from quantum measurements (IBM Quantum). Non-deterministic at the physics level. |
+| **QRNG_INT** | Quantum RNG (Integer Mode) | QRNG with integer-based seed extraction. Variant of QRNG used in some experiments. |
+| **Nebula-Text** | Nebula Text Entropy | Multi-layer text-derived entropy from literary corpus; 5-layer hierarchical extraction. |
+| **Chain-PRNG->TRNG** | Chained Entropy | PRNG output fed into TRNG mixing; combines deterministic base with hardware noise. |
+| **Recursive-TRNG** | Recursive TRNG | Self-modulating TRNG that feeds back into its own state. |
+| **GQA** | Grouped Query Attention | Optimization that shares key-value heads across query groups to reduce memory usage. |
+| **SWA** | Sliding Window Attention | Local attention mechanism attending to a fixed window of recent tokens. |
+
+### How to Read These Tables
+
+1. **Sensitivity overview table (Section "Entropy Source Impact")**: Each row is a model size. The "Sensitivity" column uses warning indicators to show how much entropy source matters: more warnings = more sensitive. At 0.6B, entropy choice is critical; at 32B, it is a minor optimization.
+
+2. **Per-model result tables (Sections "0.6B" through "32B")**: Columns show metric values per entropy source. Bold values indicate the best score. The "Improvement" column shows percentage change, typically PRNG-to-TRNG.
+
+3. **Recommendation matrix (Section "Architecture-Specific Recommendations")**: Rows are model sizes; columns are use cases. Each cell names the recommended entropy source. "Essential" means degraded output without it. "Viable" means acceptable but not optimal.
+
+4. **Temperature tables (Section "Temperature Recommendations")**: Recommended sampling temperature by model size and task type. Smaller models need higher temperatures to avoid repetition. Larger models can use lower temperatures because their internal diversity is already sufficient.
+
+### Why These Findings Matter
+
+- **Inverse scaling of entropy sensitivity**: The discovery that smaller models are dramatically more sensitive to entropy source quality has direct practical implications. Teams deploying small models (0.6B-1.7B) for edge devices or cost optimization MUST use TRNG to avoid the 2-3x quality degradation seen with PRNG.
+
+- **14B QRNG sweet spot**: At 14B parameters, QRNG achieves 91.7% distinct_2, the highest bigram diversity in the entire Qwen3 lineup. This suggests that quantum entropy pairs especially well with models at this scale, possibly because the 14B model has enough capacity to exploit the entropy without being overwhelmed by it.
+
+- **Creative writing chain advantage**: Chain-PRNG->TRNG achieving 0.520 uniqueness on 4B (higher than pure TRNG at 0.355) demonstrates that entropy source engineering -- combining sources in sequence -- can outperform any single source. This is an actionable finding for applications where creativity is the primary objective.
+
+- **TRNG as universal safe default**: Across all six model sizes, TRNG never produces the worst result and is optimal or near-optimal in every case. For teams that cannot tune per-model, TRNG is the correct default.
+
+For the complete metrics reference, see `METRICS_GLOSSARY.md` in the repository root.

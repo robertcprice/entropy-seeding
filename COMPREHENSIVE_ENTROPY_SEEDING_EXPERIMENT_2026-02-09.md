@@ -508,6 +508,157 @@ These results strongly support the SHA256 Paradox hypothesis: even when entropy 
 
 ---
 
+## Appendix: Complete Metrics & Symbols Reference
+
+> A standalone version of this glossary is available at `METRICS_GLOSSARY.md`.
+
+### A.1 — Metrics Glossary
+
+All metrics used in this report are defined below with their full names, conceptual formulas, value ranges, and interpretation guidance.
+
+| Abbreviation | Full Name | Description | Formula Concept | Range | Good (High Diversity) | Bad (Low Diversity) |
+|:-------------|:----------|:------------|:----------------|:------|:----------------------|:--------------------|
+| `shannon_char` | Character-Level Shannon Entropy | Information content per character in the output text. Measures how unpredictable each character is. | H = -sum(p(c) * log2(p(c))) over all characters c | 0 to ~4.7 bits (English text) | Higher = more varied character usage (>4.5 typical for rich text) | Lower = repetitive character patterns (<4.0 suggests degenerate output) |
+| `shannon_word` | Word-Level Shannon Entropy | Information content per word token. Captures vocabulary richness at the word level. | H = -sum(p(w) * log2(p(w))) over all words w | 0 to ~12 bits (depends on vocabulary size) | Higher = broader vocabulary usage (>8.0 typical for creative text) | Lower = narrow vocabulary, repeated phrases (<6.0 concerning) |
+| `word_diversity` / `ttr` | Type-Token Ratio (TTR) | Fraction of unique words in the total output. The simplest lexical diversity measure. | unique_words / total_words | 0.0 to 1.0 | Higher = more unique words (>0.5 for mid-length text) | Lower = heavy word repetition (<0.3 indicates severe repetition) |
+| `distinct_2` / `D2` | Distinct-2 (Bigram Diversity) | Fraction of unique word bigrams out of all bigrams. Captures phrase-level diversity beyond single words. | unique_bigrams / total_bigrams | 0.0 to 1.0 | Higher = more varied phrasing (>0.85 excellent) | Lower = repeated phrases and patterns (<0.7 concerning) |
+| `repetition_ratio` | Repetition Ratio | Complement of TTR: the fraction of words that are repeats. | 1 - TTR | 0.0 to 1.0 | Lower = less repetition (<0.5 for mid-length text) | Higher = more repetition (>0.7 indicates severe issues) |
+| `perplexity` | Cross-Entropy Perplexity | How surprised a reference language model is by the generated text. Measures naturalness and fluency. | 2^(cross_entropy) or exp(cross_entropy) | 1 to infinity | Moderate values (50-300) indicate natural, non-trivial text | Very low (<10) = degenerate/repetitive; very high (>1000) or infinity = incoherent/collapsed |
+| `burstiness` | Output Burstiness | Measures temporal clustering of token patterns. High burstiness means vocabulary usage is uneven across the text. | Variance-to-mean ratio of inter-arrival times for repeated tokens | 0.0 to ~1.0+ | Lower = smoother, more evenly distributed vocabulary (<0.3 smooth) | Higher = clumpy repetition patterns (>0.5 bursty) |
+| `hidden_entropy_early` | Hidden Layer Entropy (Early) | Shannon entropy of activation distributions in the model's early transformer layers (layers 1-10). H200 GPU experiments only. | H(activations) at early layers | ~0.5 to ~2.5 | Higher = richer internal representations | Lower = collapsed internal state |
+| `hidden_entropy_mid` | Hidden Layer Entropy (Mid) | Shannon entropy of activation distributions in the model's middle transformer layers. H200 GPU experiments only. | H(activations) at mid layers | ~0.5 to ~2.5 | Higher = richer internal representations | Lower = collapsed internal state |
+| `hidden_entropy_late` | Hidden Layer Entropy (Late) | Shannon entropy of activation distributions in the model's final transformer layers. The metric most affected by entropy source changes. | H(activations) at late layers | ~0.5 to ~2.5 | Higher = richer pre-output representations | Lower = information bottleneck before token selection |
+| `hidden_entropy_mean` | Hidden Layer Entropy (Mean) | Average of early, mid, and late hidden layer entropy. Summarizes overall internal representation richness. | mean(early, mid, late) | ~0.5 to ~2.5 | Higher = richer overall internal state | Lower = overall internal collapse |
+| `length_words` | Output Length (Words) | Total word count of the generated output. A control metric to detect length confounds. | count(words) | 0 to unbounded | Context-dependent; not inherently good or bad | Very short (<50) may indicate generation failure |
+| `uniqueness` | Uniqueness Score | Proportion of unique content in the output, accounting for both word and phrase novelty. Used in DeepSeek analysis. | Composite of unique n-gram ratios | 0.0 to 1.0 | Higher = more novel content (>0.6) | Lower = heavy repetition (<0.5) |
+| `tsa` | Text Similarity Average | Mean pairwise cosine similarity between outputs in a comparison group. Measures how alike outputs are. | mean(cosine_sim(output_i, output_j)) for all pairs | 0.0 to 1.0 | Lower = more diverse outputs across samples | Higher = outputs converging to same text (>0.8 near-identical) |
+| `tre` | Text Repetition Entropy | Entropy computed specifically over repeated text segments. Captures the diversity within the repetitions themselves. | H over repeated n-gram distribution | 0 to unbounded | Higher = diverse repetition patterns (less concerning) | Lower = same phrases repeated (mechanical repetition) |
+
+### A.2 — Statistical Measures & Significance Thresholds
+
+| Measure | Full Name | What It Tests | Significance Threshold | Interpretation |
+|:--------|:----------|:--------------|:-----------------------|:---------------|
+| Wilcoxon p | Wilcoxon Signed-Rank Test p-value | Whether paired samples (e.g., same prompt, different entropy source) differ in central tendency. Non-parametric; does not assume normality. | p < 0.05 = significant | Low p means the two conditions reliably differ; this test is preferred when sample sizes are small or distributions are non-normal. |
+| t-test p | Student's t-test p-value | Whether two group means differ, assuming approximately normal distributions. Parametric complement to Wilcoxon. | p < 0.05 = significant | Low p means the mean difference is unlikely under the null hypothesis. Used alongside Wilcoxon for robustness. |
+| Cohen's d | Cohen's d Effect Size | The magnitude of the difference between two groups in standard deviation units, independent of sample size. | d < 0.2 = negligible; 0.2-0.5 = small; 0.5-0.8 = medium; > 0.8 = large | Sign indicates direction (+d means second group higher). A significant p-value with small d means the effect is real but practically unimportant. |
+| Bootstrap p | Bootstrap Permutation p-value | Whether the observed difference would arise by chance, estimated by resampling. Does not assume any distribution shape. | p < 0.05 (or equivalently, 1-p > 0.95 for one-sided) | Used in H200 experiments where sample sizes allow resampling. More robust than parametric tests for non-standard distributions. |
+| 95% CI | 95% Confidence Interval | The range within which the true population difference lies with 95% confidence. | CI excluding zero = significant | If the interval [lower, upper] does not contain 0, the effect is statistically significant at alpha=0.05. Width indicates precision. |
+| KW H | Kruskal-Wallis H Statistic | Whether three or more independent groups differ. Non-parametric alternative to one-way ANOVA. | p < 0.05 = at least one group differs | Large H with small p means at least one entropy source produces meaningfully different results. Used for 3-way source comparisons. |
+| CV | Coefficient of Variation | Ratio of standard deviation to mean, expressed as a percentage. Measures relative variability. | Context-dependent (not a hypothesis test) | CV < 5% = highly consistent; 5-10% = moderate variation; >10% = high variation. Used to compare inter-sample consistency across entropy sources. |
+| F-ratio | F-ratio (ANOVA-style) | Ratio of between-group variance to within-group variance. Quantifies how much of the total variation is explained by group membership. | F >> 1 with p < 0.05 = significant group effect | F near 1 means groups are indistinguishable. F = 0.0099 (as in Mistral) means entropy source explains <1% of variance. |
+| Mann-Whitney U | Mann-Whitney U Test | Whether one of two independent groups tends to have larger values than the other. Non-parametric rank test. | p < 0.05 = significant | Used when comparing two entropy sources without paired structure. Robust to outliers and non-normal distributions. |
+
+### A.3 — Symbols & Notation Key
+
+| Symbol | Meaning | Context in This Report |
+|:-------|:--------|:-----------------------|
+| ✅ | Complete / Passed | Model run finished successfully with valid data |
+| 🔄 | In Progress / Running | Model run currently executing |
+| ⏳ | Queued / Pending | Model run scheduled but not yet started |
+| ↓ | Decrease | Metric declining across turns or conditions (e.g., "↓ -23.4%") |
+| ↑ | Increase | Metric increasing across turns or conditions (e.g., "↑ +5.0%") |
+| ∞ | Infinity | Perplexity = infinity indicates complete output collapse (division by zero or degenerate distribution) |
+| FAIL | Complete Generation Failure | Model produced all-zero or empty output; no valid text generated |
+| DEGRADED | Partial Generation Failure | Model produced output but with severely reduced quality (e.g., low Shannon + low uniqueness) |
+| REVERSAL | Effect Direction Inversion | The expected relationship between entropy source and output quality inverts at a particular scale (e.g., PRNG becomes best at 72B) |
+| ** | Highly Significant | Statistical test result with p < 0.01 (used in bold formatting for emphasis) |
+| * | Significant | Statistical test result with p < 0.05 |
+| ns | Not Significant | Statistical test result with p >= 0.05 |
+| [CI excl. 0] | Confidence Interval Excludes Zero | The 95% bootstrap CI does not contain zero, confirming statistical significance of the observed difference |
+| +0.05 / -0.03 | Signed Effect Size | Cohen's d values; positive means second condition is higher, negative means lower |
+| Trending | Near-Significant | p-value between 0.05 and 0.10; suggestive but not confirmatory |
+
+### A.4 — Entropy Source Definitions
+
+| Abbreviation | Full Name | Implementation | Quality Tier |
+|:-------------|:----------|:---------------|:-------------|
+| PRNG | Pseudo-Random Number Generator | `random.Random(42).getrandbits(64)` — Mersenne Twister with fixed seed 42. Deterministic and reproducible. | Lowest (deterministic, periodic) |
+| TRNG | True Random Number Generator | `secrets.token_bytes(8)` — Hardware entropy from OS (`/dev/urandom` on macOS, Apple Secure Enclave on M-series). Non-deterministic. | High (hardware-sourced, non-deterministic) |
+| QRNG | Quasi-Quantum Random Number Generator | `SHA256(timestamp_ns + secrets.token_hex(16) + counter)[:8]` — NOT true quantum. Hybrid of TRNG + timing + hash mixing. Used in Ollama experiments. | Medium (mixed sources, SHA256-compressed) |
+| QRNG-IBM | IBM Quantum Random Number Generator | Real quantum random bits from IBM ibm_fez backend (127-qubit Eagle processor). Measurement outcomes of quantum circuits. Used in H200/DeepSeek experiments. | Highest (genuine quantum randomness) |
+| qrng_cached | Cached Quantum RNG | Pre-generated QRNG-IBM bits stored locally for reproducible experiments. Same quantum source, deterministic replay. Used in H200 scale experiments. | Highest source, cached delivery |
+| self_seed_sfc | Self-Seed (SFC variant) | Model's own hidden state activations from a calibration pass fed back as the generation seed. SFC = Self-Feeding Chain variant. | Experimental (model-derived) |
+| self_seed_sfs | Self-Seed (SFS variant) | Model's own hidden state activations fed back as seed. SFS = Self-Feeding State variant. Differs from SFC in which layers are sampled. | Experimental (model-derived) |
+| hidden_variance | Hidden Layer Variance Seed | Variance of hidden layer activation tensors used as the entropy seed. Captures the model's internal uncertainty. | Experimental (model-derived) |
+| nebula_bible | Nebula Bible Entropy | Entropy extracted from the King James Bible via the Nebula 5-layer hierarchical text extraction algorithm. Text-derived entropy source. | Experimental (text-derived) |
+| neural | Neural Entropy | Entropy derived from neural network activation patterns (MLP projections from mid-layers). Used in 0.6B and cross-architecture experiments. | Experimental (neural-derived) |
+
+### A.5 — Architecture Abbreviations
+
+| Abbreviation | Full Name | Description | Models Using It |
+|:-------------|:----------|:------------|:----------------|
+| SWA | Sliding Window Attention | Attention mechanism that limits each token's context to a fixed-size local window, reducing memory usage while maintaining local coherence. | Mistral 7B |
+| GQA | Grouped-Query Attention | Attention mechanism where multiple query heads share a single key-value head, reducing KV-cache memory by the grouping factor. | Llama 3.2 1B, Llama 3.1 8B |
+| MoE | Mixture of Experts | Architecture where only a subset of "expert" sub-networks activate per token, allowing larger total parameters with lower compute cost. | DeepSeek R1 (32B, 70B), Mixtral 8x22B |
+| Dense | Dense (Full) Architecture | Standard transformer where all parameters are active for every token. Includes both full attention and GQA variants. | Qwen3 (0.6B-14B), Qwen2.5-72B, Gemma2-27B |
+| H200 | NVIDIA H200 GPU | High-memory (141GB HBM3e) GPU used for large-scale experiments. Enables hidden layer entropy extraction not possible on consumer hardware. | H200 experiments (8B, 14B, 72B, DeepSeek, Gemma2, Mixtral) |
+| MLP | Multi-Layer Perceptron | Feed-forward neural network layers within each transformer block. In this research, MLP projections from mid-layers are used to extract neural entropy. | Neural entropy source, 8B ablation studies |
+
+### A.6 — How to Read the Tables in This Report
+
+This section provides worked examples showing how to interpret specific data rows from the report.
+
+**Example 1: Reading a Single-Turn Aggregate Row**
+
+From the qwen3:4b results table:
+
+> | shannon_word | 8.344 ± 0.271 | 8.377 ± 0.259 | 8.369 ± 0.256 | +0.40% | +0.30% |
+
+Interpretation: Across 15 prompts with 5 samples each, PRNG produced mean word-level Shannon entropy of 8.344 bits (std dev 0.271). TRNG produced 8.377 (slightly higher), and QRNG produced 8.369. The "+0.40%" means TRNG was 0.40% higher than PRNG; "+0.30%" means QRNG was 0.30% higher than PRNG. Both differences are tiny and well within the standard deviation, indicating no practical distinction between sources.
+
+**Example 2: Reading a Significance Test Row**
+
+From the H200 Qwen3-14B significance results:
+
+> | qrng_cached vs prng | TTR | **+0.045** | **0.9876** | [+0.006, +0.085] | **YES** |
+
+Interpretation: QRNG cached produced TTR (type-token ratio) that was 0.045 higher than PRNG. The bootstrap p-value of 0.9876 means there is a 98.76% probability this difference is real (equivalently, only a 1.24% chance it arose by chance). The 95% confidence interval [+0.006, +0.085] does not contain zero, confirming significance. The "YES" confirms this passes the p < 0.05 threshold. Practical meaning: QRNG cached gives approximately 4.5 percentage points more unique words than PRNG at the 14B scale.
+
+**Example 3: Reading a 72B Reversal Row**
+
+From the Qwen2.5-72B reversal table:
+
+> | self_seed_sfc | **-0.032** | **0.005** | [-0.055, -0.007] | **YES** |
+
+Interpretation: At 72B, self_seed_sfc produced D2 (bigram diversity) that was 0.032 LOWER than PRNG. The bootstrap p = 0.005 means only a 0.5% chance this is noise. The CI [-0.055, -0.007] is entirely negative and excludes zero. This is the "reversal" effect: at extreme scale, the model's own hidden states as a seed actually REDUCE output diversity compared to simple PRNG. This contradicts the hypothesis that richer entropy sources always help.
+
+**Example 4: Reading a Multi-Turn Diversity Row**
+
+From the qwen3:4b multi-turn table:
+
+> | Storytelling | QRNG | 0.611 | 0.560 | 0.451 | ↓ -26.2% |
+
+Interpretation: In the storytelling conversation seeded with QRNG, word diversity started at 0.611 (Turn 1), dropped to 0.560 (Turn 2), and fell to 0.451 (Turn 3). The "↓ -26.2%" means Turn 3 diversity is 26.2% lower than Turn 1. This is the "vocabulary collapse" phenomenon: as conversation context accumulates, the model increasingly repeats itself. The downward arrow (↓) visually signals the declining trend. QRNG showed the steepest storytelling collapse of all three sources.
+
+### A.7 — Significance Interpretation Guide
+
+**What does p < 0.05 mean?**
+
+A p-value below 0.05 means that if there were truly no difference between entropy sources (the null hypothesis), you would observe a difference this large or larger less than 5% of the time by random chance alone. It does NOT mean there is a 95% probability the effect is real — it means the data are incompatible with the null hypothesis at the 5% level. In this research, p < 0.05 is used as the standard threshold, with p < 0.01 noted as "highly significant."
+
+**Why do confidence intervals excluding zero matter?**
+
+A 95% confidence interval represents the range of plausible true effect sizes given the data. When a CI for a difference excludes zero (e.g., [+0.006, +0.085]), it means zero difference is outside the plausible range, which is mathematically equivalent to p < 0.05 significance. CIs are more informative than p-values alone because they also convey: (a) the magnitude of the effect (center of the interval), (b) the precision of the estimate (width of the interval), and (c) the direction of the effect (sign of the bounds). In this report, "[CI excl. 0]" is shorthand for "the 95% bootstrap confidence interval does not contain zero."
+
+**How to interpret effect sizes (Cohen's d)**
+
+Cohen's d expresses the difference between two groups in units of standard deviation. The conventional benchmarks are:
+
+| d Range | Label | Practical Meaning in This Research |
+|:--------|:------|:-----------------------------------|
+| |d| < 0.2 | Negligible | Entropy sources are functionally interchangeable. No practical reason to prefer one over another. |
+| 0.2 <= |d| < 0.5 | Small | A detectable but minor effect. Might matter in aggregate over thousands of generations but invisible in individual outputs. |
+| 0.5 <= |d| < 0.8 | Medium | A meaningful effect. An informed reader could plausibly distinguish outputs from different entropy sources in a blind comparison. |
+| |d| >= 0.8 | Large | A substantial effect. Outputs from different entropy sources are noticeably different in quality or character. |
+
+In this research, most effect sizes are negligible to small (d < 0.5). The largest reliable effects occur at the 14B scale (QRNG cached vs PRNG on TTR) and in the 72B reversal. The DeepSeek collapse scenarios represent effectively infinite effect sizes (complete output failure vs. success), but these are binary outcomes rather than continuous effect sizes.
+
+**Multiple comparisons caveat**
+
+This research performs many statistical tests across models, metrics, and entropy sources. With 42 comparisons per model, approximately 2 tests would be expected to reach p < 0.05 by chance alone (the "multiple comparisons problem"). The finding that significant results cluster in specific, theoretically motivated patterns (QRNG affecting late-layer entropy; 72B reversal across multiple sources) rather than being randomly distributed across tests strengthens confidence that these are genuine effects rather than statistical artifacts.
+
+---
+
 ## Pending Results
 
 ### qwen3:8b (Running)

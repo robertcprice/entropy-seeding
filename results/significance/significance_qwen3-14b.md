@@ -24,6 +24,8 @@
 | hidden_variance_vs_prng | -0.0112 | [-0.0956, 0.0619] | 0.414 | 14 |
 | nebula_bible_vs_prng | 0.0276 | [-0.0129, 0.0697] | 0.907 | 14 |
 
+> **Interpretation:** No entropy source reaches statistical significance for distinct_2 on the 14B model. nebula_bible (P=0.907) and qrng_cached (P=0.887) show weak positive trends but confidence intervals include zero. Notably, the 14B baseline (0.8909) is already substantially higher than the 8B baseline (0.8256), leaving less room for improvement. The larger model's higher baseline bigram diversity may limit the ceiling for entropy-source-driven gains.
+
 ## ttr
 
 | Source | Mean | Prompts |
