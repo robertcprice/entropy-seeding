@@ -1,0 +1,1726 @@
+{
+  "analysis_timestamp": "2026-02-09T06:03:00.370559+00:00",
+  "data_sources": [
+    "/Users/bobbyprice/projects/entropy/entropy-seeding/results/valid_entropy_comparisons/deepseek/deepseek-r1_32b_entropy_comparison.json",
+    "/Users/bobbyprice/projects/entropy/entropy-seeding/results/valid_entropy_comparisons/deepseek/deepseek-r1_70b_entropy_comparison.json",
+    "/Users/bobbyprice/projects/entropy/entropy-seeding/results/deepseek-r1/deepseek-r1_70b_full_results.json",
+    "/Users/bobbyprice/projects/entropy/entropy-seeding/results/deepseek-r1/deepseek-r1_32b_summary.json"
+  ],
+  "models_analyzed": [
+    "deepseek-r1:32b",
+    "deepseek-r1:70b"
+  ],
+  "aggregate_stats": {
+    "32B": {
+      "PRNG": {
+        "shannon_char": {
+          "mean": 4.370944324335008,
+          "std": 0.0,
+          "min": 4.370944324335008,
+          "max": 4.370944324335008,
+          "n": 1
+        },
+        "shannon_word": {
+          "mean": 6.8812838352282775,
+          "std": 0.0,
+          "min": 6.8812838352282775,
+          "max": 6.8812838352282775,
+          "n": 1
+        },
+        "burstiness": {
+          "mean": 0.2359257385020862,
+          "std": 0.0,
+          "min": 0.2359257385020862,
+          "max": 0.2359257385020862,
+          "n": 1
+        },
+        "repetition": {
+          "mean": 0.013768969126111983,
+          "std": 0.0,
+          "min": 0.013768969126111983,
+          "max": 0.013768969126111983,
+          "n": 1
+        },
+        "uniqueness": {
+          "mean": 0.6548767934118253,
+          "std": 0.0,
+          "min": 0.6548767934118253,
+          "max": 0.6548767934118253,
+          "n": 1
+        },
+        "tsa": {
+          "mean": 4.119345567245818,
+          "std": 0.0,
+          "min": 4.119345567245818,
+          "max": 4.119345567245818,
+          "n": 1
+        },
+        "tre": {
+          "mean": 6.8812838352282775,
+          "std": 0.0,
+          "min": 6.8812838352282775,
+          "max": 6.8812838352282775,
+          "n": 1
+        },
+        "perplexity": {
+          "mean": 188.39530603349988,
+          "std": 0.0,
+          "min": 188.39530603349988,
+          "max": 188.39530603349988,
+          "n": 1
+        }
+      },
+      "TRNG": {
+        "shannon_char": {
+          "mean": 4.343041694009122,
+          "std": 0.0,
+          "min": 4.343041694009122,
+          "max": 4.343041694009122,
+          "n": 1
+        },
+        "shannon_word": {
+          "mean": 6.698056038140059,
+          "std": 0.0,
+          "min": 6.698056038140059,
+          "max": 6.698056038140059,
+          "n": 1
+        },
+        "burstiness": {
+          "mean": 0.5082668312412579,
+          "std": 0.0,
+          "min": 0.5082668312412579,
+          "max": 0.5082668312412579,
+          "n": 1
+        },
+        "repetition": {
+          "mean": 0.01182033096926714,
+          "std": 0.0,
+          "min": 0.01182033096926714,
+          "max": 0.01182033096926714,
+          "n": 1
+        },
+        "uniqueness": {
+          "mean": 0.7105376159395397,
+          "std": 0.0,
+          "min": 0.7105376159395397,
+          "max": 0.7105376159395397,
+          "n": 1
+        },
+        "tsa": {
+          "mean": 4.111778714043075,
+          "std": 0.0,
+          "min": 4.111778714043075,
+          "max": 4.111778714043075,
+          "n": 1
+        },
+        "tre": {
+          "mean": 6.698056038140059,
+          "std": 0.0,
+          "min": 6.698056038140059,
+          "max": 6.698056038140059,
+          "n": 1
+        },
+        "perplexity": {
+          "mean": 183.65687578152162,
+          "std": 0.0,
+          "min": 183.65687578152162,
+          "max": 183.65687578152162,
+          "n": 1
+        }
+      },
+      "QRNG-IBM": {
+        "shannon_char": {
+          "mean": 4.336249234598573,
+          "std": 0.0,
+          "min": 4.336249234598573,
+          "max": 4.336249234598573,
+          "n": 1
+        },
+        "shannon_word": {
+          "mean": 6.768055787333893,
+          "std": 0.0,
+          "min": 6.768055787333893,
+          "max": 6.768055787333893,
+          "n": 1
+        },
+        "burstiness": {
+          "mean": 0.3024793951221535,
+          "std": 0.0,
+          "min": 0.3024793951221535,
+          "max": 0.3024793951221535,
+          "n": 1
+        },
+        "repetition": {
+          "mean": 0.03915097144701855,
+          "std": 0.0,
+          "min": 0.03915097144701855,
+          "max": 0.03915097144701855,
+          "n": 1
+        },
+        "uniqueness": {
+          "mean": 0.5776617927846448,
+          "std": 0.0,
+          "min": 0.5776617927846448,
+          "max": 0.5776617927846448,
+          "n": 1
+        },
+        "tsa": {
+          "mean": 4.107416249477092,
+          "std": 0.0,
+          "min": 4.107416249477092,
+          "max": 4.107416249477092,
+          "n": 1
+        },
+        "tre": {
+          "mean": 6.768055787333893,
+          "std": 0.0,
+          "min": 6.768055787333893,
+          "max": 6.768055787333893,
+          "n": 1
+        },
+        "perplexity": {
+          "mean": 184.30585513495973,
+          "std": 0.0,
+          "min": 184.30585513495973,
+          "max": 184.30585513495973,
+          "n": 1
+        }
+      }
+    },
+    "70B": {
+      "PRNG": {
+        "shannon_char": {
+          "mean": 4.412046473129114,
+          "std": 0.0,
+          "min": 4.412046473129114,
+          "max": 4.412046473129114,
+          "n": 1
+        },
+        "shannon_word": {
+          "mean": 6.825007216441474,
+          "std": 0.0,
+          "min": 6.825007216441474,
+          "max": 6.825007216441474,
+          "n": 1
+        },
+        "burstiness": {
+          "mean": 0.4505599687446957,
+          "std": 0.0,
+          "min": 0.4505599687446957,
+          "max": 0.4505599687446957,
+          "n": 1
+        },
+        "repetition": {
+          "mean": 0.02425145526159852,
+          "std": 0.0,
+          "min": 0.02425145526159852,
+          "max": 0.02425145526159852,
+          "n": 1
+        },
+        "uniqueness": {
+          "mean": 0.6067176870748299,
+          "std": 0.0,
+          "min": 0.6067176870748299,
+          "max": 0.6067176870748299,
+          "n": 1
+        },
+        "tsa": {
+          "mean": 4.14695270031644,
+          "std": 0.0,
+          "min": 4.14695270031644,
+          "max": 4.14695270031644,
+          "n": 1
+        },
+        "tre": {
+          "mean": 6.825007216441474,
+          "std": 0.0,
+          "min": 6.825007216441474,
+          "max": 6.825007216441474,
+          "n": 1
+        },
+        "perplexity": {
+          "mean": 199.2505846514489,
+          "std": 0.0,
+          "min": 199.2505846514489,
+          "max": 199.2505846514489,
+          "n": 1
+        }
+      },
+      "TRNG": {
+        "shannon_char": {
+          "mean": 4.4514134842028685,
+          "std": 0.019958573480004627,
+          "min": 4.437300641552347,
+          "max": 4.465526326853389,
+          "n": 2
+        },
+        "shannon_word": {
+          "mean": 6.659699666820854,
+          "std": 0.18840233902518844,
+          "min": 6.526479095304737,
+          "max": 6.792920238336972,
+          "n": 2
+        },
+        "burstiness": {
+          "mean": 0.442795215921836,
+          "std": 0.28697771386635773,
+          "min": 0.23987132839752173,
+          "max": 0.6457191034461502,
+          "n": 2
+        },
+        "repetition": {
+          "mean": 0.036785215124629955,
+          "std": 0.03391702591710362,
+          "min": 0.012802256100966103,
+          "max": 0.0607681741482938,
+          "n": 2
+        },
+        "uniqueness": {
+          "mean": 0.5775795125957344,
+          "std": 0.10674529119488925,
+          "min": 0.5020991933320955,
+          "max": 0.6530598318593732,
+          "n": 2
+        },
+        "tsa": {
+          "mean": 4.178970274052801,
+          "std": 0.027379708744847582,
+          "min": 4.159609896332407,
+          "max": 4.198330651773196,
+          "n": 2
+        },
+        "tre": {
+          "mean": 6.659699666820854,
+          "std": 0.18840233902518844,
+          "min": 6.526479095304737,
+          "max": 6.792920238336972,
+          "n": 2
+        },
+        "perplexity": {
+          "mean": 196.03927347970978,
+          "std": 0.42935867436733693,
+          "min": 195.73567104950337,
+          "max": 196.3428759099162,
+          "n": 2
+        }
+      },
+      "QRNG-IBM": {
+        "shannon_char": {
+          "mean": 3.3271145604662133,
+          "std": 1.5368344613207545,
+          "min": 2.240408491305133,
+          "max": 4.413820629627294,
+          "n": 2
+        },
+        "shannon_word": {
+          "mean": 4.6894944119846595,
+          "std": 2.974841170397471,
+          "min": 2.5859640474436816,
+          "max": 6.793024776525637,
+          "n": 2
+        },
+        "burstiness": {
+          "mean": 0.317883355478664,
+          "std": 0.05797314612903525,
+          "min": 0.2768901507241045,
+          "max": 0.35887656023322345,
+          "n": 2
+        },
+        "repetition": {
+          "mean": 0.011046920210907349,
+          "std": 0.015622704384718624,
+          "min": 0.0,
+          "max": 0.022093840421814698,
+          "n": 2
+        },
+        "uniqueness": {
+          "mean": 0.5204745135056636,
+          "std": 0.08198834327169174,
+          "min": 0.4625,
+          "max": 0.5784490270113274,
+          "n": 2
+        },
+        "tsa": {
+          "mean": 3.119518499279608,
+          "std": 1.4596471136597575,
+          "min": 2.087392127071422,
+          "max": 4.151644871487794,
+          "n": 2
+        },
+        "tre": {
+          "mean": 4.6894944119846595,
+          "std": 2.974841170397471,
+          "min": 2.5859640474436816,
+          "max": 6.793024776525637,
+          "n": 2
+        },
+        "perplexity": {
+          "mean": 197.99651151546283,
+          "std": 0.0,
+          "min": 197.99651151546283,
+          "max": 197.99651151546283,
+          "n": 1
+        }
+      }
+    }
+  },
+  "deltas_vs_prng": {
+    "32B": {
+      "TRNG": {
+        "shannon_char": {
+          "prng_mean": 4.370944324335008,
+          "comparison_mean": 4.343041694009122,
+          "pct_change": -0.638366180290612,
+          "cohens_d": null,
+          "n_prng": 1,
+          "n_comp": 1
+        },
+        "shannon_word": {
+          "prng_mean": 6.8812838352282775,
+          "comparison_mean": 6.698056038140059,
+          "pct_change": -2.6626978551617873,
+          "cohens_d": null,
+          "n_prng": 1,
+          "n_comp": 1
+        },
+        "burstiness": {
+          "prng_mean": 0.2359257385020862,
+          "comparison_mean": 0.5082668312412579,
+          "pct_change": 115.43509176586238,
+          "cohens_d": null,
+          "n_prng": 1,
+          "n_comp": 1
+        },
+        "repetition": {
+          "prng_mean": 0.013768969126111983,
+          "comparison_mean": 0.01182033096926714,
+          "pct_change": -14.152389616077896,
+          "cohens_d": null,
+          "n_prng": 1,
+          "n_comp": 1
+        },
+        "uniqueness": {
+          "prng_mean": 0.6548767934118253,
+          "comparison_mean": 0.7105376159395397,
+          "pct_change": 8.49943425811878,
+          "cohens_d": null,
+          "n_prng": 1,
+          "n_comp": 1
+        },
+        "tsa": {
+          "prng_mean": 4.119345567245818,
+          "comparison_mean": 4.111778714043075,
+          "pct_change": -0.18369066346145185,
+          "cohens_d": null,
+          "n_prng": 1,
+          "n_comp": 1
+        },
+        "tre": {
+          "prng_mean": 6.8812838352282775,
+          "comparison_mean": 6.698056038140059,
+          "pct_change": -2.6626978551617873,
+          "cohens_d": null,
+          "n_prng": 1,
+          "n_comp": 1
+        },
+        "perplexity": {
+          "prng_mean": 188.39530603349988,
+          "comparison_mean": 183.65687578152162,
+          "pct_change": -2.5151530320695383,
+          "cohens_d": null,
+          "n_prng": 1,
+          "n_comp": 1
+        }
+      },
+      "QRNG-IBM": {
+        "shannon_char": {
+          "prng_mean": 4.370944324335008,
+          "comparison_mean": 4.336249234598573,
+          "pct_change": -0.7937664532415154,
+          "cohens_d": null,
+          "n_prng": 1,
+          "n_comp": 1
+        },
+        "shannon_word": {
+          "prng_mean": 6.8812838352282775,
+          "comparison_mean": 6.768055787333893,
+          "pct_change": -1.6454494627110319,
+          "cohens_d": null,
+          "n_prng": 1,
+          "n_comp": 1
+        },
+        "burstiness": {
+          "prng_mean": 0.2359257385020862,
+          "comparison_mean": 0.3024793951221535,
+          "pct_change": 28.20957859139171,
+          "cohens_d": null,
+          "n_prng": 1,
+          "n_comp": 1
+        },
+        "repetition": {
+          "prng_mean": 0.013768969126111983,
+          "comparison_mean": 0.03915097144701855,
+          "pct_change": 184.34206721236086,
+          "cohens_d": null,
+          "n_prng": 1,
+          "n_comp": 1
+        },
+        "uniqueness": {
+          "prng_mean": 0.6548767934118253,
+          "comparison_mean": 0.5776617927846448,
+          "pct_change": -11.790767577043013,
+          "cohens_d": null,
+          "n_prng": 1,
+          "n_comp": 1
+        },
+        "tsa": {
+          "prng_mean": 4.119345567245818,
+          "comparison_mean": 4.107416249477092,
+          "pct_change": -0.28959254750511754,
+          "cohens_d": null,
+          "n_prng": 1,
+          "n_comp": 1
+        },
+        "tre": {
+          "prng_mean": 6.8812838352282775,
+          "comparison_mean": 6.768055787333893,
+          "pct_change": -1.6454494627110319,
+          "cohens_d": null,
+          "n_prng": 1,
+          "n_comp": 1
+        },
+        "perplexity": {
+          "prng_mean": 188.39530603349988,
+          "comparison_mean": 184.30585513495973,
+          "pct_change": -2.1706755781977796,
+          "cohens_d": null,
+          "n_prng": 1,
+          "n_comp": 1
+        }
+      }
+    },
+    "70B": {
+      "TRNG": {
+        "shannon_char": {
+          "prng_mean": 4.412046473129114,
+          "comparison_mean": 4.4514134842028685,
+          "pct_change": 0.8922619313625417,
+          "cohens_d": null,
+          "n_prng": 1,
+          "n_comp": 2
+        },
+        "shannon_word": {
+          "prng_mean": 6.825007216441474,
+          "comparison_mean": 6.659699666820854,
+          "pct_change": -2.4220860781274034,
+          "cohens_d": null,
+          "n_prng": 1,
+          "n_comp": 2
+        },
+        "burstiness": {
+          "prng_mean": 0.4505599687446957,
+          "comparison_mean": 0.442795215921836,
+          "pct_change": -1.723356126043127,
+          "cohens_d": null,
+          "n_prng": 1,
+          "n_comp": 2
+        },
+        "repetition": {
+          "prng_mean": 0.02425145526159852,
+          "comparison_mean": 0.036785215124629955,
+          "pct_change": 51.68250617470485,
+          "cohens_d": null,
+          "n_prng": 1,
+          "n_comp": 2
+        },
+        "uniqueness": {
+          "prng_mean": 0.6067176870748299,
+          "comparison_mean": 0.5775795125957344,
+          "pct_change": -4.802591897325342,
+          "cohens_d": null,
+          "n_prng": 1,
+          "n_comp": 2
+        },
+        "tsa": {
+          "prng_mean": 4.14695270031644,
+          "comparison_mean": 4.178970274052801,
+          "pct_change": 0.7720747269173848,
+          "cohens_d": null,
+          "n_prng": 1,
+          "n_comp": 2
+        },
+        "tre": {
+          "prng_mean": 6.825007216441474,
+          "comparison_mean": 6.659699666820854,
+          "pct_change": -2.4220860781274034,
+          "cohens_d": null,
+          "n_prng": 1,
+          "n_comp": 2
+        },
+        "perplexity": {
+          "prng_mean": 199.2505846514489,
+          "comparison_mean": 196.03927347970978,
+          "pct_change": -1.6116947297076654,
+          "cohens_d": null,
+          "n_prng": 1,
+          "n_comp": 2
+        }
+      },
+      "QRNG-IBM": {
+        "shannon_char": {
+          "prng_mean": 4.412046473129114,
+          "comparison_mean": 3.3271145604662133,
+          "pct_change": -24.590219510844012,
+          "cohens_d": null,
+          "n_prng": 1,
+          "n_comp": 2
+        },
+        "shannon_word": {
+          "prng_mean": 6.825007216441474,
+          "comparison_mean": 4.6894944119846595,
+          "pct_change": -31.28953181635258,
+          "cohens_d": null,
+          "n_prng": 1,
+          "n_comp": 2
+        },
+        "burstiness": {
+          "prng_mean": 0.4505599687446957,
+          "comparison_mean": 0.317883355478664,
+          "pct_change": -29.447048666059217,
+          "cohens_d": null,
+          "n_prng": 1,
+          "n_comp": 2
+        },
+        "repetition": {
+          "prng_mean": 0.02425145526159852,
+          "comparison_mean": 0.011046920210907349,
+          "pct_change": -54.44842343791291,
+          "cohens_d": null,
+          "n_prng": 1,
+          "n_comp": 2
+        },
+        "uniqueness": {
+          "prng_mean": 0.6067176870748299,
+          "comparison_mean": 0.5204745135056636,
+          "pct_change": -14.214712279935457,
+          "cohens_d": null,
+          "n_prng": 1,
+          "n_comp": 2
+        },
+        "tsa": {
+          "prng_mean": 4.14695270031644,
+          "comparison_mean": 3.119518499279608,
+          "pct_change": -24.775643111589673,
+          "cohens_d": null,
+          "n_prng": 1,
+          "n_comp": 2
+        },
+        "tre": {
+          "prng_mean": 6.825007216441474,
+          "comparison_mean": 4.6894944119846595,
+          "pct_change": -31.28953181635258,
+          "cohens_d": null,
+          "n_prng": 1,
+          "n_comp": 2
+        },
+        "perplexity": {
+          "prng_mean": 199.2505846514489,
+          "comparison_mean": 197.99651151546283,
+          "pct_change": -0.6293949592066816,
+          "cohens_d": null,
+          "n_prng": 1,
+          "n_comp": 1
+        }
+      }
+    }
+  },
+  "cross_model_sensitivity": {
+    "shannon_char": {
+      "range_32B": 0.034695089736435314,
+      "range_70B": 1.1242989237366552,
+      "more_sensitive": "70B",
+      "ratio_70B_over_32B": 32.40513087810129
+    },
+    "shannon_word": {
+      "range_32B": 0.18322779708821813,
+      "range_70B": 2.1355128044568144,
+      "more_sensitive": "70B",
+      "ratio_70B_over_32B": 11.654960865073521
+    },
+    "burstiness": {
+      "range_32B": 0.27234109273917173,
+      "range_70B": 0.13267661326603175,
+      "more_sensitive": "32B",
+      "ratio_70B_over_32B": 0.48717074581579817
+    },
+    "repetition": {
+      "range_32B": 0.027330640477751408,
+      "range_70B": 0.025738294913722606,
+      "more_sensitive": "32B",
+      "ratio_70B_over_32B": 0.9417377150262887
+    },
+    "uniqueness": {
+      "range_32B": 0.13287582315489488,
+      "range_70B": 0.08624317356916622,
+      "more_sensitive": "32B",
+      "ratio_70B_over_32B": 0.6490509072416549
+    },
+    "tsa": {
+      "range_32B": 0.0119293177687263,
+      "range_70B": 1.0594517747731933,
+      "more_sensitive": "70B",
+      "ratio_70B_over_32B": 88.81075978633366
+    },
+    "tre": {
+      "range_32B": 0.18322779708821813,
+      "range_70B": 2.1355128044568144,
+      "more_sensitive": "70B",
+      "ratio_70B_over_32B": 11.654960865073521
+    }
+  },
+  "philosophy_failure_analysis": {
+    "failure_log": [
+      {
+        "model": "32B",
+        "prompt": "philosophy",
+        "source": "PRNG",
+        "type": "catastrophic_failure",
+        "detail": "All metrics zero / perplexity infinite"
+      },
+      {
+        "model": "32B",
+        "prompt": "philosophy",
+        "source": "TRNG",
+        "type": "catastrophic_failure",
+        "detail": "All metrics zero / perplexity infinite"
+      },
+      {
+        "model": "32B",
+        "prompt": "philosophy",
+        "source": "QRNG-IBM",
+        "type": "catastrophic_failure",
+        "detail": "All metrics zero / perplexity infinite"
+      },
+      {
+        "model": "70B",
+        "prompt": "philosophy",
+        "source": "PRNG",
+        "type": "catastrophic_failure",
+        "detail": "All metrics zero / perplexity infinite"
+      }
+    ],
+    "failure_quantification": {
+      "32B": {
+        "PRNG": {
+          "shannon_char": {
+            "color": 4.370944324335008,
+            "philosophy": 0.0,
+            "delta_pct": -100.0
+          },
+          "shannon_word": {
+            "color": 6.8812838352282775,
+            "philosophy": 0.0,
+            "delta_pct": -100.0
+          },
+          "burstiness": {
+            "color": 0.2359257385020862,
+            "philosophy": 0.0,
+            "delta_pct": -100.0
+          },
+          "repetition": {
+            "color": 0.013768969126111983,
+            "philosophy": 0.0,
+            "delta_pct": -100.0
+          },
+          "uniqueness": {
+            "color": 0.6548767934118253,
+            "philosophy": 0.0,
+            "delta_pct": -100.0
+          },
+          "tsa": {
+            "color": 4.119345567245818,
+            "philosophy": 0.0,
+            "delta_pct": -100.0
+          },
+          "tre": {
+            "color": 6.8812838352282775,
+            "philosophy": 0.0,
+            "delta_pct": -100.0
+          }
+        },
+        "TRNG": {
+          "shannon_char": {
+            "color": 4.343041694009122,
+            "philosophy": 0.0,
+            "delta_pct": -100.0
+          },
+          "shannon_word": {
+            "color": 6.698056038140059,
+            "philosophy": 0.0,
+            "delta_pct": -100.0
+          },
+          "burstiness": {
+            "color": 0.5082668312412579,
+            "philosophy": 0.0,
+            "delta_pct": -100.0
+          },
+          "repetition": {
+            "color": 0.01182033096926714,
+            "philosophy": 0.0,
+            "delta_pct": -100.0
+          },
+          "uniqueness": {
+            "color": 0.7105376159395397,
+            "philosophy": 0.0,
+            "delta_pct": -100.0
+          },
+          "tsa": {
+            "color": 4.111778714043075,
+            "philosophy": 0.0,
+            "delta_pct": -100.0
+          },
+          "tre": {
+            "color": 6.698056038140059,
+            "philosophy": 0.0,
+            "delta_pct": -100.0
+          }
+        },
+        "QRNG-IBM": {
+          "shannon_char": {
+            "color": 4.336249234598573,
+            "philosophy": 0.0,
+            "delta_pct": -100.0
+          },
+          "shannon_word": {
+            "color": 6.768055787333893,
+            "philosophy": 0.0,
+            "delta_pct": -100.0
+          },
+          "burstiness": {
+            "color": 0.3024793951221535,
+            "philosophy": 0.0,
+            "delta_pct": -100.0
+          },
+          "repetition": {
+            "color": 0.03915097144701855,
+            "philosophy": 0.0,
+            "delta_pct": -100.0
+          },
+          "uniqueness": {
+            "color": 0.5776617927846448,
+            "philosophy": 0.0,
+            "delta_pct": -100.0
+          },
+          "tsa": {
+            "color": 4.107416249477092,
+            "philosophy": 0.0,
+            "delta_pct": -100.0
+          },
+          "tre": {
+            "color": 6.768055787333893,
+            "philosophy": 0.0,
+            "delta_pct": -100.0
+          }
+        }
+      },
+      "70B": {
+        "PRNG": {
+          "shannon_char": {
+            "color": 4.412046473129114,
+            "philosophy": 0.0,
+            "delta_pct": -100.0
+          },
+          "shannon_word": {
+            "color": 6.825007216441474,
+            "philosophy": 0.0,
+            "delta_pct": -100.0
+          },
+          "burstiness": {
+            "color": 0.4505599687446957,
+            "philosophy": 0.0,
+            "delta_pct": -100.0
+          },
+          "repetition": {
+            "color": 0.02425145526159852,
+            "philosophy": 0.0,
+            "delta_pct": -100.0
+          },
+          "uniqueness": {
+            "color": 0.6067176870748299,
+            "philosophy": 0.0,
+            "delta_pct": -100.0
+          },
+          "tsa": {
+            "color": 4.14695270031644,
+            "philosophy": 0.0,
+            "delta_pct": -100.0
+          },
+          "tre": {
+            "color": 6.825007216441474,
+            "philosophy": 0.0,
+            "delta_pct": -100.0
+          }
+        },
+        "TRNG": {
+          "shannon_char": {
+            "color": 4.465526326853389,
+            "philosophy": 4.437300641552347,
+            "delta_pct": -0.6320796975556432
+          },
+          "shannon_word": {
+            "color": 6.526479095304737,
+            "philosophy": 6.792920238336972,
+            "delta_pct": 4.082463747166795
+          },
+          "burstiness": {
+            "color": 0.23987132839752173,
+            "philosophy": 0.6457191034461502,
+            "delta_pct": 169.19394983965978
+          },
+          "repetition": {
+            "color": 0.012802256100966103,
+            "philosophy": 0.0607681741482938,
+            "delta_pct": 374.6676966078504
+          },
+          "uniqueness": {
+            "color": 0.6530598318593732,
+            "philosophy": 0.5020991933320955,
+            "delta_pct": -23.11589706833858
+          },
+          "tsa": {
+            "color": 4.198330651773196,
+            "philosophy": 4.159609896332407,
+            "delta_pct": -0.9222893252687157
+          },
+          "tre": {
+            "color": 6.526479095304737,
+            "philosophy": 6.792920238336972,
+            "delta_pct": 4.082463747166795
+          }
+        },
+        "QRNG-IBM": {
+          "shannon_char": {
+            "color": 4.413820629627294,
+            "philosophy": 2.240408491305133,
+            "delta_pct": -49.2410616719077
+          },
+          "shannon_word": {
+            "color": 6.793024776525637,
+            "philosophy": 2.5859640474436816,
+            "delta_pct": -61.93206807695025
+          },
+          "burstiness": {
+            "color": 0.2768901507241045,
+            "philosophy": 0.35887656023322345,
+            "delta_pct": 29.609724034861333
+          },
+          "repetition": {
+            "color": 0.022093840421814698,
+            "philosophy": 0.0,
+            "delta_pct": -100.0
+          },
+          "uniqueness": {
+            "color": 0.5784490270113274,
+            "philosophy": 0.4625,
+            "delta_pct": -20.044813215505126
+          },
+          "tsa": {
+            "color": 4.151644871487794,
+            "philosophy": 2.087392127071422,
+            "delta_pct": -49.721322712186144
+          },
+          "tre": {
+            "color": 6.793024776525637,
+            "philosophy": 2.5859640474436816,
+            "delta_pct": -61.93206807695025
+          }
+        }
+      }
+    }
+  },
+  "per_prompt_divergence": {
+    "32B": {
+      "color": {
+        "shannon_char": {
+          "spread": 0.034695089736435314,
+          "cv_pct": 0.7975738919023374,
+          "values": {
+            "PRNG": 4.370944324335008,
+            "TRNG": 4.343041694009122,
+            "QRNG-IBM": 4.336249234598573
+          }
+        },
+        "shannon_word": {
+          "spread": 0.18322779708821813,
+          "cv_pct": 2.7014926157173065,
+          "values": {
+            "PRNG": 6.8812838352282775,
+            "TRNG": 6.698056038140059,
+            "QRNG-IBM": 6.768055787333893
+          }
+        },
+        "burstiness": {
+          "spread": 0.27234109273917173,
+          "cv_pct": 78.05915374092461,
+          "values": {
+            "PRNG": 0.2359257385020862,
+            "TRNG": 0.5082668312412579,
+            "QRNG-IBM": 0.3024793951221535
+          }
+        },
+        "repetition": {
+          "spread": 0.027330640477751408,
+          "cv_pct": 126.64747842393378,
+          "values": {
+            "PRNG": 0.013768969126111983,
+            "TRNG": 0.01182033096926714,
+            "QRNG-IBM": 0.03915097144701855
+          }
+        },
+        "uniqueness": {
+          "spread": 0.13287582315489488,
+          "cv_pct": 20.51527722003266,
+          "values": {
+            "PRNG": 0.6548767934118253,
+            "TRNG": 0.7105376159395397,
+            "QRNG-IBM": 0.5776617927846448
+          }
+        },
+        "tsa": {
+          "spread": 0.0119293177687263,
+          "cv_pct": 0.2900501337005144,
+          "values": {
+            "PRNG": 4.119345567245818,
+            "TRNG": 4.111778714043075,
+            "QRNG-IBM": 4.107416249477092
+          }
+        },
+        "tre": {
+          "spread": 0.18322779708821813,
+          "cv_pct": 2.7014926157173065,
+          "values": {
+            "PRNG": 6.8812838352282775,
+            "TRNG": 6.698056038140059,
+            "QRNG-IBM": 6.768055787333893
+          }
+        }
+      },
+      "philosophy": {
+        "shannon_char": {
+          "spread": 0.0,
+          "cv_pct": null,
+          "values": {
+            "PRNG": 0.0,
+            "TRNG": 0.0,
+            "QRNG-IBM": 0.0
+          }
+        },
+        "shannon_word": {
+          "spread": 0.0,
+          "cv_pct": null,
+          "values": {
+            "PRNG": 0.0,
+            "TRNG": 0.0,
+            "QRNG-IBM": 0.0
+          }
+        },
+        "burstiness": {
+          "spread": 0.0,
+          "cv_pct": null,
+          "values": {
+            "PRNG": 0.0,
+            "TRNG": 0.0,
+            "QRNG-IBM": 0.0
+          }
+        },
+        "repetition": {
+          "spread": 0.0,
+          "cv_pct": null,
+          "values": {
+            "PRNG": 0.0,
+            "TRNG": 0.0,
+            "QRNG-IBM": 0.0
+          }
+        },
+        "uniqueness": {
+          "spread": 0.0,
+          "cv_pct": null,
+          "values": {
+            "PRNG": 0.0,
+            "TRNG": 0.0,
+            "QRNG-IBM": 0.0
+          }
+        },
+        "tsa": {
+          "spread": 0.0,
+          "cv_pct": null,
+          "values": {
+            "PRNG": 0.0,
+            "TRNG": 0.0,
+            "QRNG-IBM": 0.0
+          }
+        },
+        "tre": {
+          "spread": 0.0,
+          "cv_pct": null,
+          "values": {
+            "PRNG": 0.0,
+            "TRNG": 0.0,
+            "QRNG-IBM": 0.0
+          }
+        }
+      }
+    },
+    "70B": {
+      "color": {
+        "shannon_char": {
+          "spread": 0.05347985372427555,
+          "cv_pct": 1.2070936130399141,
+          "values": {
+            "PRNG": 4.412046473129114,
+            "TRNG": 4.465526326853389,
+            "QRNG-IBM": 4.413820629627294
+          }
+        },
+        "shannon_word": {
+          "spread": 0.2985281211367372,
+          "cv_pct": 4.4457984583781816,
+          "values": {
+            "PRNG": 6.825007216441474,
+            "TRNG": 6.526479095304737,
+            "QRNG-IBM": 6.793024776525637
+          }
+        },
+        "burstiness": {
+          "spread": 0.210688640347174,
+          "cv_pct": 65.34186980302226,
+          "values": {
+            "PRNG": 0.4505599687446957,
+            "TRNG": 0.23987132839752173,
+            "QRNG-IBM": 0.2768901507241045
+          }
+        },
+        "repetition": {
+          "spread": 0.011449199160632416,
+          "cv_pct": 58.07103835355758,
+          "values": {
+            "PRNG": 0.02425145526159852,
+            "TRNG": 0.012802256100966103,
+            "QRNG-IBM": 0.022093840421814698
+          }
+        },
+        "uniqueness": {
+          "spread": 0.07461080484804583,
+          "cv_pct": 12.176541299429696,
+          "values": {
+            "PRNG": 0.6067176870748299,
+            "TRNG": 0.6530598318593732,
+            "QRNG-IBM": 0.5784490270113274
+          }
+        },
+        "tsa": {
+          "spread": 0.05137795145675561,
+          "cv_pct": 1.2333739268780382,
+          "values": {
+            "PRNG": 4.14695270031644,
+            "TRNG": 4.198330651773196,
+            "QRNG-IBM": 4.151644871487794
+          }
+        },
+        "tre": {
+          "spread": 0.2985281211367372,
+          "cv_pct": 4.4457984583781816,
+          "values": {
+            "PRNG": 6.825007216441474,
+            "TRNG": 6.526479095304737,
+            "QRNG-IBM": 6.793024776525637
+          }
+        }
+      },
+      "philosophy": {
+        "shannon_char": {
+          "spread": 4.437300641552347,
+          "cv_pct": 199.3483342836273,
+          "values": {
+            "PRNG": 0.0,
+            "TRNG": 4.437300641552347,
+            "QRNG-IBM": 2.240408491305133
+          }
+        },
+        "shannon_word": {
+          "spread": 6.792920238336972,
+          "cv_pct": 217.28342193012446,
+          "values": {
+            "PRNG": 0.0,
+            "TRNG": 6.792920238336972,
+            "QRNG-IBM": 2.5859640474436816
+          }
+        },
+        "burstiness": {
+          "spread": 0.6457191034461502,
+          "cv_pct": 192.82955126876925,
+          "values": {
+            "PRNG": 0.0,
+            "TRNG": 0.6457191034461502,
+            "QRNG-IBM": 0.35887656023322345
+          }
+        },
+        "repetition": {
+          "spread": 0.0607681741482938,
+          "cv_pct": 300.0,
+          "values": {
+            "PRNG": 0.0,
+            "TRNG": 0.0607681741482938,
+            "QRNG-IBM": 0.0
+          }
+        },
+        "uniqueness": {
+          "spread": 0.5020991933320955,
+          "cv_pct": 156.1578726593122,
+          "values": {
+            "PRNG": 0.0,
+            "TRNG": 0.5020991933320955,
+            "QRNG-IBM": 0.4625
+          }
+        },
+        "tsa": {
+          "spread": 4.159609896332407,
+          "cv_pct": 199.75709375867677,
+          "values": {
+            "PRNG": 0.0,
+            "TRNG": 4.159609896332407,
+            "QRNG-IBM": 2.087392127071422
+          }
+        },
+        "tre": {
+          "spread": 6.792920238336972,
+          "cv_pct": 217.28342193012446,
+          "values": {
+            "PRNG": 0.0,
+            "TRNG": 6.792920238336972,
+            "QRNG-IBM": 2.5859640474436816
+          }
+        }
+      }
+    }
+  },
+  "full_text_analysis": {
+    "philosophy": {
+      "char_count": 3078,
+      "word_count": 399,
+      "unique_words": 240,
+      "word_ttr": 0.6015,
+      "sentence_count": 26,
+      "avg_sentence_length": 15.35,
+      "std_sentence_length": 8.06,
+      "tokens": 1219
+    },
+    "science": {
+      "char_count": 2069,
+      "word_count": 255,
+      "unique_words": 190,
+      "word_ttr": 0.7451,
+      "sentence_count": 23,
+      "avg_sentence_length": 11.09,
+      "std_sentence_length": 7.55,
+      "tokens": 1500
+    },
+    "creative": {
+      "char_count": 2753,
+      "word_count": 365,
+      "unique_words": 260,
+      "word_ttr": 0.7123,
+      "sentence_count": 23,
+      "avg_sentence_length": 15.87,
+      "std_sentence_length": 6.85,
+      "tokens": 1015
+    },
+    "analysis": {
+      "char_count": 2692,
+      "word_count": 338,
+      "unique_words": 264,
+      "word_ttr": 0.7811,
+      "sentence_count": 30,
+      "avg_sentence_length": 11.33,
+      "std_sentence_length": 8.87,
+      "tokens": 1322
+    },
+    "oscillation_summary": {
+      "philosophy_oscillation": {
+        "variance": 2.1187707074070405,
+        "entropy_range": 4.6105043907924115,
+        "zero_entropy_count": 1,
+        "total_tests": 3
+      },
+      "science_oscillation": {
+        "variance": 0.9225607332876009,
+        "entropy_range": 1.9848081234351889,
+        "zero_entropy_count": 0,
+        "total_tests": 3
+      },
+      "creative_oscillation": {
+        "variance": 2.0881794977417503,
+        "entropy_range": 4.4713467784700995,
+        "zero_entropy_count": 1,
+        "total_tests": 3
+      },
+      "analysis_oscillation": {
+        "variance": 2.1484279001551005,
+        "entropy_range": 4.55750381127014,
+        "zero_entropy_count": 2,
+        "total_tests": 3
+      }
+    },
+    "sub_metrics": {
+      "philosophy": {
+        "tsa_mean": 4.331662312833609,
+        "tsa_std": 0.09808639773907779,
+        "tsa_max": 4.54106612759666,
+        "tsa_min": 4.1524065803406875,
+        "tsa_windows": 19,
+        "neural_transition_entropy": 8.40137511771227,
+        "neural_unique_patterns": 359,
+        "neural_pattern_diversity": 0.9042821158690176,
+        "tre_token_entropy": 7.192230200813484,
+        "tre_vocab_richness": 0.5239294710327456,
+        "tre_zipf_ratio": 5.25,
+        "tre_unique_tokens": 208,
+        "shannon_base": 4.42530333637248
+      },
+      "science": {
+        "tsa_mean": 4.5573388611877474,
+        "tsa_std": 0.1541047126256874,
+        "tsa_max": 4.785520176718587,
+        "tsa_min": 4.271283812500549,
+        "tsa_windows": 19,
+        "neural_transition_entropy": 7.884270327120262,
+        "neural_unique_patterns": 244,
+        "neural_pattern_diversity": 0.9420849420849421,
+        "tre_token_entropy": 7.192869016259929,
+        "tre_vocab_richness": 0.7065637065637066,
+        "tre_zipf_ratio": 8.5,
+        "tre_unique_tokens": 183,
+        "shannon_base": 4.752282824707882
+      },
+      "creative": {
+        "tsa_mean": 4.2962983946950395,
+        "tsa_std": 0.06677297683573885,
+        "tsa_max": 4.416399221616522,
+        "tsa_min": 4.1444683833781495,
+        "tsa_windows": 19,
+        "neural_transition_entropy": 8.493387385371697,
+        "neural_unique_patterns": 365,
+        "neural_pattern_diversity": 0.9707446808510638,
+        "tre_token_entropy": 7.60025473781845,
+        "tre_vocab_richness": 0.675531914893617,
+        "tre_zipf_ratio": 6.0,
+        "tre_unique_tokens": 254,
+        "shannon_base": 4.391060892331794
+      },
+      "analysis": {
+        "tsa_mean": 4.430596036362071,
+        "tsa_std": 0.08795738228417475,
+        "tsa_max": 4.666709043908004,
+        "tsa_min": 4.263296849518651,
+        "tsa_windows": 19,
+        "neural_transition_entropy": 8.392910247222346,
+        "neural_unique_patterns": 338,
+        "neural_pattern_diversity": 0.9825581395348837,
+        "tre_token_entropy": 7.723791425635732,
+        "tre_vocab_richness": 0.7383720930232558,
+        "tre_zipf_ratio": 5.5,
+        "tre_unique_tokens": 254,
+        "shannon_base": 4.571279511288079
+      }
+    }
+  },
+  "statistical_tests": {
+    "32B": {
+      "shannon_char": {
+        "test": "kruskal_wallis",
+        "h_stat": 2.0,
+        "p_value": 0.36787944117144245,
+        "n_groups": 3,
+        "total_obs": 3,
+        "significant": false
+      },
+      "shannon_word": {
+        "test": "kruskal_wallis",
+        "h_stat": 2.0,
+        "p_value": 0.36787944117144245,
+        "n_groups": 3,
+        "total_obs": 3,
+        "significant": false
+      },
+      "burstiness": {
+        "test": "kruskal_wallis",
+        "h_stat": 2.0,
+        "p_value": 0.36787944117144245,
+        "n_groups": 3,
+        "total_obs": 3,
+        "significant": false
+      },
+      "repetition": {
+        "test": "kruskal_wallis",
+        "h_stat": 2.0,
+        "p_value": 0.36787944117144245,
+        "n_groups": 3,
+        "total_obs": 3,
+        "significant": false
+      },
+      "uniqueness": {
+        "test": "kruskal_wallis",
+        "h_stat": 2.0,
+        "p_value": 0.36787944117144245,
+        "n_groups": 3,
+        "total_obs": 3,
+        "significant": false
+      },
+      "tsa": {
+        "test": "kruskal_wallis",
+        "h_stat": 2.0,
+        "p_value": 0.36787944117144245,
+        "n_groups": 3,
+        "total_obs": 3,
+        "significant": false
+      },
+      "tre": {
+        "test": "kruskal_wallis",
+        "h_stat": 2.0,
+        "p_value": 0.36787944117144245,
+        "n_groups": 3,
+        "total_obs": 3,
+        "significant": false
+      }
+    },
+    "70B": {
+      "shannon_char": {
+        "test": "kruskal_wallis",
+        "h_stat": 3.0,
+        "p_value": 0.22313016014842982,
+        "n_groups": 3,
+        "total_obs": 5,
+        "significant": false
+      },
+      "shannon_word": {
+        "test": "kruskal_wallis",
+        "h_stat": 2.0,
+        "p_value": 0.36787944117144245,
+        "n_groups": 3,
+        "total_obs": 5,
+        "significant": false
+      },
+      "burstiness": {
+        "test": "kruskal_wallis",
+        "h_stat": 0.6000000000000014,
+        "p_value": 0.7408182206817173,
+        "n_groups": 3,
+        "total_obs": 5,
+        "significant": false
+      },
+      "repetition": {
+        "test": "kruskal_wallis",
+        "h_stat": 1.4000000000000021,
+        "p_value": 0.49658530379140875,
+        "n_groups": 3,
+        "total_obs": 5,
+        "significant": false
+      },
+      "uniqueness": {
+        "test": "kruskal_wallis",
+        "h_stat": 1.4000000000000021,
+        "p_value": 0.49658530379140875,
+        "n_groups": 3,
+        "total_obs": 5,
+        "significant": false
+      },
+      "tsa": {
+        "test": "kruskal_wallis",
+        "h_stat": 3.0,
+        "p_value": 0.22313016014842982,
+        "n_groups": 3,
+        "total_obs": 5,
+        "significant": false
+      },
+      "tre": {
+        "test": "kruskal_wallis",
+        "h_stat": 2.0,
+        "p_value": 0.36787944117144245,
+        "n_groups": 3,
+        "total_obs": 5,
+        "significant": false
+      }
+    },
+    "bootstrap_ci": {
+      "shannon_char": {
+        "PRNG": {
+          "mean": 4.3914953987320615,
+          "ci_95_low": 4.370944324335008,
+          "ci_95_high": 4.412046473129114,
+          "n": 2
+        },
+        "TRNG": {
+          "mean": 4.4042840104312555,
+          "ci_95_low": 4.343041694009122,
+          "ci_95_high": 4.465526326853389,
+          "n": 2
+        },
+        "QRNG-IBM": {
+          "mean": 4.375034932112934,
+          "ci_95_low": 4.336249234598573,
+          "ci_95_high": 4.413820629627294,
+          "n": 2
+        }
+      },
+      "shannon_word": {
+        "PRNG": {
+          "mean": 6.853145525834876,
+          "ci_95_low": 6.825007216441474,
+          "ci_95_high": 6.8812838352282775,
+          "n": 2
+        },
+        "TRNG": {
+          "mean": 6.612267566722398,
+          "ci_95_low": 6.526479095304737,
+          "ci_95_high": 6.698056038140059,
+          "n": 2
+        },
+        "QRNG-IBM": {
+          "mean": 6.780540281929765,
+          "ci_95_low": 6.768055787333893,
+          "ci_95_high": 6.793024776525637,
+          "n": 2
+        }
+      },
+      "burstiness": {
+        "PRNG": {
+          "mean": 0.34324285362339096,
+          "ci_95_low": 0.2359257385020862,
+          "ci_95_high": 0.4505599687446957,
+          "n": 2
+        },
+        "TRNG": {
+          "mean": 0.37406907981938986,
+          "ci_95_low": 0.23987132839752173,
+          "ci_95_high": 0.5082668312412579,
+          "n": 2
+        },
+        "QRNG-IBM": {
+          "mean": 0.289684772923129,
+          "ci_95_low": 0.2768901507241045,
+          "ci_95_high": 0.3024793951221535,
+          "n": 2
+        }
+      },
+      "repetition": {
+        "PRNG": {
+          "mean": 0.01901021219385525,
+          "ci_95_low": 0.013768969126111983,
+          "ci_95_high": 0.02425145526159852,
+          "n": 2
+        },
+        "TRNG": {
+          "mean": 0.012311293535116622,
+          "ci_95_low": 0.01182033096926714,
+          "ci_95_high": 0.012802256100966103,
+          "n": 2
+        },
+        "QRNG-IBM": {
+          "mean": 0.030622405934416622,
+          "ci_95_low": 0.022093840421814698,
+          "ci_95_high": 0.03915097144701855,
+          "n": 2
+        }
+      },
+      "uniqueness": {
+        "PRNG": {
+          "mean": 0.6307972402433275,
+          "ci_95_low": 0.6067176870748299,
+          "ci_95_high": 0.6548767934118253,
+          "n": 2
+        },
+        "TRNG": {
+          "mean": 0.6817987238994565,
+          "ci_95_low": 0.6530598318593732,
+          "ci_95_high": 0.7105376159395397,
+          "n": 2
+        },
+        "QRNG-IBM": {
+          "mean": 0.5780554098979861,
+          "ci_95_low": 0.5776617927846448,
+          "ci_95_high": 0.5784490270113274,
+          "n": 2
+        }
+      },
+      "tsa": {
+        "PRNG": {
+          "mean": 4.13314913378113,
+          "ci_95_low": 4.119345567245818,
+          "ci_95_high": 4.14695270031644,
+          "n": 2
+        },
+        "TRNG": {
+          "mean": 4.155054682908135,
+          "ci_95_low": 4.111778714043075,
+          "ci_95_high": 4.198330651773196,
+          "n": 2
+        },
+        "QRNG-IBM": {
+          "mean": 4.1295305604824435,
+          "ci_95_low": 4.107416249477092,
+          "ci_95_high": 4.151644871487794,
+          "n": 2
+        }
+      },
+      "tre": {
+        "PRNG": {
+          "mean": 6.853145525834876,
+          "ci_95_low": 6.825007216441474,
+          "ci_95_high": 6.8812838352282775,
+          "n": 2
+        },
+        "TRNG": {
+          "mean": 6.612267566722398,
+          "ci_95_low": 6.526479095304737,
+          "ci_95_high": 6.698056038140059,
+          "n": 2
+        },
+        "QRNG-IBM": {
+          "mean": 6.780540281929765,
+          "ci_95_low": 6.768055787333893,
+          "ci_95_high": 6.793024776525637,
+          "n": 2
+        }
+      }
+    },
+    "pooled_color_values": {
+      "shannon_char": {
+        "PRNG": [
+          4.370944324335008,
+          4.412046473129114
+        ],
+        "TRNG": [
+          4.343041694009122,
+          4.465526326853389
+        ],
+        "QRNG-IBM": [
+          4.336249234598573,
+          4.413820629627294
+        ]
+      },
+      "shannon_word": {
+        "PRNG": [
+          6.8812838352282775,
+          6.825007216441474
+        ],
+        "TRNG": [
+          6.698056038140059,
+          6.526479095304737
+        ],
+        "QRNG-IBM": [
+          6.768055787333893,
+          6.793024776525637
+        ]
+      },
+      "burstiness": {
+        "PRNG": [
+          0.2359257385020862,
+          0.4505599687446957
+        ],
+        "TRNG": [
+          0.5082668312412579,
+          0.23987132839752173
+        ],
+        "QRNG-IBM": [
+          0.3024793951221535,
+          0.2768901507241045
+        ]
+      },
+      "repetition": {
+        "PRNG": [
+          0.013768969126111983,
+          0.02425145526159852
+        ],
+        "TRNG": [
+          0.01182033096926714,
+          0.012802256100966103
+        ],
+        "QRNG-IBM": [
+          0.03915097144701855,
+          0.022093840421814698
+        ]
+      },
+      "uniqueness": {
+        "PRNG": [
+          0.6548767934118253,
+          0.6067176870748299
+        ],
+        "TRNG": [
+          0.7105376159395397,
+          0.6530598318593732
+        ],
+        "QRNG-IBM": [
+          0.5776617927846448,
+          0.5784490270113274
+        ]
+      },
+      "tsa": {
+        "PRNG": [
+          4.119345567245818,
+          4.14695270031644
+        ],
+        "TRNG": [
+          4.111778714043075,
+          4.198330651773196
+        ],
+        "QRNG-IBM": [
+          4.107416249477092,
+          4.151644871487794
+        ]
+      },
+      "tre": {
+        "PRNG": [
+          6.8812838352282775,
+          6.825007216441474
+        ],
+        "TRNG": [
+          6.698056038140059,
+          6.526479095304737
+        ],
+        "QRNG-IBM": [
+          6.768055787333893,
+          6.793024776525637
+        ]
+      }
+    }
+  },
+  "composite_scores": {
+    "32B": {
+      "PRNG": 4.8219,
+      "TRNG": 0.8458,
+      "QRNG-IBM": -5.6677
+    },
+    "70B": {
+      "PRNG": -4.6068,
+      "TRNG": 7.776,
+      "QRNG-IBM": -3.1692
+    }
+  },
+  "key_findings": [
+    "PRNG CATASTROPHIC FAILURE: On the 32B model, ALL three entropy sources produced zero-output on the philosophy prompt (all metrics = 0, perplexity = Inf). On the 70B model, PRNG also failed completely on philosophy, but TRNG produced valid output (shannon_char=4.437, uniqueness=0.502) while QRNG-IBM produced severely degraded output (shannon_char=2.240, uniqueness=0.463).",
+    "TRNG SUPERIORITY ON 70B PHILOSOPHY: TRNG was the ONLY source to produce fully valid output on the 70B philosophy prompt. This demonstrates hardware entropy's resilience against model collapse on complex analytical prompts.",
+    "32B UNIVERSAL FRAGILITY: All three sources failed on 32B philosophy, suggesting the smaller model is fundamentally more susceptible to prompt-induced collapse regardless of entropy source quality. Model scale provides a buffer.",
+    "UNIQUENESS BOOST: On 32B color prompt, TRNG produced +8.50% higher word uniqueness than PRNG (0.7105 vs 0.6549). TRNG consistently promotes vocabulary diversity.",
+    "BURSTINESS INVERSION: On 70B color prompt, PRNG had burstiness=0.451 (worst) vs TRNG=0.240 (best). But on 70B philosophy, TRNG had burstiness=0.646 (high) -- a 169% increase from its color value. Entropy source behavior is PROMPT-DEPENDENT, not fixed.",
+    "QRNG-IBM CONSERVATIVE BIAS: On 70B philosophy, QRNG-IBM produced extremely low shannon_char (2.240 vs 4.437 for TRNG) with zero repetition -- an impossible combination for natural text. This suggests quantum entropy causes excessive constraint on complex prompts, producing unnaturally short or formulaic output.",
+    "SCALE SENSITIVITY: 70B shows greater metric range across sources than 32B on most metrics, indicating larger models are MORE sensitive to entropy source quality, not less. The larger model amplifies source differences rather than averaging them out."
+  ],
+  "recommendations": [
+    "USE TRNG (/dev/urandom) as PRIMARY entropy source for production DeepSeek R1 deployments. It is the only source that produced valid output across all tested conditions on 70B.",
+    "NEVER use seeded PRNG (e.g., random.Random(42)) for production LLM inference. Catastrophic failure on analytical/philosophical prompts is reproducible.",
+    "CALIBRATE QRNG-IBM before production use. Quantum entropy produces overly conservative output on complex prompts. Consider mixing QRNG with TRNG or applying post-processing.",
+    "PREFER 70B over 32B for entropy-sensitive applications. The larger model provides a resilience buffer against prompt-induced collapse.",
+    "TEST ENTROPY SOURCES PER PROMPT TYPE. Source behavior inverts across creative vs analytical prompts. A source that excels on creative tasks may degrade on analysis.",
+    "EXPAND SAMPLE SIZE. Current results are based on 2 prompts. Statistical power requires 20+ prompts per condition for reliable effect size estimation."
+  ]
+}

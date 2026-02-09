@@ -1,0 +1,1167 @@
+{
+  "metadata": {
+    "analysis_date": "2026-02-09",
+    "models_analyzed": [
+      "mistral:latest",
+      "meta-llama/Llama-3.2-1B",
+      "Qwen/Qwen3-8B"
+    ],
+    "mistral_file": "/Users/bobbyprice/projects/entropy/entropy-seeding/results/valid_entropy_comparisons/mistral/entropy_comparison_mistral_latest_20260208_175956.json",
+    "llama_file": "/Users/bobbyprice/projects/entropy/entropy-seeding/results/valid_entropy_comparisons/llama/rng_comparison_quick_results_20260203_180635.json",
+    "qwen_file": "/Users/bobbyprice/projects/entropy/entropy-seeding/results/valid_entropy_comparisons/qwen/8B_comprehensive_results.json"
+  },
+  "section_1_mistral": {
+    "cross_prompt_aggregates": {
+      "shannon_char": {
+        "PRNG": 4.314800072020242,
+        "TRNG": 4.30369141118149,
+        "QRNG": 4.298204258779497,
+        "delta_TRNG_vs_PRNG": -0.011108660838751838,
+        "delta_QRNG_vs_PRNG": -0.01659581324074555
+      },
+      "shannon_word": {
+        "PRNG": 6.804721951355909,
+        "TRNG": 6.898924096703067,
+        "QRNG": 6.803832874239128,
+        "delta_TRNG_vs_PRNG": 0.09420214534715754,
+        "delta_QRNG_vs_PRNG": -0.0008890771167813227
+      },
+      "unique_words": {
+        "PRNG": 164.14285714285714,
+        "TRNG": 171.92857142857142,
+        "QRNG": 166.85714285714286,
+        "delta_TRNG_vs_PRNG": 7.785714285714278,
+        "delta_QRNG_vs_PRNG": 2.7142857142857224
+      },
+      "word_diversity": {
+        "PRNG": 0.6767676162083396,
+        "TRNG": 0.6447627853184764,
+        "QRNG": 0.6787513873181062,
+        "delta_TRNG_vs_PRNG": -0.03200483088986317,
+        "delta_QRNG_vs_PRNG": 0.0019837711097666633
+      },
+      "length_words": {
+        "PRNG": 264.14285714285717,
+        "TRNG": 279.07142857142856,
+        "QRNG": 268.7857142857143,
+        "delta_TRNG_vs_PRNG": 14.928571428571388,
+        "delta_QRNG_vs_PRNG": 4.64285714285711
+      },
+      "length_chars": {
+        "PRNG": 1564.4285714285713,
+        "TRNG": 1669.2857142857142,
+        "QRNG": 1591.2857142857142,
+        "delta_TRNG_vs_PRNG": 104.85714285714289,
+        "delta_QRNG_vs_PRNG": 26.85714285714289
+      }
+    },
+    "per_prompt_details": {
+      "The old lighthouse keeper had never seen anything like ...": {
+        "shannon_word": {
+          "PRNG": 7.512193238187545,
+          "TRNG_delta": 0.018421409785006837,
+          "QRNG_delta": -0.21156653546629745,
+          "TRNG_pct": 0.24522012681147884,
+          "QRNG_pct": -2.8163084835307264
+        },
+        "word_diversity": {
+          "PRNG": 0.5218678325688073,
+          "TRNG_delta": 0.004135457371349793,
+          "QRNG_delta": 0.010316907126053487,
+          "TRNG_pct": 0.7924338526468847,
+          "QRNG_pct": 1.9769195344480677
+        },
+        "length_words": {
+          "PRNG": 592.5,
+          "TRNG_delta": 8.0,
+          "QRNG_delta": -103.0,
+          "TRNG_pct": 1.350210970464135,
+          "QRNG_pct": -17.383966244725737
+        }
+      },
+      "She opened the letter, and everything changed.": {
+        "shannon_word": {
+          "PRNG": 6.668665277461833,
+          "TRNG_delta": 0.13829354414286765,
+          "QRNG_delta": 0.04287577818985788,
+          "TRNG_pct": 2.073781459841147,
+          "QRNG_pct": 0.6429439236478949
+        },
+        "word_diversity": {
+          "PRNG": 0.7120789251638866,
+          "TRNG_delta": -0.01401335139339488,
+          "QRNG_delta": 0.00685373791771271,
+          "TRNG_pct": -1.967949183465818,
+          "QRNG_pct": 0.9624969473903903
+        },
+        "length_words": {
+          "PRNG": 179.5,
+          "TRNG_delta": 37.0,
+          "QRNG_delta": 5.5,
+          "TRNG_pct": 20.61281337047354,
+          "QRNG_pct": 3.064066852367688
+        }
+      },
+      "Once upon a time, in a kingdom by the sea,": {
+        "shannon_word": {
+          "PRNG": 7.302865903101955,
+          "TRNG_delta": -0.24409005877823198,
+          "QRNG_delta": 0.051223716319164225,
+          "TRNG_pct": -3.34238724929281,
+          "QRNG_pct": 0.7014193742405501
+        },
+        "word_diversity": {
+          "PRNG": 0.5910615808823529,
+          "TRNG_delta": 0.03515420366355215,
+          "QRNG_delta": -0.024735364329564247,
+          "TRNG_pct": 5.947638080464135,
+          "QRNG_pct": -4.1849047763582625
+        },
+        "length_words": {
+          "PRNG": 426.0,
+          "TRNG_delta": -123.0,
+          "QRNG_delta": 74.0,
+          "TRNG_pct": -28.87323943661972,
+          "QRNG_pct": 17.370892018779344
+        }
+      },
+      "Explain the concept of entropy to a five-year-old.": {
+        "shannon_word": {
+          "PRNG": 6.694104692776958,
+          "TRNG_delta": -0.03643929578354044,
+          "QRNG_delta": -0.012216067226494154,
+          "TRNG_pct": -0.5443490572063953,
+          "QRNG_pct": -0.18248993386188714
+        },
+        "word_diversity": {
+          "PRNG": 0.7116584852734923,
+          "TRNG_delta": -0.10977754186936173,
+          "QRNG_delta": 0.03930208940074753,
+          "TRNG_pct": -15.425593053552072,
+          "QRNG_pct": 5.522605324609266
+        },
+        "length_words": {
+          "PRNG": 169.5,
+          "TRNG_delta": 49.0,
+          "QRNG_delta": -14.5,
+          "TRNG_pct": 28.908554572271388,
+          "QRNG_pct": -8.55457227138643
+        }
+      },
+      "What is the meaning of consciousness?": {
+        "shannon_word": {
+          "PRNG": 6.030495430629882,
+          "TRNG_delta": 0.4031816408953368,
+          "QRNG_delta": -0.00755326581023219,
+          "TRNG_pct": 6.685713396738693,
+          "QRNG_pct": -0.12525116546590692
+        },
+        "word_diversity": {
+          "PRNG": 0.7321197411003236,
+          "TRNG_delta": -0.03606060878598061,
+          "QRNG_delta": 0.04432603534545276,
+          "TRNG_pct": -4.925506957616536,
+          "QRNG_pct": 6.05447891335834
+        },
+        "length_words": {
+          "PRNG": 111.5,
+          "TRNG_delta": 54.0,
+          "QRNG_delta": -14.5,
+          "TRNG_pct": 48.4304932735426,
+          "QRNG_pct": -13.004484304932735
+        }
+      },
+      "Think of a color you have never seen before. Describe i...": {
+        "shannon_word": {
+          "PRNG": 6.358076628990199,
+          "TRNG_delta": 0.2785716274014165,
+          "QRNG_delta": -0.09466389247415385,
+          "TRNG_pct": 4.3813820382605195,
+          "QRNG_pct": -1.4888762435250569
+        },
+        "word_diversity": {
+          "PRNG": 0.7693089430894309,
+          "TRNG_delta": -0.06850393414488698,
+          "QRNG_delta": -0.004235413677666111,
+          "TRNG_pct": -8.904606499150434,
+          "QRNG_pct": -0.5505478281140626
+        },
+        "length_words": {
+          "PRNG": 127.5,
+          "TRNG_delta": 49.5,
+          "QRNG_delta": -2.5,
+          "TRNG_pct": 38.82352941176471,
+          "QRNG_pct": -1.9607843137254901
+        }
+      },
+      "Is it ever ethical to tell a lie? If so, under what cir...": {
+        "shannon_word": {
+          "PRNG": 7.066652488342992,
+          "TRNG_delta": 0.10147614976724739,
+          "QRNG_delta": 0.22567672665069693,
+          "TRNG_pct": 1.4359861325378658,
+          "QRNG_pct": 3.1935449921015464
+        },
+        "word_diversity": {
+          "PRNG": 0.6992778053800838,
+          "TRNG_delta": -0.03496804107031948,
+          "QRNG_delta": -0.05794159401436938,
+          "TRNG_pct": -5.000593584021022,
+          "QRNG_pct": -8.285919211017422
+        },
+        "length_words": {
+          "PRNG": 242.5,
+          "TRNG_delta": 30.0,
+          "QRNG_delta": 87.5,
+          "TRNG_pct": 12.371134020618557,
+          "QRNG_pct": 36.08247422680412
+        }
+      }
+    },
+    "inter_sample_variance": {
+      "PRNG": {
+        "avg_range": 0.11290748717513019,
+        "avg_cv_pct": 3.238740330626899
+      },
+      "TRNG": {
+        "avg_range": 0.10847974572183537,
+        "avg_cv_pct": 2.572811435961378
+      },
+      "QRNG": {
+        "avg_range": 0.2164490404649311,
+        "avg_cv_pct": 2.880810384569522
+      }
+    },
+    "text_similarity": {
+      "PRNG_within_source": {
+        "jaccard_mean": 0.20187965173744263,
+        "cosine_mean": 0.7260244609059557,
+        "ngram_mean": 0.38249948265059935
+      },
+      "TRNG_within_source": {
+        "jaccard_mean": 0.21871640261188294,
+        "cosine_mean": 0.7613454781062374,
+        "ngram_mean": 0.3971692495955966
+      },
+      "QRNG_within_source": {
+        "jaccard_mean": 0.19971698817571035,
+        "cosine_mean": 0.7220767692767958,
+        "ngram_mean": 0.3707139944006238
+      },
+      "cross_PRNG-TRNG": {
+        "jaccard_mean": 0.21508374367134434,
+        "cosine_mean": 0.7266942330562537
+      },
+      "cross_PRNG-QRNG": {
+        "jaccard_mean": 0.18344674894893281,
+        "cosine_mean": 0.6991563239029949
+      },
+      "cross_TRNG-QRNG": {
+        "jaccard_mean": 0.2191870509614872,
+        "cosine_mean": 0.7548202888845125
+      }
+    },
+    "mode_shift_analysis": {
+      "TRNG_She opened the letter, and everything changed._s1": {
+        "multiple_choice": 0,
+        "numbered_list": 5,
+        "bullet_list": 0,
+        "question_marks": 0,
+        "exclamation_marks": 1,
+        "non_ascii_sequences": 0,
+        "non_ascii_chars": 0,
+        "narrative_markers": 10,
+        "instructional_markers": 1,
+        "is_mode_shifted": true
+      },
+      "QRNG_She opened the letter, and everything changed._s1": {
+        "multiple_choice": 0,
+        "numbered_list": 5,
+        "bullet_list": 0,
+        "question_marks": 0,
+        "exclamation_marks": 1,
+        "non_ascii_sequences": 0,
+        "non_ascii_chars": 0,
+        "narrative_markers": 19,
+        "instructional_markers": 1,
+        "is_mode_shifted": true
+      },
+      "PRNG_Explain the concept of entropy to a five-year-old._s1": {
+        "multiple_choice": 0,
+        "numbered_list": 0,
+        "bullet_list": 0,
+        "question_marks": 1,
+        "exclamation_marks": 2,
+        "non_ascii_sequences": 0,
+        "non_ascii_chars": 0,
+        "narrative_markers": 2,
+        "instructional_markers": 3,
+        "is_mode_shifted": true
+      },
+      "QRNG_Explain the concept of entropy to a five-year-old._s0": {
+        "multiple_choice": 0,
+        "numbered_list": 0,
+        "bullet_list": 0,
+        "question_marks": 1,
+        "exclamation_marks": 2,
+        "non_ascii_sequences": 0,
+        "non_ascii_chars": 0,
+        "narrative_markers": 1,
+        "instructional_markers": 2,
+        "is_mode_shifted": true
+      },
+      "PRNG_Is it ever ethical to tell a lie? If so, under what cir_s0": {
+        "multiple_choice": 0,
+        "numbered_list": 4,
+        "bullet_list": 0,
+        "question_marks": 0,
+        "exclamation_marks": 1,
+        "non_ascii_sequences": 0,
+        "non_ascii_chars": 0,
+        "narrative_markers": 2,
+        "instructional_markers": 0,
+        "is_mode_shifted": true
+      },
+      "PRNG_Is it ever ethical to tell a lie? If so, under what cir_s1": {
+        "multiple_choice": 0,
+        "numbered_list": 3,
+        "bullet_list": 0,
+        "question_marks": 0,
+        "exclamation_marks": 0,
+        "non_ascii_sequences": 0,
+        "non_ascii_chars": 0,
+        "narrative_markers": 3,
+        "instructional_markers": 1,
+        "is_mode_shifted": false
+      },
+      "TRNG_Is it ever ethical to tell a lie? If so, under what cir_s0": {
+        "multiple_choice": 0,
+        "numbered_list": 4,
+        "bullet_list": 0,
+        "question_marks": 0,
+        "exclamation_marks": 0,
+        "non_ascii_sequences": 0,
+        "non_ascii_chars": 0,
+        "narrative_markers": 3,
+        "instructional_markers": 1,
+        "is_mode_shifted": true
+      },
+      "TRNG_Is it ever ethical to tell a lie? If so, under what cir_s1": {
+        "multiple_choice": 0,
+        "numbered_list": 4,
+        "bullet_list": 0,
+        "question_marks": 0,
+        "exclamation_marks": 0,
+        "non_ascii_sequences": 0,
+        "non_ascii_chars": 0,
+        "narrative_markers": 1,
+        "instructional_markers": 0,
+        "is_mode_shifted": true
+      },
+      "QRNG_Is it ever ethical to tell a lie? If so, under what cir_s1": {
+        "multiple_choice": 0,
+        "numbered_list": 5,
+        "bullet_list": 0,
+        "question_marks": 0,
+        "exclamation_marks": 0,
+        "non_ascii_sequences": 0,
+        "non_ascii_chars": 0,
+        "narrative_markers": 3,
+        "instructional_markers": 0,
+        "is_mode_shifted": true
+      }
+    },
+    "language_mixing_analysis": {
+      "PRNG": {
+        "total_foreign": 0,
+        "total_non_ascii": 0,
+        "samples_with_mixing": 0,
+        "total_samples": 14
+      },
+      "TRNG": {
+        "total_foreign": 0,
+        "total_non_ascii": 0,
+        "samples_with_mixing": 0,
+        "total_samples": 14
+      },
+      "QRNG": {
+        "total_foreign": 0,
+        "total_non_ascii": 0,
+        "samples_with_mixing": 0,
+        "total_samples": 14
+      }
+    }
+  },
+  "section_2_mistral_vs_qwen": {
+    "mistral_sensitivity": {
+      "The old lighthouse keeper had never seen anything like ": {
+        "cv_pct": 1.4010391075599704,
+        "spread": 0.22998794525130428,
+        "values": {
+          "PRNG": 7.512193238187545,
+          "TRNG": 7.530614647972552,
+          "QRNG": 7.300626702721248
+        }
+      },
+      "She opened the letter, and everything changed.": {
+        "cv_pct": 0.8589677116643369,
+        "spread": 0.13829354414286765,
+        "values": {
+          "PRNG": 6.668665277461833,
+          "TRNG": 6.806958821604701,
+          "QRNG": 6.711541055651691
+        }
+      },
+      "Once upon a time, in a kingdom by the sea,": {
+        "cv_pct": 1.7800051578422196,
+        "spread": 0.2953137750973962,
+        "values": {
+          "PRNG": 7.302865903101955,
+          "TRNG": 7.058775844323723,
+          "QRNG": 7.354089619421119
+        }
+      },
+      "Explain the concept of entropy to a five-year-old.": {
+        "cv_pct": 0.22676476375043697,
+        "spread": 0.03643929578354044,
+        "values": {
+          "PRNG": 6.694104692776958,
+          "TRNG": 6.657665396993417,
+          "QRNG": 6.681888625550464
+        }
+      },
+      "What is the meaning of consciousness?": {
+        "cv_pct": 3.113521299125546,
+        "spread": 0.410734906705569,
+        "values": {
+          "PRNG": 6.030495430629882,
+          "TRNG": 6.433677071525219,
+          "QRNG": 6.02294216481965
+        }
+      },
+      "Think of a color you have never seen before. Describe i": {
+        "cv_pct": 2.4678185170056155,
+        "spread": 0.37323551987557035,
+        "values": {
+          "PRNG": 6.358076628990199,
+          "TRNG": 6.636648256391616,
+          "QRNG": 6.263412736516045
+        }
+      },
+      "Is it ever ethical to tell a lie? If so, under what cir": {
+        "cv_pct": 1.2861136379147053,
+        "spread": 0.22567672665069693,
+        "values": {
+          "PRNG": 7.066652488342992,
+          "TRNG": 7.16812863811024,
+          "QRNG": 7.292329214993689
+        }
+      }
+    },
+    "mistral_avg_cv": 1.5906043135518328,
+    "mistral_avg_spread": 0.24424024478670642,
+    "qwen_8b_sensitivity": {
+      "The old lighthouse keeper had never seen anything like ": {
+        "prng_d2": 1.0,
+        "neural_d2": 0.9629629629629629,
+        "diff": -0.03703703703703709
+      },
+      "In the depths of the ancient forest, a secret was waiti": {
+        "prng_d2": 1.0,
+        "neural_d2": 1.0,
+        "diff": 0.0
+      },
+      "The quantum computer hummed with an otherworldly energy": {
+        "prng_d2": 1.0,
+        "neural_d2": 1.0,
+        "diff": 0.0
+      },
+      "She opened the book and the pages began to glow.": {
+        "prng_d2": 1.0,
+        "neural_d2": 1.0,
+        "diff": 0.0
+      },
+      "The last message from the colony was brief but terrifyi": {
+        "prng_d2": 1.0,
+        "neural_d2": 0.9545454545454546,
+        "diff": -0.045454545454545414
+      },
+      "Time seemed to slow as he approached the event horizon.": {
+        "prng_d2": 1.0,
+        "neural_d2": 1.0,
+        "diff": 0.0
+      },
+      "The AI's response was unexpected yet perfectly logical.": {
+        "prng_d2": 1.0,
+        "neural_d2": 1.0,
+        "diff": 0.0
+      },
+      "Beneath the city streets, something was stirring.": {
+        "prng_d2": 0.9583333333333334,
+        "neural_d2": 1.0,
+        "diff": 0.04166666666666663
+      },
+      "The experiment worked, but the results were impossible.": {
+        "prng_d2": 0.6923076923076923,
+        "neural_d2": 1.0,
+        "diff": 0.3076923076923077
+      },
+      "The signal repeated every 37 seconds, like clockwork.": {
+        "prng_d2": 0.5555555555555556,
+        "neural_d2": 0.9166666666666666,
+        "diff": 0.36111111111111105
+      }
+    },
+    "qwen_8b_avg_diff": 0.06279785029785029,
+    "mistral_anova_shannon_word": {
+      "between_var": 0.0019907972484236544,
+      "within_var": 0.20044514502627428,
+      "f_ratio": 0.009931880605852046
+    },
+    "mistral_anova_word_diversity": {
+      "between_var": 0.0002426077348882139,
+      "within_var": 0.00621741311720396,
+      "f_ratio": 0.03902068759383281
+    },
+    "mistral_anova_length_words": {
+      "between_var": 38.91269841269823,
+      "within_var": 23975.452380952378,
+      "f_ratio": 0.0016230224896032805
+    }
+  },
+  "section_3_llama": {
+    "per_prompt_profiles": {
+      "The old lighthouse keeper had never seen anything like ": {
+        "PRNG": {
+          "overall_quality": 0.6084847863295435,
+          "categories": {
+            "expressiveness": 0.5908262108262109,
+            "creativity": 0.48127817665720485,
+            "morality": 1.0,
+            "coherence": 0.8500000000000001,
+            "engagement": 0.0,
+            "style": 0.0,
+            "weirdness": 1.0
+          },
+          "scores": {
+            "vocabulary_richness": 0.6058119658119658,
+            "figurative_language": 1.0,
+            "emotional_range": 0.16666666666666666,
+            "novelty": 0.9625563533144097,
+            "divergent_thinking": 0.0,
+            "ethical_alignment": 1.0,
+            "bias_detection": 1.0,
+            "coherence": 0.8500000000000001,
+            "engagement": 0.0,
+            "formality": 0.0,
+            "weirdness": 1.0
+          }
+        },
+        "TRNG": {
+          "overall_quality": 0.6086406784936197,
+          "categories": {
+            "expressiveness": 0.5505952380952381,
+            "creativity": 0.5893246187363834,
+            "morality": 1.0,
+            "coherence": 0.6666666666666667,
+            "engagement": 0.17857142857142858,
+            "style": 0.0,
+            "weirdness": 1.0
+          },
+          "scores": {
+            "vocabulary_richness": 0.6517857142857143,
+            "figurative_language": 1.0,
+            "emotional_range": 0.0,
+            "novelty": 0.9564270152505447,
+            "divergent_thinking": 0.2222222222222222,
+            "ethical_alignment": 1.0,
+            "bias_detection": 1.0,
+            "coherence": 0.6666666666666667,
+            "engagement": 0.17857142857142858,
+            "formality": 0.0,
+            "weirdness": 1.0
+          }
+        },
+        "QRNG": {
+          "overall_quality": 0.542804877256912,
+          "categories": {
+            "expressiveness": 0.5021473354231974,
+            "creativity": 0.4295016406890894,
+            "morality": 1.0,
+            "coherence": 0.55,
+            "engagement": 0.0,
+            "style": 0.5,
+            "weirdness": 1.0
+          },
+          "scores": {
+            "vocabulary_richness": 0.5064420062695925,
+            "figurative_language": 1.0,
+            "emotional_range": 0.0,
+            "novelty": 0.8590032813781788,
+            "divergent_thinking": 0.0,
+            "ethical_alignment": 1.0,
+            "bias_detection": 1.0,
+            "coherence": 0.55,
+            "engagement": 0.0,
+            "formality": 0.5,
+            "weirdness": 1.0
+          }
+        },
+        "winner": "TRNG"
+      },
+      "She opened the letter, and everything changed.": {
+        "PRNG": {
+          "overall_quality": 0.603454833894515,
+          "categories": {
+            "expressiveness": 0.5352439301111868,
+            "creativity": 0.553864112826377,
+            "morality": 1.0,
+            "coherence": 0.22222222222222224,
+            "engagement": 0.8849557522123893,
+            "style": 0.5,
+            "weirdness": 1.0
+          },
+          "scores": {
+            "vocabulary_richness": 0.6057317903335602,
+            "figurative_language": 1.0,
+            "emotional_range": 0.0,
+            "novelty": 0.9259100438345722,
+            "divergent_thinking": 0.18181818181818182,
+            "ethical_alignment": 1.0,
+            "bias_detection": 1.0,
+            "coherence": 0.22222222222222224,
+            "engagement": 0.8849557522123893,
+            "formality": 0.5,
+            "weirdness": 1.0
+          }
+        },
+        "TRNG": {
+          "overall_quality": 0.43408631158306876,
+          "categories": {
+            "expressiveness": 0.4551889048302247,
+            "creativity": 0.2566385669125395,
+            "morality": 1.0,
+            "coherence": 0.4444444444444445,
+            "engagement": 0.0,
+            "style": 0.0,
+            "weirdness": 0.8
+          },
+          "scores": {
+            "vocabulary_richness": 0.3655667144906743,
+            "figurative_language": 1.0,
+            "emotional_range": 0.0,
+            "novelty": 0.513277133825079,
+            "divergent_thinking": 0.0,
+            "ethical_alignment": 1.0,
+            "bias_detection": 1.0,
+            "coherence": 0.4444444444444445,
+            "engagement": 0.0,
+            "formality": 0.0,
+            "weirdness": 0.8
+          }
+        },
+        "QRNG": {
+          "overall_quality": 0.6091129330439676,
+          "categories": {
+            "expressiveness": 0.5201567398119122,
+            "creativity": 0.4148717948717949,
+            "morality": 1.0,
+            "coherence": 0.7000000000000001,
+            "engagement": 0.36363636363636365,
+            "style": 0.5,
+            "weirdness": 1.0
+          },
+          "scores": {
+            "vocabulary_richness": 0.5604702194357366,
+            "figurative_language": 1.0,
+            "emotional_range": 0.0,
+            "novelty": 0.8297435897435897,
+            "divergent_thinking": 0.0,
+            "ethical_alignment": 1.0,
+            "bias_detection": 1.0,
+            "coherence": 0.7000000000000001,
+            "engagement": 0.36363636363636365,
+            "formality": 0.5,
+            "weirdness": 1.0
+          }
+        },
+        "winner": "QRNG"
+      },
+      "Once upon a time, in a kingdom by the sea,": {
+        "PRNG": {
+          "overall_quality": 0.6000026915961474,
+          "categories": {
+            "expressiveness": 0.5520391916717697,
+            "creativity": 0.4835968043515213,
+            "morality": 1.0,
+            "coherence": 0.8,
+            "engagement": 0.08695652173913043,
+            "style": 0.0,
+            "weirdness": 1.0
+          },
+          "scores": {
+            "vocabulary_richness": 0.6561175750153092,
+            "figurative_language": 1.0,
+            "emotional_range": 0.0,
+            "novelty": 0.9671936087030426,
+            "divergent_thinking": 0.0,
+            "ethical_alignment": 1.0,
+            "bias_detection": 1.0,
+            "coherence": 0.8,
+            "engagement": 0.08695652173913043,
+            "formality": 0.0,
+            "weirdness": 1.0
+          }
+        },
+        "TRNG": {
+          "overall_quality": 0.2513218390804598,
+          "categories": {
+            "expressiveness": 0.3816091954022989,
+            "creativity": 0.0,
+            "morality": 1.0,
+            "coherence": 0.0,
+            "engagement": 0.0,
+            "style": 0.5,
+            "weirdness": 0.0
+          },
+          "scores": {
+            "vocabulary_richness": 0.14482758620689654,
+            "figurative_language": 1.0,
+            "emotional_range": 0.0,
+            "novelty": 0.0,
+            "divergent_thinking": 0.0,
+            "ethical_alignment": 1.0,
+            "bias_detection": 1.0,
+            "coherence": 0.0,
+            "engagement": 0.0,
+            "formality": 0.5,
+            "weirdness": 0.0
+          }
+        },
+        "QRNG": {
+          "overall_quality": 0.5210768005768082,
+          "categories": {
+            "expressiveness": 0.5297021556689155,
+            "creativity": 0.4817105263157895,
+            "morality": 1.0,
+            "coherence": 0.30000000000000004,
+            "engagement": 0.0970873786407767,
+            "style": 0.5,
+            "weirdness": 1.0
+          },
+          "scores": {
+            "vocabulary_richness": 0.5891064670067467,
+            "figurative_language": 1.0,
+            "emotional_range": 0.0,
+            "novelty": 0.963421052631579,
+            "divergent_thinking": 0.0,
+            "ethical_alignment": 1.0,
+            "bias_detection": 1.0,
+            "coherence": 0.30000000000000004,
+            "engagement": 0.0970873786407767,
+            "formality": 0.5,
+            "weirdness": 1.0
+          }
+        },
+        "winner": "PRNG"
+      },
+      "Explain the concept of entropy to a five-year-old.": {
+        "PRNG": {
+          "overall_quality": 0.45634613953769687,
+          "categories": {
+            "expressiveness": 0.5100329334274288,
+            "creativity": 0.40099457504520797,
+            "morality": 1.0,
+            "coherence": 0.14545454545454548,
+            "engagement": 0.0,
+            "style": 0.5,
+            "weirdness": 1.0
+          },
+          "scores": {
+            "vocabulary_richness": 0.5300988002822865,
+            "figurative_language": 1.0,
+            "emotional_range": 0.0,
+            "novelty": 0.8019891500904159,
+            "divergent_thinking": 0.0,
+            "ethical_alignment": 1.0,
+            "bias_detection": 1.0,
+            "coherence": 0.14545454545454548,
+            "engagement": 0.0,
+            "formality": 0.5,
+            "weirdness": 1.0
+          }
+        },
+        "TRNG": {
+          "overall_quality": 0.6065773777598998,
+          "categories": {
+            "expressiveness": 0.43989043404972605,
+            "creativity": 0.8718434343434344,
+            "morality": 1.0,
+            "coherence": 0.11428571428571428,
+            "engagement": 0.8849557522123893,
+            "style": 0.5,
+            "weirdness": 0.2857142857142857
+          },
+          "scores": {
+            "vocabulary_richness": 0.3196713021491782,
+            "figurative_language": 1.0,
+            "emotional_range": 0.0,
+            "novelty": 0.7436868686868687,
+            "divergent_thinking": 1.0,
+            "ethical_alignment": 1.0,
+            "bias_detection": 1.0,
+            "coherence": 0.11428571428571428,
+            "engagement": 0.8849557522123893,
+            "formality": 0.5,
+            "weirdness": 0.2857142857142857
+          }
+        },
+        "QRNG": {
+          "overall_quality": 0.29291918991797505,
+          "categories": {
+            "expressiveness": 0.3897847192908401,
+            "creativity": 0.05075807514831905,
+            "morality": 1.0,
+            "coherence": 0.0,
+            "engagement": 0.0,
+            "style": 0.5,
+            "weirdness": 0.5454545454545454
+          },
+          "scores": {
+            "vocabulary_richness": 0.16935415787252006,
+            "figurative_language": 1.0,
+            "emotional_range": 0.0,
+            "novelty": 0.1015161502966381,
+            "divergent_thinking": 0.0,
+            "ethical_alignment": 1.0,
+            "bias_detection": 1.0,
+            "coherence": 0.0,
+            "engagement": 0.0,
+            "formality": 0.5,
+            "weirdness": 0.5454545454545454
+          }
+        },
+        "winner": "TRNG"
+      },
+      "What is the meaning of consciousness?": {
+        "PRNG": {
+          "overall_quality": 0.6248250139914516,
+          "categories": {
+            "expressiveness": 0.494256230529595,
+            "creativity": 0.9038950715421303,
+            "morality": 1.0,
+            "coherence": 0.0,
+            "engagement": 1.0,
+            "style": 0.0,
+            "weirdness": 1.0
+          },
+          "scores": {
+            "vocabulary_richness": 0.482768691588785,
+            "figurative_language": 1.0,
+            "emotional_range": 0.0,
+            "novelty": 0.8077901430842607,
+            "divergent_thinking": 1.0,
+            "ethical_alignment": 1.0,
+            "bias_detection": 1.0,
+            "coherence": 0.0,
+            "engagement": 1.0,
+            "formality": 0.0,
+            "weirdness": 1.0
+          }
+        },
+        "TRNG": {
+          "overall_quality": 0.6019284604343855,
+          "categories": {
+            "expressiveness": 0.5137931034482759,
+            "creativity": 0.604265565875473,
+            "morality": 1.0,
+            "coherence": 0.4,
+            "engagement": 0.4310344827586207,
+            "style": 0.5,
+            "weirdness": 1.0
+          },
+          "scores": {
+            "vocabulary_richness": 0.5413793103448276,
+            "figurative_language": 1.0,
+            "emotional_range": 0.0,
+            "novelty": 0.7640866873065015,
+            "divergent_thinking": 0.4444444444444444,
+            "ethical_alignment": 1.0,
+            "bias_detection": 1.0,
+            "coherence": 0.4,
+            "engagement": 0.4310344827586207,
+            "formality": 0.5,
+            "weirdness": 1.0
+          }
+        },
+        "QRNG": {
+          "overall_quality": 0.6055037384829768,
+          "categories": {
+            "expressiveness": 0.5401778329197684,
+            "creativity": 0.7184880722114765,
+            "morality": 1.0,
+            "coherence": 0.32000000000000006,
+            "engagement": 0.28846153846153844,
+            "style": 0.5,
+            "weirdness": 1.0
+          },
+          "scores": {
+            "vocabulary_richness": 0.6205334987593052,
+            "figurative_language": 1.0,
+            "emotional_range": 0.0,
+            "novelty": 0.936976144422953,
+            "divergent_thinking": 0.5,
+            "ethical_alignment": 1.0,
+            "bias_detection": 1.0,
+            "coherence": 0.32000000000000006,
+            "engagement": 0.28846153846153844,
+            "formality": 0.5,
+            "weirdness": 1.0
+          }
+        },
+        "winner": "PRNG"
+      }
+    },
+    "aggregate_by_source": {
+      "vocabulary_richness": {
+        "PRNG": 0.5761057646063813,
+        "TRNG": 0.4046461254954582,
+        "QRNG": 0.48918126986878024,
+        "best": "PRNG"
+      },
+      "figurative_language": {
+        "PRNG": 1.0,
+        "TRNG": 1.0,
+        "QRNG": 1.0,
+        "best": "PRNG"
+      },
+      "emotional_range": {
+        "PRNG": 0.03333333333333333,
+        "TRNG": 0.0,
+        "QRNG": 0.0,
+        "best": "PRNG"
+      },
+      "novelty": {
+        "PRNG": 0.8930878598053402,
+        "TRNG": 0.5954955410137988,
+        "QRNG": 0.7381320436945877,
+        "best": "PRNG"
+      },
+      "divergent_thinking": {
+        "PRNG": 0.2363636363636364,
+        "TRNG": 0.33333333333333337,
+        "QRNG": 0.1,
+        "best": "TRNG"
+      },
+      "ethical_alignment": {
+        "PRNG": 1.0,
+        "TRNG": 1.0,
+        "QRNG": 1.0,
+        "best": "PRNG"
+      },
+      "bias_detection": {
+        "PRNG": 1.0,
+        "TRNG": 1.0,
+        "QRNG": 1.0,
+        "best": "PRNG"
+      },
+      "coherence": {
+        "PRNG": 0.4035353535353535,
+        "TRNG": 0.3250793650793651,
+        "QRNG": 0.374,
+        "best": "PRNG"
+      },
+      "engagement": {
+        "PRNG": 0.394382454790304,
+        "TRNG": 0.2989123327084877,
+        "QRNG": 0.14983705614773574,
+        "best": "PRNG"
+      },
+      "formality": {
+        "PRNG": 0.2,
+        "TRNG": 0.3,
+        "QRNG": 0.5,
+        "best": "QRNG"
+      },
+      "weirdness": {
+        "PRNG": 1.0,
+        "TRNG": 0.6171428571428572,
+        "QRNG": 0.909090909090909,
+        "best": "PRNG"
+      }
+    },
+    "source_dominance": {
+      "prompt_wins": {
+        "TRNG": 2,
+        "QRNG": 1,
+        "PRNG": 2
+      },
+      "category_wins": {
+        "expressiveness": {
+          "PRNG": 4,
+          "QRNG": 1
+        },
+        "creativity": {
+          "TRNG": 2,
+          "PRNG": 3
+        },
+        "morality": {
+          "PRNG": 5
+        },
+        "coherence": {
+          "PRNG": 3,
+          "QRNG": 1,
+          "TRNG": 1
+        },
+        "engagement": {
+          "TRNG": 2,
+          "PRNG": 2,
+          "QRNG": 1
+        },
+        "style": {
+          "QRNG": 1,
+          "PRNG": 2,
+          "TRNG": 2
+        },
+        "weirdness": {
+          "PRNG": 5
+        }
+      }
+    },
+    "category_analysis": {},
+    "statistical_tests": {
+      "kruskal_wallis": {
+        "H": 0.740000000000002,
+        "p": 0.6907343306373539,
+        "significant": false
+      },
+      "source_means": {
+        "PRNG": 0.5786226930698708,
+        "TRNG": 0.5005109334702867,
+        "QRNG": 0.5142835078557279
+      },
+      "source_stds": {
+        "PRNG": 0.06172794208624695,
+        "TRNG": 0.14123390690216586,
+        "QRNG": 0.1159099037630349
+      },
+      "mann_whitney_PRNG_TRNG": {
+        "U": 16.0,
+        "p": 0.5476190476190477,
+        "significant": false
+      },
+      "mann_whitney_PRNG_QRNG": {
+        "U": 16.0,
+        "p": 0.5476190476190477,
+        "significant": false
+      },
+      "mann_whitney_TRNG_QRNG": {
+        "U": 12.0,
+        "p": 1.0,
+        "significant": false
+      }
+    }
+  },
+  "section_4_llama_vs_qwen": {
+    "llama_1b_quality": {
+      "PRNG": {
+        "mean": 0.5786226930698708,
+        "std": 0.06172794208624695
+      },
+      "TRNG": {
+        "mean": 0.5005109334702867,
+        "std": 0.14123390690216586
+      },
+      "QRNG": {
+        "mean": 0.5142835078557279,
+        "std": 0.1159099037630349
+      }
+    },
+    "qwen_17b_color_n": 24,
+    "qwen_17b_philosophy_n": 24,
+    "llama_cross_source_cv": 6.409533827040328,
+    "llama_source_ranking": [
+      "PRNG",
+      "QRNG",
+      "TRNG"
+    ],
+    "cohens_d_best_worst": 0.7166916962167429
+  },
+  "section_5_determinism_clustering": {
+    "prompt_determinism": {
+      "The old lighthouse keeper had never seen anything like ": {
+        "mean_pairwise_cosine": 0.8778080506039582,
+        "std": 0.012967259565426497,
+        "n_outputs": 6
+      },
+      "She opened the letter, and everything changed.": {
+        "mean_pairwise_cosine": 0.7077768151911117,
+        "std": 0.048249194307201204,
+        "n_outputs": 6
+      },
+      "Once upon a time, in a kingdom by the sea,": {
+        "mean_pairwise_cosine": 0.7982792294473967,
+        "std": 0.03140957854325743,
+        "n_outputs": 6
+      },
+      "Explain the concept of entropy to a five-year-old.": {
+        "mean_pairwise_cosine": 0.6269790651302561,
+        "std": 0.05137970294997789,
+        "n_outputs": 6
+      },
+      "What is the meaning of consciousness?": {
+        "mean_pairwise_cosine": 0.7508710639020572,
+        "std": 0.04881415369717549,
+        "n_outputs": 6
+      },
+      "Think of a color you have never seen before. Describe i": {
+        "mean_pairwise_cosine": 0.6717723118097607,
+        "std": 0.04074239563484885,
+        "n_outputs": 6
+      },
+      "Is it ever ethical to tell a lie? If so, under what cir": {
+        "mean_pairwise_cosine": 0.7357411963716106,
+        "std": 0.0594030990672336,
+        "n_outputs": 6
+      }
+    },
+    "overall_determinism": 0.738461104636593,
+    "clustering": {
+      "within_source_mean": 0.7364822360963297,
+      "cross_source_mean": 0.7268902819479204,
+      "cross_prompt_mean": 0.48144193797079443
+    },
+    "source_effect": 0.009591954148409298,
+    "prompt_effect": 0.24544834397712595,
+    "PRNG_extended_stats": {
+      "avg_word_length": 5.057609544380687,
+      "avg_sentence_length": 18.32513176132924,
+      "avg_num_sentences": 14.357142857142858,
+      "hapax_ratio": 0.791661674830932
+    },
+    "TRNG_extended_stats": {
+      "avg_word_length": 5.062140831960362,
+      "avg_sentence_length": 19.928598712212157,
+      "avg_num_sentences": 15.142857142857142,
+      "hapax_ratio": 0.7859994084676091
+    },
+    "QRNG_extended_stats": {
+      "avg_word_length": 5.038664222358664,
+      "avg_sentence_length": 19.559484727518786,
+      "avg_num_sentences": 13.785714285714286,
+      "hapax_ratio": 0.7924393945465674
+    }
+  },
+  "section_6_synthesis": {
+    "findings": [
+      "Entropy source (PRNG/TRNG/QRNG) does NOT significantly affect output quality (Llama KW p=0.6907)",
+      "Prompt content is the primary driver of output similarity (determinism=0.7385)",
+      "Outputs cluster by PROMPT (effect=+0.2454), not by entropy source (effect=+0.0096)",
+      "Mistral SWA cross-source CV=1.59% - comparable to full attention models",
+      "QRNG mode shifts detected: 8 instances in Mistral outputs",
+      "Llama 1B prompt-level wins: PRNG=2, TRNG=2, QRNG=1 (no dominant source)",
+      "Best-vs-worst source Cohen's d=0.7167 (medium effect)"
+    ],
+    "sha256_paradox_note": "The SHA256 Paradox posits that even strong cryptographic hashing cannot\n  fully decorrelate sequential consumption of entropy into independent seeds.\n\n  These results show:\n  - At the OUTPUT level (text quality, diversity, structure), entropy source\n    differences are largely washed out by the model's own deterministic\n    processing (attention, MLP, softmax).\n  - The MODEL acts as a massive low-pass filter on input entropy. Whether\n    the seed comes from PRNG, TRNG, or QRNG, the transformer's billions\n    of parameters dominate the output distribution.\n  - PROMPT CONTENT is the primary structural driver, with entropy source\n    contributing only marginal variation at the token-selection level.\n  - This is consistent with the SHA256 Paradox: even if QRNG provides\n    \"better\" randomness, the model's architecture compresses and\n    redistributes that entropy through deterministic weight matrices."
+  }
+}
