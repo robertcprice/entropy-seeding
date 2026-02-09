@@ -1,0 +1,1619 @@
+{
+  "analysis_type": "comprehensive_entropy_source_comparison",
+  "models_analyzed": [
+    "qwen3:1.7b",
+    "qwen3:4b"
+  ],
+  "metrics": [
+    "shannon_char",
+    "shannon_word",
+    "word_diversity",
+    "length_words"
+  ],
+  "sources": [
+    "PRNG",
+    "TRNG",
+    "QRNG"
+  ],
+  "baseline": "PRNG",
+  "per_model": {
+    "qwen3:1.7b": {
+      "model": "qwen3:1.7b",
+      "num_prompts": 15,
+      "num_samples_per_prompt": 5,
+      "num_conversations": 3,
+      "aggregate_stats": {
+        "PRNG": {
+          "shannon_char": {
+            "mean": 4.492877,
+            "std": 0.071199,
+            "cv": 0.015847
+          },
+          "shannon_word": {
+            "mean": 7.578164,
+            "std": 0.301538,
+            "cv": 0.03979
+          },
+          "word_diversity": {
+            "mean": 0.447593,
+            "std": 0.044438,
+            "cv": 0.099281
+          },
+          "length_words": {
+            "mean": 885.0,
+            "std": 180.008016,
+            "cv": 0.203399
+          }
+        },
+        "TRNG": {
+          "shannon_char": {
+            "mean": 4.486876,
+            "std": 0.094059,
+            "cv": 0.020963
+          },
+          "shannon_word": {
+            "mean": 7.553392,
+            "std": 0.3835,
+            "cv": 0.050772
+          },
+          "word_diversity": {
+            "mean": 0.444792,
+            "std": 0.06068,
+            "cv": 0.136424
+          },
+          "length_words": {
+            "mean": 913.346667,
+            "std": 231.295584,
+            "cv": 0.25324
+          }
+        },
+        "QRNG": {
+          "shannon_char": {
+            "mean": 4.482568,
+            "std": 0.081992,
+            "cv": 0.018291
+          },
+          "shannon_word": {
+            "mean": 7.568945,
+            "std": 0.342982,
+            "cv": 0.045314
+          },
+          "word_diversity": {
+            "mean": 0.440986,
+            "std": 0.057128,
+            "cv": 0.129547
+          },
+          "length_words": {
+            "mean": 914.623333,
+            "std": 222.385138,
+            "cv": 0.243144
+          }
+        }
+      },
+      "deltas": {
+        "TRNG_vs_PRNG": {
+          "shannon_char": -0.1336,
+          "shannon_word": -0.3269,
+          "word_diversity": -0.6258,
+          "length_words": 3.203
+        },
+        "QRNG_vs_PRNG": {
+          "shannon_char": -0.2295,
+          "shannon_word": -0.1217,
+          "word_diversity": -1.4761,
+          "length_words": 3.3473
+        }
+      },
+      "stat_tests": {
+        "TRNG_vs_PRNG": {
+          "shannon_char": {
+            "n_prompts": 15,
+            "paired_t_stat": -0.569406,
+            "paired_t_pvalue": 0.578103,
+            "wilcoxon_stat": 50.0,
+            "wilcoxon_pvalue": 0.599487,
+            "significant_t_005": false,
+            "significant_w_005": false
+          },
+          "shannon_word": {
+            "n_prompts": 15,
+            "paired_t_stat": -0.622336,
+            "paired_t_pvalue": 0.543724,
+            "wilcoxon_stat": 58.0,
+            "wilcoxon_pvalue": 0.934082,
+            "significant_t_005": false,
+            "significant_w_005": false
+          },
+          "word_diversity": {
+            "n_prompts": 15,
+            "paired_t_stat": -0.284186,
+            "paired_t_pvalue": 0.780428,
+            "wilcoxon_stat": 56.0,
+            "wilcoxon_pvalue": 0.846924,
+            "significant_t_005": false,
+            "significant_w_005": false
+          },
+          "length_words": {
+            "n_prompts": 15,
+            "paired_t_stat": 1.241646,
+            "paired_t_pvalue": 0.234768,
+            "wilcoxon_stat": 38.0,
+            "wilcoxon_pvalue": 0.362686,
+            "significant_t_005": false,
+            "significant_w_005": false
+          }
+        },
+        "QRNG_vs_PRNG": {
+          "shannon_char": {
+            "n_prompts": 15,
+            "paired_t_stat": -1.253897,
+            "paired_t_pvalue": 0.230414,
+            "wilcoxon_stat": 44.0,
+            "wilcoxon_pvalue": 0.389404,
+            "significant_t_005": false,
+            "significant_w_005": false
+          },
+          "shannon_word": {
+            "n_prompts": 15,
+            "paired_t_stat": -0.357573,
+            "paired_t_pvalue": 0.725996,
+            "wilcoxon_stat": 54.0,
+            "wilcoxon_pvalue": 0.761536,
+            "significant_t_005": false,
+            "significant_w_005": false
+          },
+          "word_diversity": {
+            "n_prompts": 15,
+            "paired_t_stat": -1.325947,
+            "paired_t_pvalue": 0.206085,
+            "wilcoxon_stat": 48.0,
+            "wilcoxon_pvalue": 0.524475,
+            "significant_t_005": false,
+            "significant_w_005": false
+          },
+          "length_words": {
+            "n_prompts": 15,
+            "paired_t_stat": 1.398052,
+            "paired_t_pvalue": 0.183855,
+            "wilcoxon_stat": 40.0,
+            "wilcoxon_pvalue": 0.276855,
+            "significant_t_005": false,
+            "significant_w_005": false
+          }
+        }
+      },
+      "multi_turn_evolution": {
+        "storytelling": {
+          "PRNG": {
+            "shannon_char": {
+              "per_turn_means": [
+                4.335,
+                4.33072,
+                4.32916
+              ],
+              "slope": -0.00292,
+              "r_squared": 0.932567,
+              "trend_pvalue": 0.167233,
+              "direction": "decreasing"
+            },
+            "shannon_word": {
+              "per_turn_means": [
+                7.0793,
+                7.164,
+                7.12398
+              ],
+              "slope": 0.02234,
+              "r_squared": 0.277985,
+              "trend_pvalue": 0.646452,
+              "direction": "increasing"
+            },
+            "word_diversity": {
+              "per_turn_means": [
+                0.60606,
+                0.5705,
+                0.51858
+              ],
+              "slope": -0.04374,
+              "r_squared": 0.988476,
+              "trend_pvalue": 0.068472,
+              "direction": "decreasing"
+            },
+            "length_words": {
+              "per_turn_means": [
+                371.6,
+                447.2,
+                528.6
+              ],
+              "slope": 78.5,
+              "r_squared": 0.999545,
+              "trend_pvalue": 0.013576,
+              "direction": "increasing"
+            }
+          },
+          "TRNG": {
+            "shannon_char": {
+              "per_turn_means": [
+                4.33694,
+                4.3231,
+                4.31904
+              ],
+              "slope": -0.00895,
+              "r_squared": 0.909499,
+              "trend_pvalue": 0.19453,
+              "direction": "decreasing"
+            },
+            "shannon_word": {
+              "per_turn_means": [
+                7.08214,
+                7.19212,
+                7.19786
+              ],
+              "slope": 0.05786,
+              "r_squared": 0.787106,
+              "trend_pvalue": 0.305309,
+              "direction": "increasing"
+            },
+            "word_diversity": {
+              "per_turn_means": [
+                0.58582,
+                0.55306,
+                0.52104
+              ],
+              "slope": -0.03239,
+              "r_squared": 0.999957,
+              "trend_pvalue": 0.004199,
+              "direction": "decreasing"
+            },
+            "length_words": {
+              "per_turn_means": [
+                386.6,
+                467.4,
+                533.2
+              ],
+              "slope": 73.3,
+              "r_squared": 0.996522,
+              "trend_pvalue": 0.037564,
+              "direction": "increasing"
+            }
+          },
+          "QRNG": {
+            "shannon_char": {
+              "per_turn_means": [
+                4.32468,
+                4.31066,
+                4.30418
+              ],
+              "slope": -0.01025,
+              "r_squared": 0.956852,
+              "trend_pvalue": 0.133209,
+              "direction": "decreasing"
+            },
+            "shannon_word": {
+              "per_turn_means": [
+                7.2089,
+                7.26358,
+                7.21244
+              ],
+              "slope": 0.00177,
+              "r_squared": 0.003346,
+              "trend_pvalue": 0.963154,
+              "direction": "increasing"
+            },
+            "word_diversity": {
+              "per_turn_means": [
+                0.58668,
+                0.5373,
+                0.50732
+              ],
+              "slope": -0.03968,
+              "r_squared": 0.98047,
+              "trend_pvalue": 0.089261,
+              "direction": "decreasing"
+            },
+            "length_words": {
+              "per_turn_means": [
+                430.4,
+                521.6,
+                571.4
+              ],
+              "slope": 70.5,
+              "r_squared": 0.972066,
+              "trend_pvalue": 0.106903,
+              "direction": "increasing"
+            }
+          }
+        },
+        "debate": {
+          "PRNG": {
+            "shannon_char": {
+              "per_turn_means": [
+                4.5253,
+                4.57048,
+                4.56352
+              ],
+              "slope": 0.01911,
+              "r_squared": 0.617149,
+              "trend_pvalue": 0.424721,
+              "direction": "increasing"
+            },
+            "shannon_word": {
+              "per_turn_means": [
+                8.3081,
+                8.13512,
+                8.10792
+              ],
+              "slope": -0.10009,
+              "r_squared": 0.849776,
+              "trend_pvalue": 0.253383,
+              "direction": "decreasing"
+            },
+            "word_diversity": {
+              "per_turn_means": [
+                0.5668,
+                0.56084,
+                0.57174
+              ],
+              "slope": 0.00247,
+              "r_squared": 0.204802,
+              "trend_pvalue": 0.701028,
+              "direction": "increasing"
+            },
+            "length_words": {
+              "per_turn_means": [
+                923.2,
+                874.2,
+                800.4
+              ],
+              "slope": -61.4,
+              "r_squared": 0.986587,
+              "trend_pvalue": 0.073895,
+              "direction": "decreasing"
+            }
+          },
+          "TRNG": {
+            "shannon_char": {
+              "per_turn_means": [
+                4.49238,
+                4.52098,
+                4.52124
+              ],
+              "slope": 0.01443,
+              "r_squared": 0.756756,
+              "trend_pvalue": 0.328344,
+              "direction": "increasing"
+            },
+            "shannon_word": {
+              "per_turn_means": [
+                8.34526,
+                8.13434,
+                8.1031
+              ],
+              "slope": -0.12108,
+              "r_squared": 0.84494,
+              "trend_pvalue": 0.257663,
+              "direction": "decreasing"
+            },
+            "word_diversity": {
+              "per_turn_means": [
+                0.56086,
+                0.55744,
+                0.5871
+              ],
+              "slope": 0.01312,
+              "r_squared": 0.653696,
+              "trend_pvalue": 0.400544,
+              "direction": "increasing"
+            },
+            "length_words": {
+              "per_turn_means": [
+                941.4,
+                831.2,
+                765.6
+              ],
+              "slope": -87.9,
+              "r_squared": 0.978996,
+              "trend_pvalue": 0.092589,
+              "direction": "decreasing"
+            }
+          },
+          "QRNG": {
+            "shannon_char": {
+              "per_turn_means": [
+                4.50022,
+                4.5198,
+                4.53224
+              ],
+              "slope": 0.01601,
+              "r_squared": 0.983696,
+              "trend_pvalue": 0.081511,
+              "direction": "increasing"
+            },
+            "shannon_word": {
+              "per_turn_means": [
+                8.34,
+                8.1817,
+                8.16644
+              ],
+              "slope": -0.08678,
+              "r_squared": 0.815388,
+              "trend_pvalue": 0.282736,
+              "direction": "decreasing"
+            },
+            "word_diversity": {
+              "per_turn_means": [
+                0.58648,
+                0.55316,
+                0.57296
+              ],
+              "slope": -0.00676,
+              "r_squared": 0.162716,
+              "trend_pvalue": 0.73567,
+              "direction": "decreasing"
+            },
+            "length_words": {
+              "per_turn_means": [
+                877.8,
+                872.8,
+                810.0
+              ],
+              "slope": -33.9,
+              "r_squared": 0.804987,
+              "trend_pvalue": 0.29118,
+              "direction": "decreasing"
+            }
+          }
+        },
+        "worldbuilding": {
+          "PRNG": {
+            "shannon_char": {
+              "per_turn_means": [
+                4.46086,
+                4.45346,
+                4.40948
+              ],
+              "slope": -0.02569,
+              "r_squared": 0.855463,
+              "trend_pvalue": 0.248276,
+              "direction": "decreasing"
+            },
+            "shannon_word": {
+              "per_turn_means": [
+                7.95004,
+                7.62558,
+                7.19632
+              ],
+              "slope": -0.37686,
+              "r_squared": 0.993597,
+              "trend_pvalue": 0.050997,
+              "direction": "decreasing"
+            },
+            "word_diversity": {
+              "per_turn_means": [
+                0.46416,
+                0.50112,
+                0.48734
+              ],
+              "slope": 0.01159,
+              "r_squared": 0.385034,
+              "trend_pvalue": 0.573851,
+              "direction": "increasing"
+            },
+            "length_words": {
+              "per_turn_means": [
+                1066.0,
+                670.8,
+                557.4
+              ],
+              "slope": -254.3,
+              "r_squared": 0.907168,
+              "trend_pvalue": 0.197101,
+              "direction": "decreasing"
+            }
+          },
+          "TRNG": {
+            "shannon_char": {
+              "per_turn_means": [
+                4.46096,
+                4.4481,
+                4.4179
+              ],
+              "slope": -0.02153,
+              "r_squared": 0.948718,
+              "trend_pvalue": 0.145428,
+              "direction": "decreasing"
+            },
+            "shannon_word": {
+              "per_turn_means": [
+                7.92716,
+                7.48354,
+                7.19038
+              ],
+              "slope": -0.36839,
+              "r_squared": 0.98629,
+              "trend_pvalue": 0.074714,
+              "direction": "decreasing"
+            },
+            "word_diversity": {
+              "per_turn_means": [
+                0.47486,
+                0.49682,
+                0.50806
+              ],
+              "slope": 0.0166,
+              "r_squared": 0.966414,
+              "trend_pvalue": 0.117333,
+              "direction": "increasing"
+            },
+            "length_words": {
+              "per_turn_means": [
+                972.0,
+                624.6,
+                502.2
+              ],
+              "slope": -234.9,
+              "r_squared": 0.928973,
+              "trend_pvalue": 0.17174,
+              "direction": "decreasing"
+            }
+          },
+          "QRNG": {
+            "shannon_char": {
+              "per_turn_means": [
+                4.45706,
+                4.4368,
+                4.40448
+              ],
+              "slope": -0.02629,
+              "r_squared": 0.982766,
+              "trend_pvalue": 0.083816,
+              "direction": "decreasing"
+            },
+            "shannon_word": {
+              "per_turn_means": [
+                7.97014,
+                7.5017,
+                7.19562
+              ],
+              "slope": -0.38726,
+              "r_squared": 0.985564,
+              "trend_pvalue": 0.076676,
+              "direction": "decreasing"
+            },
+            "word_diversity": {
+              "per_turn_means": [
+                0.46994,
+                0.49398,
+                0.48346
+              ],
+              "slope": 0.00676,
+              "r_squared": 0.314656,
+              "trend_pvalue": 0.620878,
+              "direction": "increasing"
+            },
+            "length_words": {
+              "per_turn_means": [
+                1061.8,
+                647.4,
+                572.8
+              ],
+              "slope": -244.5,
+              "r_squared": 0.861359,
+              "trend_pvalue": 0.242893,
+              "direction": "decreasing"
+            }
+          }
+        }
+      },
+      "inter_sample_variance": {
+        "PRNG": {
+          "shannon_char": {
+            "mean_intra_prompt_std": 0.048278,
+            "mean_intra_prompt_cv": 0.010755,
+            "overall_mean": 4.492877,
+            "overall_std": 0.093094
+          },
+          "shannon_word": {
+            "mean_intra_prompt_std": 0.137326,
+            "mean_intra_prompt_cv": 0.018197,
+            "overall_mean": 7.578164,
+            "overall_std": 0.323581
+          },
+          "word_diversity": {
+            "mean_intra_prompt_std": 0.037045,
+            "mean_intra_prompt_cv": 0.085822,
+            "overall_mean": 0.447593,
+            "overall_std": 0.057501
+          },
+          "length_words": {
+            "mean_intra_prompt_std": 132.860289,
+            "mean_intra_prompt_cv": 0.161468,
+            "overall_mean": 885.0,
+            "overall_std": 224.293124
+          }
+        },
+        "TRNG": {
+          "shannon_char": {
+            "mean_intra_prompt_std": 0.035896,
+            "mean_intra_prompt_cv": 0.008001,
+            "overall_mean": 4.484921,
+            "overall_std": 0.099008
+          },
+          "shannon_word": {
+            "mean_intra_prompt_std": 0.137268,
+            "mean_intra_prompt_cv": 0.018475,
+            "overall_mean": 7.565915,
+            "overall_std": 0.392701
+          },
+          "word_diversity": {
+            "mean_intra_prompt_std": 0.039819,
+            "mean_intra_prompt_cv": 0.092983,
+            "overall_mean": 0.445637,
+            "overall_std": 0.073643
+          },
+          "length_words": {
+            "mean_intra_prompt_std": 162.499826,
+            "mean_intra_prompt_cv": 0.189848,
+            "overall_mean": 919.232877,
+            "overall_std": 276.271431
+          }
+        },
+        "QRNG": {
+          "shannon_char": {
+            "mean_intra_prompt_std": 0.034931,
+            "mean_intra_prompt_cv": 0.007802,
+            "overall_mean": 4.481288,
+            "overall_std": 0.08744
+          },
+          "shannon_word": {
+            "mean_intra_prompt_std": 0.14005,
+            "mean_intra_prompt_cv": 0.018804,
+            "overall_mean": 7.574408,
+            "overall_std": 0.363727
+          },
+          "word_diversity": {
+            "mean_intra_prompt_std": 0.036643,
+            "mean_intra_prompt_cv": 0.088653,
+            "overall_mean": 0.442191,
+            "overall_std": 0.067006
+          },
+          "length_words": {
+            "mean_intra_prompt_std": 145.264525,
+            "mean_intra_prompt_cv": 0.164318,
+            "overall_mean": 915.135135,
+            "overall_std": 263.300928
+          }
+        }
+      }
+    },
+    "qwen3:4b": {
+      "model": "qwen3:4b",
+      "num_prompts": 15,
+      "num_samples_per_prompt": 5,
+      "num_conversations": 3,
+      "aggregate_stats": {
+        "PRNG": {
+          "shannon_char": {
+            "mean": 4.636844,
+            "std": 0.073406,
+            "cv": 0.015831
+          },
+          "shannon_word": {
+            "mean": 8.344184,
+            "std": 0.271282,
+            "cv": 0.032512
+          },
+          "word_diversity": {
+            "mean": 0.548736,
+            "std": 0.039273,
+            "cv": 0.07157
+          },
+          "length_words": {
+            "mean": 1031.893333,
+            "std": 283.630603,
+            "cv": 0.274864
+          }
+        },
+        "TRNG": {
+          "shannon_char": {
+            "mean": 4.637615,
+            "std": 0.077892,
+            "cv": 0.016796
+          },
+          "shannon_word": {
+            "mean": 8.377225,
+            "std": 0.259501,
+            "cv": 0.030977
+          },
+          "word_diversity": {
+            "mean": 0.543444,
+            "std": 0.043667,
+            "cv": 0.080353
+          },
+          "length_words": {
+            "mean": 1076.28,
+            "std": 323.765284,
+            "cv": 0.300819
+          }
+        },
+        "QRNG": {
+          "shannon_char": {
+            "mean": 4.638524,
+            "std": 0.067692,
+            "cv": 0.014593
+          },
+          "shannon_word": {
+            "mean": 8.369063,
+            "std": 0.25584,
+            "cv": 0.03057
+          },
+          "word_diversity": {
+            "mean": 0.550732,
+            "std": 0.042736,
+            "cv": 0.077598
+          },
+          "length_words": {
+            "mean": 1038.293333,
+            "std": 283.698692,
+            "cv": 0.273236
+          }
+        }
+      },
+      "deltas": {
+        "TRNG_vs_PRNG": {
+          "shannon_char": 0.0166,
+          "shannon_word": 0.396,
+          "word_diversity": -0.9644,
+          "length_words": 4.3015
+        },
+        "QRNG_vs_PRNG": {
+          "shannon_char": 0.0362,
+          "shannon_word": 0.2982,
+          "word_diversity": 0.3637,
+          "length_words": 0.6202
+        }
+      },
+      "stat_tests": {
+        "TRNG_vs_PRNG": {
+          "shannon_char": {
+            "n_prompts": 15,
+            "paired_t_stat": 0.186985,
+            "paired_t_pvalue": 0.854355,
+            "wilcoxon_stat": 57.0,
+            "wilcoxon_pvalue": 0.890381,
+            "significant_t_005": false,
+            "significant_w_005": false
+          },
+          "shannon_word": {
+            "n_prompts": 15,
+            "paired_t_stat": 2.0693,
+            "paired_t_pvalue": 0.057501,
+            "wilcoxon_stat": 31.0,
+            "wilcoxon_pvalue": 0.106995,
+            "significant_t_005": false,
+            "significant_w_005": false
+          },
+          "word_diversity": {
+            "n_prompts": 15,
+            "paired_t_stat": -0.848114,
+            "paired_t_pvalue": 0.410641,
+            "wilcoxon_stat": 48.0,
+            "wilcoxon_pvalue": 0.524475,
+            "significant_t_005": false,
+            "significant_w_005": false
+          },
+          "length_words": {
+            "n_prompts": 15,
+            "paired_t_stat": 1.663508,
+            "paired_t_pvalue": 0.118426,
+            "wilcoxon_stat": 31.0,
+            "wilcoxon_pvalue": 0.106995,
+            "significant_t_005": false,
+            "significant_w_005": false
+          }
+        },
+        "QRNG_vs_PRNG": {
+          "shannon_char": {
+            "n_prompts": 15,
+            "paired_t_stat": 0.263165,
+            "paired_t_pvalue": 0.796257,
+            "wilcoxon_stat": 49.0,
+            "wilcoxon_pvalue": 0.561401,
+            "significant_t_005": false,
+            "significant_w_005": false
+          },
+          "shannon_word": {
+            "n_prompts": 15,
+            "paired_t_stat": 1.142301,
+            "paired_t_pvalue": 0.272489,
+            "wilcoxon_stat": 40.0,
+            "wilcoxon_pvalue": 0.276855,
+            "significant_t_005": false,
+            "significant_w_005": false
+          },
+          "word_diversity": {
+            "n_prompts": 15,
+            "paired_t_stat": 0.323578,
+            "paired_t_pvalue": 0.75104,
+            "wilcoxon_stat": 53.0,
+            "wilcoxon_pvalue": 0.719727,
+            "significant_t_005": false,
+            "significant_w_005": false
+          },
+          "length_words": {
+            "n_prompts": 15,
+            "paired_t_stat": 0.26148,
+            "paired_t_pvalue": 0.79753,
+            "wilcoxon_stat": 56.0,
+            "wilcoxon_pvalue": 0.846924,
+            "significant_t_005": false,
+            "significant_w_005": false
+          }
+        }
+      },
+      "multi_turn_evolution": {
+        "storytelling": {
+          "PRNG": {
+            "shannon_char": {
+              "per_turn_means": [
+                4.50272,
+                4.488,
+                4.50826
+              ],
+              "slope": 0.00277,
+              "r_squared": 0.069983,
+              "trend_pvalue": 0.829558,
+              "direction": "increasing"
+            },
+            "shannon_word": {
+              "per_turn_means": [
+                7.86692,
+                7.9955,
+                7.94092
+              ],
+              "slope": 0.037,
+              "r_squared": 0.328721,
+              "trend_pvalue": 0.611294,
+              "direction": "increasing"
+            },
+            "word_diversity": {
+              "per_turn_means": [
+                0.62482,
+                0.56666,
+                0.4794
+              ],
+              "slope": -0.07271,
+              "r_squared": 0.986828,
+              "trend_pvalue": 0.073226,
+              "direction": "decreasing"
+            },
+            "length_words": {
+              "per_turn_means": [
+                549.8,
+                761.0,
+                1011.0
+              ],
+              "slope": 230.6,
+              "r_squared": 0.997646,
+              "trend_pvalue": 0.030897,
+              "direction": "increasing"
+            }
+          },
+          "TRNG": {
+            "shannon_char": {
+              "per_turn_means": [
+                4.4927,
+                4.47788,
+                4.5077
+              ],
+              "slope": 0.0075,
+              "r_squared": 0.253024,
+              "trend_pvalue": 0.664448,
+              "direction": "increasing"
+            },
+            "shannon_word": {
+              "per_turn_means": [
+                7.82878,
+                7.95442,
+                8.06252
+              ],
+              "slope": 0.11687,
+              "r_squared": 0.998126,
+              "trend_pvalue": 0.027564,
+              "direction": "increasing"
+            },
+            "word_diversity": {
+              "per_turn_means": [
+                0.62786,
+                0.5491,
+                0.48018
+              ],
+              "slope": -0.07384,
+              "r_squared": 0.998522,
+              "trend_pvalue": 0.024478,
+              "direction": "decreasing"
+            },
+            "length_words": {
+              "per_turn_means": [
+                535.6,
+                768.0,
+                1078.0
+              ],
+              "slope": 271.2,
+              "r_squared": 0.993223,
+              "trend_pvalue": 0.052466,
+              "direction": "increasing"
+            }
+          },
+          "QRNG": {
+            "shannon_char": {
+              "per_turn_means": [
+                4.55052,
+                4.5168,
+                4.51834
+              ],
+              "slope": -0.01609,
+              "r_squared": 0.714186,
+              "trend_pvalue": 0.359087,
+              "direction": "decreasing"
+            },
+            "shannon_word": {
+              "per_turn_means": [
+                7.95102,
+                8.0117,
+                7.9209
+              ],
+              "slope": -0.01506,
+              "r_squared": 0.106033,
+              "trend_pvalue": 0.788849,
+              "direction": "decreasing"
+            },
+            "word_diversity": {
+              "per_turn_means": [
+                0.611,
+                0.55956,
+                0.4513
+              ],
+              "slope": -0.07985,
+              "r_squared": 0.959512,
+              "trend_pvalue": 0.128978,
+              "direction": "decreasing"
+            },
+            "length_words": {
+              "per_turn_means": [
+                613.4,
+                793.8,
+                1150.2
+              ],
+              "slope": 268.4,
+              "r_squared": 0.965407,
+              "trend_pvalue": 0.1191,
+              "direction": "increasing"
+            }
+          }
+        },
+        "debate": {
+          "PRNG": {
+            "shannon_char": {
+              "per_turn_means": [
+                4.69182,
+                4.71482,
+                4.68406
+              ],
+              "slope": -0.00388,
+              "r_squared": 0.058829,
+              "trend_pvalue": 0.844034,
+              "direction": "decreasing"
+            },
+            "shannon_word": {
+              "per_turn_means": [
+                8.9722,
+                8.9046,
+                8.7697
+              ],
+              "slope": -0.10125,
+              "r_squared": 0.96449,
+              "trend_pvalue": 0.120688,
+              "direction": "decreasing"
+            },
+            "word_diversity": {
+              "per_turn_means": [
+                0.61836,
+                0.53428,
+                0.5695
+              ],
+              "slope": -0.02443,
+              "r_squared": 0.334756,
+              "trend_pvalue": 0.607213,
+              "direction": "decreasing"
+            },
+            "length_words": {
+              "per_turn_means": [
+                1271.2,
+                1552.2,
+                1223.6
+              ],
+              "slope": -23.8,
+              "r_squared": 0.017963,
+              "trend_pvalue": 0.914419,
+              "direction": "decreasing"
+            }
+          },
+          "TRNG": {
+            "shannon_char": {
+              "per_turn_means": [
+                4.71488,
+                4.72252,
+                4.70626
+              ],
+              "slope": -0.00431,
+              "r_squared": 0.280704,
+              "trend_pvalue": 0.644523,
+              "direction": "decreasing"
+            },
+            "shannon_word": {
+              "per_turn_means": [
+                8.96928,
+                8.9923,
+                8.78198
+              ],
+              "slope": -0.09365,
+              "r_squared": 0.659045,
+              "trend_pvalue": 0.396958,
+              "direction": "decreasing"
+            },
+            "word_diversity": {
+              "per_turn_means": [
+                0.61016,
+                0.5571,
+                0.5759
+              ],
+              "slope": -0.01713,
+              "r_squared": 0.405435,
+              "trend_pvalue": 0.560567,
+              "direction": "decreasing"
+            },
+            "length_words": {
+              "per_turn_means": [
+                1313.2,
+                1536.2,
+                1195.0
+              ],
+              "slope": -59.1,
+              "r_squared": 0.116351,
+              "trend_pvalue": 0.778399,
+              "direction": "decreasing"
+            }
+          },
+          "QRNG": {
+            "shannon_char": {
+              "per_turn_means": [
+                4.73612,
+                4.7539,
+                4.73392
+              ],
+              "slope": -0.0011,
+              "r_squared": 0.010081,
+              "trend_pvalue": 0.935973,
+              "direction": "decreasing"
+            },
+            "shannon_word": {
+              "per_turn_means": [
+                8.93728,
+                8.95542,
+                8.71758
+              ],
+              "slope": -0.10985,
+              "r_squared": 0.688462,
+              "trend_pvalue": 0.376982,
+              "direction": "decreasing"
+            },
+            "word_diversity": {
+              "per_turn_means": [
+                0.606,
+                0.54112,
+                0.57788
+              ],
+              "slope": -0.01406,
+              "r_squared": 0.186745,
+              "trend_pvalue": 0.715517,
+              "direction": "decreasing"
+            },
+            "length_words": {
+              "per_turn_means": [
+                1291.4,
+                1576.6,
+                1149.6
+              ],
+              "slope": -70.9,
+              "r_squared": 0.106284,
+              "trend_pvalue": 0.78859,
+              "direction": "decreasing"
+            }
+          }
+        },
+        "worldbuilding": {
+          "PRNG": {
+            "shannon_char": {
+              "per_turn_means": [
+                4.63256,
+                4.7027,
+                4.63852
+              ],
+              "slope": 0.00298,
+              "r_squared": 0.005872,
+              "trend_pvalue": 0.951169,
+              "direction": "increasing"
+            },
+            "shannon_word": {
+              "per_turn_means": [
+                8.689,
+                8.72166,
+                8.30548
+              ],
+              "slope": -0.19176,
+              "r_squared": 0.686555,
+              "trend_pvalue": 0.378291,
+              "direction": "decreasing"
+            },
+            "word_diversity": {
+              "per_turn_means": [
+                0.55478,
+                0.55332,
+                0.5041
+              ],
+              "slope": -0.02534,
+              "r_squared": 0.771588,
+              "trend_pvalue": 0.317222,
+              "direction": "decreasing"
+            },
+            "length_words": {
+              "per_turn_means": [
+                1253.6,
+                1286.8,
+                1191.6
+              ],
+              "slope": -31.0,
+              "r_squared": 0.411584,
+              "trend_pvalue": 0.556585,
+              "direction": "decreasing"
+            }
+          },
+          "TRNG": {
+            "shannon_char": {
+              "per_turn_means": [
+                4.6322,
+                4.6748,
+                4.64004
+              ],
+              "slope": 0.00392,
+              "r_squared": 0.029891,
+              "trend_pvalue": 0.889379,
+              "direction": "increasing"
+            },
+            "shannon_word": {
+              "per_turn_means": [
+                8.71626,
+                8.67096,
+                8.39106
+              ],
+              "slope": -0.1626,
+              "r_squared": 0.852171,
+              "trend_pvalue": 0.251242,
+              "direction": "decreasing"
+            },
+            "word_diversity": {
+              "per_turn_means": [
+                0.53558,
+                0.553,
+                0.5111
+              ],
+              "slope": -0.01224,
+              "r_squared": 0.338146,
+              "trend_pvalue": 0.60493,
+              "direction": "decreasing"
+            },
+            "length_words": {
+              "per_turn_means": [
+                1385.0,
+                1256.2,
+                1224.8
+              ],
+              "slope": -80.1,
+              "r_squared": 0.8903,
+              "trend_pvalue": 0.214914,
+              "direction": "decreasing"
+            }
+          },
+          "QRNG": {
+            "shannon_char": {
+              "per_turn_means": [
+                4.64574,
+                4.68592,
+                4.61088
+              ],
+              "slope": -0.01743,
+              "r_squared": 0.215448,
+              "trend_pvalue": 0.69271,
+              "direction": "decreasing"
+            },
+            "shannon_word": {
+              "per_turn_means": [
+                8.72394,
+                8.71828,
+                8.3315
+              ],
+              "slope": -0.19622,
+              "r_squared": 0.760815,
+              "trend_pvalue": 0.325324,
+              "direction": "decreasing"
+            },
+            "word_diversity": {
+              "per_turn_means": [
+                0.54754,
+                0.54796,
+                0.51532
+              ],
+              "slope": -0.01611,
+              "r_squared": 0.740225,
+              "trend_pvalue": 0.340473,
+              "direction": "decreasing"
+            },
+            "length_words": {
+              "per_turn_means": [
+                1321.2,
+                1327.2,
+                1165.8
+              ],
+              "slope": -77.7,
+              "r_squared": 0.721084,
+              "trend_pvalue": 0.35421,
+              "direction": "decreasing"
+            }
+          }
+        }
+      },
+      "inter_sample_variance": {
+        "PRNG": {
+          "shannon_char": {
+            "mean_intra_prompt_std": 0.035809,
+            "mean_intra_prompt_cv": 0.007745,
+            "overall_mean": 4.636844,
+            "overall_std": 0.07984
+          },
+          "shannon_word": {
+            "mean_intra_prompt_std": 0.117449,
+            "mean_intra_prompt_cv": 0.014232,
+            "overall_mean": 8.344184,
+            "overall_std": 0.289405
+          },
+          "word_diversity": {
+            "mean_intra_prompt_std": 0.038586,
+            "mean_intra_prompt_cv": 0.069684,
+            "overall_mean": 0.548736,
+            "overall_std": 0.054091
+          },
+          "length_words": {
+            "mean_intra_prompt_std": 131.811703,
+            "mean_intra_prompt_cv": 0.137567,
+            "overall_mean": 1031.893333,
+            "overall_std": 302.548838
+          }
+        },
+        "TRNG": {
+          "shannon_char": {
+            "mean_intra_prompt_std": 0.038425,
+            "mean_intra_prompt_cv": 0.008302,
+            "overall_mean": 4.637615,
+            "overall_std": 0.084199
+          },
+          "shannon_word": {
+            "mean_intra_prompt_std": 0.092867,
+            "mean_intra_prompt_cv": 0.011149,
+            "overall_mean": 8.377225,
+            "overall_std": 0.267497
+          },
+          "word_diversity": {
+            "mean_intra_prompt_std": 0.032394,
+            "mean_intra_prompt_cv": 0.059201,
+            "overall_mean": 0.543444,
+            "overall_std": 0.05282
+          },
+          "length_words": {
+            "mean_intra_prompt_std": 137.630118,
+            "mean_intra_prompt_cv": 0.13191,
+            "overall_mean": 1076.28,
+            "overall_std": 341.037153
+          }
+        },
+        "QRNG": {
+          "shannon_char": {
+            "mean_intra_prompt_std": 0.038027,
+            "mean_intra_prompt_cv": 0.008222,
+            "overall_mean": 4.638524,
+            "overall_std": 0.075372
+          },
+          "shannon_word": {
+            "mean_intra_prompt_std": 0.126532,
+            "mean_intra_prompt_cv": 0.015265,
+            "overall_mean": 8.369063,
+            "overall_std": 0.277518
+          },
+          "word_diversity": {
+            "mean_intra_prompt_std": 0.026157,
+            "mean_intra_prompt_cv": 0.047929,
+            "overall_mean": 0.550732,
+            "overall_std": 0.049587
+          },
+          "length_words": {
+            "mean_intra_prompt_std": 127.419451,
+            "mean_intra_prompt_cv": 0.130206,
+            "overall_mean": 1038.293333,
+            "overall_std": 301.721178
+          }
+        }
+      }
+    }
+  },
+  "cross_model_comparison": {
+    "models": [
+      "qwen3:1.7b",
+      "qwen3:4b"
+    ],
+    "comparisons": {
+      "TRNG_vs_PRNG": {
+        "shannon_char": {
+          "deltas_pct": {
+            "qwen3:1.7b": -0.1336,
+            "qwen3:4b": 0.0166
+          },
+          "most_sensitive": "qwen3:1.7b",
+          "least_sensitive": "qwen3:4b"
+        },
+        "shannon_word": {
+          "deltas_pct": {
+            "qwen3:1.7b": -0.3269,
+            "qwen3:4b": 0.396
+          },
+          "most_sensitive": "qwen3:4b",
+          "least_sensitive": "qwen3:1.7b"
+        },
+        "word_diversity": {
+          "deltas_pct": {
+            "qwen3:1.7b": -0.6258,
+            "qwen3:4b": -0.9644
+          },
+          "most_sensitive": "qwen3:4b",
+          "least_sensitive": "qwen3:1.7b"
+        },
+        "length_words": {
+          "deltas_pct": {
+            "qwen3:1.7b": 3.203,
+            "qwen3:4b": 4.3015
+          },
+          "most_sensitive": "qwen3:4b",
+          "least_sensitive": "qwen3:1.7b"
+        }
+      },
+      "QRNG_vs_PRNG": {
+        "shannon_char": {
+          "deltas_pct": {
+            "qwen3:1.7b": -0.2295,
+            "qwen3:4b": 0.0362
+          },
+          "most_sensitive": "qwen3:1.7b",
+          "least_sensitive": "qwen3:4b"
+        },
+        "shannon_word": {
+          "deltas_pct": {
+            "qwen3:1.7b": -0.1217,
+            "qwen3:4b": 0.2982
+          },
+          "most_sensitive": "qwen3:4b",
+          "least_sensitive": "qwen3:1.7b"
+        },
+        "word_diversity": {
+          "deltas_pct": {
+            "qwen3:1.7b": -1.4761,
+            "qwen3:4b": 0.3637
+          },
+          "most_sensitive": "qwen3:1.7b",
+          "least_sensitive": "qwen3:4b"
+        },
+        "length_words": {
+          "deltas_pct": {
+            "qwen3:1.7b": 3.3473,
+            "qwen3:4b": 0.6202
+          },
+          "most_sensitive": "qwen3:1.7b",
+          "least_sensitive": "qwen3:4b"
+        }
+      }
+    },
+    "sensitivity_scores": {
+      "qwen3:1.7b": 1.183,
+      "qwen3:4b": 0.8746
+    },
+    "model_effect_tests": {
+      "PRNG_shannon_char": {
+        "models": [
+          "qwen3:1.7b",
+          "qwen3:4b"
+        ],
+        "means": {
+          "qwen3:1.7b": 4.492877,
+          "qwen3:4b": 4.636844
+        },
+        "welch_t_stat": -5.452387,
+        "welch_t_pvalue": 8e-06,
+        "mannwhitney_u": 17.0,
+        "mannwhitney_pvalue": 8.1e-05,
+        "significant_005": true
+      },
+      "PRNG_shannon_word": {
+        "models": [
+          "qwen3:1.7b",
+          "qwen3:4b"
+        ],
+        "means": {
+          "qwen3:1.7b": 7.578164,
+          "qwen3:4b": 8.344184
+        },
+        "welch_t_stat": -7.314375,
+        "welch_t_pvalue": 0.0,
+        "mannwhitney_u": 3.0,
+        "mannwhitney_pvalue": 6e-06,
+        "significant_005": true
+      },
+      "PRNG_word_diversity": {
+        "models": [
+          "qwen3:1.7b",
+          "qwen3:4b"
+        ],
+        "means": {
+          "qwen3:1.7b": 0.447593,
+          "qwen3:4b": 0.548736
+        },
+        "welch_t_stat": -6.605277,
+        "welch_t_pvalue": 0.0,
+        "mannwhitney_u": 9.0,
+        "mannwhitney_pvalue": 1.9e-05,
+        "significant_005": true
+      },
+      "PRNG_length_words": {
+        "models": [
+          "qwen3:1.7b",
+          "qwen3:4b"
+        ],
+        "means": {
+          "qwen3:1.7b": 885.0,
+          "qwen3:4b": 1031.893333
+        },
+        "welch_t_stat": -1.693552,
+        "welch_t_pvalue": 0.103453,
+        "mannwhitney_u": 77.0,
+        "mannwhitney_pvalue": 0.146576,
+        "significant_005": false
+      },
+      "TRNG_shannon_char": {
+        "models": [
+          "qwen3:1.7b",
+          "qwen3:4b"
+        ],
+        "means": {
+          "qwen3:1.7b": 4.486876,
+          "qwen3:4b": 4.637615
+        },
+        "welch_t_stat": -4.780427,
+        "welch_t_pvalue": 5.5e-05,
+        "mannwhitney_u": 25.0,
+        "mannwhitney_pvalue": 0.000308,
+        "significant_005": true
+      },
+      "TRNG_shannon_word": {
+        "models": [
+          "qwen3:1.7b",
+          "qwen3:4b"
+        ],
+        "means": {
+          "qwen3:1.7b": 7.553392,
+          "qwen3:4b": 8.377225
+        },
+        "welch_t_stat": -6.890644,
+        "welch_t_pvalue": 0.0,
+        "mannwhitney_u": 5.0,
+        "mannwhitney_pvalue": 9e-06,
+        "significant_005": true
+      },
+      "TRNG_word_diversity": {
+        "models": [
+          "qwen3:1.7b",
+          "qwen3:4b"
+        ],
+        "means": {
+          "qwen3:1.7b": 0.444792,
+          "qwen3:4b": 0.543444
+        },
+        "welch_t_stat": -5.110764,
+        "welch_t_pvalue": 2.7e-05,
+        "mannwhitney_u": 15.0,
+        "mannwhitney_pvalue": 5.7e-05,
+        "significant_005": true
+      },
+      "TRNG_length_words": {
+        "models": [
+          "qwen3:1.7b",
+          "qwen3:4b"
+        ],
+        "means": {
+          "qwen3:1.7b": 913.346667,
+          "qwen3:4b": 1076.28
+        },
+        "welch_t_stat": -1.585935,
+        "welch_t_pvalue": 0.125157,
+        "mannwhitney_u": 81.0,
+        "mannwhitney_pvalue": 0.198506,
+        "significant_005": false
+      },
+      "QRNG_shannon_char": {
+        "models": [
+          "qwen3:1.7b",
+          "qwen3:4b"
+        ],
+        "means": {
+          "qwen3:1.7b": 4.482568,
+          "qwen3:4b": 4.638524
+        },
+        "welch_t_stat": -5.680869,
+        "welch_t_pvalue": 5e-06,
+        "mannwhitney_u": 14.0,
+        "mannwhitney_pvalue": 4.8e-05,
+        "significant_005": true
+      },
+      "QRNG_shannon_word": {
+        "models": [
+          "qwen3:1.7b",
+          "qwen3:4b"
+        ],
+        "means": {
+          "qwen3:1.7b": 7.568945,
+          "qwen3:4b": 8.369063
+        },
+        "welch_t_stat": -7.242124,
+        "welch_t_pvalue": 0.0,
+        "mannwhitney_u": 4.0,
+        "mannwhitney_pvalue": 7e-06,
+        "significant_005": true
+      },
+      "QRNG_word_diversity": {
+        "models": [
+          "qwen3:1.7b",
+          "qwen3:4b"
+        ],
+        "means": {
+          "qwen3:1.7b": 0.440986,
+          "qwen3:4b": 0.550732
+        },
+        "welch_t_stat": -5.957659,
+        "welch_t_pvalue": 3e-06,
+        "mannwhitney_u": 14.0,
+        "mannwhitney_pvalue": 4.8e-05,
+        "significant_005": true
+      },
+      "QRNG_length_words": {
+        "models": [
+          "qwen3:1.7b",
+          "qwen3:4b"
+        ],
+        "means": {
+          "qwen3:1.7b": 914.623333,
+          "qwen3:4b": 1038.293333
+        },
+        "welch_t_stat": -1.328735,
+        "welch_t_pvalue": 0.195269,
+        "mannwhitney_u": 82.0,
+        "mannwhitney_pvalue": 0.213374,
+        "significant_005": false
+      }
+    }
+  }
+}
