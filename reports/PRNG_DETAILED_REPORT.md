@@ -256,3 +256,25 @@ PRNG is best suited for **development and testing** due to its reproducibility, 
 
 *Report generated: 2026-02-07*
 *Data sources: 7 model sizes, 50+ configurations*
+
+---
+
+## Appendix: Metrics Glossary
+
+### Key Metrics
+
+| Metric | What It Measures | Good Range | Direction |
+|:------:|------------------|:----------:|:---------:|
+| **shannon_char** | Character diversity (bits/char) | 4.2–4.7 | Higher = better |
+| **shannon_word** | Vocabulary richness (bits/word) | 7.0–9.0 | Higher = better |
+| **word_diversity** (TTR) | Unique word fraction | 0.5–0.8 | Higher = better |
+| **distinct_2** (D2) | Unique bigram fraction | 0.85–1.0 | Higher = better |
+
+### PRNG Implementation
+
+**Source**: `random.Random(42)` → Python's Mersenne Twister PRNG with fixed seed.
+**Properties**: Fully deterministic. Same seed = identical sequence every time. Period of 2^19937-1.
+**Limitation**: Predictable. Not suitable for cryptographic or security-sensitive applications.
+**Use case**: Reproducible experiments and debugging baselines.
+
+*Full glossary: see `METRICS_GLOSSARY.md` in the repository root.*

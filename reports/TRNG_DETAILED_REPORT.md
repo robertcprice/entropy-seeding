@@ -464,3 +464,24 @@ The 1-2 μs overhead of TRNG is **negligible** for LLM applications:
 *Tested models: Qwen3 (0.6B, 1.7B, 8B, 14B, 32B), DeepSeek-R1 (32B, 70B)*
 *Total comparisons: 50+ configurations*
 *Hardware: Apple M4 Pro, macOS 15.x*
+
+---
+
+## Appendix: Metrics Glossary
+
+### Key Metrics
+
+| Metric | What It Measures | Good Range | Direction |
+|:------:|------------------|:----------:|:---------:|
+| **shannon_char** | Character diversity (bits/char) | 4.2–4.7 | Higher = better |
+| **shannon_word** | Vocabulary richness (bits/word) | 7.0–9.0 | Higher = better |
+| **word_diversity** (TTR) | Unique word fraction | 0.5–0.8 | Higher = better |
+| **distinct_2** (D2) | Unique bigram fraction | 0.85–1.0 | Higher = better |
+
+### TRNG Implementation
+
+**Source**: `secrets.token_bytes()` → Python's interface to the OS entropy pool (`/dev/urandom` on Unix).
+**Properties**: Non-deterministic, non-reproducible, hardware-sourced entropy. Each run produces different seeds.
+**Quality**: Considered cryptographically secure. Passes all NIST randomness tests.
+
+*Full glossary: see `METRICS_GLOSSARY.md` in the repository root.*

@@ -225,3 +225,35 @@ The Jaccard similarity metric (how similar repeated runs of the same prompt are)
 - `results/gemma2_27b/gemma2_27b_tre_experiment.json` (8.8MB)
 - `results/mixtral_8x22b/mixtral_8x22b_tre_experiment.json` (8.6MB)
 - `scripts/run_universal_tre.py` — experiment script with NaN-safe sampling, bfloat16 Gemma support
+
+---
+
+## Appendix: Metrics Glossary & Interpretation Guide
+
+### Entropy Sources
+
+| Source | Description |
+|:------:|-------------|
+| **PRNG** | Pseudo-Random Number Generator (Mersenne Twister, seed=42) |
+| **TRNG** | True Random Number Generator (`secrets.token_bytes()` → `/dev/urandom`) |
+| **QRNG** | Quantum RNG (SHA256-mixed). NOT true quantum. |
+
+### Key Metrics
+
+| Metric | What It Measures | Good Range | Direction |
+|:------:|------------------|:----------:|:---------:|
+| **shannon_char** | Character diversity | 4.2–4.7 bits | Higher = better |
+| **shannon_word** | Vocabulary richness | 7.0–9.0 bits | Higher = better |
+| **ttr** / **word_diversity** | Unique word fraction | 0.5–0.8 | Higher = better |
+| **tsa** | Temporal Shannon Analysis (windowed entropy) | 0–~5.0 | Stable = consistent quality |
+| **tre** | Token Richness Entropy (composite metric) | 0–~10 | Higher = richer patterns |
+
+### Architecture Abbreviations
+
+| Abbreviation | Full Form | Models |
+|:------------:|-----------|--------|
+| **GQA** | Grouped-Query Attention | Llama 3.1 70B |
+| **MoE** | Mixture of Experts | DeepSeek-R1 (Llama 70B), Mixtral 8x22B |
+| **Dense** | Full/Standard Attention | Gemma2 27B |
+
+*Full glossary: see `METRICS_GLOSSARY.md` in the repository root.*

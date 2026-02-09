@@ -524,3 +524,41 @@ For access to raw experimental data, statistical analyses, and code implementati
 ---
 
 **License:** Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+
+---
+
+## Appendix: Metrics Glossary & Interpretation Guide
+
+### Entropy Sources
+
+| Source | Description | Implementation |
+|:------:|-------------|----------------|
+| **PRNG** | Pseudo-Random Number Generator. Deterministic, reproducible. | `random.Random(42)` → Mersenne Twister |
+| **TRNG** | True Random Number Generator. Hardware entropy. | `secrets.token_bytes()` → `/dev/urandom` |
+| **QRNG** | Quantum RNG (SHA256-mixed or IBM). | Context-dependent (see per-experiment notes) |
+| **qrng_cached** | Pre-generated IBM quantum random numbers. | Binary cache from IBM ibm_fez backend |
+| **self_seed_sfc/sfs** | Model hidden-state activations fed back as seed. | Hidden layer → hash → seed |
+| **hidden_variance** | Variance of hidden states as entropy source. | `var(hidden_states)` → seed |
+
+### Key Metrics
+
+| Metric | What It Measures | Good Range | Direction |
+|:------:|------------------|:----------:|:---------:|
+| **shannon_char** | Character diversity | 4.2–4.7 bits | Higher = better |
+| **shannon_word** | Vocabulary richness | 7.0–9.0 bits | Higher = better |
+| **word_diversity** (TTR) | Unique word fraction | 0.5–0.8 | Higher = better |
+| **distinct_2** (D2) | Unique bigram fraction | 0.85–1.0 | Higher = better |
+| **perplexity** | Text predictability | 50–300 | Context-dependent |
+| **hidden_entropy_late** | Late-layer activation diversity | 1.5–2.2 | Higher = more diverse |
+
+### Statistical Measures
+
+| Measure | Key Thresholds |
+|:-------:|:--------------:|
+| **p-value** | < 0.05 significant, < 0.01 highly significant |
+| **Cohen's d** | < 0.2 negligible, 0.2–0.5 small, 0.5–0.8 medium, > 0.8 large |
+| **P(Δ>0)** | > 0.95 strong evidence, 0.90–0.95 trending |
+| **95% CI** | Excluding 0 = confirmed non-zero effect |
+| **CV%** | < 5% very consistent, > 15% high variation |
+
+*Full glossary: see `METRICS_GLOSSARY.md` in the repository root.*
