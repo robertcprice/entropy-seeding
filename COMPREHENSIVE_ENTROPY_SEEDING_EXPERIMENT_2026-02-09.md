@@ -207,6 +207,15 @@ Qwen3 models (with /think enabled) generate an extensive "Thinking..." prefix be
 2. The true entropy source effect on creative content may be larger than measured
 3. Chain-of-thought creates a "deterministic bottleneck" that shields content from seed influence
 
+### Scale Effect on Thinking Determinism
+
+| Model | Mean Thinking Sim | Mean Content Sim | Think/Content Ratio |
+|-------|:-----------------:|:----------------:|:-------------------:|
+| qwen3:1.7b | 58.6% | 12.0% | 4.9x |
+| qwen3:4b | 63.8% | 14.5% | 4.4x |
+
+**The larger model is MORE deterministic in both thinking and content.** The 4B model's thinking is 5.2 percentage points more similar across samples than the 1.7B model's. This suggests larger models have stronger attractor states in both reasoning and generation. The ratio is slightly lower at 4B (4.4x vs 4.9x), meaning content converges even faster than thinking as scale increases.
+
 ### Entropy Source Does NOT Cluster Outputs
 
 Within-source similarity (samples sharing the same entropy source type) is statistically indistinguishable from cross-source similarity:
