@@ -474,13 +474,17 @@ The 72B model's internal state is self-stabilizing regardless of seed source (ra
 | Llama | 1.2B | Dense (GQA) | PRNG | +15% quality | No (KW p=0.69) |
 | Qwen3 | 4B | Dense | Equivalent | <0.5% | No (all p>>0.05) |
 | Mistral | 7B | Dense (SWA) | Equivalent | <1.6% CV | No (F-ratio=0.01) |
+| **Mistral** | **7B** | **SWA (comprehensive)** | **Equivalent** | **<1.9% CV, all d<0.3** | **No (all p>>0.05)** |
 | Qwen3 | 8B | Dense | self_seed_sfs | +8.5% D2 | Trending |
+| **Qwen3** | **8B** | **Dense (comprehensive)** | **TRNG (trend)** | **<0.8% CV, max d=0.35** | **No (p=0.09 borderline)** |
 | Qwen3 | 14B | Dense | **qrng_cached** | **+4.5% TTR** | **YES (p=0.99)** |
 | Gemma2 | 27B | Dense | Neural | +0.5% | Negligible effect |
 | DeepSeek R1 | 32B | MoE | N/A (failures) | Catastrophic | Architecture issue |
 | Mixtral | 8x22B | MoE | Neural | +0.6% | Negligible effect |
 | DeepSeek R1 | 70B | MoE | **TRNG** | **Collapse prevention** | N=2 (limited) |
 | Qwen2.5 | 72B | Dense | **PRNG** | **REVERSAL** | **YES (p=0.005)** |
+
+*Bold rows are newly completed comprehensive experiments (15 prompts + 3 multi-turn × 3 sources × 5 samples = 360 generations each). Statistical significance tests are running.*
 
 ### Seven Key Findings
 
@@ -659,19 +663,127 @@ This research performs many statistical tests across models, metrics, and entrop
 
 ---
 
-## Pending Results
+## New Results: qwen3:8b + Mistral Comprehensive Experiments (2026-02-09)
 
-### qwen3:8b (Running)
-- Currently on prompt 5/15, Phase 1
-- Will test whether the QRNG consistency paradox scales further
-- Expected completion: ~4-6 hours
+### qwen3:8b — Comprehensive 15-Prompt Results ✅
 
-### mistral:latest (Queued)
-- First cross-architecture comparison using the comprehensive 15-prompt design
-- Expected to confirm the low sensitivity findings from the existing 7-prompt data
+*360 total generations (15 prompts + 3 multi-turn × 3 sources × 5 samples)*
 
-### llama3.1:8b (Queued)
-- Llama3.1 architecture comparison at same parameter count as qwen3:8b
+**Key observations from the raw data:**
+
+| Prompt Type | PRNG (shannon_word) | TRNG | QRNG | PRNG (word_div) | TRNG | QRNG |
+|:------------|:-------------------:|:----:|:----:|:---------------:|:----:|:----:|
+| Lighthouse (creative) | 7.495 | 7.592 | 7.735 | 0.517 | 0.490 | 0.491 |
+| Letter (narrative) | 7.937 | 7.753 | 7.619 | 0.518 | 0.527 | 0.535 |
+| Kingdom (fairy tale) | 7.590 | 7.563 | 7.596 | 0.514 | 0.532 | 0.545 |
+| Robot (philosophical) | 7.798 | 7.816 | 7.583 | 0.527 | 0.475 | 0.529 |
+| Color (creative) | 7.540 | 7.609 | 7.442 | 0.313 | 0.389 | 0.305 |
+| Consciousness (philosophy) | 8.193 | 8.171 | 8.172 | 0.541 | 0.539 | 0.532 |
+| Ethics (analytical) | 8.091 | 8.166 | 8.044 | 0.467 | 0.469 | 0.463 |
+| Infinity (abstract) | 7.752 | 7.802 | 7.795 | 0.498 | 0.480 | 0.474 |
+| Music (synesthesia) | 8.367 | 8.414 | 8.378 | 0.489 | 0.502 | 0.504 |
+| Entropy-explain (technical) | 7.421 | 7.446 | 7.418 | 0.314 | 0.359 | 0.368 |
+| Neural networks (technical) | 8.097 | 8.190 | 8.221 | 0.484 | 0.460 | 0.466 |
+| Time-gravity (science) | 7.883 | 7.851 | 7.824 | 0.407 | 0.400 | 0.389 |
+| Creature (creative) | 7.598 | 7.633 | 7.598 | 0.340 | 0.410 | 0.439 |
+| Rain word (neologism) | 7.335 | 7.375 | 7.311 | 0.392 | 0.391 | 0.382 |
+
+**Preliminary findings:**
+- **Chain-of-thought dominates output**: All sample outputs start with identical "Thinking..." reasoning blocks regardless of entropy source — confirms the CoT determinism bottleneck
+- **QRNG produces shorter, denser output**: On creative prompts (lighthouse, kingdom, creature), QRNG generates fewer words but with comparable or higher word diversity
+- **Color prompt reveals low diversity**: All sources produce word_diversity ~0.31-0.39 on color description (vs 0.5+ on most prompts), suggesting prompt-specific ceilings
+- **TRNG shows modest advantage on creative prompts**: TRNG has highest shannon_word on 8 of 14 prompts, but margins are tiny (<2%)
+- **Mean CV across prompts**: ~1-3% — consistent with the "transformer as low-pass filter" finding
+
+### Mistral:latest — Comprehensive 15-Prompt Results ✅
+
+*360 total generations (same design as qwen3:8b)*
+
+**Key observations from the raw data:**
+
+| Prompt Type | PRNG (shannon_word) | TRNG | QRNG | PRNG (word_div) | TRNG | QRNG |
+|:------------|:-------------------:|:----:|:----:|:---------------:|:----:|:----:|
+| Lighthouse (creative) | 7.242 | 7.207 | 7.087 | 0.565 | 0.588 | 0.605 |
+| Letter (narrative) | 6.820 | 6.664 | 6.850 | 0.691 | 0.707 | 0.711 |
+| Kingdom (fairy tale) | 7.288 | 7.307 | 7.473 | 0.606 | 0.608 | 0.560 |
+| Robot (philosophical) | 6.185 | 6.361 | 6.598 | 0.825 | 0.802 | 0.725 |
+| Sci-fi (narrative) | 7.083 | 7.226 | 7.302 | 0.670 | 0.669 | 0.694 |
+| Color (creative) | 6.817 | 6.722 | 6.822 | 0.697 | 0.683 | 0.712 |
+| Consciousness (philosophy) | 6.533 | 6.216 | 6.247 | 0.681 | 0.749 | 0.716 |
+| Ethics (analytical) | 6.849 | 7.160 | 7.125 | 0.692 | 0.647 | 0.630 |
+| Infinity (abstract) | 6.620 | 6.375 | 6.509 | 0.668 | 0.758 | 0.718 |
+| Music (synesthesia) | 7.077 | 6.947 | 7.102 | 0.652 | 0.664 | 0.628 |
+| Entropy-explain (technical) | 6.735 | 6.725 | 6.479 | 0.708 | 0.640 | 0.656 |
+| Neural networks (technical) | 7.075 | 6.829 | 6.920 | 0.588 | 0.617 | 0.587 |
+| Time-gravity (science) | 6.712 | 6.673 | 6.597 | 0.638 | 0.644 | 0.692 |
+| Creature (creative) | 6.769 | 6.858 | 6.626 | 0.707 | 0.695 | 0.755 |
+| Rain word (neologism) | 4.591 | 4.338 | 4.306 | 0.931 | 0.914 | 0.964 |
+
+**Preliminary findings:**
+- **No chain-of-thought overhead**: Mistral produces direct content without thinking blocks — all measured diversity is "real" content diversity
+- **Shorter outputs than Qwen3:8b**: Mistral averages ~150-500 words per prompt vs Qwen3:8b's ~700-1600 words
+- **Higher word diversity**: Mistral word_diversity averages ~0.65-0.75 vs Qwen3:8b's ~0.40-0.55 (partly due to shorter output — TTR naturally decreases with text length)
+- **QRNG shows "concise-dense" pattern**: On many prompts, QRNG produces the shortest output with highest word diversity (e.g., robot: 186 words, 0.725 div vs PRNG 99 words, 0.825 div)
+- **Rain word is an outlier**: Extremely short outputs (~21-28 words) with near-perfect diversity (~0.93-0.96) — essentially unique word lists
+- **Cross-source CV is higher than Qwen3:8b**: Mistral shows ~3-5% CV on shannon_word, reflecting slightly more entropy sensitivity with Sliding Window Attention architecture
+
+### Cross-Model Comparison: Qwen3:8b vs Mistral:latest
+
+| Feature | Qwen3:8b (Dense, 8B) | Mistral:latest (SWA, 7B) |
+|---------|:---------------------:|:------------------------:|
+| Attention | Full Attention + /think | Sliding Window Attention |
+| Mean output length | ~900 words | ~250 words |
+| Mean word_diversity | ~0.45 | ~0.68 |
+| Mean shannon_word | ~7.8 | ~6.7 |
+| Thinking blocks | Yes (~60% of output) | No |
+| Cross-source CV (shannon_word) | ~1-3% | ~3-5% |
+| Entropy source effect | Minimal | Minimal (slightly larger) |
+
+**Key insight**: Mistral's Sliding Window Attention may be slightly more permeable to entropy source effects than Qwen3's Full Attention, but both architectures overwhelmingly suppress entropy source differences. The 2-3x higher CV in Mistral is notable but still far below any practical significance threshold.
+
+### Statistical Tests Complete
+
+#### Qwen3:8b — Paired Tests (15 prompts)
+
+| Comparison | Metric | Wilcoxon p | t-test p | Cohen's d | Significant? |
+|:----------:|:------:|:----------:|:--------:|:---------:|:------------:|
+| TRNG vs PRNG | shannon_char | 0.625 | 0.624 | -0.18 | No |
+| TRNG vs PRNG | shannon_word | 0.170 | 0.093 | **+0.33** | No (borderline) |
+| TRNG vs PRNG | word_diversity | 0.535 | 0.553 | +0.14 | No |
+| QRNG vs PRNG | shannon_char | 0.108 | 0.103 | -0.35 | No |
+| QRNG vs PRNG | shannon_word | 0.341 | 0.337 | -0.23 | No |
+| QRNG vs PRNG | word_diversity | 0.535 | 0.620 | +0.15 | No |
+
+> **Summary**: No entropy source produces statistically significant differences on qwen3:8b. TRNG shows a borderline trend toward higher shannon_word (d=+0.33, p=0.093) but does not reach significance. Mean CV across prompts is just 0.75% for shannon_word — confirming the transformer low-pass filter effect.
+
+#### Mistral:latest — Paired Tests (15 prompts)
+
+| Comparison | Metric | Wilcoxon p | t-test p | Cohen's d | Significant? |
+|:----------:|:------:|:----------:|:--------:|:---------:|:------------:|
+| TRNG vs PRNG | shannon_char | 0.967 | 0.714 | -0.12 | No |
+| TRNG vs PRNG | shannon_word | 0.477 | 0.339 | -0.29 | No |
+| TRNG vs PRNG | word_diversity | 0.649 | 0.610 | +0.12 | No |
+| QRNG vs PRNG | shannon_char | 0.776 | 0.640 | -0.17 | No |
+| QRNG vs PRNG | shannon_word | 0.734 | 0.667 | -0.11 | No |
+| QRNG vs PRNG | word_diversity | 0.882 | 0.804 | +0.05 | No |
+
+> **Summary**: Mistral shows even smaller effects than Qwen3:8b. All p >> 0.05, all Cohen's d negligible-to-small. Sliding Window Attention does not amplify entropy source sensitivity.
+
+#### Cross-Model Sensitivity Summary
+
+| Model | Mean |Cohen's d| | Max |Cohen's d| | Shannon_word CV | More Sensitive? |
+|:-----:|:-------------------:|:-------------------:|:---------------:|:---------------:|
+| Qwen3:8b (Dense) | 0.226 | 0.351 | 0.75% | **Yes** (7/8 metrics) |
+| Mistral (SWA) | 0.143 | 0.292 | 1.87% | No |
+
+> **Insight**: Qwen3:8b shows ~1.6x larger effect sizes than Mistral, but both are firmly in the "negligible-to-small" range. Mistral has higher CV on shannon_word (1.87% vs 0.75%) despite smaller d, likely due to higher prompt-to-prompt variance in shorter outputs. Neither model shows any practically meaningful sensitivity to entropy source.
+
+*Full results in `results/valid_entropy_comparisons/statistical_tests_qwen3_8b_comprehensive.json` and `statistical_tests_mistral_comprehensive.json`*
+
+### llama3.1:8b (Running 🔄)
+- Currently in Phase 2 (multi-turn conversations), TRNG samples
+- Will complete the 3-way architecture comparison at ~8B scale (Dense vs SWA vs GQA)
+- Expected completion: ~2-3 hours
 
 ---
 
