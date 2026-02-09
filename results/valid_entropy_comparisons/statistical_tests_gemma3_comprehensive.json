@@ -1,0 +1,706 @@
+{
+  "model": "gemma3",
+  "analysis_type": "comprehensive_entropy_seeding_statistical_tests",
+  "analysis_timestamp": "2026-02-09",
+  "design": {
+    "single_turn_prompts": 15,
+    "multi_turn_prompts": 3,
+    "sources": [
+      "PRNG",
+      "TRNG",
+      "QRNG"
+    ],
+    "pairwise_comparisons": [
+      "TRNG_vs_PRNG",
+      "QRNG_vs_PRNG",
+      "QRNG_vs_TRNG"
+    ],
+    "samples_per_condition": 5,
+    "metrics_analyzed": [
+      "shannon_char",
+      "shannon_word",
+      "word_diversity",
+      "length_words"
+    ]
+  },
+  "grand_means_per_source": {
+    "shannon_char": {
+      "PRNG": {
+        "mean": 4.541429,
+        "std": 0.130504,
+        "n_prompts": 15
+      },
+      "TRNG": {
+        "mean": 4.550593,
+        "std": 0.134245,
+        "n_prompts": 15
+      },
+      "QRNG": {
+        "mean": 4.551895,
+        "std": 0.129819,
+        "n_prompts": 15
+      }
+    },
+    "shannon_word": {
+      "PRNG": {
+        "mean": 7.327328,
+        "std": 0.610681,
+        "n_prompts": 15
+      },
+      "TRNG": {
+        "mean": 7.322311,
+        "std": 0.635707,
+        "n_prompts": 15
+      },
+      "QRNG": {
+        "mean": 7.356532,
+        "std": 0.617378,
+        "n_prompts": 15
+      }
+    },
+    "word_diversity": {
+      "PRNG": {
+        "mean": 0.622249,
+        "std": 0.056301,
+        "n_prompts": 15
+      },
+      "TRNG": {
+        "mean": 0.624687,
+        "std": 0.055488,
+        "n_prompts": 15
+      },
+      "QRNG": {
+        "mean": 0.632364,
+        "std": 0.056454,
+        "n_prompts": 15
+      }
+    },
+    "length_words": {
+      "PRNG": {
+        "mean": 458.906667,
+        "std": 231.00481,
+        "n_prompts": 15
+      },
+      "TRNG": {
+        "mean": 458.36,
+        "std": 234.485652,
+        "n_prompts": 15
+      },
+      "QRNG": {
+        "mean": 455.186667,
+        "std": 231.119567,
+        "n_prompts": 15
+      }
+    }
+  },
+  "sample_level_descriptive_stats": {
+    "shannon_char": {
+      "PRNG": {
+        "mean": 4.541429,
+        "std": 0.131572,
+        "median": 4.5631,
+        "n_samples": 75
+      },
+      "TRNG": {
+        "mean": 4.550593,
+        "std": 0.134221,
+        "median": 4.5786,
+        "n_samples": 75
+      },
+      "QRNG": {
+        "mean": 4.551895,
+        "std": 0.130187,
+        "median": 4.5838,
+        "n_samples": 75
+      }
+    },
+    "shannon_word": {
+      "PRNG": {
+        "mean": 7.327328,
+        "std": 0.612847,
+        "median": 7.3636,
+        "n_samples": 75
+      },
+      "TRNG": {
+        "mean": 7.322311,
+        "std": 0.634494,
+        "median": 7.3294,
+        "n_samples": 75
+      },
+      "QRNG": {
+        "mean": 7.356532,
+        "std": 0.612664,
+        "median": 7.5127,
+        "n_samples": 75
+      }
+    },
+    "word_diversity": {
+      "PRNG": {
+        "mean": 0.622249,
+        "std": 0.059749,
+        "median": 0.6066,
+        "n_samples": 75
+      },
+      "TRNG": {
+        "mean": 0.624687,
+        "std": 0.059319,
+        "median": 0.6219,
+        "n_samples": 75
+      },
+      "QRNG": {
+        "mean": 0.632364,
+        "std": 0.061009,
+        "median": 0.6237,
+        "n_samples": 75
+      }
+    },
+    "length_words": {
+      "PRNG": {
+        "mean": 458.906667,
+        "std": 229.247369,
+        "median": 427.0,
+        "n_samples": 75
+      },
+      "TRNG": {
+        "mean": 458.36,
+        "std": 230.419983,
+        "median": 385.0,
+        "n_samples": 75
+      },
+      "QRNG": {
+        "mean": 455.186667,
+        "std": 227.300236,
+        "median": 396.0,
+        "n_samples": 75
+      }
+    }
+  },
+  "paired_tests_by_prompt_mean": {
+    "shannon_char": {
+      "TRNG_vs_PRNG": {
+        "n_pairs": 15,
+        "mean_alt_source": 4.550593,
+        "mean_base_source": 4.541429,
+        "mean_difference": 0.009164,
+        "percent_difference": 0.2018,
+        "wilcoxon_signed_rank": {
+          "statistic": 26.0,
+          "p_value": 0.05535888671875,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "paired_ttest": {
+          "statistic": 2.177924309978665,
+          "p_value": 0.04700298976063028,
+          "significant_005": true,
+          "significant_001": false
+        },
+        "cohens_d": 0.5623,
+        "effect_size_interpretation": "medium"
+      },
+      "QRNG_vs_PRNG": {
+        "n_pairs": 15,
+        "mean_alt_source": 4.551895,
+        "mean_base_source": 4.541429,
+        "mean_difference": 0.010465,
+        "percent_difference": 0.2304,
+        "wilcoxon_signed_rank": {
+          "statistic": 38.0,
+          "p_value": 0.22930908203125,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "paired_ttest": {
+          "statistic": 1.6018908626875672,
+          "p_value": 0.13149568405269477,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "cohens_d": 0.4136,
+        "effect_size_interpretation": "small"
+      },
+      "QRNG_vs_TRNG": {
+        "n_pairs": 15,
+        "mean_alt_source": 4.551895,
+        "mean_base_source": 4.550593,
+        "mean_difference": 0.001301,
+        "percent_difference": 0.0286,
+        "wilcoxon_signed_rank": {
+          "statistic": 58.0,
+          "p_value": 0.93408203125,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "paired_ttest": {
+          "statistic": 0.2366832952389196,
+          "p_value": 0.8163304997920786,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "cohens_d": 0.0611,
+        "effect_size_interpretation": "negligible"
+      }
+    },
+    "shannon_word": {
+      "TRNG_vs_PRNG": {
+        "n_pairs": 15,
+        "mean_alt_source": 7.322311,
+        "mean_base_source": 7.327328,
+        "mean_difference": -0.005017,
+        "percent_difference": -0.0685,
+        "wilcoxon_signed_rank": {
+          "statistic": 59.0,
+          "p_value": 0.97796630859375,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "paired_ttest": {
+          "statistic": -0.2868874022251053,
+          "p_value": 0.7784007042819534,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "cohens_d": -0.0741,
+        "effect_size_interpretation": "negligible"
+      },
+      "QRNG_vs_PRNG": {
+        "n_pairs": 15,
+        "mean_alt_source": 7.356532,
+        "mean_base_source": 7.327328,
+        "mean_difference": 0.029204,
+        "percent_difference": 0.3986,
+        "wilcoxon_signed_rank": {
+          "statistic": 35.0,
+          "p_value": 0.1688232421875,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "paired_ttest": {
+          "statistic": 1.7291027718404577,
+          "p_value": 0.10576793620140075,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "cohens_d": 0.4465,
+        "effect_size_interpretation": "small"
+      },
+      "QRNG_vs_TRNG": {
+        "n_pairs": 15,
+        "mean_alt_source": 7.356532,
+        "mean_base_source": 7.322311,
+        "mean_difference": 0.034221,
+        "percent_difference": 0.4674,
+        "wilcoxon_signed_rank": {
+          "statistic": 23.0,
+          "p_value": 0.03533935546875,
+          "significant_005": true,
+          "significant_001": false
+        },
+        "paired_ttest": {
+          "statistic": 2.3699792613501613,
+          "p_value": 0.032693162790391105,
+          "significant_005": true,
+          "significant_001": false
+        },
+        "cohens_d": 0.6119,
+        "effect_size_interpretation": "medium"
+      }
+    },
+    "word_diversity": {
+      "TRNG_vs_PRNG": {
+        "n_pairs": 15,
+        "mean_alt_source": 0.624687,
+        "mean_base_source": 0.622249,
+        "mean_difference": 0.002437,
+        "percent_difference": 0.3917,
+        "wilcoxon_signed_rank": {
+          "statistic": 45.0,
+          "p_value": 0.42120361328125,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "paired_ttest": {
+          "statistic": 0.8897542545643439,
+          "p_value": 0.3886315624338418,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "cohens_d": 0.2297,
+        "effect_size_interpretation": "small"
+      },
+      "QRNG_vs_PRNG": {
+        "n_pairs": 15,
+        "mean_alt_source": 0.632364,
+        "mean_base_source": 0.622249,
+        "mean_difference": 0.010115,
+        "percent_difference": 1.6255,
+        "wilcoxon_signed_rank": {
+          "statistic": 14.0,
+          "p_value": 0.0067138671875,
+          "significant_005": true,
+          "significant_001": true
+        },
+        "paired_ttest": {
+          "statistic": 2.823036673796743,
+          "p_value": 0.013551417518821813,
+          "significant_005": true,
+          "significant_001": false
+        },
+        "cohens_d": 0.7289,
+        "effect_size_interpretation": "medium"
+      },
+      "QRNG_vs_TRNG": {
+        "n_pairs": 15,
+        "mean_alt_source": 0.632364,
+        "mean_base_source": 0.624687,
+        "mean_difference": 0.007677,
+        "percent_difference": 1.229,
+        "wilcoxon_signed_rank": {
+          "statistic": 28.0,
+          "p_value": 0.072998046875,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "paired_ttest": {
+          "statistic": 2.0430946519608537,
+          "p_value": 0.06033952183354772,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "cohens_d": 0.5275,
+        "effect_size_interpretation": "medium"
+      }
+    },
+    "length_words": {
+      "TRNG_vs_PRNG": {
+        "n_pairs": 15,
+        "mean_alt_source": 458.36,
+        "mean_base_source": 458.906667,
+        "mean_difference": -0.546667,
+        "percent_difference": -0.1191,
+        "wilcoxon_signed_rank": {
+          "statistic": 52.0,
+          "p_value": 0.67877197265625,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "paired_ttest": {
+          "statistic": -0.12935326308099288,
+          "p_value": 0.8989181622064213,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "cohens_d": -0.0334,
+        "effect_size_interpretation": "negligible"
+      },
+      "QRNG_vs_PRNG": {
+        "n_pairs": 15,
+        "mean_alt_source": 455.186667,
+        "mean_base_source": 458.906667,
+        "mean_difference": -3.72,
+        "percent_difference": -0.8106,
+        "wilcoxon_signed_rank": {
+          "statistic": 45.0,
+          "p_value": 0.42120361328125,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "paired_ttest": {
+          "statistic": -0.757739033055667,
+          "p_value": 0.46117212814166103,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "cohens_d": -0.1956,
+        "effect_size_interpretation": "negligible"
+      },
+      "QRNG_vs_TRNG": {
+        "n_pairs": 15,
+        "mean_alt_source": 455.186667,
+        "mean_base_source": 458.36,
+        "mean_difference": -3.173333,
+        "percent_difference": -0.6923,
+        "wilcoxon_signed_rank": {
+          "statistic": 52.0,
+          "p_value": 0.67877197265625,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "paired_ttest": {
+          "statistic": -0.5419683078936535,
+          "p_value": 0.5963615554518594,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "cohens_d": -0.1399,
+        "effect_size_interpretation": "negligible"
+      }
+    }
+  },
+  "effect_size_summary": {
+    "overall": {
+      "mean_abs_cohens_d": 0.3354,
+      "median_abs_cohens_d": 0.3216,
+      "max_abs_cohens_d": 0.7289,
+      "min_abs_cohens_d": 0.0334,
+      "n_effects": 12
+    },
+    "per_comparison": {
+      "TRNG_vs_PRNG": {
+        "mean_abs_cohens_d": 0.2249,
+        "max_abs_cohens_d": 0.5623,
+        "n_effects": 4
+      },
+      "QRNG_vs_PRNG": {
+        "mean_abs_cohens_d": 0.4461,
+        "max_abs_cohens_d": 0.7289,
+        "n_effects": 4
+      },
+      "QRNG_vs_TRNG": {
+        "mean_abs_cohens_d": 0.3351,
+        "max_abs_cohens_d": 0.6119,
+        "n_effects": 4
+      }
+    }
+  },
+  "significance_counts": {
+    "wilcoxon_p005": 2,
+    "wilcoxon_p001": 1,
+    "ttest_p005": 3,
+    "ttest_p001": 0,
+    "total_tests": 12
+  },
+  "cross_source_cv_per_prompt": {
+    "The old lighthouse keeper had never seen anything like it.": {
+      "shannon_char": 0.2589,
+      "shannon_word": 1.2193,
+      "word_diversity": 0.9939,
+      "length_words": 4.7793
+    },
+    "She opened the letter, and everything changed.": {
+      "shannon_char": 0.2367,
+      "shannon_word": 0.6844,
+      "word_diversity": 1.6979,
+      "length_words": 6.8912
+    },
+    "Once upon a time, in a kingdom by the sea,": {
+      "shannon_char": 0.0452,
+      "shannon_word": 0.7025,
+      "word_diversity": 1.667,
+      "length_words": 0.4167
+    },
+    "The robot looked at its hands and wondered what it meant to be alive.": {
+      "shannon_char": 0.8134,
+      "shannon_word": 0.474,
+      "word_diversity": 0.8447,
+      "length_words": 0.798
+    },
+    "In the year 2157, humanity discovered they were not alone.": {
+      "shannon_char": 0.1145,
+      "shannon_word": 0.6036,
+      "word_diversity": 0.3947,
+      "length_words": 3.3413
+    },
+    "Think of a color you have never seen before. Describe it in detail.": {
+      "shannon_char": 0.7239,
+      "shannon_word": 1.0222,
+      "word_diversity": 1.84,
+      "length_words": 1.4442
+    },
+    "What is the meaning of consciousness?": {
+      "shannon_char": 0.2196,
+      "shannon_word": 0.3384,
+      "word_diversity": 2.0899,
+      "length_words": 3.775
+    },
+    "Is it ever ethical to tell a lie? If so, under what circumstances?": {
+      "shannon_char": 0.1592,
+      "shannon_word": 0.1516,
+      "word_diversity": 0.7365,
+      "length_words": 1.5107
+    },
+    "Describe what infinity feels like.": {
+      "shannon_char": 0.1744,
+      "shannon_word": 0.3499,
+      "word_diversity": 1.2651,
+      "length_words": 0.4761
+    },
+    "What would music look like if you could see it?": {
+      "shannon_char": 0.2023,
+      "shannon_word": 0.7032,
+      "word_diversity": 1.9673,
+      "length_words": 0.4541
+    },
+    "Explain the concept of entropy to a five-year-old.": {
+      "shannon_char": 0.2817,
+      "shannon_word": 1.0097,
+      "word_diversity": 1.5455,
+      "length_words": 7.1343
+    },
+    "How does a neural network learn?": {
+      "shannon_char": 0.0845,
+      "shannon_word": 0.4578,
+      "word_diversity": 1.221,
+      "length_words": 1.3187
+    },
+    "What is the relationship between time and gravity?": {
+      "shannon_char": 0.1793,
+      "shannon_word": 0.1439,
+      "word_diversity": 0.8771,
+      "length_words": 1.2039
+    },
+    "Invent a name for a magical creature that lives in clouds.": {
+      "shannon_char": 0.4167,
+      "shannon_word": 0.5485,
+      "word_diversity": 0.5705,
+      "length_words": 2.0195
+    },
+    "Create a unique word that describes the feeling of watching rain.": {
+      "shannon_char": 0.1683,
+      "shannon_word": 0.5428,
+      "word_diversity": 4.0035,
+      "length_words": 8.3534
+    }
+  },
+  "mean_cv_across_prompts": {
+    "shannon_char": 0.2719,
+    "shannon_word": 0.5968,
+    "word_diversity": 1.4476,
+    "length_words": 2.9278
+  },
+  "single_turn_vs_multi_turn": {
+    "single_turn": {
+      "PRNG": {
+        "mean_word_diversity": 0.622249,
+        "n": 15
+      },
+      "TRNG": {
+        "mean_word_diversity": 0.624687,
+        "n": 15
+      },
+      "QRNG": {
+        "mean_word_diversity": 0.632364,
+        "n": 15
+      }
+    },
+    "multi_turn": {
+      "PRNG": {
+        "mean_word_diversity": 0.631611,
+        "n": 45
+      },
+      "TRNG": {
+        "mean_word_diversity": 0.650862,
+        "n": 45
+      },
+      "QRNG": {
+        "mean_word_diversity": 0.638162,
+        "n": 45
+      }
+    },
+    "comparison": {
+      "PRNG": {
+        "mean_difference": 0.009362,
+        "percent_difference": 1.5045,
+        "ttest_ind_statistic": 0.5723,
+        "ttest_ind_p_value": 0.57296,
+        "significant_005": false,
+        "cohens_d": 0.1806,
+        "effect_size_interpretation": "negligible",
+        "direction": "multi_turn_higher"
+      },
+      "TRNG": {
+        "mean_difference": 0.026176,
+        "percent_difference": 4.1902,
+        "ttest_ind_statistic": 1.5193,
+        "ttest_ind_p_value": 0.140079,
+        "significant_005": false,
+        "cohens_d": 0.4208,
+        "effect_size_interpretation": "small",
+        "direction": "multi_turn_higher"
+      },
+      "QRNG": {
+        "mean_difference": 0.005798,
+        "percent_difference": 0.9169,
+        "ttest_ind_statistic": 0.3417,
+        "ttest_ind_p_value": 0.73548,
+        "significant_005": false,
+        "cohens_d": 0.1002,
+        "effect_size_interpretation": "negligible",
+        "direction": "multi_turn_higher"
+      },
+      "ALL_SOURCES_COMBINED": {
+        "single_turn_mean": 0.626433,
+        "multi_turn_mean": 0.640212,
+        "single_turn_n": 45,
+        "multi_turn_n": 135,
+        "mean_difference": 0.013779,
+        "ttest_ind_p_value": 0.15494,
+        "significant_005": false,
+        "cohens_d": 0.2406,
+        "effect_size_interpretation": "small"
+      }
+    }
+  },
+  "multi_turn_means": {
+    "storytelling": {
+      "PRNG": {
+        "shannon_char": 4.356086666666666,
+        "shannon_word": 6.820446666666668,
+        "word_diversity": 0.6718333333333333,
+        "length_words": 271.26666666666665
+      },
+      "TRNG": {
+        "shannon_char": 4.362466666666667,
+        "shannon_word": 6.8975599999999995,
+        "word_diversity": 0.7057800000000001,
+        "length_words": 270.26666666666665
+      },
+      "QRNG": {
+        "shannon_char": 4.375086666666666,
+        "shannon_word": 6.9845,
+        "word_diversity": 0.6941200000000001,
+        "length_words": 284.4
+      }
+    },
+    "debate": {
+      "PRNG": {
+        "shannon_char": 4.534706666666667,
+        "shannon_word": 8.041473333333334,
+        "word_diversity": 0.6274866666666666,
+        "length_words": 656.1333333333333
+      },
+      "TRNG": {
+        "shannon_char": 4.540220000000001,
+        "shannon_word": 8.0053,
+        "word_diversity": 0.6319333333333332,
+        "length_words": 634.4
+      },
+      "QRNG": {
+        "shannon_char": 4.54122,
+        "shannon_word": 8.007873333333333,
+        "word_diversity": 0.6259666666666667,
+        "length_words": 645.1333333333333
+      }
+    },
+    "worldbuilding": {
+      "PRNG": {
+        "shannon_char": 4.531266666666666,
+        "shannon_word": 7.704719999999999,
+        "word_diversity": 0.5955133333333333,
+        "length_words": 586.9333333333333
+      },
+      "TRNG": {
+        "shannon_char": 4.52292,
+        "shannon_word": 7.677319999999999,
+        "word_diversity": 0.6148733333333333,
+        "length_words": 570.1333333333333
+      },
+      "QRNG": {
+        "shannon_char": 4.516253333333333,
+        "shannon_word": 7.755413333333333,
+        "word_diversity": 0.5944000000000002,
+        "length_words": 605.4
+      }
+    }
+  }
+}

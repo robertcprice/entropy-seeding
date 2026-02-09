@@ -51,26 +51,38 @@ This repository contains experimental data comparing three entropy sources used 
 entropy-seeding/
 ├── README.md                           # This file
 ├── DATA_INTEGRITY.md                    # Data validity assessment
-├── COMPREHENSIVE_REPORT.md              # Full analysis
+├── COMPREHENSIVE_REPORT.md              # Original analysis report
+├── COMPREHENSIVE_ENTROPY_SEEDING_EXPERIMENT_2026-02-09.md  # Full comprehensive report
+├── METRICS_GLOSSARY.md                  # Metric definitions and interpretation guide
 │
-└── results/
-    └── entropy_source_comparisons/      # Valid PRNG/TRNG/QRNG comparisons
-        ├── deepseek_r1/                 # DeepSeek-R1 32B & 70B
-        │   ├── deepseek-r1_32b_prng_trng_qrng.json
-        │   └── deepseek-r1_70b_prng_trng_qrng.json
-        │
-        ├── qwen_models/                 # Qwen model results
-        │   ├── qwen_0.6b_prng_trng_qrng_results.json
-        │   └── qwen_0.6b_prng_trng_qrng_results_v2.json
-        │
-        ├── prng_trng_qrng/              # Direct entropy source comparisons
-        │   ├── llama_1b_prng_trng_qrng.json (Llama 3.2-1B)
-        │   └── qwen_0.6b_prng_trng_qrng_extended.json (7 QRNG variants)
-        │
-        └── documentation/               # Qualitative analysis
-            ├── deepseek_r1_70b_qualitative_findings.md
-            ├── qwen_8b_14b_qualitative_findings.md
-            └── entropy_source_evidence_summary.md
+├── reports/
+│   ├── PRNG_DETAILED_REPORT.md          # PRNG entropy source detailed analysis
+│   ├── TRNG_DETAILED_REPORT.md          # TRNG entropy source detailed analysis
+│   ├── QRNG_DETAILED_REPORT.md          # QRNG entropy source detailed analysis
+│   ├── FINGERPRINT_CLASSIFIER_REPORT.md # Fingerprint classification experiment
+│   └── NEBULA_ENTROPY_SOURCE_EXPLAINED.md # Nebula 5-layer entropy explainer
+│
+├── results/
+│   ├── fingerprint/                     # Fingerprint classifier results
+│   │   └── fingerprint_classifier_qwen3_8b_results.json
+│   │
+│   ├── valid_entropy_comparisons/       # Validated entropy comparison data
+│   │   ├── qwen/                        # Qwen 0.6B → 8B results
+│   │   ├── llama/                       # Llama 3.1-8B results
+│   │   ├── mistral/                     # Mistral 7B results
+│   │   └── deepseek/                    # DeepSeek-R1 32B/70B results
+│   │
+│   ├── entropy_source_comparisons/      # Original PRNG/TRNG/QRNG comparisons
+│   │   ├── deepseek_r1/
+│   │   ├── qwen_models/
+│   │   ├── prng_trng_qrng/
+│   │   └── documentation/
+│   │
+│   ├── cross_architecture/              # Dense vs SWA vs GQA comparison
+│   ├── significance/                    # Statistical significance tests
+│   └── formatted_summaries/             # Summary reports per model
+│
+└── scripts/                             # Analysis and experiment scripts
 ```
 
 ## Unified File Naming Convention
@@ -145,6 +157,35 @@ Same model with TRNG: Normal generation (Shannon = 4.44, Perplexity = 195.74)
 - **PRNG:** Named color "Elyndor" (fantasy theme), structured headers, academic tone
 - **TRNG:** Named color "Aurorin" (celestial theme), emotive language, flowing description
 - **QRNG:** Named color "Lunaris" (astronomical theme), analytical tone, highly organized format
+
+### ✅ VALID FINDING: Entropy Source Fingerprints Partially Detectable (Qwen3-8B)
+
+**Documentation:** [`reports/FINGERPRINT_CLASSIFIER_REPORT.md`](reports/FINGERPRINT_CLASSIFIER_REPORT.md)
+
+A Random Forest classifier trained to detect which entropy source was used from text features alone, using LeaveOneGroupOut CV to prevent prompt leakage:
+
+- **7-way multiclass:** 18.0% accuracy (14.3% baseline) — marginal, signal too weak for universal detection
+- **Pairwise binary:** **9 of 21 pairs above 60%**, best pair **prng vs self_seed_sfc = 85.7%**
+- **nebula_bible ~50% vs everything** — SHA256 hash chain makes it indistinguishable from PRNG
+
+**Key insight:** Sources with fundamentally different seed mechanisms (deterministic PRNG vs feedback-loop self-seeding) leave clearly distinguishable traces. Hash-chain sources (Nebula) successfully mask their origin.
+
+**Top discriminating features:** prompt-normalized hidden entropy trajectory (slope, ratio), sentence length variation, diversity ratios.
+
+---
+
+### ✅ VALID FINDING: Nebula 5-Layer Hierarchical Entropy (Text-Derived RNG)
+
+**Documentation:** [`reports/NEBULA_ENTROPY_SOURCE_EXPLAINED.md`](reports/NEBULA_ENTROPY_SOURCE_EXPLAINED.md)
+
+Nebula extracts entropy from literary texts through 5 orthogonal layers (chunk hashes, frequency signatures, word boundaries, positional encoding, cross-chunk entanglement) combined via prime-number gear ratios. Key properties:
+
+- **Reduces text-induced bias by 23.8%** vs single-layer literary hash chain
+- **Indistinguishable from PRNG** via text-feature classifier at 8B scale (SHA256 Paradox)
+- **Still measurably affects generation** — Bible KJV shows -25.2% D2 and 2.1x first-person pronouns vs PRNG
+- **22 literary texts** available as entropy sources from Project Gutenberg corpus
+
+---
 
 ### 3. ~~Model Size Effects~~ (INVALID DATA - CANNOT DETERMINE)
 
@@ -269,11 +310,21 @@ See `results/significance/` for detailed statistical analyses.
 
 ## Future Directions
 
-1. Test additional architectures (Gemma, Llama, Mistral baseline)
-2. Expand prompt diversity and sample sizes
-3. Investigate Qwen2.5 opposite pattern
-4. Test on different hardware platforms
-5. Explore hybrid entropy sources
+### Completed (Feb 2026)
+- ~~Test additional architectures~~ — Llama 3.1-8B (GQA) and Mistral 7B (SWA) now tested alongside Qwen3-8B (Dense)
+- ~~Expand prompt diversity~~ — 15 single-turn + 3 multi-turn = 360 generations per model
+- ~~Explore hybrid entropy sources~~ — 10 entropy sources tested including self-seeding, hidden variance, Nebula
+
+### Open Research Directions
+1. **Nebula genre sweep at scale** — Test all 22 literary texts as entropy sources on 8B+ models to quantify genre-specific coloring effects
+2. **Nebula layer ablation** — Systematically measure each of the 5 layers' contribution to debiasing and coloring
+3. **Token-level fingerprint features** — Current text-feature classifier is marginal; token-ID sequences, softmax entropy trajectories, or generation perplexity curves may carry stronger signal
+4. **Power-up sample sizes** — n=70 per source is insufficient for statistical significance on many metrics; target n=300+
+5. **Entropy-based style transfer** — Test whether different literary entropy sources can steer generation style without model modification
+6. **Entropy watermarking system** — Use private literary texts as watermark keys, detect via statistical correlation with Nebula walk pattern
+7. **SHA256 Paradox formalization** — Prove theoretically why sequential hash consumption preserves structural information (information theory paper)
+8. **Recursive modulation dynamics** — Map the phase space of RecursiveModulation feedback_gain × modulation_mode × base_source
+9. **Fingerprint at smaller scales** — 0.6B models may be more susceptible to entropy source effects; repeat classifier experiment at that scale
 
 ## Citation
 

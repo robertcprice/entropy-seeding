@@ -205,4 +205,38 @@
 
 ---
 
+## 8. Fingerprint Classification Terms
+
+| Term | Definition |
+|:----:|-----------|
+| **LOGO** | LeaveOneGroupOut cross-validation. Holds out one entire prompt group per fold, preventing prompt leakage. |
+| **Prompt leakage** | When a classifier learns prompt identity instead of the target variable, inflating accuracy. Caused by StratifiedKFold when samples share prompt IDs across classes. |
+| **Prompt normalization (pn_)** | Feature residuals after subtracting per-prompt-group means. Isolates source-specific signal from prompt-driven variation. |
+| **ANOVA F-score** | Statistical test measuring between-class vs within-class variance. Used for feature selection: higher F = more discriminating. |
+| **Pairwise binary** | Training a separate classifier for each source pair (e.g., prng vs self_seed_sfc) rather than a single multiclass classifier. More sensitive for marginal signals. |
+| **he_slope_early_late** | Difference between late-layer and early-layer hidden entropy during generation. Captures the trajectory shape of internal entropy evolution. |
+| **he_ratio_late_early** | Ratio of late/early hidden entropy. Values > 1 indicate increasing internal entropy over generation depth. |
+| **d2_d1_ratio** | Ratio of distinct_2 to distinct_1 diversity metrics. Captures the relationship between word-level and bigram-level diversity. |
+| **Feature importance** | Mean decrease in impurity (RF) or absolute coefficient (LR) across all CV folds. Higher = more discriminating for classification. |
+
+---
+
+## 9. Nebula Entropy Source Terms
+
+| Term | Definition |
+|:----:|-----------|
+| **Nebula** | Hierarchical 5-layer entropy extraction from literary text. Combines multiple orthogonal information layers via gear ratios. |
+| **Chunk** | A 1024-character block of source literary text. The fundamental unit of entropy extraction. |
+| **Layer 1 (Chunk chain)** | SHA256 hash chain of raw text chunks. Carries content patterns. |
+| **Layer 2 (Frequency)** | Character frequency distribution signature per chunk. Captures statistical fingerprint. |
+| **Layer 3 (Boundary)** | Word/sentence boundary positions. Captures rhythm and prose density. |
+| **Layer 4 (Positional)** | Sinusoidal positional encoding (transformer-style). Position awareness within text. |
+| **Layer 5 (Entanglement)** | XOR of neighboring chunk hashes. Creates non-local dependencies, breaks periodicity. Key debiasing layer. |
+| **Gear ratio** | Prime numbers (1, 2, 3, 5, 7) controlling how fast each layer advances through its chain. Ensures astronomically long non-repeating period. |
+| **Context blending** | Mixing recently generated token IDs into the seed computation for generation-dependent recurrence. |
+| **SHA256 Paradox** | The finding that SHA256 doesn't fully decorrelate sequential consumption — when chunks from structured text are consumed in order, the walk pattern preserves autocorrelation structure. |
+| **Literary entropy** | Randomness derived from the structure of literary text rather than mathematical, hardware, or quantum processes. |
+
+---
+
 *This glossary applies to all experiment reports in the entropy-seeding repository. For methodology details, see the main report: `COMPREHENSIVE_ENTROPY_SEEDING_EXPERIMENT_2026-02-09.md`*

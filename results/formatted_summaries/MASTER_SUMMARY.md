@@ -1,6 +1,6 @@
 # Entropy Source Comparison - Master Summary
 
-**Last Updated:** 2026-02-09T07:59:06.415179
+**Last Updated:** 2026-02-09T13:00:21.589827
 
 ## Available Model Results
 
@@ -12,12 +12,19 @@
 - **Model:** Unknown
 - **Timestamp:** Unknown
 
+### GEMMA
+
+- **Files:** 1
+- **Latest:** comprehensive_gemma3_20260209_102643.json
+- **Model:** gemma3
+- **Timestamp:** 2026-02-09T09:01:06.528326
+
 ### LLAMA
 
-- **Files:** 2
-- **Latest:** comprehensive_llama3.1_8b_20260209_075906.json
-- **Model:** llama3.1:8b
-- **Timestamp:** 2026-02-09T06:36:02.893091
+- **Files:** 3
+- **Latest:** comprehensive_llama3.2_3b_20260209_130021.json
+- **Model:** llama3.2:3b
+- **Timestamp:** 2026-02-09T12:20:47.931420
 
 ### MISTRAL
 
@@ -25,6 +32,13 @@
 - **Latest:** comprehensive_mistral_latest_20260209_063602.json
 - **Model:** mistral:latest
 - **Timestamp:** 2026-02-09T05:36:01.825581
+
+### OTHER
+
+- **Files:** 1
+- **Latest:** comprehensive_phi4-mini_20260209_122047.json
+- **Model:** phi4-mini
+- **Timestamp:** 2026-02-09T10:26:43.246573
 
 ### QWEN
 
