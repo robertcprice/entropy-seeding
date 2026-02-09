@@ -1,0 +1,1209 @@
+{
+  "experiment": "entropy_fingerprint_classifier",
+  "timestamp": "2026-02-09 07:48:38",
+  "input_files": [
+    "results/hidden_variance_selfseed_qwen3-8b_20260206_full_v2.json"
+  ],
+  "n_samples": 490,
+  "n_classes": 7,
+  "n_features": 108,
+  "n_prompt_groups": 14,
+  "class_counts": {
+    "prng": 70,
+    "trng": 70,
+    "qrng_cached": 70,
+    "self_seed_sfc": 70,
+    "self_seed_sfs": 70,
+    "hidden_variance": 70,
+    "nebula_bible": 70
+  },
+  "feature_names": [
+    "apostrophe_rate",
+    "avg_sentence_length",
+    "avg_word_length",
+    "bigram_repetition_rate",
+    "comma_rate",
+    "content_word_ratio",
+    "digit_ratio",
+    "double_quote_rate",
+    "exclamation_rate",
+    "first_person_rate",
+    "fourgram_repetition_rate",
+    "hapax_ratio",
+    "he_late_minus_mean",
+    "he_range",
+    "he_ratio_late_early",
+    "he_slope_early_late",
+    "he_slope_early_mid",
+    "he_slope_mid_late",
+    "he_std",
+    "max_bigram_count",
+    "max_sentence_length",
+    "metric_avg_temperature",
+    "metric_d2_d1_ratio",
+    "metric_d3_d2_ratio",
+    "metric_distinct_1",
+    "metric_distinct_2",
+    "metric_distinct_3",
+    "metric_hidden_entropy_early",
+    "metric_hidden_entropy_late",
+    "metric_hidden_entropy_mean",
+    "metric_hidden_entropy_mid",
+    "metric_repetition_ratio",
+    "metric_token_count",
+    "metric_ttr",
+    "min_sentence_length",
+    "n_sentences",
+    "n_words",
+    "question_rate",
+    "second_person_rate",
+    "semicolon_rate",
+    "sentence_length_std",
+    "state_branching_rate",
+    "state_confident_exploring_ratio",
+    "state_confident_rate",
+    "state_entropy",
+    "state_exploring_rate",
+    "state_focused_uncertain_rate",
+    "third_person_rate",
+    "total_pronoun_rate",
+    "trigram_repetition_rate",
+    "ttr",
+    "unique_word_count",
+    "uppercase_ratio",
+    "word_length_std",
+    "pn_apostrophe_rate",
+    "pn_avg_sentence_length",
+    "pn_avg_word_length",
+    "pn_bigram_repetition_rate",
+    "pn_comma_rate",
+    "pn_content_word_ratio",
+    "pn_digit_ratio",
+    "pn_double_quote_rate",
+    "pn_exclamation_rate",
+    "pn_first_person_rate",
+    "pn_fourgram_repetition_rate",
+    "pn_hapax_ratio",
+    "pn_he_late_minus_mean",
+    "pn_he_range",
+    "pn_he_ratio_late_early",
+    "pn_he_slope_early_late",
+    "pn_he_slope_early_mid",
+    "pn_he_slope_mid_late",
+    "pn_he_std",
+    "pn_max_bigram_count",
+    "pn_max_sentence_length",
+    "pn_metric_avg_temperature",
+    "pn_metric_d2_d1_ratio",
+    "pn_metric_d3_d2_ratio",
+    "pn_metric_distinct_1",
+    "pn_metric_distinct_2",
+    "pn_metric_distinct_3",
+    "pn_metric_hidden_entropy_early",
+    "pn_metric_hidden_entropy_late",
+    "pn_metric_hidden_entropy_mean",
+    "pn_metric_hidden_entropy_mid",
+    "pn_metric_repetition_ratio",
+    "pn_metric_token_count",
+    "pn_metric_ttr",
+    "pn_min_sentence_length",
+    "pn_n_sentences",
+    "pn_n_words",
+    "pn_question_rate",
+    "pn_second_person_rate",
+    "pn_semicolon_rate",
+    "pn_sentence_length_std",
+    "pn_state_branching_rate",
+    "pn_state_confident_exploring_ratio",
+    "pn_state_confident_rate",
+    "pn_state_entropy",
+    "pn_state_exploring_rate",
+    "pn_state_focused_uncertain_rate",
+    "pn_third_person_rate",
+    "pn_total_pronoun_rate",
+    "pn_trigram_repetition_rate",
+    "pn_ttr",
+    "pn_unique_word_count",
+    "pn_uppercase_ratio",
+    "pn_word_length_std"
+  ],
+  "label_names": [
+    "hidden_variance",
+    "nebula_bible",
+    "prng",
+    "qrng_cached",
+    "self_seed_sfc",
+    "self_seed_sfs",
+    "trng"
+  ],
+  "random_baseline": 0.14285714285714285,
+  "cv_strategy": "LeaveOneGroupOut",
+  "effect_sizes": {
+    "hidden_variance": {
+      "pn_sentence_length_std": 0.008,
+      "pn_he_slope_early_late": -0.2912,
+      "pn_metric_d2_d1_ratio": -0.0126,
+      "pn_avg_sentence_length": 1.0092,
+      "pn_he_ratio_late_early": -0.318
+    },
+    "nebula_bible": {
+      "pn_sentence_length_std": -0.1979,
+      "pn_he_slope_early_late": 0.3385,
+      "pn_metric_d2_d1_ratio": 0.657,
+      "pn_avg_sentence_length": 0.402,
+      "pn_he_ratio_late_early": 0.326
+    },
+    "qrng_cached": {
+      "pn_sentence_length_std": -0.7358,
+      "pn_he_slope_early_late": 0.8067,
+      "pn_metric_d2_d1_ratio": 0.1514,
+      "pn_avg_sentence_length": 0.4757,
+      "pn_he_ratio_late_early": 0.7288
+    },
+    "self_seed_sfc": {
+      "pn_sentence_length_std": 0.3002,
+      "pn_he_slope_early_late": -0.1893,
+      "pn_metric_d2_d1_ratio": 1.2439,
+      "pn_avg_sentence_length": 1.8345,
+      "pn_he_ratio_late_early": -0.2568
+    },
+    "self_seed_sfs": {
+      "pn_sentence_length_std": -0.1933,
+      "pn_he_slope_early_late": 0.4981,
+      "pn_metric_d2_d1_ratio": 0.3863,
+      "pn_avg_sentence_length": 0.7912,
+      "pn_he_ratio_late_early": 0.4962
+    },
+    "trng": {
+      "pn_sentence_length_std": -0.1387,
+      "pn_he_slope_early_late": 0.2817,
+      "pn_metric_d2_d1_ratio": 0.4532,
+      "pn_avg_sentence_length": 0.7997,
+      "pn_he_ratio_late_early": 0.2416
+    }
+  },
+  "pairwise_binary_accuracies": {
+    "hidden_variance_vs_nebula_bible": 0.5357,
+    "hidden_variance_vs_prng": 0.6786,
+    "hidden_variance_vs_qrng_cached": 0.7857,
+    "hidden_variance_vs_self_seed_sfc": 0.2857,
+    "hidden_variance_vs_self_seed_sfs": 0.6786,
+    "hidden_variance_vs_trng": 0.4429,
+    "nebula_bible_vs_prng": 0.5357,
+    "nebula_bible_vs_qrng_cached": 0.5,
+    "nebula_bible_vs_self_seed_sfc": 0.4643,
+    "nebula_bible_vs_self_seed_sfs": 0.5357,
+    "nebula_bible_vs_trng": 0.5357,
+    "prng_vs_qrng_cached": 0.6429,
+    "prng_vs_self_seed_sfc": 0.8571,
+    "prng_vs_self_seed_sfs": 0.5357,
+    "prng_vs_trng": 0.6143,
+    "qrng_cached_vs_self_seed_sfc": 0.7857,
+    "qrng_cached_vs_self_seed_sfs": 0.6429,
+    "qrng_cached_vs_trng": 0.5857,
+    "self_seed_sfc_vs_self_seed_sfs": 0.6071,
+    "self_seed_sfc_vs_trng": 0.4143,
+    "self_seed_sfs_vs_trng": 0.4714
+  },
+  "models": {
+    "random_forest": {
+      "mean_accuracy": 0.17959183673469384,
+      "std_accuracy": 0.1320078500309896,
+      "random_baseline": 0.14285714285714285,
+      "lift_over_random": 1.257142857142857,
+      "n_classes": 7,
+      "n_samples": 490,
+      "n_features": 108,
+      "cv_folds": 14,
+      "cv_strategy": "LeaveOneGroupOut",
+      "fold_accuracies": [
+        0.0,
+        0.0,
+        0.17142857142857143,
+        0.2857142857142857,
+        0.0,
+        0.42857142857142855,
+        0.17142857142857143,
+        0.3142857142857143,
+        0.34285714285714286,
+        0.14285714285714285,
+        0.2857142857142857,
+        0.05714285714285714,
+        0.14285714285714285,
+        0.17142857142857143
+      ],
+      "last_fold_report": {
+        "hidden_variance": {
+          "precision": 0.3125,
+          "recall": 1.0,
+          "f1-score": 0.47619047619047616,
+          "support": 5.0
+        },
+        "nebula_bible": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 5.0
+        },
+        "prng": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 5.0
+        },
+        "qrng_cached": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 5.0
+        },
+        "self_seed_sfc": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 5.0
+        },
+        "self_seed_sfs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 5.0
+        },
+        "trng": {
+          "precision": 0.09090909090909091,
+          "recall": 0.2,
+          "f1-score": 0.125,
+          "support": 5.0
+        },
+        "accuracy": 0.17142857142857143,
+        "macro avg": {
+          "precision": 0.057629870129870135,
+          "recall": 0.17142857142857143,
+          "f1-score": 0.0858843537414966,
+          "support": 35.0
+        },
+        "weighted avg": {
+          "precision": 0.05762987012987013,
+          "recall": 0.17142857142857143,
+          "f1-score": 0.0858843537414966,
+          "support": 35.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          5
+        ],
+        [
+          5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          5,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          5
+        ],
+        [
+          1,
+          2,
+          0,
+          1,
+          0,
+          0,
+          1
+        ]
+      ],
+      "top_features_aggregated": [
+        [
+          "pn_sentence_length_std",
+          0.053700602046337156,
+          0.0014993967244131996
+        ],
+        [
+          "pn_he_slope_early_late",
+          0.05102256786132548,
+          0.004150739948241968
+        ],
+        [
+          "pn_metric_d2_d1_ratio",
+          0.049187207264126016,
+          0.0073575541416661654
+        ],
+        [
+          "pn_avg_sentence_length",
+          0.048618823251010544,
+          0.00300620277062279
+        ],
+        [
+          "pn_he_ratio_late_early",
+          0.04821141019249865,
+          0.004288548242750723
+        ],
+        [
+          "pn_max_sentence_length",
+          0.04620869651508561,
+          0.0036680105664604608
+        ],
+        [
+          "pn_he_late_minus_mean",
+          0.04572955023533386,
+          0.0033370354302196116
+        ],
+        [
+          "pn_unique_word_count",
+          0.04495788325291972,
+          0.001702030140198537
+        ],
+        [
+          "metric_d2_d1_ratio",
+          0.043025888983684535,
+          0.004762795499691705
+        ],
+        [
+          "pn_metric_d3_d2_ratio",
+          0.042492354440138554,
+          0.0037529659561158306
+        ],
+        [
+          "comma_rate",
+          0.04100009994170904,
+          0.0
+        ],
+        [
+          "pn_metric_hidden_entropy_early",
+          0.040792744034384244,
+          0.003170984283692732
+        ],
+        [
+          "pn_he_slope_mid_late",
+          0.040706408381728426,
+          0.0
+        ],
+        [
+          "pn_metric_hidden_entropy_late",
+          0.040506009950955484,
+          0.004132075845339997
+        ],
+        [
+          "pn_comma_rate",
+          0.03936674788999235,
+          0.0017950245964025357
+        ],
+        [
+          "pn_min_sentence_length",
+          0.03859202609377018,
+          0.0
+        ],
+        [
+          "pn_he_std",
+          0.03800104802740743,
+          0.004066599139150269
+        ],
+        [
+          "pn_metric_hidden_entropy_mean",
+          0.0375096878254897,
+          0.0033483875049472103
+        ],
+        [
+          "pn_he_slope_early_mid",
+          0.03729204831915466,
+          0.00317385856434227
+        ],
+        [
+          "pn_content_word_ratio",
+          0.03581788840256885,
+          0.003601748331526652
+        ]
+      ],
+      "top_features_last_fold": [
+        [
+          "pn_he_ratio_late_early",
+          0.0537246469088369
+        ],
+        [
+          "pn_he_slope_early_late",
+          0.05164153463037929
+        ],
+        [
+          "pn_metric_d2_d1_ratio",
+          0.05091032773748922
+        ],
+        [
+          "pn_avg_sentence_length",
+          0.04876923581574577
+        ],
+        [
+          "pn_he_std",
+          0.04709502834347162
+        ],
+        [
+          "pn_max_sentence_length",
+          0.04633793778767269
+        ],
+        [
+          "metric_d2_d1_ratio",
+          0.04379208815746723
+        ],
+        [
+          "pn_metric_hidden_entropy_late",
+          0.0427396268459845
+        ],
+        [
+          "pn_comma_rate",
+          0.04213331528442617
+        ],
+        [
+          "pn_he_late_minus_mean",
+          0.040598645109403045
+        ],
+        [
+          "pn_word_length_std",
+          0.039902428198833204
+        ],
+        [
+          "pn_metric_d3_d2_ratio",
+          0.037775558498279835
+        ],
+        [
+          "pn_state_branching_rate",
+          0.03446212072305806
+        ],
+        [
+          "pn_he_range",
+          0.03398242583499634
+        ],
+        [
+          "pn_uppercase_ratio",
+          0.033493845135843546
+        ],
+        [
+          "pn_metric_distinct_2",
+          0.031128778971337406
+        ],
+        [
+          "pn_metric_distinct_3",
+          0.03080871278758286
+        ],
+        [
+          "metric_d3_d2_ratio",
+          0.029749421160231663
+        ],
+        [
+          "pn_digit_ratio",
+          0.02896546449624887
+        ],
+        [
+          "pn_state_entropy",
+          0.027090469549541512
+        ]
+      ]
+    },
+    "xgboost": {
+      "mean_accuracy": 0.09999999999999999,
+      "std_accuracy": 0.06180001603970091,
+      "random_baseline": 0.14285714285714285,
+      "lift_over_random": 0.7,
+      "n_classes": 7,
+      "n_samples": 490,
+      "n_features": 108,
+      "cv_folds": 14,
+      "cv_strategy": "LeaveOneGroupOut",
+      "fold_accuracies": [
+        0.05714285714285714,
+        0.02857142857142857,
+        0.2,
+        0.14285714285714285,
+        0.05714285714285714,
+        0.05714285714285714,
+        0.11428571428571428,
+        0.17142857142857143,
+        0.02857142857142857,
+        0.05714285714285714,
+        0.11428571428571428,
+        0.05714285714285714,
+        0.22857142857142856,
+        0.08571428571428572
+      ],
+      "last_fold_report": {
+        "hidden_variance": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 5.0
+        },
+        "nebula_bible": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 5.0
+        },
+        "prng": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 5.0
+        },
+        "qrng_cached": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 5.0
+        },
+        "self_seed_sfc": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 5.0
+        },
+        "self_seed_sfs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 5.0
+        },
+        "trng": {
+          "precision": 0.13043478260869565,
+          "recall": 0.6,
+          "f1-score": 0.21428571428571427,
+          "support": 5.0
+        },
+        "accuracy": 0.08571428571428572,
+        "macro avg": {
+          "precision": 0.018633540372670808,
+          "recall": 0.08571428571428572,
+          "f1-score": 0.030612244897959183,
+          "support": 35.0
+        },
+        "weighted avg": {
+          "precision": 0.018633540372670808,
+          "recall": 0.08571428571428572,
+          "f1-score": 0.030612244897959183,
+          "support": 35.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          5
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          5
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          5
+        ],
+        [
+          5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          5
+        ],
+        [
+          0,
+          5,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          3
+        ]
+      ],
+      "top_features_aggregated": [
+        [
+          "pn_metric_ttr",
+          0.06193915009498596,
+          0.018393967362790885
+        ],
+        [
+          "pn_he_range",
+          0.049243162253073285,
+          0.007251208546580643
+        ],
+        [
+          "pn_avg_sentence_length",
+          0.046599044863666804,
+          0.0060353161474384675
+        ],
+        [
+          "pn_he_slope_mid_late",
+          0.04655282199382782,
+          0.0
+        ],
+        [
+          "pn_metric_hidden_entropy_late",
+          0.046466526998714966,
+          0.004964554722637273
+        ],
+        [
+          "pn_metric_d2_d1_ratio",
+          0.04318610153027943,
+          0.004643978414959524
+        ],
+        [
+          "double_quote_rate",
+          0.042970117181539536,
+          0.004988642595848712
+        ],
+        [
+          "pn_he_late_minus_mean",
+          0.042661820753262594,
+          0.006626853456531514
+        ],
+        [
+          "pn_metric_repetition_ratio",
+          0.041956381406635046,
+          0.010550008299546039
+        ],
+        [
+          "pn_he_std",
+          0.041184299521976046,
+          0.011954195381439532
+        ],
+        [
+          "pn_n_sentences",
+          0.041043148996929325,
+          0.00457471443465816
+        ],
+        [
+          "pn_sentence_length_std",
+          0.0405337642878294,
+          0.0024720449000597
+        ],
+        [
+          "pn_he_ratio_late_early",
+          0.03821586538106203,
+          0.006060860100088603
+        ],
+        [
+          "pn_metric_distinct_2",
+          0.03771616704761982,
+          0.005881629082336708
+        ],
+        [
+          "pn_metric_d3_d2_ratio",
+          0.0375696982849728,
+          0.005793312545034597
+        ],
+        [
+          "uppercase_ratio",
+          0.037423147819936275,
+          0.007784978486597538
+        ],
+        [
+          "pn_n_words",
+          0.03738136067986488,
+          0.0027454244845336187
+        ],
+        [
+          "n_words",
+          0.036774758249521255,
+          0.0
+        ],
+        [
+          "pn_he_slope_early_late",
+          0.036729130216620186,
+          0.007448630878125219
+        ],
+        [
+          "metric_d2_d1_ratio",
+          0.03656282089650631,
+          0.0035269444817429764
+        ]
+      ],
+      "top_features_last_fold": [
+        [
+          "pn_avg_sentence_length",
+          0.05538923293352127
+        ],
+        [
+          "pn_he_range",
+          0.05106433480978012
+        ],
+        [
+          "pn_metric_hidden_entropy_late",
+          0.04624029994010925
+        ],
+        [
+          "uppercase_ratio",
+          0.045208126306533813
+        ],
+        [
+          "pn_uppercase_ratio",
+          0.04368143528699875
+        ],
+        [
+          "pn_metric_d2_d1_ratio",
+          0.04314475879073143
+        ],
+        [
+          "pn_he_late_minus_mean",
+          0.0429568849503994
+        ],
+        [
+          "pn_metric_distinct_2",
+          0.04207567125558853
+        ],
+        [
+          "metric_d2_d1_ratio",
+          0.04074167460203171
+        ],
+        [
+          "pn_state_branching_rate",
+          0.040402960032224655
+        ],
+        [
+          "pn_state_entropy",
+          0.037650156766176224
+        ],
+        [
+          "pn_he_ratio_late_early",
+          0.03628751263022423
+        ],
+        [
+          "pn_metric_d3_d2_ratio",
+          0.0360175222158432
+        ],
+        [
+          "pn_word_length_std",
+          0.03581833094358444
+        ],
+        [
+          "pn_n_sentences",
+          0.03331851214170456
+        ],
+        [
+          "pn_max_sentence_length",
+          0.03185873106122017
+        ],
+        [
+          "pn_comma_rate",
+          0.030970582738518715
+        ],
+        [
+          "pn_he_slope_early_late",
+          0.030350591987371445
+        ],
+        [
+          "pn_metric_distinct_3",
+          0.03025851398706436
+        ],
+        [
+          "metric_d3_d2_ratio",
+          0.0289775263518095
+        ]
+      ]
+    },
+    "logistic_regression": {
+      "mean_accuracy": 0.15918367346938775,
+      "std_accuracy": 0.12672795670416345,
+      "random_baseline": 0.14285714285714285,
+      "lift_over_random": 1.1142857142857143,
+      "n_classes": 7,
+      "n_samples": 490,
+      "n_features": 108,
+      "cv_folds": 14,
+      "cv_strategy": "LeaveOneGroupOut",
+      "fold_accuracies": [
+        0.0,
+        0.0,
+        0.14285714285714285,
+        0.0,
+        0.14285714285714285,
+        0.2857142857142857,
+        0.17142857142857143,
+        0.14285714285714285,
+        0.42857142857142855,
+        0.2857142857142857,
+        0.2857142857142857,
+        0.0,
+        0.14285714285714285,
+        0.2
+      ],
+      "last_fold_report": {
+        "hidden_variance": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 5.0
+        },
+        "nebula_bible": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 5.0
+        },
+        "prng": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1-score": 0.6666666666666666,
+          "support": 5.0
+        },
+        "qrng_cached": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 5.0
+        },
+        "self_seed_sfc": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 5.0
+        },
+        "self_seed_sfs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 5.0
+        },
+        "trng": {
+          "precision": 1.0,
+          "recall": 0.4,
+          "f1-score": 0.5714285714285714,
+          "support": 5.0
+        },
+        "accuracy": 0.2,
+        "macro avg": {
+          "precision": 0.21428571428571427,
+          "recall": 0.19999999999999998,
+          "f1-score": 0.17687074829931973,
+          "support": 35.0
+        },
+        "weighted avg": {
+          "precision": 0.21428571428571427,
+          "recall": 0.2,
+          "f1-score": 0.1768707482993197,
+          "support": 35.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          5,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          5,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          5,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          5,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          5,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          1,
+          0,
+          2
+        ]
+      ],
+      "top_features_aggregated": [
+        [
+          "pn_unique_word_count",
+          0.3257775722426488,
+          0.01612671065630797
+        ],
+        [
+          "pn_comma_rate",
+          0.31618388047100277,
+          0.035213679646227014
+        ],
+        [
+          "pn_ttr",
+          0.31065676927056357,
+          0.0
+        ],
+        [
+          "pn_metric_hidden_entropy_early",
+          0.2984369774962056,
+          0.05351582323426544
+        ],
+        [
+          "pn_digit_ratio",
+          0.2952610435209667,
+          0.02911372311441745
+        ],
+        [
+          "pn_state_confident_rate",
+          0.2941053807601473,
+          0.0
+        ],
+        [
+          "pn_word_length_std",
+          0.2752773389677342,
+          0.03149618093821414
+        ],
+        [
+          "pn_state_branching_rate",
+          0.2701413373734959,
+          0.04747893032098493
+        ],
+        [
+          "pn_avg_sentence_length",
+          0.2583636419758023,
+          0.025421188863585905
+        ],
+        [
+          "pn_metric_d3_d2_ratio",
+          0.2582438392232007,
+          0.037807617508836135
+        ],
+        [
+          "pn_exclamation_rate",
+          0.25174583671827555,
+          0.013450951268509722
+        ],
+        [
+          "pn_first_person_rate",
+          0.23606168966805904,
+          0.0
+        ],
+        [
+          "pn_he_slope_early_mid",
+          0.2283885407478059,
+          0.025922113178986524
+        ],
+        [
+          "pn_double_quote_rate",
+          0.22700822905423848,
+          0.03319092785474732
+        ],
+        [
+          "pn_question_rate",
+          0.22484023231627762,
+          0.028902178229265295
+        ],
+        [
+          "pn_metric_hidden_entropy_mid",
+          0.20575287147661986,
+          0.04835093710461118
+        ],
+        [
+          "pn_metric_hidden_entropy_late",
+          0.20556591360844287,
+          0.07261942363478407
+        ],
+        [
+          "pn_metric_d2_d1_ratio",
+          0.20551738156848498,
+          0.026337291718703307
+        ],
+        [
+          "pn_avg_word_length",
+          0.20534393959449732,
+          0.023565357748537404
+        ],
+        [
+          "pn_metric_distinct_3",
+          0.20307871902553556,
+          0.02451309193747002
+        ]
+      ],
+      "top_features_last_fold": [
+        [
+          "pn_metric_hidden_entropy_late",
+          0.4146929922973851
+        ],
+        [
+          "pn_comma_rate",
+          0.3262607124395166
+        ],
+        [
+          "pn_digit_ratio",
+          0.3097243890980833
+        ],
+        [
+          "pn_state_branching_rate",
+          0.3061582019442956
+        ],
+        [
+          "pn_avg_sentence_length",
+          0.2655817515450781
+        ],
+        [
+          "pn_uppercase_ratio",
+          0.2631404705318604
+        ],
+        [
+          "pn_metric_d3_d2_ratio",
+          0.2492776506895785
+        ],
+        [
+          "pn_he_ratio_late_early",
+          0.22154161248349383
+        ],
+        [
+          "pn_double_quote_rate",
+          0.22132530613764456
+        ],
+        [
+          "pn_word_length_std",
+          0.21876093541869282
+        ],
+        [
+          "pn_metric_d2_d1_ratio",
+          0.21428142517313717
+        ],
+        [
+          "pn_he_std",
+          0.21217963413953303
+        ],
+        [
+          "metric_d3_d2_ratio",
+          0.19258545914630168
+        ],
+        [
+          "pn_n_sentences",
+          0.17873606737379943
+        ],
+        [
+          "avg_sentence_length",
+          0.17575600225332724
+        ],
+        [
+          "max_sentence_length",
+          0.17570414551080565
+        ],
+        [
+          "pn_he_range",
+          0.17545077796755562
+        ],
+        [
+          "metric_d2_d1_ratio",
+          0.17495725273455376
+        ],
+        [
+          "pn_max_sentence_length",
+          0.17298678626590278
+        ],
+        [
+          "pn_he_slope_early_late",
+          0.17281276538324833
+        ]
+      ]
+    }
+  }
+}
