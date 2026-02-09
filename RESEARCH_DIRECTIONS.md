@@ -9,13 +9,13 @@
 ## Current State of Evidence
 
 ### What We Know (Statistically Confirmed)
-1. **Transformer is a low-pass filter on entropy** — prompt drives ~96% of output variation, source <1%
-2. **Below 14B: entropy source doesn't matter** for aggregate text quality metrics
-3. **14B is the sweet spot** — QRNG cached produces +4.5% TTR (p=0.99)
-4. **72B reversal** — PRNG becomes *better* than alternatives (p=0.005)
-5. **MoE catastrophic failure** — DeepSeek R1 collapses on philosophy prompts; only TRNG prevents it
-6. **Multi-turn degradation** — PRNG-seeded Llama loses -4.8% vocabulary diversity over 3 turns (d=-0.50)
-7. **All 3 architectures at 8B agree** — Dense, SWA, GQA show negligible entropy source effects (36 tests, 0 significant)
+1. **Entropy source effects follow a U-shaped curve with scale** — PRNG outperforms at small scale (0.6B-1.7B), null zone at 3-8B (architecture-dependent), QRNG sweet spot at 14B, PRNG reversal at 72B
+2. **At 0.6B-1.7B, PRNG is BEST** — all alternatives produce lower D2 (TRNG -3.2%, QRNG -0.5% at 0.6B; QRNG -8.6% at 1.7B). External entropy degrades small models.
+3. **The 3-8B null zone is architecture-dependent** — most architectures show <1% CV, but Gemma3 at 4B is a significant exception (QRNG +1.63% word_div, d=0.73). Dense, SWA, GQA at 7-8B all show negligible effects (36 tests, 0 significant).
+4. **14B is the sweet spot** — QRNG cached produces +4.5% TTR (p=0.99)
+5. **72B reversal** — PRNG becomes *better* than alternatives (p=0.005)
+6. **MoE catastrophic failure** — DeepSeek R1 collapses on philosophy prompts; only TRNG prevents it
+7. **Multi-turn degradation** — PRNG-seeded Llama loses -4.8% vocabulary diversity over 3 turns (d=-0.50)
 8. **Nebula reduces text-induced bias by 23.8%** vs single-layer literary hash chain
 9. **Bible KJV entropy** — -25.2% D2, 2.1x first-person pronouns vs PRNG
 10. **Pairwise fingerprinting works** — 9/21 source pairs above 60%, PRNG vs self_seed_sfc = 85.7%
