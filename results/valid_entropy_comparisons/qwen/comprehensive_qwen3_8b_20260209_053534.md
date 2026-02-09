@@ -367,3 +367,47 @@
 
 - **Turn 3** (What is their most sacred cultural tradition?...): Thinking... Okay, the user is asking about the most sacred cultural tradition of the Virellan Hive. Let me recall the previous information. The Virell...
 
+---
+
+## Appendix: Metrics Glossary & Interpretation Guide
+
+### Entropy Sources (Independent Variables)
+
+| Source | Description | Implementation |
+|:------:|-------------|----------------|
+| **PRNG** | Pseudo-Random Number Generator. Deterministic, reproducible. | `random.Random(42)` → Mersenne Twister |
+| **TRNG** | True Random Number Generator. Hardware entropy, non-reproducible. | `secrets.token_bytes()` → `/dev/urandom` |
+| **QRNG** | Quantum RNG (SHA256-mixed). NOT true quantum. | `SHA256(time_ns + secrets + counter)` |
+
+### Output Quality Metrics
+
+| Metric | What It Measures | Range | Good Range | Interpretation |
+|:------:|------------------|:-----:|:----------:|----------------|
+| **shannon_char** | Information per character (character diversity) | 0–~5.0 bits | 4.2–4.7 | Higher = more uniform character distribution |
+| **shannon_word** | Information per word (vocabulary richness) | 0–~10+ bits | 7.0–9.0 | Higher = richer vocabulary usage |
+| **word_diversity** (TTR) | Fraction of unique words (type-token ratio) | 0.0–1.0 | 0.5–0.8 | Higher = less word repetition |
+| **length_words** | Total word count of output | 0–∞ | Context-dependent | Useful for detecting truncation or verbosity differences |
+
+### Statistical Measures
+
+| Measure | What It Tests | Key Thresholds |
+|:-------:|---------------|:--------------:|
+| **Wilcoxon p** | Non-parametric paired test: are two distributions different? | p < 0.05 = significant |
+| **Cohen's d** | Standardized effect size (mean difference / pooled SD) | \|d\| < 0.2 negligible, 0.2–0.5 small, 0.5–0.8 medium, > 0.8 large |
+| **CV%** | Coefficient of Variation (relative variability) | < 5% very consistent, 5–15% moderate, > 15% high variation |
+| **95% CI** | Confidence interval for true difference | CI excluding 0 = significant effect |
+
+### How to Read the Tables
+
+Each prompt section shows mean values across 5 samples per entropy source. For example:
+```
+| shannon_char | 4.340 | 4.383 | 4.401 |
+```
+means PRNG averaged 4.340 bits/char, TRNG 4.383, QRNG 4.401. All are in the natural text range (4.2–4.7). Differences < 1% between sources are considered negligible.
+
+### Key Observation for Qwen3:8b
+
+This model produces `<think>...</think>` blocks before responding. These "Thinking..." blocks are often **nearly identical across entropy sources** for the same prompt, which dilutes measured diversity. The visible output variation comes primarily from the post-thinking response.
+
+*Full glossary: see `METRICS_GLOSSARY.md` in the repository root.*
+
