@@ -603,3 +603,50 @@ seed = 0.7 * qrng.get_seed() + 0.3 * trng.get_seed()
 *Quantum hardware: IBM Quantum ibm_fez*
 *Scientific validation: NIST SP 800-90B, Diehard*
 *Cache size: 102KB quantum measurements*
+
+---
+
+## Appendix: Metrics Glossary
+
+### Entropy Sources
+
+| Source | Description |
+|:------:|-------------|
+| **PRNG** | Pseudo-Random Number Generator (Mersenne Twister, seed=42) |
+| **TRNG** | True Random Number Generator (`secrets.token_bytes()` via `/dev/urandom`) |
+| **QRNG** | Quantum RNG from IBM Quantum `ibm_fez` (156 superconducting transmon qubits). Measurements cached to `.bin` files, then SHA256-mixed into seeds. NOT live quantum per inference -- uses pre-generated cache. |
+
+### QRNG Implementation Detail
+
+| Property | Value |
+|:--------:|-------|
+| **Hardware** | IBM `ibm_fez`, 156 superconducting transmon qubits, heavy-hexagon lattice |
+| **Measurement** | Hadamard gate on each qubit, then computational-basis measurement |
+| **Cache** | ~102KB binary-packed measurement results (~5,000 shots) |
+| **Seed derivation** | Read 4 bytes from cache, `struct.unpack("I", ...)`, position wraps on exhaustion |
+| **Randomness guarantee** | Bell's theorem: no local hidden variables; min-entropy H_inf = 1.0 bit/bit (theoretical max) |
+| **Validation** | Passed NIST SP 800-90B full suite and Diehard tests |
+| **Limitation** | Cache is finite and reused; not fresh quantum randomness per call |
+
+### Key Metrics
+
+| Metric | What It Measures | Good Range | Direction |
+|:------:|------------------|:----------:|:---------:|
+| **shannon_char** | Character diversity (bits/char) | 4.2-4.7 | Higher = better |
+| **shannon_word** | Vocabulary richness (bits/word) | 7.0-9.0 | Higher = better |
+| **word_diversity** (TTR) | Unique word fraction | 0.5-0.8 | Higher = better |
+| **distinct_2** (D2) | Unique bigram fraction | 0.85-1.0 | Higher = better |
+| **repetition** | Fraction of repeated n-grams | 0.0-0.05 | Lower = less repetitive |
+| **burstiness** | Variance in sentence length; measures flow | 0.0-0.3 | Lower = smoother |
+| **hidden_entropy_mean** | Mean entropy across all hidden layers (nats) | 1.3-1.6 | Higher = more activation diversity |
+
+### Statistical Measures
+
+| Measure | Key Thresholds |
+|:-------:|:--------------:|
+| **p-value** | < 0.05 significant, < 0.01 highly significant |
+| **Cohen's d** | < 0.2 negligible, 0.2-0.5 small, 0.5-0.8 medium, > 0.8 large |
+| **CV%** | < 5% very consistent, > 15% high variation |
+| **Min-entropy (H_inf)** | 1.0 = theoretical maximum for binary source; QRNG achieves ~1.0 |
+
+*Full glossary: see `METRICS_GLOSSARY.md` in the repository root.*

@@ -308,3 +308,46 @@ This suggests entropy sources could be used as a **feature** to control output s
 *IBM Quantum Data:* ibm_fez 156 qubits, 102KB cached measurements
 *Test Date:* 2025-02-05
 *Total Comparisons:* 3 entropy sources × 2 prompt types × 2+ iterations
+
+---
+
+## Appendix: Metrics Glossary
+
+### Entropy Sources
+
+| Source | Description |
+|:------:|-------------|
+| **PRNG** | Pseudo-Random Number Generator (Mersenne Twister, seed=42) |
+| **TRNG** | True Random Number Generator (`secrets.token_bytes()` via `/dev/urandom`) |
+| **QRNG** | Quantum RNG (IBM `ibm_fez` 156-qubit measurements, SHA256-mixed). Cached, NOT live quantum. |
+
+### Key Metrics
+
+| Metric | What It Measures | Good Range | Direction |
+|:------:|------------------|:----------:|:---------:|
+| **shannon_char** | Character diversity (bits/char) | 4.2-4.7 | Higher = better |
+| **shannon_word** | Vocabulary richness (bits/word) | 7.0-9.0 | Higher = better |
+| **word_diversity** (TTR) | Unique word fraction | 0.5-0.8 | Higher = better |
+| **distinct_2** (D2) | Unique bigram fraction | 0.85-1.0 | Higher = better |
+| **burstiness** | Variance in sentence length; measures flow | 0.0-0.3 | Lower = smoother |
+| **repetition** | Fraction of repeated n-grams | 0.0-0.05 | Lower = less repetitive |
+
+### Anomaly-Specific Context
+
+| Anomaly | What to Watch For |
+|:-------:|-------------------|
+| **Zero-repetition** | repetition = 0.000 indicates over-constrained output, not genuine diversity; often paired with abnormally low Shannon entropy |
+| **PRNG catastrophic failure** | Deterministic seeds can collapse on complex prompts, producing degenerate or truncated output |
+| **QRNG over-constraint** | Quantum entropy may push token selection too far from high-probability regions, causing formulaic structure |
+| **Personality divergence** | Same prompt + different entropy source = qualitatively different tone, creativity, and coherence |
+| **Prompt sensitivity** | Some prompts amplify entropy source differences (philosophy, color naming); others suppress them |
+
+### Statistical Measures
+
+| Measure | Key Thresholds |
+|:-------:|:--------------:|
+| **p-value** | < 0.05 significant, < 0.01 highly significant |
+| **Cohen's d** | < 0.2 negligible, 0.2-0.5 small, 0.5-0.8 medium, > 0.8 large |
+| **CV%** | < 5% very consistent, > 15% high variation |
+
+*Full glossary: see `METRICS_GLOSSARY.md` in the repository root.*

@@ -1,6 +1,6 @@
 # Entropy Source Comparison - Master Summary
 
-**Last Updated:** 2026-02-09T06:36:02.645845
+**Last Updated:** 2026-02-09T07:59:06.415179
 
 ## Available Model Results
 
@@ -14,10 +14,10 @@
 
 ### LLAMA
 
-- **Files:** 1
-- **Latest:** rng_comparison_quick_results_20260203_180635.json
-- **Model:** Unknown
-- **Timestamp:** Unknown
+- **Files:** 2
+- **Latest:** comprehensive_llama3.1_8b_20260209_075906.json
+- **Model:** llama3.1:8b
+- **Timestamp:** 2026-02-09T06:36:02.893091
 
 ### MISTRAL
 

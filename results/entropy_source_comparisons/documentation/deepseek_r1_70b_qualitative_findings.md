@@ -308,3 +308,54 @@ This suggests entropy sources could be used as a **feature** to control output s
 *IBM Quantum Data:* ibm_fez 156 qubits, 102KB cached measurements
 *Test Date:* 2025-02-05
 *Total Comparisons:* 3 entropy sources × 2 prompt types × 2+ iterations
+
+---
+
+## Appendix: Metrics Glossary
+
+### Entropy Sources
+
+| Source | Description |
+|:------:|-------------|
+| **PRNG** | Pseudo-Random Number Generator (Mersenne Twister, seed=42) |
+| **TRNG** | True Random Number Generator (`secrets.token_bytes()` via `/dev/urandom`) |
+| **QRNG** | Quantum RNG (IBM `ibm_fez` 156-qubit measurements, SHA256-mixed). Cached, NOT live quantum. |
+
+### Model Architecture Note
+
+| Property | Value |
+|:--------:|-------|
+| **Model** | DeepSeek-R1 70B |
+| **Architecture** | Mixture of Experts (MoE) -- routes tokens through specialized expert sub-networks |
+| **Thinking model** | Extended chain-of-thought reasoning before generating final answer |
+| **MoE relevance** | Expert routing decisions are sensitive to entropy source; different seeds may activate different expert pathways, contributing to the observed "personality" differences |
+
+### Key Metrics
+
+| Metric | What It Measures | Good Range | Direction |
+|:------:|------------------|:----------:|:---------:|
+| **shannon_char** | Character diversity (bits/char) | 4.2-4.7 | Higher = better |
+| **shannon_word** | Vocabulary richness (bits/word) | 7.0-9.0 | Higher = better |
+| **word_diversity** (TTR) | Unique word fraction | 0.5-0.8 | Higher = better |
+| **distinct_2** (D2) | Unique bigram fraction | 0.85-1.0 | Higher = better |
+| **burstiness** | Variance in sentence length; measures flow | 0.0-0.3 | Lower = smoother |
+| **repetition** | Fraction of repeated n-grams | 0.0-0.05 | Lower = less repetitive |
+
+### Qualitative Measures
+
+| Measure | Description |
+|:-------:|-------------|
+| **Personality** | Tone and behavioral profile of generated text (e.g., "Academic", "Flowing", "Structured") |
+| **Coherence** | Logical consistency and narrative flow |
+| **Creativity** | Narrative originality and conceptual novelty |
+| **Sentence Variance** | Standard deviation of sentence lengths; high = erratic pacing |
+
+### Statistical Measures
+
+| Measure | Key Thresholds |
+|:-------:|:--------------:|
+| **p-value** | < 0.05 significant, < 0.01 highly significant |
+| **Cohen's d** | < 0.2 negligible, 0.2-0.5 small, 0.5-0.8 medium, > 0.8 large |
+| **CV%** | < 5% very consistent, > 15% high variation |
+
+*Full glossary: see `METRICS_GLOSSARY.md` in the repository root.*

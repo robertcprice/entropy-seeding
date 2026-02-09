@@ -117,3 +117,45 @@ Comparing PRNG vs TRNG vs QRNG on Qwen3 models (0.6B, 1.7B, 4B, 8B, 14B).
 | QRNG    | **Highest**| Low       | **Very High**  | **Severe (mode shifts)** |
 
 > **Why these personality profiles matter:** Each entropy source creates a distinct "behavioral fingerprint" on the model's output. PRNG's high coherence but medium creativity means the deterministic seed keeps the model on a predictable, safe path -- good for consistency but limiting for diversity. TRNG's balanced profile with occasional language mixing (outputting Chinese when prompted in English) shows that hardware entropy introduces enough randomness to explore the model's multilingual training data in unexpected ways. QRNG's extreme creativity paired with severe mode shifts (suddenly switching from narrative to multiple-choice test format) reveals that quantum entropy can push token selection into entirely different regions of the model's probability space. The "Meta-Cognition" column is particularly notable: QRNG's "Very High" rating means the model frequently breaks the fourth wall and comments on its own generation process ("Okay, let's see. The question is about..."), which is a sign that quantum entropy is activating self-referential pathways in the model. These profiles are qualitative summaries derived from manual inspection of outputs across model sizes, not computed metrics.
+
+---
+
+## Appendix: Metrics Glossary
+
+### Entropy Sources
+
+| Source | Description |
+|:------:|-------------|
+| **PRNG** | Pseudo-Random Number Generator (Mersenne Twister, seed=42) |
+| **TRNG** | True Random Number Generator (`secrets.token_bytes()` via `/dev/urandom`) |
+| **QRNG** | Quantum RNG (IBM `ibm_fez` measurements, SHA256-mixed). Cached, NOT live quantum. |
+
+### Key Metrics
+
+| Metric | What It Measures | Good Range | Direction |
+|:------:|------------------|:----------:|:---------:|
+| **shannon_char** | Character diversity (bits/char) | 4.2-4.7 | Higher = better |
+| **shannon_word** | Vocabulary richness (bits/word) | 7.0-9.0 | Higher = better |
+| **word_diversity** (TTR) | Unique word fraction | 0.5-0.8 | Higher = better |
+| **distinct_2** (D2) | Unique bigram fraction | 0.85-1.0 | Higher = better |
+
+### Qualitative Measures
+
+| Measure | Description |
+|:-------:|-------------|
+| **Creativity** | Narrative originality and conceptual novelty (manual rating) |
+| **Coherence** | Logical consistency and narrative flow (manual rating) |
+| **Meta-Cognition** | Self-referential or "breaking the fourth wall" behaviors |
+| **Glitch Severity** | Frequency and impact of mode shifts, language mixing, or repetition loops |
+| **Mode Shift** | Sudden change in output format (e.g., narrative to multiple-choice) |
+| **Language Mixing** | Unexpected insertion of non-prompt language (e.g., Chinese in English prompt) |
+
+### Statistical Measures
+
+| Measure | Key Thresholds |
+|:-------:|:--------------:|
+| **p-value** | < 0.05 significant, < 0.01 highly significant |
+| **Cohen's d** | < 0.2 negligible, 0.2-0.5 small, 0.5-0.8 medium, > 0.8 large |
+| **CV%** | < 5% very consistent, > 15% high variation |
+
+*Full glossary: see `METRICS_GLOSSARY.md` in the repository root.*

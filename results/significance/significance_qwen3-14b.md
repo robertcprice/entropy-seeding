@@ -151,3 +151,44 @@
 | self_seed_sfs_vs_prng | -0.0175 | [-0.0867, 0.0441] | 0.305 | 14 |
 | hidden_variance_vs_prng | -0.0071 | [-0.0786, 0.0632] | 0.432 | 14 |
 | nebula_bible_vs_prng | -0.0011 | [-0.0719, 0.0613] | 0.499 | 14 |
+
+---
+
+## Appendix: Metrics Glossary
+
+### Entropy Sources
+
+| Source | Description |
+|:------:|-------------|
+| **PRNG** | Pseudo-Random Number Generator (Mersenne Twister, seed=42) |
+| **TRNG** | True Random Number Generator (`secrets.token_bytes()` via `/dev/urandom`) |
+| **QRNG** | Quantum RNG (IBM `ibm_fez` measurements, SHA256-mixed). Cached, NOT live quantum. |
+| **self_seed_sfc** | Self-Seed via SFC (State From Context): seeds derived from model's own hidden states, single forward-pass context |
+| **self_seed_sfs** | Self-Seed via SFS (State From Sequence): seeds derived from model's own hidden states, full sequence context |
+| **hidden_variance** | Seeds derived from variance of model hidden-layer activations |
+| **nebula_bible** | Nebula entropy extracted from KJV Bible text corpus (5-layer hierarchical extraction) |
+
+### Key Metrics
+
+| Metric | What It Measures | Good Range | Direction |
+|:------:|------------------|:----------:|:---------:|
+| **distinct_2** (D2) | Unique bigram fraction | 0.85-1.0 | Higher = more diverse |
+| **ttr** (TTR) | Type-Token Ratio; unique word fraction | 0.5-0.8 | Higher = richer vocabulary |
+| **repetition_ratio** | Fraction of repeated tokens | 0.0-0.4 | Lower = less repetitive |
+| **hidden_entropy_mean** | Mean entropy across all hidden layers (nats) | 1.3-1.6 | Higher = more activation diversity |
+| **hidden_entropy_early** | Entropy of early hidden layers (nats) | 1.3-1.6 | Higher = more early-layer diversity |
+| **hidden_entropy_mid** | Entropy of middle hidden layers (nats) | 1.3-1.6 | Higher = more mid-layer diversity |
+| **hidden_entropy_late** | Entropy of late hidden layers (nats) | 1.3-1.6 | Higher = more late-layer diversity |
+
+### Statistical Measures
+
+| Measure | What It Means | Key Thresholds |
+|:-------:|---------------|:--------------:|
+| **Mean Delta** | Average difference vs PRNG baseline | Positive = source outperforms PRNG |
+| **95% CI** | 95% bootstrap confidence interval for the mean delta | Excludes zero = statistically significant |
+| **P(Delta>0)** | Posterior probability that the true difference is positive | > 0.95 significant, > 0.99 highly significant |
+| **N** | Number of paired prompt comparisons | Higher N = more reliable estimate |
+| **Cohen's d** | Standardized effect size | < 0.2 negligible, 0.2-0.5 small, 0.5-0.8 medium, > 0.8 large |
+| **CV%** | Coefficient of variation (std/mean as %) | < 5% very consistent, > 15% high variation |
+
+*Full glossary: see `METRICS_GLOSSARY.md` in the repository root.*

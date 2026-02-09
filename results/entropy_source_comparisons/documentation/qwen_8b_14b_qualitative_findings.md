@@ -276,3 +276,46 @@ Okay, let's see. The question is about..." → **MAJOR MODE SHIFT + META-COGNITI
 **Status**: ✅ Qualitative analysis complete
 **Next**: Deploy more complex prompts to H200 for extended testing
 **Date**: 2026-02-04
+
+---
+
+## Appendix: Metrics Glossary
+
+### Entropy Sources
+
+| Source | Description |
+|:------:|-------------|
+| **PRNG** | Pseudo-Random Number Generator (Mersenne Twister, seed=42) |
+| **TRNG** | True Random Number Generator (`secrets.token_bytes()` via `/dev/urandom`) |
+| **QRNG_INT** | Quantum RNG with integer seed derivation (IBM `ibm_fez`, SHA256-mixed). Cached, NOT live quantum. |
+
+### Key Metrics
+
+| Metric | What It Measures | Good Range | Direction |
+|:------:|------------------|:----------:|:---------:|
+| **shannon_char** | Character diversity (bits/char) | 4.2-4.7 | Higher = better |
+| **shannon_word** | Vocabulary richness (bits/word) | 7.0-9.0 | Higher = better |
+| **word_diversity** (TTR) | Unique word fraction | 0.5-0.8 | Higher = better |
+| **distinct_2** (D2) | Unique bigram fraction | 0.85-1.0 | Higher = better |
+
+### Qualitative Measures
+
+| Measure | Description |
+|:-------:|-------------|
+| **Coherence** | Logical consistency and narrative flow (manual rating: Low/Medium/High) |
+| **Creativity** | Narrative originality and conceptual novelty (manual rating) |
+| **Meta-Cognition** | Self-referential or "breaking the fourth wall" behaviors |
+| **Glitches** | Mode shifts, language mixing, or repetition loops |
+| **Strange Loop Intensity** | Self-referential, self-aware text generation; QRNG_INT produces strongest effects |
+| **Language Mixing** | Unexpected insertion of non-prompt language (e.g., Chinese characters in English prompt) |
+| **Mode Shift** | Sudden format change (e.g., narrative to multiple-choice test format) |
+
+### Statistical Measures
+
+| Measure | Key Thresholds |
+|:-------:|:--------------:|
+| **p-value** | < 0.05 significant, < 0.01 highly significant |
+| **Cohen's d** | < 0.2 negligible, 0.2-0.5 small, 0.5-0.8 medium, > 0.8 large |
+| **CV%** | < 5% very consistent, > 15% high variation |
+
+*Full glossary: see `METRICS_GLOSSARY.md` in the repository root.*
