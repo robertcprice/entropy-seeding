@@ -276,3 +276,33 @@ Okay, let's see. The question is about..." → **MAJOR MODE SHIFT + META-COGNITI
 **Status**: ✅ Qualitative analysis complete
 **Next**: Deploy more complex prompts to H200 for extended testing
 **Date**: 2026-02-04
+
+---
+
+## Appendix: Metrics Glossary & Interpretation Guide
+
+### Entropy Sources
+
+| Source | Description | Implementation |
+|:------:|-------------|----------------|
+| **PRNG** | Pseudo-Random Number Generator. Deterministic, reproducible. | `random.Random(42)` → Mersenne Twister |
+| **TRNG** | True Random Number Generator. Hardware entropy, non-reproducible. | `secrets.token_bytes()` → `/dev/urandom` |
+| **QRNG_INT** | Quantum RNG (Integer-based). SHA256-mixed entropy. | `SHA256(time_ns + secrets + counter)` → int seed |
+
+### Key Metrics Used in This Report
+
+| Metric | What It Measures | Good Range | Interpretation |
+|:------:|------------------|:----------:|----------------|
+| **shannon_char** | Character-level information diversity | 4.2–4.7 bits | Higher = more diverse character usage |
+| **shannon_word** | Word-level vocabulary richness | 7.0–9.0 bits | Higher = richer vocabulary |
+| **word_diversity** (TTR) | Unique word fraction | 0.5–0.8 | Higher = less repetition |
+| **distinct_2** (D2) | Unique bigram fraction (phrase diversity) | 0.85–1.0 | Higher = less phrase repetition |
+
+### Models in This Report
+
+| Model | Parameters | Architecture | Key Feature |
+|:-----:|:----------:|:------------:|-------------|
+| **Qwen3-8B** | 8B | Dense (Full Attention) | CoT thinking blocks |
+| **Qwen3-14B** | 14B | Dense (Full Attention) | Better entropy resistance at scale |
+
+*Full glossary: see `METRICS_GLOSSARY.md` in the repository root.*

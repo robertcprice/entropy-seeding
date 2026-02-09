@@ -259,3 +259,43 @@
 The entropy seeding research is promising and shows real signal differences between PRNG/TRNG/QRNG and self-seeding variants, but the evidence is not yet cohesive enough for publication. The primary blockers are inconsistent metrics, small sample sizes, unresolved anomalies, and the **missing hidden-layer entropy instrumentation** in seeding runs. The hidden-variance self-seeding test adds a novel feedback mechanism and performs competitively, but it needs hidden-entropy instrumentation and multi-model validation.
 
 Once the core benchmark suite is unified and the anomalies are resolved or scoped, the seeding paper will have a defensible and novel contribution.
+
+---
+
+## Appendix: Metrics Glossary & Interpretation Guide
+
+### Entropy Sources
+
+| Source | Description | Implementation |
+|:------:|-------------|----------------|
+| **PRNG** | Pseudo-Random Number Generator. Deterministic, reproducible. | `random.Random(42)` → Mersenne Twister |
+| **TRNG** | True Random Number Generator. Hardware entropy, non-reproducible. | `secrets.token_bytes()` → `/dev/urandom` |
+| **QRNG** | Quantum RNG (SHA256-mixed). NOT true quantum. | `SHA256(time_ns + secrets + counter)` |
+| **QRNG-IBM** | Real quantum from IBM ibm_fez superconducting qubits. | IBM Quantum backend, 156 qubits |
+| **qrng_cached** | Pre-generated IBM quantum random numbers. | Binary cache from IBM Quantum |
+| **self_seed_sfc** | Model hidden-state → SFC hash → seed. | Hidden layer activations fed back |
+| **self_seed_sfs** | Model hidden-state → SFS hash → seed. | Hidden layer activations fed back |
+| **hidden_variance** | Statistical variance of hidden states as seed. | `var(hidden_states)` → seed |
+
+### Key Metrics
+
+| Metric | What It Measures | Good Range | Interpretation |
+|:------:|------------------|:----------:|----------------|
+| **shannon_char** | Character-level information diversity | 4.2–4.7 bits | Higher = more diverse |
+| **shannon_word** | Word-level vocabulary richness | 7.0–9.0 bits | Higher = richer vocabulary |
+| **word_diversity** (TTR) | Unique word fraction | 0.5–0.8 | Higher = less repetition |
+| **distinct_2** (D2) | Unique bigram fraction | 0.85–1.0 | Higher = less phrase repetition |
+| **hidden_entropy_late** | Late-layer activation entropy | 1.5–2.2 | Shows strongest source effects |
+| **burstiness** | Output structure variability | 0.2–0.4 | Lower = smoother flow |
+
+### Statistical Measures
+
+| Measure | Interpretation |
+|:-------:|----------------|
+| **Cohen's d** | \|d\| < 0.2 negligible, 0.2–0.5 small, 0.5–0.8 medium, > 0.8 large |
+| **P(Δ>0)** | Bootstrap probability. > 0.95 = strong evidence of real difference |
+| **Wilcoxon p** | p < 0.05 = significant difference between paired conditions |
+| **CV%** | < 5% very consistent, 5–15% moderate, > 15% high variation |
+| **F-ratio** | < 0.1 negligible between-group vs within-group variance |
+
+*Full glossary: see `METRICS_GLOSSARY.md` in the repository root.*

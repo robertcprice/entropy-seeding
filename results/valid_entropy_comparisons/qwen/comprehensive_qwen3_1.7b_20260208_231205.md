@@ -367,3 +367,38 @@
 
 - **Turn 3** (What is their most sacred cultural tradition?...): Thinking... Okay, the user is asking about the most sacred cultural tradition of the Xylophians. Let me recall the previous response where I described...
 
+---
+
+## Appendix: Metrics Glossary & Interpretation Guide
+
+### Entropy Sources (Independent Variables)
+
+| Source | Description | Implementation |
+|:------:|-------------|----------------|
+| **PRNG** | Pseudo-Random Number Generator. Deterministic, reproducible. | `random.Random(42)` → Mersenne Twister |
+| **TRNG** | True Random Number Generator. Hardware entropy, non-reproducible. | `secrets.token_bytes()` → `/dev/urandom` |
+| **QRNG** | Quantum RNG (SHA256-mixed). NOT true quantum. | `SHA256(time_ns + secrets + counter)` |
+
+### Output Quality Metrics
+
+| Metric | What It Measures | Range | Good Range | Interpretation |
+|:------:|------------------|:-----:|:----------:|----------------|
+| **shannon_char** | Information per character (character diversity) | 0–~5.0 bits | 4.2–4.7 | Higher = more uniform character distribution |
+| **shannon_word** | Information per word (vocabulary richness) | 0–~10+ bits | 7.0–9.0 | Higher = richer vocabulary usage |
+| **word_diversity** (TTR) | Fraction of unique words (type-token ratio) | 0.0–1.0 | 0.5–0.8 | Higher = less word repetition |
+| **length_words** | Total word count of output | 0–∞ | Context-dependent | Useful for detecting truncation or verbosity differences |
+
+### Statistical Measures
+
+| Measure | What It Tests | Key Thresholds |
+|:-------:|---------------|:--------------:|
+| **Wilcoxon p** | Non-parametric paired test: are two distributions different? | p < 0.05 = significant |
+| **Cohen's d** | Standardized effect size (mean difference / pooled SD) | \|d\| < 0.2 negligible, 0.2–0.5 small, 0.5–0.8 medium, > 0.8 large |
+| **CV%** | Coefficient of Variation (relative variability) | < 5% very consistent, 5–15% moderate, > 15% high variation |
+
+### Key Observation for Qwen3:1.7b
+
+The smallest model tested (1.7B parameters). Produces CoT blocks like all Qwen3 variants, but with noticeably less sophisticated reasoning. Small model size means lower baseline entropy and more susceptibility to prompt-driven variation. Watch for higher CV% compared to larger models.
+
+*Full glossary: see `METRICS_GLOSSARY.md` in the repository root.*
+
