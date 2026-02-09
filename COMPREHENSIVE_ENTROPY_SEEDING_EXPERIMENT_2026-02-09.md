@@ -1,7 +1,7 @@
 # Comprehensive Entropy Source Seeding Experiment (Feb 2026)
 
 **Status:** LIVE - Updated as results arrive
-**Last Updated:** 2026-02-09 01:15 UTC
+**Last Updated:** 2026-02-09 08:00 UTC
 **Author:** Robert Price
 
 ---
@@ -477,6 +477,7 @@ The 72B model's internal state is self-stabilizing regardless of seed source (ra
 | **Mistral** | **7B** | **SWA (comprehensive)** | **Equivalent** | **<1.9% CV, all d<0.3** | **No (all p>>0.05)** |
 | Qwen3 | 8B | Dense | self_seed_sfs | +8.5% D2 | Trending |
 | **Qwen3** | **8B** | **Dense (comprehensive)** | **TRNG (trend)** | **<0.8% CV, max d=0.35** | **No (p=0.09 borderline)** |
+| **Llama3.1** | **8B** | **GQA (comprehensive)** | **PRNG (trend)** | **~1-3% CV** | **Pending statistical tests** |
 | Qwen3 | 14B | Dense | **qrng_cached** | **+4.5% TTR** | **YES (p=0.99)** |
 | Gemma2 | 27B | Dense | Neural | +0.5% | Negligible effect |
 | DeepSeek R1 | 32B | MoE | N/A (failures) | Catastrophic | Architecture issue |
@@ -780,10 +781,53 @@ This research performs many statistical tests across models, metrics, and entrop
 
 *Full results in `results/valid_entropy_comparisons/statistical_tests_qwen3_8b_comprehensive.json` and `statistical_tests_mistral_comprehensive.json`*
 
-### llama3.1:8b (Running 🔄)
-- Currently in Phase 2 (multi-turn conversations), TRNG samples
-- Will complete the 3-way architecture comparison at ~8B scale (Dense vs SWA vs GQA)
-- Expected completion: ~2-3 hours
+### Llama3.1:8b — Comprehensive 15-Prompt Results ✅
+
+*360 total generations (same design as qwen3:8b and mistral)*
+
+**Key observations from the raw data:**
+
+| Prompt Type | PRNG (shannon_word) | TRNG | QRNG | PRNG (word_div) | TRNG | QRNG |
+|:------------|:-------------------:|:----:|:----:|:---------------:|:----:|:----:|
+| Lighthouse (creative) | 7.045 | 7.001 | 6.760 | 0.662 | 0.662 | 0.683 |
+| Letter (narrative) | 6.705 | 6.862 | 6.863 | 0.701 | 0.685 | 0.643 |
+| Kingdom (fairy tale) | 5.655 | 5.317 | 5.563 | 0.757 | 0.813 | 0.842 |
+| Robot (philosophical) | 7.169 | 7.344 | 7.280 | 0.617 | 0.589 | 0.636 |
+| Sci-fi (narrative) | 7.686 | 7.629 | 7.589 | 0.638 | 0.621 | 0.609 |
+| Color (creative) | 7.281 | 7.320 | 7.309 | 0.664 | 0.668 | 0.647 |
+| Consciousness (philosophy) | 7.339 | 7.272 | 7.200 | 0.640 | 0.604 | 0.626 |
+| Ethics (analytical) | 7.419 | 7.587 | 7.569 | 0.579 | 0.626 | 0.569 |
+| Infinity (abstract) | 7.335 | 7.437 | 7.374 | 0.661 | 0.643 | 0.632 |
+| Music (synesthesia) | 7.657 | 7.468 | 7.549 | 0.623 | 0.623 | 0.608 |
+| Entropy-explain (technical) | 6.853 | 6.725 | 6.739 | 0.604 | 0.625 | 0.608 |
+| Neural networks (technical) | 7.482 | 7.421 | 7.385 | 0.559 | 0.565 | 0.558 |
+| Time-gravity (science) | 7.348 | 7.280 | 7.321 | 0.582 | 0.551 | 0.554 |
+| Creature (creative) | 6.713 | 6.801 | 6.723 | 0.706 | 0.705 | 0.739 |
+| Rain word (neologism) | 6.597 | 6.507 | 6.487 | 0.748 | 0.752 | 0.732 |
+
+**Preliminary findings:**
+- **No chain-of-thought overhead**: Like Mistral, Llama produces direct responses without thinking blocks (GQA architecture)
+- **Output length between Qwen and Mistral**: Llama averages ~200-470 words per prompt — shorter than Qwen3:8b (~900) but longer than Mistral (~250)
+- **Word diversity ~0.55-0.84**: Healthy range, intermediate between Qwen (lower TTR from longer outputs) and Mistral (higher TTR from shorter outputs)
+- **Kingdom prompt anomaly**: Very short outputs (55-105 words) with highly variable metrics — prompt triggers brief completions
+- **Name convergence across sources**: Worldbuilding produces "Xylophia-IV" (PRNG), "Xylonia-IV" (TRNG, QRNG) — similar phonetic patterns regardless of entropy source
+- **PRNG has highest shannon_word on 9/15 prompts**: Unlike Qwen (TRNG leads) and Mistral (mixed), Llama shows a slight PRNG advantage in vocabulary richness
+- **GQA architecture pattern**: Cross-source CV ~1-3%, comparable to Dense and SWA architectures
+
+### Cross-Model Comparison: Qwen3:8b vs Mistral vs Llama3.1:8b
+
+| Feature | Qwen3:8b (Dense, 8B) | Mistral (SWA, 7B) | Llama3.1:8b (GQA, 8B) |
+|---------|:---------------------:|:------------------:|:----------------------:|
+| Attention | Full Attention + /think | Sliding Window | Grouped-Query |
+| Mean output length | ~900 words | ~250 words | ~330 words |
+| Mean word_diversity | ~0.45 | ~0.68 | ~0.65 |
+| Mean shannon_word | ~7.8 | ~6.7 | ~7.1 |
+| Thinking blocks | Yes (~60% of output) | No | No |
+| Cross-source CV (shannon_word) | ~1-3% | ~3-5% | ~1-3% |
+| PRNG win rate (shannon_word) | 4/14 (29%) | 5/15 (33%) | 9/15 (60%) |
+| Entropy source effect | Minimal | Minimal (slightly larger) | Minimal (PRNG-favoring) |
+
+**Key insight**: All three architectures at the ~7-8B scale confirm the transformer low-pass filter effect. GQA (Llama) shows a slight PRNG advantage — the deterministic seed may interact favorably with grouped-query attention's key-value sharing. Statistical tests pending.
 
 ---
 

@@ -367,3 +367,38 @@
 
 - **Turn 3** (What is their most sacred cultural tradition?...): The Xyloxians' most sacred cultural tradition is the **Songweaver's Resonance**, a ritualistic ceremony where the aliens harmonize with the songstones...
 
+---
+
+## Appendix: Metrics Glossary & Interpretation Guide
+
+### Entropy Sources (Independent Variables)
+
+| Source | Description | Implementation |
+|:------:|-------------|----------------|
+| **PRNG** | Pseudo-Random Number Generator. Deterministic, reproducible. | `random.Random(42)` → Mersenne Twister |
+| **TRNG** | True Random Number Generator. Hardware entropy, non-reproducible. | `secrets.token_bytes()` → `/dev/urandom` |
+| **QRNG** | Quantum RNG (SHA256-mixed). NOT true quantum. | `SHA256(time_ns + secrets + counter)` |
+
+### Output Quality Metrics
+
+| Metric | What It Measures | Range | Good Range | Interpretation |
+|:------:|------------------|:-----:|:----------:|----------------|
+| **shannon_char** | Information per character (character diversity) | 0–~5.0 bits | 4.2–4.7 | Higher = more uniform character distribution |
+| **shannon_word** | Information per word (vocabulary richness) | 0–~10+ bits | 7.0–9.0 | Higher = richer vocabulary usage |
+| **word_diversity** (TTR) | Fraction of unique words (type-token ratio) | 0.0–1.0 | 0.5–0.8 | Higher = less word repetition |
+| **length_words** | Total word count of output | 0–∞ | Context-dependent | Useful for detecting truncation or verbosity differences |
+
+### Statistical Measures
+
+| Measure | What It Tests | Key Thresholds |
+|:-------:|---------------|:--------------:|
+| **Wilcoxon p** | Non-parametric paired test: are two distributions different? | p < 0.05 = significant |
+| **Cohen's d** | Standardized effect size (mean difference / pooled SD) | \|d\| < 0.2 negligible, 0.2–0.5 small, 0.5–0.8 medium, > 0.8 large |
+| **CV%** | Coefficient of Variation (relative variability) | < 5% very consistent, 5–15% moderate, > 15% high variation |
+
+### Key Observation for Llama3.1:8b
+
+Llama 3.1 uses **Grouped-Query Attention (GQA)** where multiple query heads share key-value pairs, reducing memory usage. Unlike Qwen3:8b, Llama does **not** produce chain-of-thought blocks — all output is direct response text. PRNG has the highest shannon_word on 9/15 prompts, a pattern not seen with other architectures, possibly due to GQA's key-value sharing interacting favorably with deterministic seed patterns.
+
+*Full glossary: see `METRICS_GLOSSARY.md` in the repository root.*
+
