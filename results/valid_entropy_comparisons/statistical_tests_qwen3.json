@@ -1,0 +1,110 @@
+{
+  "qwen3:4b": {
+    "TRNG_vs_PRNG": {
+      "shannon_char": {
+        "wilcoxon_p": 0.864678,
+        "ttest_p": 0.857737,
+        "cohens_d": 0.0471,
+        "significant_05": false
+      },
+      "shannon_word": {
+        "wilcoxon_p": 0.106995,
+        "ttest_p": 0.057414,
+        "cohens_d": 0.5345,
+        "significant_05": false
+      },
+      "word_diversity": {
+        "wilcoxon_p": 0.524475,
+        "ttest_p": 0.408822,
+        "cohens_d": -0.2199,
+        "significant_05": false
+      },
+      "length_words": {
+        "wilcoxon_p": 0.106995,
+        "ttest_p": 0.118426,
+        "cohens_d": 0.4295,
+        "significant_05": false
+      }
+    },
+    "QRNG_vs_PRNG": {
+      "shannon_char": {
+        "wilcoxon_p": 0.561401,
+        "ttest_p": 0.797795,
+        "cohens_d": 0.0674,
+        "significant_05": false
+      },
+      "shannon_word": {
+        "wilcoxon_p": 0.276855,
+        "ttest_p": 0.272404,
+        "cohens_d": 0.295,
+        "significant_05": false
+      },
+      "word_diversity": {
+        "wilcoxon_p": 0.719727,
+        "ttest_p": 0.753019,
+        "cohens_d": 0.0829,
+        "significant_05": false
+      },
+      "length_words": {
+        "wilcoxon_p": 0.846924,
+        "ttest_p": 0.79753,
+        "cohens_d": 0.0675,
+        "significant_05": false
+      }
+    }
+  },
+  "qwen3:1.7b": {
+    "TRNG_vs_PRNG": {
+      "shannon_char": {
+        "wilcoxon_p": 0.589423,
+        "ttest_p": 0.578555,
+        "cohens_d": -0.1468,
+        "significant_05": false
+      },
+      "shannon_word": {
+        "wilcoxon_p": 0.934082,
+        "ttest_p": 0.543773,
+        "cohens_d": -0.1607,
+        "significant_05": false
+      },
+      "word_diversity": {
+        "wilcoxon_p": 0.846924,
+        "ttest_p": 0.779908,
+        "cohens_d": -0.0736,
+        "significant_05": false
+      },
+      "length_words": {
+        "wilcoxon_p": 0.362686,
+        "ttest_p": 0.234768,
+        "cohens_d": 0.3206,
+        "significant_05": false
+      }
+    },
+    "QRNG_vs_PRNG": {
+      "shannon_char": {
+        "wilcoxon_p": 0.389404,
+        "ttest_p": 0.230614,
+        "cohens_d": -0.3236,
+        "significant_05": false
+      },
+      "shannon_word": {
+        "wilcoxon_p": 0.761536,
+        "ttest_p": 0.725382,
+        "cohens_d": -0.0925,
+        "significant_05": false
+      },
+      "word_diversity": {
+        "wilcoxon_p": 0.477645,
+        "ttest_p": 0.206022,
+        "cohens_d": -0.3424,
+        "significant_05": false
+      },
+      "length_words": {
+        "wilcoxon_p": 0.276855,
+        "ttest_p": 0.183855,
+        "cohens_d": 0.361,
+        "significant_05": false
+      }
+    }
+  }
+}
