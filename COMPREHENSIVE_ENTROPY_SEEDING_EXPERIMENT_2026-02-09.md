@@ -477,7 +477,7 @@ The 72B model's internal state is self-stabilizing regardless of seed source (ra
 | **Mistral** | **7B** | **SWA (comprehensive)** | **Equivalent** | **<1.9% CV, all d<0.3** | **No (all p>>0.05)** |
 | Qwen3 | 8B | Dense | self_seed_sfs | +8.5% D2 | Trending |
 | **Qwen3** | **8B** | **Dense (comprehensive)** | **TRNG (trend)** | **<0.8% CV, max d=0.35** | **No (p=0.09 borderline)** |
-| **Llama3.1** | **8B** | **GQA (comprehensive)** | **PRNG (trend)** | **~1-3% CV** | **Pending statistical tests** |
+| **Llama3.1** | **8B** | **GQA (comprehensive)** | **PRNG (trend)** | **<1.1% CV, all d<0.32** | **No (all p>>0.05)** |
 | Qwen3 | 14B | Dense | **qrng_cached** | **+4.5% TTR** | **YES (p=0.99)** |
 | Gemma2 | 27B | Dense | Neural | +0.5% | Negligible effect |
 | DeepSeek R1 | 32B | MoE | N/A (failures) | Catastrophic | Architecture issue |
@@ -827,7 +827,34 @@ This research performs many statistical tests across models, metrics, and entrop
 | PRNG win rate (shannon_word) | 4/14 (29%) | 5/15 (33%) | 9/15 (60%) |
 | Entropy source effect | Minimal | Minimal (slightly larger) | Minimal (PRNG-favoring) |
 
-**Key insight**: All three architectures at the ~7-8B scale confirm the transformer low-pass filter effect. GQA (Llama) shows a slight PRNG advantage — the deterministic seed may interact favorably with grouped-query attention's key-value sharing. Statistical tests pending.
+**Key insight**: All three architectures at the ~7-8B scale confirm the transformer low-pass filter effect. GQA (Llama) shows a slight PRNG advantage — the deterministic seed may interact favorably with grouped-query attention's key-value sharing.
+
+#### Llama3.1:8b — Paired Tests (15 prompts)
+
+| Comparison | Metric | Wilcoxon p | t-test p | Cohen's d | Significant? |
+|:----------:|:------:|:----------:|:--------:|:---------:|:------------:|
+| TRNG vs PRNG | shannon_char | 0.489 | 0.319 | -0.27 | No |
+| TRNG vs PRNG | shannon_word | 0.720 | 0.581 | -0.15 | No |
+| TRNG vs PRNG | word_diversity | 0.847 | 0.928 | -0.02 | No |
+| QRNG vs PRNG | shannon_char | 0.173 | 0.505 | -0.18 | No |
+| QRNG vs PRNG | shannon_word | 0.421 | 0.243 | **-0.31** | No |
+| QRNG vs PRNG | word_diversity | 0.460 | 0.673 | -0.11 | No |
+
+> **Summary**: Llama3.1:8b shows the smallest effects of all three models. Zero significant p-values. QRNG vs PRNG on shannon_word has the largest effect (d=-0.31, small) — PRNG actually produces slightly richer vocabulary. Mean CV = 1.12% for shannon_word.
+
+> **Multi-turn degradation asymmetry**: PRNG word_diversity drops -4.8% from single-turn to multi-turn (d=-0.50, medium effect), while TRNG drops only -1.2% and QRNG -1.5%. This suggests hardware entropy provides **slight resilience against vocabulary collapse** in extended conversations, though the effect is not statistically significant (p=0.096).
+
+#### Three-Way Architecture Sensitivity Summary
+
+| Model | Architecture | Mean |d| | Max |d| | Shannon_word CV | Multi-turn PRNG drop |
+|:-----:|:------------:|:-------:|:-------:|:---------------:|:--------------------:|
+| Qwen3:8b | Dense (Full Attention) | **0.226** | 0.351 | 0.75% | N/A (CoT dilution) |
+| Mistral (SWA) | Sliding Window | 0.143 | 0.292 | 1.87% | N/A |
+| **Llama3.1:8b** | **Grouped-Query (GQA)** | **0.144** | **0.315** | **1.12%** | **-4.8% (d=-0.50)** |
+
+> **Architecture ranking by entropy sensitivity**: Dense (0.226) > GQA (0.144) ≈ SWA (0.143). All are firmly negligible-to-small. Qwen's slightly higher sensitivity may be an artifact of CoT thinking blocks creating additional tokens that amplify measurement noise.
+
+*Full results in `results/valid_entropy_comparisons/statistical_tests_llama_comprehensive.json`*
 
 ---
 

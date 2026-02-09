@@ -1,0 +1,730 @@
+{
+  "model": "llama3.1:8b",
+  "analysis_type": "comprehensive_entropy_seeding_statistical_tests",
+  "analysis_timestamp": "2026-02-09",
+  "design": {
+    "single_turn_prompts": 15,
+    "multi_turn_prompts": 3,
+    "sources": [
+      "PRNG",
+      "TRNG",
+      "QRNG"
+    ],
+    "pairwise_comparisons": [
+      "TRNG_vs_PRNG",
+      "QRNG_vs_PRNG",
+      "QRNG_vs_TRNG"
+    ],
+    "samples_per_condition": 5,
+    "metrics_analyzed": [
+      "shannon_char",
+      "shannon_word",
+      "word_diversity",
+      "length_words"
+    ]
+  },
+  "grand_means_per_source": {
+    "shannon_char": {
+      "PRNG": {
+        "mean": 4.437735,
+        "std": 0.098455,
+        "n_prompts": 15
+      },
+      "TRNG": {
+        "mean": 4.428347,
+        "std": 0.11318,
+        "n_prompts": 15
+      },
+      "QRNG": {
+        "mean": 4.431001,
+        "std": 0.118781,
+        "n_prompts": 15
+      }
+    },
+    "shannon_word": {
+      "PRNG": {
+        "mean": 7.085632,
+        "std": 0.522359,
+        "n_prompts": 15
+      },
+      "TRNG": {
+        "mean": 7.064671,
+        "std": 0.588431,
+        "n_prompts": 15
+      },
+      "QRNG": {
+        "mean": 7.047471,
+        "std": 0.540686,
+        "n_prompts": 15
+      }
+    },
+    "word_diversity": {
+      "PRNG": {
+        "mean": 0.649504,
+        "std": 0.059333,
+        "n_prompts": 15
+      },
+      "TRNG": {
+        "mean": 0.648875,
+        "std": 0.069456,
+        "n_prompts": 15
+      },
+      "QRNG": {
+        "mean": 0.645771,
+        "std": 0.076922,
+        "n_prompts": 15
+      }
+    },
+    "length_words": {
+      "PRNG": {
+        "mean": 313.08,
+        "std": 114.112546,
+        "n_prompts": 15
+      },
+      "TRNG": {
+        "mean": 315.986667,
+        "std": 124.915982,
+        "n_prompts": 15
+      },
+      "QRNG": {
+        "mean": 318.973333,
+        "std": 129.039327,
+        "n_prompts": 15
+      }
+    }
+  },
+  "sample_level_descriptive_stats": {
+    "shannon_char": {
+      "PRNG": {
+        "mean": 4.437735,
+        "std": 0.10668,
+        "median": 4.4471,
+        "min": 4.1842,
+        "max": 4.7019,
+        "n_samples": 75
+      },
+      "TRNG": {
+        "mean": 4.428347,
+        "std": 0.116424,
+        "median": 4.4365,
+        "min": 4.0578,
+        "max": 4.6892,
+        "n_samples": 75
+      },
+      "QRNG": {
+        "mean": 4.431001,
+        "std": 0.126741,
+        "median": 4.4491,
+        "min": 4.1425,
+        "max": 4.6591,
+        "n_samples": 75
+      }
+    },
+    "shannon_word": {
+      "PRNG": {
+        "mean": 7.085632,
+        "std": 0.561503,
+        "median": 7.2268,
+        "min": 4.662,
+        "max": 7.848,
+        "n_samples": 75
+      },
+      "TRNG": {
+        "mean": 7.064671,
+        "std": 0.592663,
+        "median": 7.2406,
+        "min": 5.077,
+        "max": 7.917,
+        "n_samples": 75
+      },
+      "QRNG": {
+        "mean": 7.047471,
+        "std": 0.560549,
+        "median": 7.1979,
+        "min": 5.2018,
+        "max": 7.7616,
+        "n_samples": 75
+      }
+    },
+    "word_diversity": {
+      "PRNG": {
+        "mean": 0.649504,
+        "std": 0.069479,
+        "median": 0.6426,
+        "min": 0.5267,
+        "max": 0.86,
+        "n_samples": 75
+      },
+      "TRNG": {
+        "mean": 0.648875,
+        "std": 0.075911,
+        "median": 0.6361,
+        "min": 0.5061,
+        "max": 0.8947,
+        "n_samples": 75
+      },
+      "QRNG": {
+        "mean": 0.645771,
+        "std": 0.08616,
+        "median": 0.625,
+        "min": 0.4944,
+        "max": 0.9153,
+        "n_samples": 75
+      }
+    },
+    "length_words": {
+      "PRNG": {
+        "mean": 313.08,
+        "std": 119.191393,
+        "median": 317.0,
+        "min": 38.0,
+        "max": 515.0,
+        "n_samples": 75
+      },
+      "TRNG": {
+        "mean": 315.986667,
+        "std": 128.399871,
+        "median": 349.0,
+        "min": 47.0,
+        "max": 573.0,
+        "n_samples": 75
+      },
+      "QRNG": {
+        "mean": 318.973333,
+        "std": 136.477597,
+        "median": 346.0,
+        "min": 51.0,
+        "max": 621.0,
+        "n_samples": 75
+      }
+    }
+  },
+  "paired_tests_by_prompt_mean": {
+    "shannon_char": {
+      "TRNG_vs_PRNG": {
+        "n_pairs": 15,
+        "mean_alt_source": 4.428347,
+        "mean_base_source": 4.437735,
+        "mean_difference": -0.009388,
+        "percent_difference": -0.2115,
+        "wilcoxon_signed_rank": {
+          "statistic": 47.0,
+          "p_value": 0.48870849609375,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "paired_ttest": {
+          "statistic": -1.0328580303331183,
+          "p_value": 0.3191837049762646,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "cohens_d": -0.2667,
+        "effect_size_interpretation": "small"
+      },
+      "QRNG_vs_PRNG": {
+        "n_pairs": 15,
+        "mean_alt_source": 4.431001,
+        "mean_base_source": 4.437735,
+        "mean_difference": -0.006733,
+        "percent_difference": -0.1517,
+        "wilcoxon_signed_rank": {
+          "statistic": 36.0,
+          "p_value": 0.17276173970412612,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "paired_ttest": {
+          "statistic": -0.684313389204797,
+          "p_value": 0.5049482726449703,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "cohens_d": -0.1767,
+        "effect_size_interpretation": "negligible"
+      },
+      "QRNG_vs_TRNG": {
+        "n_pairs": 15,
+        "mean_alt_source": 4.431001,
+        "mean_base_source": 4.428347,
+        "mean_difference": 0.002655,
+        "percent_difference": 0.0599,
+        "wilcoxon_signed_rank": {
+          "statistic": 58.0,
+          "p_value": 0.93408203125,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "paired_ttest": {
+          "statistic": 0.22471565900124116,
+          "p_value": 0.8254472080611551,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "cohens_d": 0.058,
+        "effect_size_interpretation": "negligible"
+      }
+    },
+    "shannon_word": {
+      "TRNG_vs_PRNG": {
+        "n_pairs": 15,
+        "mean_alt_source": 7.064671,
+        "mean_base_source": 7.085632,
+        "mean_difference": -0.020961,
+        "percent_difference": -0.2958,
+        "wilcoxon_signed_rank": {
+          "statistic": 53.0,
+          "p_value": 0.7197265625,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "paired_ttest": {
+          "statistic": -0.5652783003724349,
+          "p_value": 0.5808309998783723,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "cohens_d": -0.146,
+        "effect_size_interpretation": "negligible"
+      },
+      "QRNG_vs_PRNG": {
+        "n_pairs": 15,
+        "mean_alt_source": 7.047471,
+        "mean_base_source": 7.085632,
+        "mean_difference": -0.038161,
+        "percent_difference": -0.5386,
+        "wilcoxon_signed_rank": {
+          "statistic": 45.0,
+          "p_value": 0.42120361328125,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "paired_ttest": {
+          "statistic": -1.2197678907701472,
+          "p_value": 0.24270355485190553,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "cohens_d": -0.3149,
+        "effect_size_interpretation": "small"
+      },
+      "QRNG_vs_TRNG": {
+        "n_pairs": 15,
+        "mean_alt_source": 7.047471,
+        "mean_base_source": 7.064671,
+        "mean_difference": -0.0172,
+        "percent_difference": -0.2435,
+        "wilcoxon_signed_rank": {
+          "statistic": 40.0,
+          "p_value": 0.27685546875,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "paired_ttest": {
+          "statistic": -0.6532037524564026,
+          "p_value": 0.5242080712111952,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "cohens_d": -0.1687,
+        "effect_size_interpretation": "negligible"
+      }
+    },
+    "word_diversity": {
+      "TRNG_vs_PRNG": {
+        "n_pairs": 15,
+        "mean_alt_source": 0.648875,
+        "mean_base_source": 0.649504,
+        "mean_difference": -0.000629,
+        "percent_difference": -0.0969,
+        "wilcoxon_signed_rank": {
+          "statistic": 56.0,
+          "p_value": 0.846923828125,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "paired_ttest": {
+          "statistic": -0.09198025923773691,
+          "p_value": 0.9280169277204541,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "cohens_d": -0.0237,
+        "effect_size_interpretation": "negligible"
+      },
+      "QRNG_vs_PRNG": {
+        "n_pairs": 15,
+        "mean_alt_source": 0.645771,
+        "mean_base_source": 0.649504,
+        "mean_difference": -0.003733,
+        "percent_difference": -0.5748,
+        "wilcoxon_signed_rank": {
+          "statistic": 47.0,
+          "p_value": 0.4602110981447485,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "paired_ttest": {
+          "statistic": -0.4313681945893057,
+          "p_value": 0.6727691547429716,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "cohens_d": -0.1114,
+        "effect_size_interpretation": "negligible"
+      },
+      "QRNG_vs_TRNG": {
+        "n_pairs": 15,
+        "mean_alt_source": 0.645771,
+        "mean_base_source": 0.648875,
+        "mean_difference": -0.003104,
+        "percent_difference": -0.4784,
+        "wilcoxon_signed_rank": {
+          "statistic": 57.0,
+          "p_value": 0.890380859375,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "paired_ttest": {
+          "statistic": -0.4163608155300939,
+          "p_value": 0.6834586994246071,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "cohens_d": -0.1075,
+        "effect_size_interpretation": "negligible"
+      }
+    },
+    "length_words": {
+      "TRNG_vs_PRNG": {
+        "n_pairs": 15,
+        "mean_alt_source": 315.986667,
+        "mean_base_source": 313.08,
+        "mean_difference": 2.906667,
+        "percent_difference": 0.9284,
+        "wilcoxon_signed_rank": {
+          "statistic": 54.0,
+          "p_value": 0.76153564453125,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "paired_ttest": {
+          "statistic": 0.3274562304546924,
+          "p_value": 0.7481679951432499,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "cohens_d": 0.0845,
+        "effect_size_interpretation": "negligible"
+      },
+      "QRNG_vs_PRNG": {
+        "n_pairs": 15,
+        "mean_alt_source": 318.973333,
+        "mean_base_source": 313.08,
+        "mean_difference": 5.893333,
+        "percent_difference": 1.8824,
+        "wilcoxon_signed_rank": {
+          "statistic": 51.0,
+          "p_value": 0.638671875,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "paired_ttest": {
+          "statistic": 0.6895360744159169,
+          "p_value": 0.5017559164267031,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "cohens_d": 0.178,
+        "effect_size_interpretation": "negligible"
+      },
+      "QRNG_vs_TRNG": {
+        "n_pairs": 15,
+        "mean_alt_source": 318.973333,
+        "mean_base_source": 315.986667,
+        "mean_difference": 2.986667,
+        "percent_difference": 0.9452,
+        "wilcoxon_signed_rank": {
+          "statistic": 55.0,
+          "p_value": 0.803955078125,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "paired_ttest": {
+          "statistic": 0.3431282185349759,
+          "p_value": 0.7365999430973876,
+          "significant_005": false,
+          "significant_001": false
+        },
+        "cohens_d": 0.0886,
+        "effect_size_interpretation": "negligible"
+      }
+    }
+  },
+  "effect_size_summary": {
+    "overall": {
+      "mean_abs_cohens_d": 0.1437,
+      "median_abs_cohens_d": 0.1287,
+      "max_abs_cohens_d": 0.3149,
+      "min_abs_cohens_d": 0.0237,
+      "n_effects": 12
+    },
+    "per_comparison": {
+      "TRNG_vs_PRNG": {
+        "mean_abs_cohens_d": 0.1302,
+        "max_abs_cohens_d": 0.2667,
+        "n_effects": 4
+      },
+      "QRNG_vs_PRNG": {
+        "mean_abs_cohens_d": 0.1952,
+        "max_abs_cohens_d": 0.3149,
+        "n_effects": 4
+      },
+      "QRNG_vs_TRNG": {
+        "mean_abs_cohens_d": 0.1057,
+        "max_abs_cohens_d": 0.1687,
+        "n_effects": 4
+      }
+    }
+  },
+  "significance_counts": {
+    "wilcoxon_p005": 0,
+    "wilcoxon_p001": 0,
+    "ttest_p005": 0,
+    "ttest_p001": 0,
+    "total_tests": 12
+  },
+  "cross_source_cv_per_prompt": {
+    "The old lighthouse keeper had never seen anything like it.": {
+      "shannon_char": 0.6338,
+      "shannon_word": 2.216,
+      "word_diversity": 1.8138,
+      "length_words": 7.44
+    },
+    "She opened the letter, and everything changed.": {
+      "shannon_char": 0.6037,
+      "shannon_word": 1.3366,
+      "word_diversity": 4.428,
+      "length_words": 11.8849
+    },
+    "Once upon a time, in a kingdom by the sea,": {
+      "shannon_char": 1.3737,
+      "shannon_word": 3.1684,
+      "word_diversity": 5.3529,
+      "length_words": 35.5934
+    },
+    "The robot looked at its hands and wondered what it meant to be alive.": {
+      "shannon_char": 0.3517,
+      "shannon_word": 1.2204,
+      "word_diversity": 3.8848,
+      "length_words": 12.6276
+    },
+    "In the year 2157, humanity discovered they were not alone.": {
+      "shannon_char": 0.3449,
+      "shannon_word": 0.6346,
+      "word_diversity": 2.3232,
+      "length_words": 1.8862
+    },
+    "Think of a color you have never seen before. Describe it in detail.": {
+      "shannon_char": 0.5258,
+      "shannon_word": 0.2732,
+      "word_diversity": 1.6594,
+      "length_words": 3.4398
+    },
+    "What is the meaning of consciousness?": {
+      "shannon_char": 0.2781,
+      "shannon_word": 0.9562,
+      "word_diversity": 2.9353,
+      "length_words": 5.4569
+    },
+    "Is it ever ethical to tell a lie? If so, under what circumstances?": {
+      "shannon_char": 0.3019,
+      "shannon_word": 1.2233,
+      "word_diversity": 5.1388,
+      "length_words": 9.2877
+    },
+    "Describe what infinity feels like.": {
+      "shannon_char": 0.2733,
+      "shannon_word": 0.6961,
+      "word_diversity": 2.2429,
+      "length_words": 5.6291
+    },
+    "What would music look like if you could see it?": {
+      "shannon_char": 0.2915,
+      "shannon_word": 1.2536,
+      "word_diversity": 1.4414,
+      "length_words": 6.2611
+    },
+    "Explain the concept of entropy to a five-year-old.": {
+      "shannon_char": 0.5705,
+      "shannon_word": 1.0353,
+      "word_diversity": 1.8666,
+      "length_words": 7.7417
+    },
+    "How does a neural network learn?": {
+      "shannon_char": 0.2417,
+      "shannon_word": 0.6575,
+      "word_diversity": 0.6368,
+      "length_words": 2.4066
+    },
+    "What is the relationship between time and gravity?": {
+      "shannon_char": 0.414,
+      "shannon_word": 0.4705,
+      "word_diversity": 3.0764,
+      "length_words": 4.3214
+    },
+    "Invent a name for a magical creature that lives in clouds.": {
+      "shannon_char": 1.3767,
+      "shannon_word": 0.7071,
+      "word_diversity": 2.6674,
+      "length_words": 4.0499
+    },
+    "Create a unique word that describes the feeling of watching rain.": {
+      "shannon_char": 0.2559,
+      "shannon_word": 0.8977,
+      "word_diversity": 1.4329,
+      "length_words": 4.4025
+    }
+  },
+  "mean_cv_across_prompts": {
+    "shannon_char": 0.5225,
+    "shannon_word": 1.1164,
+    "word_diversity": 2.7267,
+    "length_words": 8.1619
+  },
+  "single_turn_vs_multi_turn": {
+    "single_turn": {
+      "PRNG": {
+        "mean_word_diversity": 0.649504,
+        "n": 15
+      },
+      "TRNG": {
+        "mean_word_diversity": 0.648875,
+        "n": 15
+      },
+      "QRNG": {
+        "mean_word_diversity": 0.645771,
+        "n": 15
+      }
+    },
+    "multi_turn": {
+      "PRNG": {
+        "mean_word_diversity": 0.61842,
+        "n": 45
+      },
+      "TRNG": {
+        "mean_word_diversity": 0.64128,
+        "n": 45
+      },
+      "QRNG": {
+        "mean_word_diversity": 0.636338,
+        "n": 45
+      }
+    },
+    "comparison": {
+      "PRNG": {
+        "mean_difference": -0.031084,
+        "percent_difference": -4.7858,
+        "ttest_ind_statistic": -1.7315,
+        "ttest_ind_p_value": 0.095546,
+        "significant_005": false,
+        "cohens_d": -0.5017,
+        "effect_size_interpretation": "medium",
+        "direction": "single_turn_higher"
+      },
+      "TRNG": {
+        "mean_difference": -0.007595,
+        "percent_difference": -1.1704,
+        "ttest_ind_statistic": -0.3915,
+        "ttest_ind_p_value": 0.699797,
+        "significant_005": false,
+        "cohens_d": -0.1379,
+        "effect_size_interpretation": "negligible",
+        "direction": "single_turn_higher"
+      },
+      "QRNG": {
+        "mean_difference": -0.009433,
+        "percent_difference": -1.4607,
+        "ttest_ind_statistic": -0.4367,
+        "ttest_ind_p_value": 0.667178,
+        "significant_005": false,
+        "cohens_d": -0.1512,
+        "effect_size_interpretation": "negligible",
+        "direction": "single_turn_higher"
+      },
+      "ALL_SOURCES_COMBINED": {
+        "single_turn_mean": 0.64805,
+        "multi_turn_mean": 0.632013,
+        "single_turn_n": 45,
+        "multi_turn_n": 135,
+        "mean_difference": -0.016037,
+        "ttest_ind_p_value": 0.156307,
+        "significant_005": false,
+        "cohens_d": -0.268,
+        "effect_size_interpretation": "small"
+      }
+    }
+  },
+  "multi_turn_means": {
+    "storytelling": {
+      "PRNG": {
+        "shannon_char": 4.348786666666667,
+        "shannon_word": 6.954826666666666,
+        "word_diversity": 0.6589800000000001,
+        "length_words": 286.53333333333336
+      },
+      "TRNG": {
+        "shannon_char": 4.340613333333334,
+        "shannon_word": 6.96244,
+        "word_diversity": 0.6731133333333333,
+        "length_words": 270.46666666666664
+      },
+      "QRNG": {
+        "shannon_char": 4.352433333333334,
+        "shannon_word": 6.949253333333333,
+        "word_diversity": 0.6812733333333333,
+        "length_words": 260.0
+      }
+    },
+    "debate": {
+      "PRNG": {
+        "shannon_char": 4.5206800000000005,
+        "shannon_word": 7.658173333333334,
+        "word_diversity": 0.6107266666666666,
+        "length_words": 499.1333333333333
+      },
+      "TRNG": {
+        "shannon_char": 4.505880000000001,
+        "shannon_word": 7.617173333333332,
+        "word_diversity": 0.6235400000000001,
+        "length_words": 471.26666666666665
+      },
+      "QRNG": {
+        "shannon_char": 4.527880000000001,
+        "shannon_word": 7.5893733333333335,
+        "word_diversity": 0.6105866666666667,
+        "length_words": 468.1333333333333
+      }
+    },
+    "worldbuilding": {
+      "PRNG": {
+        "shannon_char": 4.44848,
+        "shannon_word": 7.229046666666667,
+        "word_diversity": 0.5855533333333333,
+        "length_words": 388.26666666666665
+      },
+      "TRNG": {
+        "shannon_char": 4.509173333333333,
+        "shannon_word": 7.369793333333333,
+        "word_diversity": 0.6271866666666668,
+        "length_words": 383.8
+      },
+      "QRNG": {
+        "shannon_char": 4.476780000000001,
+        "shannon_word": 7.2734,
+        "word_diversity": 0.6171533333333333,
+        "length_words": 366.73333333333335
+      }
+    }
+  }
+}
