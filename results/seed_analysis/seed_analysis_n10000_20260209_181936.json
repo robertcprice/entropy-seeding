@@ -1,0 +1,2832 @@
+{
+  "analysis_type": "seed_distribution_characterization",
+  "timestamp": "2026-02-09T18:19:36.004896",
+  "n_per_source": 10000,
+  "prng_streams": [
+    42,
+    123,
+    7,
+    999,
+    314
+  ],
+  "per_source": {
+    "PRNG_stream_42": {
+      "uniformity": {
+        "n": 10000,
+        "mean": 0.500251,
+        "std": 0.287694,
+        "expected_mean": 0.5,
+        "expected_std": 0.288675,
+        "ks_test": {
+          "statistic": 0.00626,
+          "p_value": 0.825626,
+          "uniform": true
+        },
+        "chi_squared": {
+          "16_bins": {
+            "statistic": 28.0032,
+            "p_value": 0.021549,
+            "uniform": false
+          },
+          "64_bins": {
+            "statistic": 58.8544,
+            "p_value": 0.624749,
+            "uniform": true
+          },
+          "256_bins": {
+            "statistic": 284.1856,
+            "p_value": 0.101091,
+            "uniform": true
+          }
+        },
+        "anderson_darling": {
+          "statistic": 0.518,
+          "critical_values": {
+            "15.0%": 0.561,
+            "10.0%": 0.631,
+            "5.0%": 0.752,
+            "2.5%": 0.873,
+            "1.0%": 1.035
+          }
+        }
+      },
+      "autocorrelation": {
+        "lag_1": {
+          "autocorrelation": 0.004405,
+          "z_statistic": 0.4405,
+          "p_value": 0.659592,
+          "significant": false
+        },
+        "lag_2": {
+          "autocorrelation": -0.017128,
+          "z_statistic": -1.7128,
+          "p_value": 0.086744,
+          "significant": false
+        },
+        "lag_3": {
+          "autocorrelation": 0.001032,
+          "z_statistic": 0.1032,
+          "p_value": 0.917801,
+          "significant": false
+        },
+        "lag_4": {
+          "autocorrelation": -0.008596,
+          "z_statistic": -0.8596,
+          "p_value": 0.389996,
+          "significant": false
+        },
+        "lag_5": {
+          "autocorrelation": -0.009725,
+          "z_statistic": -0.9725,
+          "p_value": 0.330823,
+          "significant": false
+        },
+        "lag_6": {
+          "autocorrelation": 0.010016,
+          "z_statistic": 1.0016,
+          "p_value": 0.316523,
+          "significant": false
+        },
+        "lag_7": {
+          "autocorrelation": 0.004364,
+          "z_statistic": 0.4364,
+          "p_value": 0.662578,
+          "significant": false
+        },
+        "lag_8": {
+          "autocorrelation": 0.006186,
+          "z_statistic": 0.6186,
+          "p_value": 0.536206,
+          "significant": false
+        },
+        "lag_9": {
+          "autocorrelation": 0.00287,
+          "z_statistic": 0.287,
+          "p_value": 0.774105,
+          "significant": false
+        },
+        "lag_10": {
+          "autocorrelation": -0.00019,
+          "z_statistic": -0.019,
+          "p_value": 0.984807,
+          "significant": false
+        }
+      },
+      "runs_test": {
+        "observed_runs": 5060,
+        "expected_runs": 5001.0,
+        "z_statistic": 1.1801,
+        "p_value": 0.237977,
+        "random": true
+      },
+      "bit_bias": {
+        "n_seeds": 10000,
+        "n_bits_tested": 32,
+        "n_biased_bits": 0,
+        "overall_proportion_1": 0.499716,
+        "per_bit": {
+          "bit_0": {
+            "count_1": 5001,
+            "proportion": 0.5001,
+            "p_value": 0.992021,
+            "biased": "False"
+          },
+          "bit_1": {
+            "count_1": 5011,
+            "proportion": 0.5011,
+            "p_value": 0.833669,
+            "biased": "False"
+          },
+          "bit_2": {
+            "count_1": 4908,
+            "proportion": 0.4908,
+            "p_value": 0.067245,
+            "biased": "False"
+          },
+          "bit_3": {
+            "count_1": 5024,
+            "proportion": 0.5024,
+            "p_value": 0.638357,
+            "biased": "False"
+          },
+          "bit_4": {
+            "count_1": 5015,
+            "proportion": 0.5015,
+            "p_value": 0.771818,
+            "biased": "False"
+          },
+          "bit_5": {
+            "count_1": 4994,
+            "proportion": 0.4994,
+            "p_value": 0.91241,
+            "biased": "False"
+          },
+          "bit_6": {
+            "count_1": 4953,
+            "proportion": 0.4953,
+            "p_value": 0.352372,
+            "biased": "False"
+          },
+          "bit_7": {
+            "count_1": 5017,
+            "proportion": 0.5017,
+            "p_value": 0.741402,
+            "biased": "False"
+          },
+          "bit_8": {
+            "count_1": 4980,
+            "proportion": 0.498,
+            "p_value": 0.696539,
+            "biased": "False"
+          },
+          "bit_9": {
+            "count_1": 5030,
+            "proportion": 0.503,
+            "p_value": 0.555193,
+            "biased": "False"
+          },
+          "bit_10": {
+            "count_1": 4996,
+            "proportion": 0.4996,
+            "p_value": 0.944194,
+            "biased": "False"
+          },
+          "bit_11": {
+            "count_1": 5009,
+            "proportion": 0.5009,
+            "p_value": 0.865011,
+            "biased": "False"
+          },
+          "bit_12": {
+            "count_1": 5016,
+            "proportion": 0.5016,
+            "p_value": 0.756563,
+            "biased": "False"
+          },
+          "bit_13": {
+            "count_1": 4937,
+            "proportion": 0.4937,
+            "p_value": 0.211297,
+            "biased": "False"
+          },
+          "bit_14": {
+            "count_1": 4998,
+            "proportion": 0.4998,
+            "p_value": 0.976067,
+            "biased": "False"
+          },
+          "bit_15": {
+            "count_1": 5007,
+            "proportion": 0.5007,
+            "p_value": 0.896567,
+            "biased": "False"
+          },
+          "bit_16": {
+            "count_1": 4999,
+            "proportion": 0.4999,
+            "p_value": 0.992021,
+            "biased": "False"
+          },
+          "bit_17": {
+            "count_1": 4978,
+            "proportion": 0.4978,
+            "p_value": 0.667198,
+            "biased": "False"
+          },
+          "bit_18": {
+            "count_1": 5013,
+            "proportion": 0.5013,
+            "p_value": 0.802589,
+            "biased": "False"
+          },
+          "bit_19": {
+            "count_1": 4983,
+            "proportion": 0.4983,
+            "p_value": 0.741402,
+            "biased": "False"
+          },
+          "bit_20": {
+            "count_1": 5017,
+            "proportion": 0.5017,
+            "p_value": 0.741402,
+            "biased": "False"
+          },
+          "bit_21": {
+            "count_1": 4987,
+            "proportion": 0.4987,
+            "p_value": 0.802589,
+            "biased": "False"
+          },
+          "bit_22": {
+            "count_1": 5030,
+            "proportion": 0.503,
+            "p_value": 0.555193,
+            "biased": "False"
+          },
+          "bit_23": {
+            "count_1": 4978,
+            "proportion": 0.4978,
+            "p_value": 0.667198,
+            "biased": "False"
+          },
+          "bit_24": {
+            "count_1": 5045,
+            "proportion": 0.5045,
+            "p_value": 0.373467,
+            "biased": "False"
+          },
+          "bit_25": {
+            "count_1": 4939,
+            "proportion": 0.4939,
+            "p_value": 0.226277,
+            "biased": "False"
+          },
+          "bit_26": {
+            "count_1": 4937,
+            "proportion": 0.4937,
+            "p_value": 0.211297,
+            "biased": "False"
+          },
+          "bit_27": {
+            "count_1": 5050,
+            "proportion": 0.505,
+            "p_value": 0.322174,
+            "biased": "False"
+          },
+          "bit_28": {
+            "count_1": 5078,
+            "proportion": 0.5078,
+            "p_value": 0.121137,
+            "biased": "False"
+          },
+          "bit_29": {
+            "count_1": 4999,
+            "proportion": 0.4999,
+            "p_value": 0.992021,
+            "biased": "False"
+          },
+          "bit_30": {
+            "count_1": 4970,
+            "proportion": 0.497,
+            "p_value": 0.555193,
+            "biased": "False"
+          },
+          "bit_31": {
+            "count_1": 5010,
+            "proportion": 0.501,
+            "p_value": 0.84931,
+            "biased": "False"
+          }
+        }
+      }
+    },
+    "PRNG_stream_123": {
+      "uniformity": {
+        "n": 10000,
+        "mean": 0.50179,
+        "std": 0.289644,
+        "expected_mean": 0.5,
+        "expected_std": 0.288675,
+        "ks_test": {
+          "statistic": 0.007998,
+          "p_value": 0.541776,
+          "uniform": true
+        },
+        "chi_squared": {
+          "16_bins": {
+            "statistic": 12.672,
+            "p_value": 0.627616,
+            "uniform": true
+          },
+          "64_bins": {
+            "statistic": 57.6,
+            "p_value": 0.668464,
+            "uniform": true
+          },
+          "256_bins": {
+            "statistic": 239.5904,
+            "p_value": 0.747589,
+            "uniform": true
+          }
+        },
+        "anderson_darling": {
+          "statistic": 0.3897,
+          "critical_values": {
+            "15.0%": 0.561,
+            "10.0%": 0.631,
+            "5.0%": 0.752,
+            "2.5%": 0.873,
+            "1.0%": 1.035
+          }
+        }
+      },
+      "autocorrelation": {
+        "lag_1": {
+          "autocorrelation": -0.009581,
+          "z_statistic": -0.9581,
+          "p_value": 0.338016,
+          "significant": false
+        },
+        "lag_2": {
+          "autocorrelation": 0.012408,
+          "z_statistic": 1.2408,
+          "p_value": 0.214688,
+          "significant": false
+        },
+        "lag_3": {
+          "autocorrelation": -9.7e-05,
+          "z_statistic": -0.0097,
+          "p_value": 0.992267,
+          "significant": false
+        },
+        "lag_4": {
+          "autocorrelation": -0.001335,
+          "z_statistic": -0.1335,
+          "p_value": 0.893811,
+          "significant": false
+        },
+        "lag_5": {
+          "autocorrelation": -0.005821,
+          "z_statistic": -0.5821,
+          "p_value": 0.560478,
+          "significant": false
+        },
+        "lag_6": {
+          "autocorrelation": 0.003896,
+          "z_statistic": 0.3896,
+          "p_value": 0.696812,
+          "significant": false
+        },
+        "lag_7": {
+          "autocorrelation": 0.024926,
+          "z_statistic": 2.4926,
+          "p_value": 0.012679,
+          "significant": true
+        },
+        "lag_8": {
+          "autocorrelation": 6.1e-05,
+          "z_statistic": 0.0061,
+          "p_value": 0.995114,
+          "significant": false
+        },
+        "lag_9": {
+          "autocorrelation": -0.021191,
+          "z_statistic": -2.1191,
+          "p_value": 0.034086,
+          "significant": true
+        },
+        "lag_10": {
+          "autocorrelation": -0.000346,
+          "z_statistic": -0.0346,
+          "p_value": 0.972398,
+          "significant": false
+        }
+      },
+      "runs_test": {
+        "observed_runs": 5038,
+        "expected_runs": 5001.0,
+        "z_statistic": 0.74,
+        "p_value": 0.459278,
+        "random": true
+      },
+      "bit_bias": {
+        "n_seeds": 10000,
+        "n_bits_tested": 32,
+        "n_biased_bits": 0,
+        "overall_proportion_1": 0.501259,
+        "per_bit": {
+          "bit_0": {
+            "count_1": 5054,
+            "proportion": 0.5054,
+            "p_value": 0.284619,
+            "biased": "False"
+          },
+          "bit_1": {
+            "count_1": 5044,
+            "proportion": 0.5044,
+            "p_value": 0.384301,
+            "biased": "False"
+          },
+          "bit_2": {
+            "count_1": 5029,
+            "proportion": 0.5029,
+            "p_value": 0.56868,
+            "biased": "False"
+          },
+          "bit_3": {
+            "count_1": 5002,
+            "proportion": 0.5002,
+            "p_value": 0.976067,
+            "biased": "False"
+          },
+          "bit_4": {
+            "count_1": 5052,
+            "proportion": 0.5052,
+            "p_value": 0.30301,
+            "biased": "False"
+          },
+          "bit_5": {
+            "count_1": 5018,
+            "proportion": 0.5018,
+            "p_value": 0.726341,
+            "biased": "False"
+          },
+          "bit_6": {
+            "count_1": 4931,
+            "proportion": 0.4931,
+            "p_value": 0.170684,
+            "biased": "False"
+          },
+          "bit_7": {
+            "count_1": 4945,
+            "proportion": 0.4945,
+            "p_value": 0.275712,
+            "biased": "False"
+          },
+          "bit_8": {
+            "count_1": 5027,
+            "proportion": 0.5027,
+            "p_value": 0.596114,
+            "biased": "False"
+          },
+          "bit_9": {
+            "count_1": 5051,
+            "proportion": 0.5051,
+            "p_value": 0.312495,
+            "biased": "False"
+          },
+          "bit_10": {
+            "count_1": 5007,
+            "proportion": 0.5007,
+            "p_value": 0.896567,
+            "biased": "False"
+          },
+          "bit_11": {
+            "count_1": 5020,
+            "proportion": 0.502,
+            "p_value": 0.696539,
+            "biased": "False"
+          },
+          "bit_12": {
+            "count_1": 5032,
+            "proportion": 0.5032,
+            "p_value": 0.528697,
+            "biased": "False"
+          },
+          "bit_13": {
+            "count_1": 5028,
+            "proportion": 0.5028,
+            "p_value": 0.582322,
+            "biased": "False"
+          },
+          "bit_14": {
+            "count_1": 5119,
+            "proportion": 0.5119,
+            "p_value": 0.017784,
+            "biased": "False"
+          },
+          "bit_15": {
+            "count_1": 4978,
+            "proportion": 0.4978,
+            "p_value": 0.667198,
+            "biased": "False"
+          },
+          "bit_16": {
+            "count_1": 4975,
+            "proportion": 0.4975,
+            "p_value": 0.624136,
+            "biased": "False"
+          },
+          "bit_17": {
+            "count_1": 4973,
+            "proportion": 0.4973,
+            "p_value": 0.596114,
+            "biased": "False"
+          },
+          "bit_18": {
+            "count_1": 5075,
+            "proportion": 0.5075,
+            "p_value": 0.13622,
+            "biased": "False"
+          },
+          "bit_19": {
+            "count_1": 4974,
+            "proportion": 0.4974,
+            "p_value": 0.610054,
+            "biased": "False"
+          },
+          "bit_20": {
+            "count_1": 4988,
+            "proportion": 0.4988,
+            "p_value": 0.818093,
+            "biased": "False"
+          },
+          "bit_21": {
+            "count_1": 5056,
+            "proportion": 0.5056,
+            "p_value": 0.266998,
+            "biased": "False"
+          },
+          "bit_22": {
+            "count_1": 5074,
+            "proportion": 0.5074,
+            "p_value": 0.141558,
+            "biased": "False"
+          },
+          "bit_23": {
+            "count_1": 4949,
+            "proportion": 0.4949,
+            "p_value": 0.312495,
+            "biased": "False"
+          },
+          "bit_24": {
+            "count_1": 5014,
+            "proportion": 0.5014,
+            "p_value": 0.787162,
+            "biased": "False"
+          },
+          "bit_25": {
+            "count_1": 4952,
+            "proportion": 0.4952,
+            "p_value": 0.342113,
+            "biased": "False"
+          },
+          "bit_26": {
+            "count_1": 4962,
+            "proportion": 0.4962,
+            "p_value": 0.453256,
+            "biased": "False"
+          },
+          "bit_27": {
+            "count_1": 4988,
+            "proportion": 0.4988,
+            "p_value": 0.818093,
+            "biased": "False"
+          },
+          "bit_28": {
+            "count_1": 5029,
+            "proportion": 0.5029,
+            "p_value": 0.56868,
+            "biased": "False"
+          },
+          "bit_29": {
+            "count_1": 5035,
+            "proportion": 0.5035,
+            "p_value": 0.490196,
+            "biased": "False"
+          },
+          "bit_30": {
+            "count_1": 4992,
+            "proportion": 0.4992,
+            "p_value": 0.880766,
+            "biased": "False"
+          },
+          "bit_31": {
+            "count_1": 5030,
+            "proportion": 0.503,
+            "p_value": 0.555193,
+            "biased": "False"
+          }
+        }
+      }
+    },
+    "PRNG_stream_7": {
+      "uniformity": {
+        "n": 10000,
+        "mean": 0.498451,
+        "std": 0.289444,
+        "expected_mean": 0.5,
+        "expected_std": 0.288675,
+        "ks_test": {
+          "statistic": 0.006445,
+          "p_value": 0.79797,
+          "uniform": true
+        },
+        "chi_squared": {
+          "16_bins": {
+            "statistic": 11.8048,
+            "p_value": 0.69374,
+            "uniform": true
+          },
+          "64_bins": {
+            "statistic": 77.7984,
+            "p_value": 0.099281,
+            "uniform": true
+          },
+          "256_bins": {
+            "statistic": 264.1152,
+            "p_value": 0.334196,
+            "uniform": true
+          }
+        },
+        "anderson_darling": {
+          "statistic": 0.2196,
+          "critical_values": {
+            "15.0%": 0.561,
+            "10.0%": 0.631,
+            "5.0%": 0.752,
+            "2.5%": 0.873,
+            "1.0%": 1.035
+          }
+        }
+      },
+      "autocorrelation": {
+        "lag_1": {
+          "autocorrelation": -0.011625,
+          "z_statistic": -1.1625,
+          "p_value": 0.245046,
+          "significant": false
+        },
+        "lag_2": {
+          "autocorrelation": 0.004576,
+          "z_statistic": 0.4576,
+          "p_value": 0.647227,
+          "significant": false
+        },
+        "lag_3": {
+          "autocorrelation": -0.01665,
+          "z_statistic": -1.665,
+          "p_value": 0.095923,
+          "significant": false
+        },
+        "lag_4": {
+          "autocorrelation": 0.000788,
+          "z_statistic": 0.0788,
+          "p_value": 0.937213,
+          "significant": false
+        },
+        "lag_5": {
+          "autocorrelation": 0.015,
+          "z_statistic": 1.5,
+          "p_value": 0.133626,
+          "significant": false
+        },
+        "lag_6": {
+          "autocorrelation": -0.015993,
+          "z_statistic": -1.5993,
+          "p_value": 0.109751,
+          "significant": false
+        },
+        "lag_7": {
+          "autocorrelation": 0.010961,
+          "z_statistic": 1.0961,
+          "p_value": 0.273027,
+          "significant": false
+        },
+        "lag_8": {
+          "autocorrelation": 0.00235,
+          "z_statistic": 0.235,
+          "p_value": 0.814214,
+          "significant": false
+        },
+        "lag_9": {
+          "autocorrelation": -0.013993,
+          "z_statistic": -1.3993,
+          "p_value": 0.161716,
+          "significant": false
+        },
+        "lag_10": {
+          "autocorrelation": -0.000285,
+          "z_statistic": -0.0285,
+          "p_value": 0.977273,
+          "significant": false
+        }
+      },
+      "runs_test": {
+        "observed_runs": 5083,
+        "expected_runs": 5001.0,
+        "z_statistic": 1.6401,
+        "p_value": 0.100988,
+        "random": true
+      },
+      "bit_bias": {
+        "n_seeds": 10000,
+        "n_bits_tested": 32,
+        "n_biased_bits": 0,
+        "overall_proportion_1": 0.499641,
+        "per_bit": {
+          "bit_0": {
+            "count_1": 4913,
+            "proportion": 0.4913,
+            "p_value": 0.083625,
+            "biased": "False"
+          },
+          "bit_1": {
+            "count_1": 5105,
+            "proportion": 0.5105,
+            "p_value": 0.036613,
+            "biased": "False"
+          },
+          "bit_2": {
+            "count_1": 5072,
+            "proportion": 0.5072,
+            "p_value": 0.152713,
+            "biased": "False"
+          },
+          "bit_3": {
+            "count_1": 4998,
+            "proportion": 0.4998,
+            "p_value": 0.976067,
+            "biased": "False"
+          },
+          "bit_4": {
+            "count_1": 5065,
+            "proportion": 0.5065,
+            "p_value": 0.197048,
+            "biased": "False"
+          },
+          "bit_5": {
+            "count_1": 4943,
+            "proportion": 0.4943,
+            "p_value": 0.258475,
+            "biased": "False"
+          },
+          "bit_6": {
+            "count_1": 4963,
+            "proportion": 0.4963,
+            "p_value": 0.465392,
+            "biased": "False"
+          },
+          "bit_7": {
+            "count_1": 4948,
+            "proportion": 0.4948,
+            "p_value": 0.30301,
+            "biased": "False"
+          },
+          "bit_8": {
+            "count_1": 5018,
+            "proportion": 0.5018,
+            "p_value": 0.726341,
+            "biased": "False"
+          },
+          "bit_9": {
+            "count_1": 4971,
+            "proportion": 0.4971,
+            "p_value": 0.56868,
+            "biased": "False"
+          },
+          "bit_10": {
+            "count_1": 5020,
+            "proportion": 0.502,
+            "p_value": 0.696539,
+            "biased": "False"
+          },
+          "bit_11": {
+            "count_1": 5107,
+            "proportion": 0.5107,
+            "p_value": 0.033166,
+            "biased": "False"
+          },
+          "bit_12": {
+            "count_1": 4962,
+            "proportion": 0.4962,
+            "p_value": 0.453256,
+            "biased": "False"
+          },
+          "bit_13": {
+            "count_1": 5030,
+            "proportion": 0.503,
+            "p_value": 0.555193,
+            "biased": "False"
+          },
+          "bit_14": {
+            "count_1": 4966,
+            "proportion": 0.4966,
+            "p_value": 0.50286,
+            "biased": "False"
+          },
+          "bit_15": {
+            "count_1": 4866,
+            "proportion": 0.4866,
+            "p_value": 0.007582,
+            "biased": "False"
+          },
+          "bit_16": {
+            "count_1": 4997,
+            "proportion": 0.4997,
+            "p_value": 0.960123,
+            "biased": "False"
+          },
+          "bit_17": {
+            "count_1": 4986,
+            "proportion": 0.4986,
+            "p_value": 0.787162,
+            "biased": "False"
+          },
+          "bit_18": {
+            "count_1": 4956,
+            "proportion": 0.4956,
+            "p_value": 0.384301,
+            "biased": "False"
+          },
+          "bit_19": {
+            "count_1": 4996,
+            "proportion": 0.4996,
+            "p_value": 0.944194,
+            "biased": "False"
+          },
+          "bit_20": {
+            "count_1": 4955,
+            "proportion": 0.4955,
+            "p_value": 0.373467,
+            "biased": "False"
+          },
+          "bit_21": {
+            "count_1": 5057,
+            "proportion": 0.5057,
+            "p_value": 0.258475,
+            "biased": "False"
+          },
+          "bit_22": {
+            "count_1": 5004,
+            "proportion": 0.5004,
+            "p_value": 0.944194,
+            "biased": "False"
+          },
+          "bit_23": {
+            "count_1": 4991,
+            "proportion": 0.4991,
+            "p_value": 0.865011,
+            "biased": "False"
+          },
+          "bit_24": {
+            "count_1": 5072,
+            "proportion": 0.5072,
+            "p_value": 0.152713,
+            "biased": "False"
+          },
+          "bit_25": {
+            "count_1": 5018,
+            "proportion": 0.5018,
+            "p_value": 0.726341,
+            "biased": "False"
+          },
+          "bit_26": {
+            "count_1": 5022,
+            "proportion": 0.5022,
+            "p_value": 0.667198,
+            "biased": "False"
+          },
+          "bit_27": {
+            "count_1": 4932,
+            "proportion": 0.4932,
+            "p_value": 0.177013,
+            "biased": "False"
+          },
+          "bit_28": {
+            "count_1": 4988,
+            "proportion": 0.4988,
+            "p_value": 0.818093,
+            "biased": "False"
+          },
+          "bit_29": {
+            "count_1": 4975,
+            "proportion": 0.4975,
+            "p_value": 0.624136,
+            "biased": "False"
+          },
+          "bit_30": {
+            "count_1": 5019,
+            "proportion": 0.5019,
+            "p_value": 0.711384,
+            "biased": "False"
+          },
+          "bit_31": {
+            "count_1": 4970,
+            "proportion": 0.497,
+            "p_value": 0.555193,
+            "biased": "False"
+          }
+        }
+      }
+    },
+    "PRNG_stream_999": {
+      "uniformity": {
+        "n": 10000,
+        "mean": 0.493833,
+        "std": 0.289983,
+        "expected_mean": 0.5,
+        "expected_std": 0.288675,
+        "ks_test": {
+          "statistic": 0.012457,
+          "p_value": 0.089044,
+          "uniform": true
+        },
+        "chi_squared": {
+          "16_bins": {
+            "statistic": 14.448,
+            "p_value": 0.491859,
+            "uniform": true
+          },
+          "64_bins": {
+            "statistic": 70.272,
+            "p_value": 0.247191,
+            "uniform": true
+          },
+          "256_bins": {
+            "statistic": 243.6352,
+            "p_value": 0.684842,
+            "uniform": true
+          }
+        },
+        "anderson_darling": {
+          "statistic": 0.4126,
+          "critical_values": {
+            "15.0%": 0.561,
+            "10.0%": 0.631,
+            "5.0%": 0.752,
+            "2.5%": 0.873,
+            "1.0%": 1.035
+          }
+        }
+      },
+      "autocorrelation": {
+        "lag_1": {
+          "autocorrelation": 0.006497,
+          "z_statistic": 0.6497,
+          "p_value": 0.515872,
+          "significant": false
+        },
+        "lag_2": {
+          "autocorrelation": -0.013013,
+          "z_statistic": -1.3013,
+          "p_value": 0.19314,
+          "significant": false
+        },
+        "lag_3": {
+          "autocorrelation": -0.002644,
+          "z_statistic": -0.2644,
+          "p_value": 0.791438,
+          "significant": false
+        },
+        "lag_4": {
+          "autocorrelation": 0.010862,
+          "z_statistic": 1.0862,
+          "p_value": 0.2774,
+          "significant": false
+        },
+        "lag_5": {
+          "autocorrelation": -0.002669,
+          "z_statistic": -0.2669,
+          "p_value": 0.789541,
+          "significant": false
+        },
+        "lag_6": {
+          "autocorrelation": -0.00334,
+          "z_statistic": -0.334,
+          "p_value": 0.738374,
+          "significant": false
+        },
+        "lag_7": {
+          "autocorrelation": -0.010688,
+          "z_statistic": -1.0688,
+          "p_value": 0.285157,
+          "significant": false
+        },
+        "lag_8": {
+          "autocorrelation": -0.014706,
+          "z_statistic": -1.4706,
+          "p_value": 0.141404,
+          "significant": false
+        },
+        "lag_9": {
+          "autocorrelation": 0.005639,
+          "z_statistic": 0.5639,
+          "p_value": 0.572856,
+          "significant": false
+        },
+        "lag_10": {
+          "autocorrelation": -0.006625,
+          "z_statistic": -0.6625,
+          "p_value": 0.507628,
+          "significant": false
+        }
+      },
+      "runs_test": {
+        "observed_runs": 4960,
+        "expected_runs": 5001.0,
+        "z_statistic": -0.82,
+        "p_value": 0.412193,
+        "random": true
+      },
+      "bit_bias": {
+        "n_seeds": 10000,
+        "n_bits_tested": 32,
+        "n_biased_bits": 0,
+        "overall_proportion_1": 0.498866,
+        "per_bit": {
+          "bit_0": {
+            "count_1": 4963,
+            "proportion": 0.4963,
+            "p_value": 0.465392,
+            "biased": "False"
+          },
+          "bit_1": {
+            "count_1": 5056,
+            "proportion": 0.5056,
+            "p_value": 0.266998,
+            "biased": "False"
+          },
+          "bit_2": {
+            "count_1": 4987,
+            "proportion": 0.4987,
+            "p_value": 0.802589,
+            "biased": "False"
+          },
+          "bit_3": {
+            "count_1": 5025,
+            "proportion": 0.5025,
+            "p_value": 0.624136,
+            "biased": "False"
+          },
+          "bit_4": {
+            "count_1": 5087,
+            "proportion": 0.5087,
+            "p_value": 0.083625,
+            "biased": "False"
+          },
+          "bit_5": {
+            "count_1": 4928,
+            "proportion": 0.4928,
+            "p_value": 0.152713,
+            "biased": "False"
+          },
+          "bit_6": {
+            "count_1": 5034,
+            "proportion": 0.5034,
+            "p_value": 0.50286,
+            "biased": "False"
+          },
+          "bit_7": {
+            "count_1": 5015,
+            "proportion": 0.5015,
+            "p_value": 0.771818,
+            "biased": "False"
+          },
+          "bit_8": {
+            "count_1": 5060,
+            "proportion": 0.506,
+            "p_value": 0.234045,
+            "biased": "False"
+          },
+          "bit_9": {
+            "count_1": 5099,
+            "proportion": 0.5099,
+            "p_value": 0.048833,
+            "biased": "False"
+          },
+          "bit_10": {
+            "count_1": 5002,
+            "proportion": 0.5002,
+            "p_value": 0.976067,
+            "biased": "False"
+          },
+          "bit_11": {
+            "count_1": 4969,
+            "proportion": 0.4969,
+            "p_value": 0.541864,
+            "biased": "False"
+          },
+          "bit_12": {
+            "count_1": 5073,
+            "proportion": 0.5073,
+            "p_value": 0.147055,
+            "biased": "False"
+          },
+          "bit_13": {
+            "count_1": 4895,
+            "proportion": 0.4895,
+            "p_value": 0.036613,
+            "biased": "False"
+          },
+          "bit_14": {
+            "count_1": 5018,
+            "proportion": 0.5018,
+            "p_value": 0.726341,
+            "biased": "False"
+          },
+          "bit_15": {
+            "count_1": 4925,
+            "proportion": 0.4925,
+            "p_value": 0.13622,
+            "biased": "False"
+          },
+          "bit_16": {
+            "count_1": 5042,
+            "proportion": 0.5042,
+            "p_value": 0.40654,
+            "biased": "False"
+          },
+          "bit_17": {
+            "count_1": 5068,
+            "proportion": 0.5068,
+            "p_value": 0.177013,
+            "biased": "False"
+          },
+          "bit_18": {
+            "count_1": 4992,
+            "proportion": 0.4992,
+            "p_value": 0.880766,
+            "biased": "False"
+          },
+          "bit_19": {
+            "count_1": 4918,
+            "proportion": 0.4918,
+            "p_value": 0.103097,
+            "biased": "False"
+          },
+          "bit_20": {
+            "count_1": 5000,
+            "proportion": 0.5,
+            "p_value": 1.0,
+            "biased": false
+          },
+          "bit_21": {
+            "count_1": 4925,
+            "proportion": 0.4925,
+            "p_value": 0.13622,
+            "biased": "False"
+          },
+          "bit_22": {
+            "count_1": 4971,
+            "proportion": 0.4971,
+            "p_value": 0.56868,
+            "biased": "False"
+          },
+          "bit_23": {
+            "count_1": 4973,
+            "proportion": 0.4973,
+            "p_value": 0.596114,
+            "biased": "False"
+          },
+          "bit_24": {
+            "count_1": 4971,
+            "proportion": 0.4971,
+            "p_value": 0.56868,
+            "biased": "False"
+          },
+          "bit_25": {
+            "count_1": 5045,
+            "proportion": 0.5045,
+            "p_value": 0.373467,
+            "biased": "False"
+          },
+          "bit_26": {
+            "count_1": 4894,
+            "proportion": 0.4894,
+            "p_value": 0.034853,
+            "biased": "False"
+          },
+          "bit_27": {
+            "count_1": 4986,
+            "proportion": 0.4986,
+            "p_value": 0.787162,
+            "biased": "False"
+          },
+          "bit_28": {
+            "count_1": 4937,
+            "proportion": 0.4937,
+            "p_value": 0.211297,
+            "biased": "False"
+          },
+          "bit_29": {
+            "count_1": 4904,
+            "proportion": 0.4904,
+            "p_value": 0.056128,
+            "biased": "False"
+          },
+          "bit_30": {
+            "count_1": 4925,
+            "proportion": 0.4925,
+            "p_value": 0.13622,
+            "biased": "False"
+          },
+          "bit_31": {
+            "count_1": 4950,
+            "proportion": 0.495,
+            "p_value": 0.322174,
+            "biased": "False"
+          }
+        }
+      }
+    },
+    "PRNG_stream_314": {
+      "uniformity": {
+        "n": 10000,
+        "mean": 0.500565,
+        "std": 0.288372,
+        "expected_mean": 0.5,
+        "expected_std": 0.288675,
+        "ks_test": {
+          "statistic": 0.006568,
+          "p_value": 0.778779,
+          "uniform": true
+        },
+        "chi_squared": {
+          "16_bins": {
+            "statistic": 16.1216,
+            "p_value": 0.374016,
+            "uniform": true
+          },
+          "64_bins": {
+            "statistic": 66.6752,
+            "p_value": 0.351821,
+            "uniform": true
+          },
+          "256_bins": {
+            "statistic": 266.0096,
+            "p_value": 0.304994,
+            "uniform": true
+          }
+        },
+        "anderson_darling": {
+          "statistic": 0.9876,
+          "critical_values": {
+            "15.0%": 0.561,
+            "10.0%": 0.631,
+            "5.0%": 0.752,
+            "2.5%": 0.873,
+            "1.0%": 1.035
+          }
+        }
+      },
+      "autocorrelation": {
+        "lag_1": {
+          "autocorrelation": 0.009515,
+          "z_statistic": 0.9515,
+          "p_value": 0.341344,
+          "significant": false
+        },
+        "lag_2": {
+          "autocorrelation": -0.008059,
+          "z_statistic": -0.8059,
+          "p_value": 0.420315,
+          "significant": false
+        },
+        "lag_3": {
+          "autocorrelation": -0.008947,
+          "z_statistic": -0.8947,
+          "p_value": 0.370965,
+          "significant": false
+        },
+        "lag_4": {
+          "autocorrelation": 0.001652,
+          "z_statistic": 0.1652,
+          "p_value": 0.868786,
+          "significant": false
+        },
+        "lag_5": {
+          "autocorrelation": -0.002661,
+          "z_statistic": -0.2661,
+          "p_value": 0.790165,
+          "significant": false
+        },
+        "lag_6": {
+          "autocorrelation": 0.022989,
+          "z_statistic": 2.2989,
+          "p_value": 0.021513,
+          "significant": true
+        },
+        "lag_7": {
+          "autocorrelation": -0.005,
+          "z_statistic": -0.5,
+          "p_value": 0.617076,
+          "significant": false
+        },
+        "lag_8": {
+          "autocorrelation": 0.013972,
+          "z_statistic": 1.3972,
+          "p_value": 0.162356,
+          "significant": false
+        },
+        "lag_9": {
+          "autocorrelation": 0.012528,
+          "z_statistic": 1.2528,
+          "p_value": 0.210288,
+          "significant": false
+        },
+        "lag_10": {
+          "autocorrelation": 0.000388,
+          "z_statistic": 0.0388,
+          "p_value": 0.96903,
+          "significant": false
+        }
+      },
+      "runs_test": {
+        "observed_runs": 4975,
+        "expected_runs": 5001.0,
+        "z_statistic": -0.52,
+        "p_value": 0.603045,
+        "random": true
+      },
+      "bit_bias": {
+        "n_seeds": 10000,
+        "n_bits_tested": 32,
+        "n_biased_bits": 0,
+        "overall_proportion_1": 0.499719,
+        "per_bit": {
+          "bit_0": {
+            "count_1": 5028,
+            "proportion": 0.5028,
+            "p_value": 0.582322,
+            "biased": "False"
+          },
+          "bit_1": {
+            "count_1": 5011,
+            "proportion": 0.5011,
+            "p_value": 0.833669,
+            "biased": "False"
+          },
+          "bit_2": {
+            "count_1": 4911,
+            "proportion": 0.4911,
+            "p_value": 0.076722,
+            "biased": "False"
+          },
+          "bit_3": {
+            "count_1": 5034,
+            "proportion": 0.5034,
+            "p_value": 0.50286,
+            "biased": "False"
+          },
+          "bit_4": {
+            "count_1": 5101,
+            "proportion": 0.5101,
+            "p_value": 0.044426,
+            "biased": "False"
+          },
+          "bit_5": {
+            "count_1": 4998,
+            "proportion": 0.4998,
+            "p_value": 0.976067,
+            "biased": "False"
+          },
+          "bit_6": {
+            "count_1": 5003,
+            "proportion": 0.5003,
+            "p_value": 0.960123,
+            "biased": "False"
+          },
+          "bit_7": {
+            "count_1": 4994,
+            "proportion": 0.4994,
+            "p_value": 0.91241,
+            "biased": "False"
+          },
+          "bit_8": {
+            "count_1": 4949,
+            "proportion": 0.4949,
+            "p_value": 0.312495,
+            "biased": "False"
+          },
+          "bit_9": {
+            "count_1": 4983,
+            "proportion": 0.4983,
+            "p_value": 0.741402,
+            "biased": "False"
+          },
+          "bit_10": {
+            "count_1": 5009,
+            "proportion": 0.5009,
+            "p_value": 0.865011,
+            "biased": "False"
+          },
+          "bit_11": {
+            "count_1": 4944,
+            "proportion": 0.4944,
+            "p_value": 0.266998,
+            "biased": "False"
+          },
+          "bit_12": {
+            "count_1": 4894,
+            "proportion": 0.4894,
+            "p_value": 0.034853,
+            "biased": "False"
+          },
+          "bit_13": {
+            "count_1": 5013,
+            "proportion": 0.5013,
+            "p_value": 0.802589,
+            "biased": "False"
+          },
+          "bit_14": {
+            "count_1": 4991,
+            "proportion": 0.4991,
+            "p_value": 0.865011,
+            "biased": "False"
+          },
+          "bit_15": {
+            "count_1": 5046,
+            "proportion": 0.5046,
+            "p_value": 0.362823,
+            "biased": "False"
+          },
+          "bit_16": {
+            "count_1": 4985,
+            "proportion": 0.4985,
+            "p_value": 0.771818,
+            "biased": "False"
+          },
+          "bit_17": {
+            "count_1": 5008,
+            "proportion": 0.5008,
+            "p_value": 0.880766,
+            "biased": "False"
+          },
+          "bit_18": {
+            "count_1": 5009,
+            "proportion": 0.5009,
+            "p_value": 0.865011,
+            "biased": "False"
+          },
+          "bit_19": {
+            "count_1": 5079,
+            "proportion": 0.5079,
+            "p_value": 0.116411,
+            "biased": "False"
+          },
+          "bit_20": {
+            "count_1": 4983,
+            "proportion": 0.4983,
+            "p_value": 0.741402,
+            "biased": "False"
+          },
+          "bit_21": {
+            "count_1": 4974,
+            "proportion": 0.4974,
+            "p_value": 0.610054,
+            "biased": "False"
+          },
+          "bit_22": {
+            "count_1": 4977,
+            "proportion": 0.4977,
+            "p_value": 0.652713,
+            "biased": "False"
+          },
+          "bit_23": {
+            "count_1": 5012,
+            "proportion": 0.5012,
+            "p_value": 0.818093,
+            "biased": "False"
+          },
+          "bit_24": {
+            "count_1": 5081,
+            "proportion": 0.5081,
+            "p_value": 0.107393,
+            "biased": "False"
+          },
+          "bit_25": {
+            "count_1": 4913,
+            "proportion": 0.4913,
+            "p_value": 0.083625,
+            "biased": "False"
+          },
+          "bit_26": {
+            "count_1": 5041,
+            "proportion": 0.5041,
+            "p_value": 0.417942,
+            "biased": "False"
+          },
+          "bit_27": {
+            "count_1": 4984,
+            "proportion": 0.4984,
+            "p_value": 0.756563,
+            "biased": "False"
+          },
+          "bit_28": {
+            "count_1": 4988,
+            "proportion": 0.4988,
+            "p_value": 0.818093,
+            "biased": "False"
+          },
+          "bit_29": {
+            "count_1": 4965,
+            "proportion": 0.4965,
+            "p_value": 0.490196,
+            "biased": "False"
+          },
+          "bit_30": {
+            "count_1": 4960,
+            "proportion": 0.496,
+            "p_value": 0.429529,
+            "biased": "False"
+          },
+          "bit_31": {
+            "count_1": 5042,
+            "proportion": 0.5042,
+            "p_value": 0.40654,
+            "biased": "False"
+          }
+        }
+      }
+    },
+    "PRNG_combined": {
+      "uniformity": {
+        "n": 50000,
+        "mean": 0.498978,
+        "std": 0.28903,
+        "expected_mean": 0.5,
+        "expected_std": 0.288675,
+        "ks_test": {
+          "statistic": 0.003583,
+          "p_value": 0.540968,
+          "uniform": true
+        },
+        "chi_squared": {
+          "16_bins": {
+            "statistic": 18.7398,
+            "p_value": 0.225766,
+            "uniform": true
+          },
+          "64_bins": {
+            "statistic": 73.8534,
+            "p_value": 0.164782,
+            "uniform": true
+          },
+          "256_bins": {
+            "statistic": 285.6704,
+            "p_value": 0.090705,
+            "uniform": true
+          }
+        },
+        "anderson_darling": {
+          "statistic": 0.7916,
+          "critical_values": {
+            "15.0%": 0.561,
+            "10.0%": 0.631,
+            "5.0%": 0.752,
+            "2.5%": 0.873,
+            "1.0%": 1.035
+          }
+        }
+      },
+      "autocorrelation": {
+        "lag_1": {
+          "autocorrelation": -4.2e-05,
+          "z_statistic": -0.0094,
+          "p_value": 0.992499,
+          "significant": false
+        },
+        "lag_2": {
+          "autocorrelation": -0.004021,
+          "z_statistic": -0.8991,
+          "p_value": 0.368618,
+          "significant": false
+        },
+        "lag_3": {
+          "autocorrelation": -0.005256,
+          "z_statistic": -1.1753,
+          "p_value": 0.239893,
+          "significant": false
+        },
+        "lag_4": {
+          "autocorrelation": 0.000722,
+          "z_statistic": 0.1614,
+          "p_value": 0.871816,
+          "significant": false
+        },
+        "lag_5": {
+          "autocorrelation": -0.001086,
+          "z_statistic": -0.2429,
+          "p_value": 0.808055,
+          "significant": false
+        },
+        "lag_6": {
+          "autocorrelation": 0.003514,
+          "z_statistic": 0.7858,
+          "p_value": 0.431956,
+          "significant": false
+        },
+        "lag_7": {
+          "autocorrelation": 0.005144,
+          "z_statistic": 1.1501,
+          "p_value": 0.250092,
+          "significant": false
+        },
+        "lag_8": {
+          "autocorrelation": 0.00177,
+          "z_statistic": 0.3958,
+          "p_value": 0.692268,
+          "significant": false
+        },
+        "lag_9": {
+          "autocorrelation": -0.002907,
+          "z_statistic": -0.6499,
+          "p_value": 0.51574,
+          "significant": false
+        },
+        "lag_10": {
+          "autocorrelation": -0.001403,
+          "z_statistic": -0.3137,
+          "p_value": 0.753786,
+          "significant": false
+        }
+      },
+      "runs_test": {
+        "observed_runs": 25114,
+        "expected_runs": 25001.0,
+        "z_statistic": 1.0107,
+        "p_value": 0.312154,
+        "random": true
+      },
+      "bit_bias": {
+        "n_seeds": 50000,
+        "n_bits_tested": 32,
+        "n_biased_bits": 0,
+        "overall_proportion_1": 0.49984,
+        "per_bit": {
+          "bit_0": {
+            "count_1": 24959,
+            "proportion": 0.4992,
+            "p_value": 0.717171,
+            "biased": "False"
+          },
+          "bit_1": {
+            "count_1": 25227,
+            "proportion": 0.5045,
+            "p_value": 0.042776,
+            "biased": "False"
+          },
+          "bit_2": {
+            "count_1": 24907,
+            "proportion": 0.4981,
+            "p_value": 0.408042,
+            "biased": "False"
+          },
+          "bit_3": {
+            "count_1": 25083,
+            "proportion": 0.5017,
+            "p_value": 0.460574,
+            "biased": "False"
+          },
+          "bit_4": {
+            "count_1": 25320,
+            "proportion": 0.5064,
+            "p_value": 0.004267,
+            "biased": "False"
+          },
+          "bit_5": {
+            "count_1": 24881,
+            "proportion": 0.4976,
+            "p_value": 0.289192,
+            "biased": "False"
+          },
+          "bit_6": {
+            "count_1": 24884,
+            "proportion": 0.4977,
+            "p_value": 0.301574,
+            "biased": "False"
+          },
+          "bit_7": {
+            "count_1": 24919,
+            "proportion": 0.4984,
+            "p_value": 0.471517,
+            "biased": "False"
+          },
+          "bit_8": {
+            "count_1": 25034,
+            "proportion": 0.5007,
+            "p_value": 0.764457,
+            "biased": "False"
+          },
+          "bit_9": {
+            "count_1": 25134,
+            "proportion": 0.5027,
+            "p_value": 0.232454,
+            "biased": "False"
+          },
+          "bit_10": {
+            "count_1": 25034,
+            "proportion": 0.5007,
+            "p_value": 0.764457,
+            "biased": "False"
+          },
+          "bit_11": {
+            "count_1": 25049,
+            "proportion": 0.501,
+            "p_value": 0.664436,
+            "biased": "False"
+          },
+          "bit_12": {
+            "count_1": 24977,
+            "proportion": 0.4995,
+            "p_value": 0.840506,
+            "biased": "False"
+          },
+          "bit_13": {
+            "count_1": 24903,
+            "proportion": 0.4981,
+            "p_value": 0.38807,
+            "biased": "False"
+          },
+          "bit_14": {
+            "count_1": 25092,
+            "proportion": 0.5018,
+            "p_value": 0.413129,
+            "biased": "False"
+          },
+          "bit_15": {
+            "count_1": 24822,
+            "proportion": 0.4964,
+            "p_value": 0.112374,
+            "biased": "False"
+          },
+          "bit_16": {
+            "count_1": 24998,
+            "proportion": 0.5,
+            "p_value": 0.989296,
+            "biased": "False"
+          },
+          "bit_17": {
+            "count_1": 25013,
+            "proportion": 0.5003,
+            "p_value": 0.910979,
+            "biased": "False"
+          },
+          "bit_18": {
+            "count_1": 25045,
+            "proportion": 0.5009,
+            "p_value": 0.690616,
+            "biased": "False"
+          },
+          "bit_19": {
+            "count_1": 24950,
+            "proportion": 0.499,
+            "p_value": 0.657953,
+            "biased": "False"
+          },
+          "bit_20": {
+            "count_1": 24943,
+            "proportion": 0.4989,
+            "p_value": 0.613313,
+            "biased": "False"
+          },
+          "bit_21": {
+            "count_1": 24999,
+            "proportion": 0.5,
+            "p_value": 0.996432,
+            "biased": "False"
+          },
+          "bit_22": {
+            "count_1": 25056,
+            "proportion": 0.5011,
+            "p_value": 0.619608,
+            "biased": "False"
+          },
+          "bit_23": {
+            "count_1": 24903,
+            "proportion": 0.4981,
+            "p_value": 0.38807,
+            "biased": "False"
+          },
+          "bit_24": {
+            "count_1": 25183,
+            "proportion": 0.5037,
+            "p_value": 0.102609,
+            "biased": "False"
+          },
+          "bit_25": {
+            "count_1": 24867,
+            "proportion": 0.4973,
+            "p_value": 0.235971,
+            "biased": "False"
+          },
+          "bit_26": {
+            "count_1": 24856,
+            "proportion": 0.4971,
+            "p_value": 0.199315,
+            "biased": "False"
+          },
+          "bit_27": {
+            "count_1": 24940,
+            "proportion": 0.4988,
+            "p_value": 0.594599,
+            "biased": "False"
+          },
+          "bit_28": {
+            "count_1": 25020,
+            "proportion": 0.5004,
+            "p_value": 0.861541,
+            "biased": "False"
+          },
+          "bit_29": {
+            "count_1": 24878,
+            "proportion": 0.4976,
+            "p_value": 0.277156,
+            "biased": "False"
+          },
+          "bit_30": {
+            "count_1": 24866,
+            "proportion": 0.4973,
+            "p_value": 0.232454,
+            "biased": "False"
+          },
+          "bit_31": {
+            "count_1": 25002,
+            "proportion": 0.5,
+            "p_value": 0.989296,
+            "biased": "False"
+          }
+        }
+      }
+    },
+    "TRNG": {
+      "uniformity": {
+        "n": 10000,
+        "mean": 0.500543,
+        "std": 0.289808,
+        "expected_mean": 0.5,
+        "expected_std": 0.288675,
+        "ks_test": {
+          "statistic": 0.008306,
+          "p_value": 0.492645,
+          "uniform": true
+        },
+        "chi_squared": {
+          "16_bins": {
+            "statistic": 19.616,
+            "p_value": 0.187163,
+            "uniform": true
+          },
+          "64_bins": {
+            "statistic": 53.056,
+            "p_value": 0.809774,
+            "uniform": true
+          },
+          "256_bins": {
+            "statistic": 264.576,
+            "p_value": 0.326978,
+            "uniform": true
+          }
+        },
+        "anderson_darling": {
+          "statistic": 0.5098,
+          "critical_values": {
+            "15.0%": 0.561,
+            "10.0%": 0.631,
+            "5.0%": 0.752,
+            "2.5%": 0.873,
+            "1.0%": 1.035
+          }
+        }
+      },
+      "autocorrelation": {
+        "lag_1": {
+          "autocorrelation": -0.004065,
+          "z_statistic": -0.4065,
+          "p_value": 0.684368,
+          "significant": false
+        },
+        "lag_2": {
+          "autocorrelation": -0.00818,
+          "z_statistic": -0.818,
+          "p_value": 0.41337,
+          "significant": false
+        },
+        "lag_3": {
+          "autocorrelation": -0.006234,
+          "z_statistic": -0.6234,
+          "p_value": 0.533024,
+          "significant": false
+        },
+        "lag_4": {
+          "autocorrelation": -0.005936,
+          "z_statistic": -0.5936,
+          "p_value": 0.552775,
+          "significant": false
+        },
+        "lag_5": {
+          "autocorrelation": -0.001125,
+          "z_statistic": -0.1125,
+          "p_value": 0.910458,
+          "significant": false
+        },
+        "lag_6": {
+          "autocorrelation": 0.008534,
+          "z_statistic": 0.8534,
+          "p_value": 0.393464,
+          "significant": false
+        },
+        "lag_7": {
+          "autocorrelation": -0.008569,
+          "z_statistic": -0.8569,
+          "p_value": 0.391523,
+          "significant": false
+        },
+        "lag_8": {
+          "autocorrelation": -0.007543,
+          "z_statistic": -0.7543,
+          "p_value": 0.450642,
+          "significant": false
+        },
+        "lag_9": {
+          "autocorrelation": -0.021953,
+          "z_statistic": -2.1953,
+          "p_value": 0.028142,
+          "significant": true
+        },
+        "lag_10": {
+          "autocorrelation": -0.000989,
+          "z_statistic": -0.0989,
+          "p_value": 0.921246,
+          "significant": false
+        }
+      },
+      "runs_test": {
+        "observed_runs": 5051,
+        "expected_runs": 5001.0,
+        "z_statistic": 1.0001,
+        "p_value": 0.317286,
+        "random": true
+      },
+      "bit_bias": {
+        "n_seeds": 10000,
+        "n_bits_tested": 32,
+        "n_biased_bits": 0,
+        "overall_proportion_1": 0.498859,
+        "per_bit": {
+          "bit_0": {
+            "count_1": 4984,
+            "proportion": 0.4984,
+            "p_value": 0.756563,
+            "biased": "False"
+          },
+          "bit_1": {
+            "count_1": 5035,
+            "proportion": 0.5035,
+            "p_value": 0.490196,
+            "biased": "False"
+          },
+          "bit_2": {
+            "count_1": 5013,
+            "proportion": 0.5013,
+            "p_value": 0.802589,
+            "biased": "False"
+          },
+          "bit_3": {
+            "count_1": 5065,
+            "proportion": 0.5065,
+            "p_value": 0.197048,
+            "biased": "False"
+          },
+          "bit_4": {
+            "count_1": 5036,
+            "proportion": 0.5036,
+            "p_value": 0.477706,
+            "biased": "False"
+          },
+          "bit_5": {
+            "count_1": 4939,
+            "proportion": 0.4939,
+            "p_value": 0.226277,
+            "biased": "False"
+          },
+          "bit_6": {
+            "count_1": 5061,
+            "proportion": 0.5061,
+            "p_value": 0.226277,
+            "biased": "False"
+          },
+          "bit_7": {
+            "count_1": 5072,
+            "proportion": 0.5072,
+            "p_value": 0.152713,
+            "biased": "False"
+          },
+          "bit_8": {
+            "count_1": 5026,
+            "proportion": 0.5026,
+            "p_value": 0.610054,
+            "biased": "False"
+          },
+          "bit_9": {
+            "count_1": 4952,
+            "proportion": 0.4952,
+            "p_value": 0.342113,
+            "biased": "False"
+          },
+          "bit_10": {
+            "count_1": 5037,
+            "proportion": 0.5037,
+            "p_value": 0.465392,
+            "biased": "False"
+          },
+          "bit_11": {
+            "count_1": 4947,
+            "proportion": 0.4947,
+            "p_value": 0.293718,
+            "biased": "False"
+          },
+          "bit_12": {
+            "count_1": 5038,
+            "proportion": 0.5038,
+            "p_value": 0.453256,
+            "biased": "False"
+          },
+          "bit_13": {
+            "count_1": 4977,
+            "proportion": 0.4977,
+            "p_value": 0.652713,
+            "biased": "False"
+          },
+          "bit_14": {
+            "count_1": 4912,
+            "proportion": 0.4912,
+            "p_value": 0.080113,
+            "biased": "False"
+          },
+          "bit_15": {
+            "count_1": 5017,
+            "proportion": 0.5017,
+            "p_value": 0.741402,
+            "biased": "False"
+          },
+          "bit_16": {
+            "count_1": 4938,
+            "proportion": 0.4938,
+            "p_value": 0.218695,
+            "biased": "False"
+          },
+          "bit_17": {
+            "count_1": 4944,
+            "proportion": 0.4944,
+            "p_value": 0.266998,
+            "biased": "False"
+          },
+          "bit_18": {
+            "count_1": 4911,
+            "proportion": 0.4911,
+            "p_value": 0.076722,
+            "biased": "False"
+          },
+          "bit_19": {
+            "count_1": 4957,
+            "proportion": 0.4957,
+            "p_value": 0.395326,
+            "biased": "False"
+          },
+          "bit_20": {
+            "count_1": 4994,
+            "proportion": 0.4994,
+            "p_value": 0.91241,
+            "biased": "False"
+          },
+          "bit_21": {
+            "count_1": 4954,
+            "proportion": 0.4954,
+            "p_value": 0.362823,
+            "biased": "False"
+          },
+          "bit_22": {
+            "count_1": 5042,
+            "proportion": 0.5042,
+            "p_value": 0.40654,
+            "biased": "False"
+          },
+          "bit_23": {
+            "count_1": 5028,
+            "proportion": 0.5028,
+            "p_value": 0.582322,
+            "biased": "False"
+          },
+          "bit_24": {
+            "count_1": 4887,
+            "proportion": 0.4887,
+            "p_value": 0.024444,
+            "biased": "False"
+          },
+          "bit_25": {
+            "count_1": 4862,
+            "proportion": 0.4862,
+            "p_value": 0.005957,
+            "biased": "False"
+          },
+          "bit_26": {
+            "count_1": 4971,
+            "proportion": 0.4971,
+            "p_value": 0.56868,
+            "biased": "False"
+          },
+          "bit_27": {
+            "count_1": 4977,
+            "proportion": 0.4977,
+            "p_value": 0.652713,
+            "biased": "False"
+          },
+          "bit_28": {
+            "count_1": 5023,
+            "proportion": 0.5023,
+            "p_value": 0.652713,
+            "biased": "False"
+          },
+          "bit_29": {
+            "count_1": 4995,
+            "proportion": 0.4995,
+            "p_value": 0.928288,
+            "biased": "False"
+          },
+          "bit_30": {
+            "count_1": 5053,
+            "proportion": 0.5053,
+            "p_value": 0.293718,
+            "biased": "False"
+          },
+          "bit_31": {
+            "count_1": 4988,
+            "proportion": 0.4988,
+            "p_value": 0.818093,
+            "biased": "False"
+          }
+        }
+      }
+    },
+    "HMIX": {
+      "uniformity": {
+        "n": 10000,
+        "mean": 0.50248,
+        "std": 0.286339,
+        "expected_mean": 0.5,
+        "expected_std": 0.288675,
+        "ks_test": {
+          "statistic": 0.00914,
+          "p_value": 0.371488,
+          "uniform": true
+        },
+        "chi_squared": {
+          "16_bins": {
+            "statistic": 9.3184,
+            "p_value": 0.86029,
+            "uniform": true
+          },
+          "64_bins": {
+            "statistic": 66.112,
+            "p_value": 0.369946,
+            "uniform": true
+          },
+          "256_bins": {
+            "statistic": 282.9568,
+            "p_value": 0.110351,
+            "uniform": true
+          }
+        },
+        "anderson_darling": {
+          "statistic": 0.1686,
+          "critical_values": {
+            "15.0%": 0.561,
+            "10.0%": 0.631,
+            "5.0%": 0.752,
+            "2.5%": 0.873,
+            "1.0%": 1.035
+          }
+        }
+      },
+      "autocorrelation": {
+        "lag_1": {
+          "autocorrelation": 0.003721,
+          "z_statistic": 0.3721,
+          "p_value": 0.709782,
+          "significant": false
+        },
+        "lag_2": {
+          "autocorrelation": 0.008695,
+          "z_statistic": 0.8695,
+          "p_value": 0.384556,
+          "significant": false
+        },
+        "lag_3": {
+          "autocorrelation": 0.002817,
+          "z_statistic": 0.2817,
+          "p_value": 0.778172,
+          "significant": false
+        },
+        "lag_4": {
+          "autocorrelation": 0.01327,
+          "z_statistic": 1.327,
+          "p_value": 0.184494,
+          "significant": false
+        },
+        "lag_5": {
+          "autocorrelation": -0.004431,
+          "z_statistic": -0.4431,
+          "p_value": 0.657695,
+          "significant": false
+        },
+        "lag_6": {
+          "autocorrelation": 0.001381,
+          "z_statistic": 0.1381,
+          "p_value": 0.890187,
+          "significant": false
+        },
+        "lag_7": {
+          "autocorrelation": -0.001264,
+          "z_statistic": -0.1264,
+          "p_value": 0.899396,
+          "significant": false
+        },
+        "lag_8": {
+          "autocorrelation": 0.005854,
+          "z_statistic": 0.5854,
+          "p_value": 0.558293,
+          "significant": false
+        },
+        "lag_9": {
+          "autocorrelation": 0.015941,
+          "z_statistic": 1.5941,
+          "p_value": 0.110917,
+          "significant": false
+        },
+        "lag_10": {
+          "autocorrelation": -0.009646,
+          "z_statistic": -0.9646,
+          "p_value": 0.334768,
+          "significant": false
+        }
+      },
+      "runs_test": {
+        "observed_runs": 5054,
+        "expected_runs": 5001.0,
+        "z_statistic": 1.0601,
+        "p_value": 0.28912,
+        "random": true
+      },
+      "bit_bias": {
+        "n_seeds": 10000,
+        "n_bits_tested": 32,
+        "n_biased_bits": 0,
+        "overall_proportion_1": 0.499778,
+        "per_bit": {
+          "bit_0": {
+            "count_1": 5017,
+            "proportion": 0.5017,
+            "p_value": 0.741402,
+            "biased": "False"
+          },
+          "bit_1": {
+            "count_1": 5016,
+            "proportion": 0.5016,
+            "p_value": 0.756563,
+            "biased": "False"
+          },
+          "bit_2": {
+            "count_1": 5045,
+            "proportion": 0.5045,
+            "p_value": 0.373467,
+            "biased": "False"
+          },
+          "bit_3": {
+            "count_1": 5073,
+            "proportion": 0.5073,
+            "p_value": 0.147055,
+            "biased": "False"
+          },
+          "bit_4": {
+            "count_1": 4940,
+            "proportion": 0.494,
+            "p_value": 0.234045,
+            "biased": "False"
+          },
+          "bit_5": {
+            "count_1": 4937,
+            "proportion": 0.4937,
+            "p_value": 0.211297,
+            "biased": "False"
+          },
+          "bit_6": {
+            "count_1": 4985,
+            "proportion": 0.4985,
+            "p_value": 0.771818,
+            "biased": "False"
+          },
+          "bit_7": {
+            "count_1": 5009,
+            "proportion": 0.5009,
+            "p_value": 0.865011,
+            "biased": "False"
+          },
+          "bit_8": {
+            "count_1": 4958,
+            "proportion": 0.4958,
+            "p_value": 0.40654,
+            "biased": "False"
+          },
+          "bit_9": {
+            "count_1": 5002,
+            "proportion": 0.5002,
+            "p_value": 0.976067,
+            "biased": "False"
+          },
+          "bit_10": {
+            "count_1": 4986,
+            "proportion": 0.4986,
+            "p_value": 0.787162,
+            "biased": "False"
+          },
+          "bit_11": {
+            "count_1": 4976,
+            "proportion": 0.4976,
+            "p_value": 0.638357,
+            "biased": "False"
+          },
+          "bit_12": {
+            "count_1": 5038,
+            "proportion": 0.5038,
+            "p_value": 0.453256,
+            "biased": "False"
+          },
+          "bit_13": {
+            "count_1": 4987,
+            "proportion": 0.4987,
+            "p_value": 0.802589,
+            "biased": "False"
+          },
+          "bit_14": {
+            "count_1": 5013,
+            "proportion": 0.5013,
+            "p_value": 0.802589,
+            "biased": "False"
+          },
+          "bit_15": {
+            "count_1": 5081,
+            "proportion": 0.5081,
+            "p_value": 0.107393,
+            "biased": "False"
+          },
+          "bit_16": {
+            "count_1": 5050,
+            "proportion": 0.505,
+            "p_value": 0.322174,
+            "biased": "False"
+          },
+          "bit_17": {
+            "count_1": 4884,
+            "proportion": 0.4884,
+            "p_value": 0.020884,
+            "biased": "False"
+          },
+          "bit_18": {
+            "count_1": 4872,
+            "proportion": 0.4872,
+            "p_value": 0.010769,
+            "biased": "False"
+          },
+          "bit_19": {
+            "count_1": 4974,
+            "proportion": 0.4974,
+            "p_value": 0.610054,
+            "biased": "False"
+          },
+          "bit_20": {
+            "count_1": 5030,
+            "proportion": 0.503,
+            "p_value": 0.555193,
+            "biased": "False"
+          },
+          "bit_21": {
+            "count_1": 4891,
+            "proportion": 0.4891,
+            "p_value": 0.030002,
+            "biased": "False"
+          },
+          "bit_22": {
+            "count_1": 5052,
+            "proportion": 0.5052,
+            "p_value": 0.30301,
+            "biased": "False"
+          },
+          "bit_23": {
+            "count_1": 4974,
+            "proportion": 0.4974,
+            "p_value": 0.610054,
+            "biased": "False"
+          },
+          "bit_24": {
+            "count_1": 5046,
+            "proportion": 0.5046,
+            "p_value": 0.362823,
+            "biased": "False"
+          },
+          "bit_25": {
+            "count_1": 5025,
+            "proportion": 0.5025,
+            "p_value": 0.624136,
+            "biased": "False"
+          },
+          "bit_26": {
+            "count_1": 5013,
+            "proportion": 0.5013,
+            "p_value": 0.802589,
+            "biased": "False"
+          },
+          "bit_27": {
+            "count_1": 4983,
+            "proportion": 0.4983,
+            "p_value": 0.741402,
+            "biased": "False"
+          },
+          "bit_28": {
+            "count_1": 5023,
+            "proportion": 0.5023,
+            "p_value": 0.652713,
+            "biased": "False"
+          },
+          "bit_29": {
+            "count_1": 4987,
+            "proportion": 0.4987,
+            "p_value": 0.802589,
+            "biased": "False"
+          },
+          "bit_30": {
+            "count_1": 5024,
+            "proportion": 0.5024,
+            "p_value": 0.638357,
+            "biased": "False"
+          },
+          "bit_31": {
+            "count_1": 5038,
+            "proportion": 0.5038,
+            "p_value": 0.453256,
+            "biased": "False"
+          }
+        }
+      }
+    }
+  },
+  "pairwise_comparisons": {
+    "PRNG_combined_vs_TRNG": {
+      "comparison": "PRNG_combined_vs_TRNG",
+      "n_a": 50000,
+      "n_b": 10000,
+      "mean_a": 0.498978,
+      "mean_b": 0.500543,
+      "ks_2sample": {
+        "statistic": 0.0095,
+        "p_value": 0.436879,
+        "different": false
+      },
+      "mann_whitney_u": {
+        "statistic": 249218238.0,
+        "p_value": 0.621006,
+        "different": false
+      },
+      "welch_t": {
+        "statistic": -0.4932,
+        "p_value": 0.621896,
+        "different": false
+      }
+    },
+    "PRNG_combined_vs_HMIX": {
+      "comparison": "PRNG_combined_vs_HMIX",
+      "n_a": 50000,
+      "n_b": 10000,
+      "mean_a": 0.498978,
+      "mean_b": 0.50248,
+      "ks_2sample": {
+        "statistic": 0.01062,
+        "p_value": 0.302075,
+        "different": false
+      },
+      "mann_whitney_u": {
+        "statistic": 248249030.5,
+        "p_value": 0.268121,
+        "different": false
+      },
+      "welch_t": {
+        "statistic": -1.1147,
+        "p_value": 0.26498,
+        "different": false
+      }
+    },
+    "TRNG_vs_HMIX": {
+      "comparison": "TRNG_vs_HMIX",
+      "n_a": 10000,
+      "n_b": 10000,
+      "mean_a": 0.500543,
+      "mean_b": 0.50248,
+      "ks_2sample": {
+        "statistic": 0.011,
+        "p_value": 0.580642,
+        "different": false
+      },
+      "mann_whitney_u": {
+        "statistic": 49808543.0,
+        "p_value": 0.639099,
+        "different": false
+      },
+      "welch_t": {
+        "statistic": -0.4755,
+        "p_value": 0.634454,
+        "different": false
+      }
+    },
+    "PRNG_42_vs_PRNG_123": {
+      "comparison": "PRNG_42_vs_PRNG_123",
+      "n_a": 10000,
+      "n_b": 10000,
+      "mean_a": 0.500251,
+      "mean_b": 0.50179,
+      "ks_2sample": {
+        "statistic": 0.0089,
+        "p_value": 0.823267,
+        "different": false
+      },
+      "mann_whitney_u": {
+        "statistic": 49844182.0,
+        "p_value": 0.702711,
+        "different": false
+      },
+      "welch_t": {
+        "statistic": -0.3769,
+        "p_value": 0.706252,
+        "different": false
+      }
+    },
+    "PRNG_42_vs_PRNG_7": {
+      "comparison": "PRNG_42_vs_PRNG_7",
+      "n_a": 10000,
+      "n_b": 10000,
+      "mean_a": 0.500251,
+      "mean_b": 0.498451,
+      "ks_2sample": {
+        "statistic": 0.0098,
+        "p_value": 0.72294,
+        "different": false
+      },
+      "mann_whitney_u": {
+        "statistic": 50177474.0,
+        "p_value": 0.663774,
+        "different": false
+      },
+      "welch_t": {
+        "statistic": 0.441,
+        "p_value": 0.65925,
+        "different": false
+      }
+    },
+    "PRNG_42_vs_PRNG_999": {
+      "comparison": "PRNG_42_vs_PRNG_999",
+      "n_a": 10000,
+      "n_b": 10000,
+      "mean_a": 0.500251,
+      "mean_b": 0.493833,
+      "ks_2sample": {
+        "statistic": 0.0148,
+        "p_value": 0.223438,
+        "different": false
+      },
+      "mann_whitney_u": {
+        "statistic": 50643245.0,
+        "p_value": 0.115122,
+        "different": false
+      },
+      "welch_t": {
+        "statistic": 1.5711,
+        "p_value": 0.116164,
+        "different": false
+      }
+    },
+    "PRNG_42_vs_PRNG_314": {
+      "comparison": "PRNG_42_vs_PRNG_314",
+      "n_a": 10000,
+      "n_b": 10000,
+      "mean_a": 0.500251,
+      "mean_b": 0.500565,
+      "ks_2sample": {
+        "statistic": 0.0103,
+        "p_value": 0.663745,
+        "different": false
+      },
+      "mann_whitney_u": {
+        "statistic": 49968996.0,
+        "p_value": 0.939466,
+        "different": false
+      },
+      "welch_t": {
+        "statistic": -0.077,
+        "p_value": 0.938606,
+        "different": false
+      }
+    },
+    "PRNG_123_vs_PRNG_7": {
+      "comparison": "PRNG_123_vs_PRNG_7",
+      "n_a": 10000,
+      "n_b": 10000,
+      "mean_a": 0.50179,
+      "mean_b": 0.498451,
+      "ks_2sample": {
+        "statistic": 0.0124,
+        "p_value": 0.425547,
+        "different": false
+      },
+      "mann_whitney_u": {
+        "statistic": 50330826.0,
+        "p_value": 0.417749,
+        "different": false
+      },
+      "welch_t": {
+        "statistic": 0.8152,
+        "p_value": 0.414947,
+        "different": false
+      }
+    },
+    "PRNG_123_vs_PRNG_999": {
+      "comparison": "PRNG_123_vs_PRNG_999",
+      "n_a": 10000,
+      "n_b": 10000,
+      "mean_a": 0.50179,
+      "mean_b": 0.493833,
+      "ks_2sample": {
+        "statistic": 0.0155,
+        "p_value": 0.180853,
+        "different": false
+      },
+      "mann_whitney_u": {
+        "statistic": 50792172.5,
+        "p_value": 0.052335,
+        "different": false
+      },
+      "welch_t": {
+        "statistic": 1.9413,
+        "p_value": 0.052237,
+        "different": false
+      }
+    },
+    "PRNG_123_vs_PRNG_314": {
+      "comparison": "PRNG_123_vs_PRNG_314",
+      "n_a": 10000,
+      "n_b": 10000,
+      "mean_a": 0.50179,
+      "mean_b": 0.500565,
+      "ks_2sample": {
+        "statistic": 0.007,
+        "p_value": 0.967082,
+        "different": false
+      },
+      "mann_whitney_u": {
+        "statistic": 50125631.0,
+        "p_value": 0.758293,
+        "different": false
+      },
+      "welch_t": {
+        "statistic": 0.2997,
+        "p_value": 0.764411,
+        "different": false
+      }
+    },
+    "PRNG_7_vs_PRNG_999": {
+      "comparison": "PRNG_7_vs_PRNG_999",
+      "n_a": 10000,
+      "n_b": 10000,
+      "mean_a": 0.498451,
+      "mean_b": 0.493833,
+      "ks_2sample": {
+        "statistic": 0.0112,
+        "p_value": 0.557301,
+        "different": false
+      },
+      "mann_whitney_u": {
+        "statistic": 50463411.0,
+        "p_value": 0.256337,
+        "different": false
+      },
+      "welch_t": {
+        "statistic": 1.1272,
+        "p_value": 0.259673,
+        "different": false
+      }
+    },
+    "PRNG_7_vs_PRNG_314": {
+      "comparison": "PRNG_7_vs_PRNG_314",
+      "n_a": 10000,
+      "n_b": 10000,
+      "mean_a": 0.498451,
+      "mean_b": 0.500565,
+      "ks_2sample": {
+        "statistic": 0.0114,
+        "p_value": 0.53427,
+        "different": false
+      },
+      "mann_whitney_u": {
+        "statistic": 49792273.0,
+        "p_value": 0.610885,
+        "different": false
+      },
+      "welch_t": {
+        "statistic": -0.5172,
+        "p_value": 0.605003,
+        "different": false
+      }
+    },
+    "PRNG_999_vs_PRNG_314": {
+      "comparison": "PRNG_999_vs_PRNG_314",
+      "n_a": 10000,
+      "n_b": 10000,
+      "mean_a": 0.493833,
+      "mean_b": 0.500565,
+      "ks_2sample": {
+        "statistic": 0.0145,
+        "p_value": 0.243864,
+        "different": false
+      },
+      "mann_whitney_u": {
+        "statistic": 49328415.0,
+        "p_value": 0.09997,
+        "different": false
+      },
+      "welch_t": {
+        "statistic": -1.646,
+        "p_value": 0.099773,
+        "different": false
+      }
+    }
+  },
+  "summary": {
+    "PRNG_stream_42": {
+      "ks_uniform": true,
+      "lag1_autocorr": 0.004405,
+      "runs_random": true,
+      "biased_bits": 0
+    },
+    "PRNG_stream_123": {
+      "ks_uniform": true,
+      "lag1_autocorr": -0.009581,
+      "runs_random": true,
+      "biased_bits": 0
+    },
+    "PRNG_stream_7": {
+      "ks_uniform": true,
+      "lag1_autocorr": -0.011625,
+      "runs_random": true,
+      "biased_bits": 0
+    },
+    "PRNG_stream_999": {
+      "ks_uniform": true,
+      "lag1_autocorr": 0.006497,
+      "runs_random": true,
+      "biased_bits": 0
+    },
+    "PRNG_stream_314": {
+      "ks_uniform": true,
+      "lag1_autocorr": 0.009515,
+      "runs_random": true,
+      "biased_bits": 0
+    },
+    "PRNG_combined": {
+      "ks_uniform": true,
+      "lag1_autocorr": -4.2e-05,
+      "runs_random": true,
+      "biased_bits": 0
+    },
+    "TRNG": {
+      "ks_uniform": true,
+      "lag1_autocorr": -0.004065,
+      "runs_random": true,
+      "biased_bits": 0
+    },
+    "HMIX": {
+      "ks_uniform": true,
+      "lag1_autocorr": 0.003721,
+      "runs_random": true,
+      "biased_bits": 0
+    }
+  }
+}

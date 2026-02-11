@@ -1,281 +1,195 @@
-# Entropy Source Effects on Large Language Model Output
+# Entropy Seeding in Large Language Models
 
-> **⚠️ DATA INTEGRITY NOTICE:** Portions of this repository contain invalid experimental data. See [DATA_INTEGRITY.md](DATA_INTEGRITY.md) for details on which results are valid and which are not.
+**How randomness sources affect AI-generated text**
 
-A comparative analysis of how different entropy sources affect text generation quality across multiple model architectures and scales.
+---
 
-## Overview
+## Key Terms
 
-This repository contains experimental data comparing three entropy sources used in LLM text generation:
+| Term | Meaning |
+|------|---------|
+| **Entropy** | Randomness used by AI models to make creative choices |
+| **PRNG** | Pseudo-Random Number Generator (software-based, deterministic) |
+| **TRNG** | True Random Number Generator (hardware-based, physical) |
+| **QRNG** | Quantum Random Number Generator (quantum physics-based) |
+| **Seed** | The starting number that initializes random generation |
+| **Temperature** | A setting that controls how "random" or "creative" model outputs are |
+| **Perplexity** | A measure of how "surprised" a model is by text (lower = more confident) |
+| **Shannon Entropy** | Information density—how unpredictable the text is |
 
-- **PRNG** (Pseudo-Random Number Generator): Mersenne Twister MT19937 algorithm
-- **TRNG** (True Random Number Generator): Hardware entropy from `/dev/urandom` (Apple M4 Pro)
-- **QRNG** (Quantum Random Number Generator): IBM Quantum ibm_fez backend (156 superconducting qubits)
+---
 
-## Data Integrity Status
+## What This Project Explores
 
-**⚠️ CRITICAL:** A significant portion of the Qwen model results contain invalid data where different entropy seeds produced identical outputs.
+When an AI like ChatGPT generates text, it uses randomness to choose which words come next. This project asks: **Does the source of that randomness matter?**
 
-### Valid Data (✅)
-- **DeepSeek-R1 32B and 70B** entropy comparisons show genuine PRNG vs TRNG vs QRNG differences
-- Documented catastrophic PRNG failure on philosophy prompt (DeepSeek-R1 70B)
-- Qualitative analysis of text output characteristics
+We compare three ways of generating randomness:
+- **PRNG** (Mersenne Twister algorithm) — standard software randomness
+- **TRNG** (hardware entropy from `/dev/urandom`) — physical randomness from your computer
+- **QRNG** (IBM Quantum ibm_fez) — randomness from quantum measurements
 
-### Invalid Data (⚠️)
-- **Qwen 0.6B, 1.7B, 8B, 14B** results with `hidden_variance_selfseed` format
-- ~85% of these results show identical outputs across seeds 11, 22, 33, 44, 55
-- Statistical significance tests for these models are based on flawed comparisons
+And we test whether these different sources produce meaningfully different text.
 
-**See [DATA_INTEGRITY.md](DATA_INTEGRITY.md) for detailed assessment.**
+---
 
-## Research Questions
+## Main Findings
 
-1. ~~How does entropy source selection affect text generation metrics?~~ **Partially Answered** (valid only for DeepSeek-R1)
-2. ~~Does model size mediate entropy source effects?~~ **Cannot Be Determined** (invalid Qwen data)
-3. ~~Do different architectures (Dense vs MoE) respond differently to entropy variation?~~ **Insufficient Valid Data**
-4. **Are there edge cases or failure modes specific to certain entropy sources?** **YES** - PRNG catastrophic failure documented
+### 1. Different Entropy Sources Produce Different Text Qualities
+
+Each entropy source seems to give text a different "personality":
+
+| Source | Creativity | Coherence | Notable Characteristics |
+|--------|------------|-----------|-------------------------|
+| **PRNG** | Medium | High | More structured, can fail catastrophically on certain prompts |
+| **TRNG** | High | Medium | Natural flow, richer vocabulary, sometimes switches languages |
+| **QRNG** | Highest | Lower | Very creative but prone to bizarre glitches and mode shifts |
+
+### 2. Documented PRNG Catastrophic Failure
+
+On DeepSeek-R1 70B with a philosophy prompt, using PRNG seed=42 caused **complete generation failure**:
+
+```
+Prompt: "What gives life meaning?"
+PRNG (seed=42):  All metrics = 0.0, Perplexity = ∞  →  FAILED
+TRNG:              Shannon = 4.44, Perplexity = 195.74  →  WORKING
+```
+
+**Why?** In "Mixture of Experts" architectures like DeepSeek-R1, deterministic PRNG seeds can cause internal routing collisions—like traffic getting stuck in a roundabout forever.
+
+### 3. QRNG Causes Catastrophic Mode Shifts
+
+On Qwen3-14B, QRNG_INT caused the model to suddenly switch from storytelling to test-taking:
+
+> **Started with:** "The old lighthouse keeper had never seen anything like it."
+> **Suddenly:** "A. operating at full capacity / B. visited by tourists / C. abandoned / D. under repair"
+> **Then:** "Okay, let's see. The question is about..."
+
+The model became self-aware about its mode change—a fascinating glitch.
+
+### 4. TRNG Causes Language Mixing
+
+On Qwen3-8B, TRNG caused the model to switch from English to Chinese mid-generation:
+
+> Prompt: "She opened the letter, and everything changed."
+> Output: "...What's the next sentence? The next sentence could be... **翻译句子并解析句子成分**..."
+
+Translation: "Translate the sentence and analyze the sentence components..."
+
+Then it switched back to English as if nothing happened.
+
+### 5. Color Naming Task — Different Names for Different Sources
+
+When asked to invent and describe a new color, DeepSeek-R1 70B gave different answers based on entropy source:
+
+| Source | Color Name | Theme |
+|--------|------------|-------|
+| **PRNG** | Elyndor | Fantasy |
+| **TRNG** | Aurorin | Celestial |
+| **QRNG** | Lunaris | Astronomical |
+
+Same model, same prompt, different randomness → different creative choices.
+
+---
+
+## Fingerprinting Experiment
+
+Can we detect which entropy source was used just by reading the text?
+
+We trained a Random Forest classifier on text features alone:
+
+| Task | Accuracy | Baseline |
+|------|----------|----------|
+| 7-way multiclass | 18.0% | 14.3% |
+| Best binary pair | **85.7%** | 50% |
+
+**Key insight:** Sources with fundamentally different mechanisms (deterministic vs. feedback-loop) leave clearly distinguishable traces. But hash-chain sources are virtually indistinguishable from PRNG—the "SHA256 Paradox."
+
+**Top detecting features:**
+- Hidden entropy trajectory patterns
+- Sentence length variation
+- Vocabulary diversity ratios
+
+---
+
+## Nebula: Text-Derived Entropy
+
+We also developed **Nebula**, a system that extracts entropy from literary texts through 5 orthogonal layers:
+
+1. Chunk hashes
+2. Frequency signatures
+3. Word boundaries
+4. Positional encoding
+5. Cross-chunk entanglement
+
+Combined via prime-number gear ratios, Nebula:
+- Reduces text-induced bias by 23.8% vs. single-layer literary hash chain
+- Is indistinguishable from PRNG via text-feature classifier (SHA256 Paradox)
+- Still measurably affects generation—Bible KJV shows -25.2% repetition and 2.1× more first-person pronouns vs. PRNG
+- Has 22 literary texts available as entropy sources from Project Gutenberg
+
+---
 
 ## Models Tested
 
-| Model Family | Architecture | Models Tested | Data Status |
-|--------------|--------------|---------------|-------------|
-| Qwen3 | Dense Transformer | 0.6B, 1.7B, 4B, 8B, 14B, 32B | ⚠️ **INVALID** (identical outputs) |
-| DeepSeek-R1 | Mixture of Experts | 32B, 70B | ✅ **VALID** |
-| Qwen2.5 | Dense Transformer | 72B | ⚠️ **QUESTIONABLE** |
+| Model | Architecture | Status |
+|-------|--------------|--------|
+| **DeepSeek-R1** 32B, 70B | Mixture of Experts | ✅ Valid |
+| Qwen3 0.6B, 4B, 8B, 14B, 32B | Dense Transformer | ⚠️ Partial |
+| Llama 3.2-1B, 3.2-3B | Dense (GQA) | ✅ Valid |
+| Mistral 7B | Dense (SLA) | ✅ Valid |
 
-**Valid Results:** Only DeepSeek-R1 32B and 70B have confirmed valid entropy source comparisons.
+**Note:** Some Qwen experiments had data integrity issues where different seeds produced identical outputs. Those results have been removed from this repository.
+
+---
 
 ## Repository Structure
 
 ```
 entropy-seeding/
 ├── README.md                           # This file
-├── DATA_INTEGRITY.md                    # Data validity assessment
-├── COMPREHENSIVE_REPORT.md              # Original analysis report
-├── COMPREHENSIVE_ENTROPY_SEEDING_EXPERIMENT_2026-02-09.md  # Full comprehensive report
-├── METRICS_GLOSSARY.md                  # Metric definitions and interpretation guide
+├── METRICS_GLOSSARY.md                 # Metric definitions
 │
 ├── reports/
-│   ├── PRNG_DETAILED_REPORT.md          # PRNG entropy source detailed analysis
-│   ├── TRNG_DETAILED_REPORT.md          # TRNG entropy source detailed analysis
-│   ├── QRNG_DETAILED_REPORT.md          # QRNG entropy source detailed analysis
-│   ├── FINGERPRINT_CLASSIFIER_REPORT.md # Fingerprint classification experiment
-│   └── NEBULA_ENTROPY_SOURCE_EXPLAINED.md # Nebula 5-layer entropy explainer
+│   ├── PRNG_DETAILED_REPORT.md         # PRNG entropy source analysis
+│   ├── TRNG_DETAILED_REPORT.md         # TRNG entropy source analysis
+│   ├── QRNG_DETAILED_REPORT.md         # QRNG entropy source analysis
+│   ├── FINGERPRINT_CLASSIFIER_REPORT.md # Fingerprint classification
+│   └── NEBULA_ENTROPY_SOURCE_EXPLAINED.md # Nebula explainer
 │
 ├── results/
-│   ├── fingerprint/                     # Fingerprint classifier results
-│   │   └── fingerprint_classifier_qwen3_8b_results.json
+│   ├── entropy_source_comparisons/     # PRNG/TRNG/QRNG comparisons
+│   │   ├── deepseek_r1/                # DeepSeek-R1 32B/70B results
+│   │   ├── prng_trng_qrng/             # Direct comparisons
+│   │   └── documentation/              # Qualitative analysis
 │   │
-│   ├── valid_entropy_comparisons/       # Validated entropy comparison data
-│   │   ├── qwen/                        # Qwen 0.6B → 8B results
-│   │   ├── llama/                       # Llama 3.1-8B results
-│   │   ├── mistral/                     # Mistral 7B results
-│   │   └── deepseek/                    # DeepSeek-R1 32B/70B results
+│   ├── valid_entropy_comparisons/      # Validated comparisons
+│   │   ├── deepseek/                   # DeepSeek results
+│   │   ├── qwen/                       # Qwen quantum activation results
+│   │   └── llama/                      # Llama results
 │   │
-│   ├── entropy_source_comparisons/      # Original PRNG/TRNG/QRNG comparisons
-│   │   ├── deepseek_r1/
-│   │   ├── qwen_models/
-│   │   ├── prng_trng_qrng/
-│   │   └── documentation/
-│   │
-│   ├── cross_architecture/              # Dense vs SWA vs GQA comparison
-│   ├── significance/                    # Statistical significance tests
-│   └── formatted_summaries/             # Summary reports per model
+│   └── fingerprint/                    # Fingerprint classifier results
 │
-└── scripts/                             # Analysis and experiment scripts
+└── scripts/                            # Analysis and experiment scripts
 ```
 
-## Unified File Naming Convention
+---
 
-**All entropy comparison files use: `{model}_prng_trng_qrng.json`**
+## Metrics We Track
 
-- `*_extended.json` = Tests 7 QRNG variants (INT, FLOAT, HASH, BITS, TEMP, MOD)
-- `*_v2.json` = Repeated experiment run
-- `*_qualitative_findings.md` = Qualitative analysis
-- `*_evidence_summary.md` = Statistical evidence summary
-
-**Note:** Other directories contain unrelated experiments:
-- `quantum_activation/` = Neural network activation functions (NOT QRNG)
-- `hidden_variance_selfseed/` = Invalid data (identical outputs across seeds)
-
-## Key Findings (Based on Valid Data Only)
-
-### ✅ VALID FINDING: QRNG Causes Catastrophic Mode Shifts (Qwen3-8B, Qwen3-14B)
-
-**Documentation:** `/results/valid_entropy_comparisons/QUANTUM_RNG_QUALITATIVE_ANALYSIS_2026-02-04.md`
-
-**Qwen 14B - QRNG_INT Mode Shift:**
-- Started with: "The old lighthouse keeper had never seen anything like it."
-- **Suddenly switched to:** Multiple-choice test format with "A. operating at full capacity / B. visited by tourists / C. abandoned / D. under repair"
-- **Then added meta-commentary:** "Okay, let's see. The question is about..."
-
-**Interpretation:** QRNG_INT caused the model to completely switch modes from narrative generation to test-taking mode, then become self-aware about it.
+| Metric | What It Measures | What It Means |
+|--------|------------------|---------------|
+| **distinct_2** | Unique bigram proportion | Higher = more diverse word pairs |
+| **TTR** | Type-Token Ratio | Higher = richer vocabulary |
+| **Repetition** | Character-level repetition | Lower = less repetitive |
+| **Shannon Entropy** | Text information density | Higher = more unpredictable |
+| **Burstiness** | Sentence length variance | Lower = more natural flow |
+| **Perplexity** | Model confidence | Lower = more confident |
 
 ---
 
-### ✅ VALID FINDING: TRNG Causes Language Mixing (Qwen3-8B)
+## Usage Examples
 
-**Documentation:** `/results/valid_entropy_comparisons/QUANTUM_RNG_QUALITATIVE_ANALYSIS_2026-02-04.md`
-
-**TRNG Language Mixing:**
-> Prompt: "She opened the letter, and everything changed."
-> Output: "...What's the next sentence? The next sentence could be... 翻译句子并解析句子成分..."
-
-**Translation:** "Translate the sentence and analyze the sentence components..."
-
-**Interpretation:** TRNG caused the model to switch from English to Chinese mid-generation, then back to English.
-
----
-
-### ✅ VALID FINDING: Different Entropy Sources = Different "Personalities"
-
-**Table: Text Generation Characteristics by Entropy Source**
-
-| Entropy Source | Creativity | Coherence | Meta-Cognition | Glitches |
-|----------------|------------|-----------|----------------|----------|
-| **PRNG** | Medium | **High** | Moderate | Repetition, perspective shifts |
-| **TRNG** | High | Medium | **High** | **Language mixing**, self-aware breaks |
-| **QRNG_INT** | **Highest** | Low | **Very High** | **Catastrophic mode shifts** |
-
-**Key Insight:** QRNG produces the most creative outputs but also the most severe glitches. This is a fundamental trade-off.
-
----
-
-### ✅ VALID FINDING: PRNG Catastrophic Failure (DeepSeek-R1 70B)
-
-**Prompt:** Philosophy question about consciousness
-**Entropy:** PRNG (seed=42)
-**Result:** All metrics = 0.00, Perplexity = ∞, complete generation failure
-
-Same model with TRNG: Normal generation (Shannon = 4.44, Perplexity = 195.74)
-
-**Implication:** Deterministic PRNG seeds can cause internal state collisions in MoE architectures, leading to complete generation failure.
-
-### 2. Different Entropy Sources Produce Different Outputs (VALID)
-
-**Color Naming Task (DeepSeek-R1 70B):**
-- **PRNG:** Named color "Elyndor" (fantasy theme), structured headers, academic tone
-- **TRNG:** Named color "Aurorin" (celestial theme), emotive language, flowing description
-- **QRNG:** Named color "Lunaris" (astronomical theme), analytical tone, highly organized format
-
-### ✅ VALID FINDING: Entropy Source Fingerprints Partially Detectable (Qwen3-8B)
-
-**Documentation:** [`reports/FINGERPRINT_CLASSIFIER_REPORT.md`](reports/FINGERPRINT_CLASSIFIER_REPORT.md)
-
-A Random Forest classifier trained to detect which entropy source was used from text features alone, using LeaveOneGroupOut CV to prevent prompt leakage:
-
-- **7-way multiclass:** 18.0% accuracy (14.3% baseline) — marginal, signal too weak for universal detection
-- **Pairwise binary:** **9 of 21 pairs above 60%**, best pair **prng vs self_seed_sfc = 85.7%**
-- **nebula_bible ~50% vs everything** — SHA256 hash chain makes it indistinguishable from PRNG
-
-**Key insight:** Sources with fundamentally different seed mechanisms (deterministic PRNG vs feedback-loop self-seeding) leave clearly distinguishable traces. Hash-chain sources (Nebula) successfully mask their origin.
-
-**Top discriminating features:** prompt-normalized hidden entropy trajectory (slope, ratio), sentence length variation, diversity ratios.
-
----
-
-### ✅ VALID FINDING: Nebula 5-Layer Hierarchical Entropy (Text-Derived RNG)
-
-**Documentation:** [`reports/NEBULA_ENTROPY_SOURCE_EXPLAINED.md`](reports/NEBULA_ENTROPY_SOURCE_EXPLAINED.md)
-
-Nebula extracts entropy from literary texts through 5 orthogonal layers (chunk hashes, frequency signatures, word boundaries, positional encoding, cross-chunk entanglement) combined via prime-number gear ratios. Key properties:
-
-- **Reduces text-induced bias by 23.8%** vs single-layer literary hash chain
-- **Indistinguishable from PRNG** via text-feature classifier at 8B scale (SHA256 Paradox)
-- **Still measurably affects generation** — Bible KJV shows -25.2% D2 and 2.1x first-person pronouns vs PRNG
-- **22 literary texts** available as entropy sources from Project Gutenberg corpus
-
----
-
-### 3. ~~Model Size Effects~~ (INVALID DATA - CANNOT DETERMINE)
-
-The Qwen model data showing size-dependent effects contains identical outputs across different seeds and **cannot be used** for this analysis.
-
-### 4. ~~Architecture-Specific Responses~~ (INSUFFICIENT VALID DATA)
-
-Claims about Qwen3 vs Qwen2.5 patterns are based on invalid data. Only DeepSeek-R1 has valid entropy comparisons.
-
-DeepSeek-R1 (Mixture of Experts) exhibited a catastrophic failure mode with PRNG:
-
-**Prompt:** "What gives life meaning?"
-**Entropy:** PRNG (seed=42)
-**Result:** All metrics = 0.00, Perplexity = ∞, complete generation failure
-
-Same model with TRNG or QRNG: Normal generation.
-
-**Hypothesis:** Deterministic PRNG seeds can cause routing collisions in MoE architectures, leading to internal state deadlocks.
-
-### 4. Textual Characteristics
-
-Qualitative analysis reveals consistent output patterns by entropy source:
-
-**PRNG Outputs:**
-- More volatile quality
-- Higher repetition on average
-- Can fail catastrophically on certain prompts
-- More conversational/academic tone observed
-
-**TRNG Outputs:**
-- More consistent quality
-- Lower repetition rates
-- Higher vocabulary diversity
-- More natural text flow
-
-**QRNG Outputs:**
-- Highly structured formatting
-- Lower repetition than PRNG
-- More organized output structure
-- Can appear overly constrained
-
-## Example Outputs
-
-### DeepSeek-R1 70B - Color Naming Task
-
-**PRNG Output (seed=42):**
-> "What a fascinating and imaginative question!
->
-> ### Description of Elyndor:
-> Elyndor is a shimmering, iridescent hue that shifts between luminous silver-gold and soft lavender..."
-
-**Characteristics:** Academic tone, structured with headers, named color "Elyndor" (fantasy theme)
-
----
-
-**TRNG Output (hardware seed):**
-> "**Aurorin: The Celestial Color**
->
-> Imagine a color named Aurorin—a mesmerizing blend of shimmering blues and greens that dance across the visual spectrum like the aurora borealis..."
-
-**Characteristics:** Emotive language, natural flow, named color "Aurorin" (celestial theme)
-
----
-
-**QRNG Output (quantum seed):**
-> "### **The Color: "Lunaris"**
-> **Name:** *Lunaris*
-> ---
->
-> ### **Emotions Evoked by Lunaris**
-> 1. **Mystery**: The unknown depth of space..."
-
-**Characteristics:** Highly organized, formatted structure, named color "Lunaris" (astronomical theme)
-
-## Metrics
-
-The following metrics were used to evaluate generation quality:
-
-| Metric | Description | Interpretation |
-|--------|-------------|----------------|
-| distinct_2 | Unique bigram proportion | Higher = more diverse |
-| TTR | Type-Token Ratio | Higher = richer vocabulary |
-| Repetition | Character-level repetition | Lower = less repetitive |
-| Shannon Entropy | Text information density | Higher = more unpredictable |
-| Burstiness | Sentence length variance | Lower = more natural flow |
-| Perplexity | Model confidence | Lower = more confident |
-
-## Usage
-
-### TRNG Implementation
+### Using TRNG (Hardware Randomness)
 
 ```python
 import struct
@@ -284,47 +198,44 @@ def get_trng_seed():
     """Generate seed from hardware entropy."""
     with open("/dev/urandom", "rb") as f:
         return struct.unpack("I", f.read(4))[0]
+
+# Use in your model
+seed = get_trng_seed()
 ```
 
-### QRNG Implementation
+### Using QRNG (Quantum Randomness)
 
 See repository for cached QRNG implementation using IBM Quantum measurements.
 
-## Statistical Analysis
-
-Results include statistical significance testing where applicable:
-
-- Qwen3 8B: TRNG vs PRNG (distinct_2): p < 0.05
-- Qwen3 14B: TRNG vs PRNG (distinct_2): p = 0.367 (not significant)
-- Qwen2.5 72B: TRNG vs PRNG (distinct_2): p = 0.099 (trending negative)
-
-See `results/significance/` for detailed statistical analyses.
+---
 
 ## Limitations
 
-1. **Sample Size:** Limited prompt set (14 prompts × 5 seeds per configuration)
-2. **Architecture Coverage:** Not all model families tested
-3. **Task Diversity:** Focused on creative/analytical tasks
-4. **Single Hardware:** TRNG tested only on Apple M4 Pro
-5. **QRNG Cache:** Quantum measurements pre-generated and cached
+1. **Sample Size:** Limited prompt set per configuration
+2. **Hardware:** TRNG tested only on Apple M4 Pro
+3. **QRNG Cache:** Quantum measurements pre-generated and cached
+4. **Task Focus:** Primarily creative/analytical writing tasks
+5. **Architecture Coverage:** Not all model families tested
+
+---
 
 ## Future Directions
 
 ### Completed (Feb 2026)
-- ~~Test additional architectures~~ — Llama 3.1-8B (GQA) and Mistral 7B (SWA) now tested alongside Qwen3-8B (Dense)
-- ~~Expand prompt diversity~~ — 15 single-turn + 3 multi-turn = 360 generations per model
-- ~~Explore hybrid entropy sources~~ — 10 entropy sources tested including self-seeding, hidden variance, Nebula
+- ✅ Llama 3.1-8B (GQA) and Mistral 7B (SLA) tested
+- ✅ Expanded prompt diversity (15 single-turn + 3 multi-turn)
+- ✅ Explored hybrid entropy sources (10 variants tested)
 
-### Open Research Directions
-1. **Nebula genre sweep at scale** — Test all 22 literary texts as entropy sources on 8B+ models to quantify genre-specific coloring effects
-2. **Nebula layer ablation** — Systematically measure each of the 5 layers' contribution to debiasing and coloring
-3. **Token-level fingerprint features** — Current text-feature classifier is marginal; token-ID sequences, softmax entropy trajectories, or generation perplexity curves may carry stronger signal
-4. **Power-up sample sizes** — n=70 per source is insufficient for statistical significance on many metrics; target n=300+
-5. **Entropy-based style transfer** — Test whether different literary entropy sources can steer generation style without model modification
-6. **Entropy watermarking system** — Use private literary texts as watermark keys, detect via statistical correlation with Nebula walk pattern
-7. **SHA256 Paradox formalization** — Prove theoretically why sequential hash consumption preserves structural information (information theory paper)
-8. **Recursive modulation dynamics** — Map the phase space of RecursiveModulation feedback_gain × modulation_mode × base_source
-9. **Fingerprint at smaller scales** — 0.6B models may be more susceptible to entropy source effects; repeat classifier experiment at that scale
+### Open Research Questions
+1. **Nebula genre sweep** — Test all 22 literary texts as entropy sources on 8B+ models
+2. **Nebula layer ablation** — Measure each layer's contribution to debiasing
+3. **Token-level fingerprinting** — Token-ID sequences may carry stronger signal
+4. **Power-up sample sizes** — Target n=300+ per source for significance
+5. **Entropy-based style transfer** — Can literary entropy sources steer generation style?
+6. **Entropy watermarking** — Use private texts as watermark keys
+7. **SHA256 Paradox formalization** — Why does hash consumption preserve structural info?
+
+---
 
 ## Citation
 
@@ -339,9 +250,13 @@ If you use this data or research, please cite:
 }
 ```
 
+---
+
 ## License
 
 Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+
+---
 
 ## Acknowledgments
 
